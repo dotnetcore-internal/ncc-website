@@ -38,8 +38,14 @@
              project-asp-cap       : "asp-cap",
              project-asp-util      : "asp-util",
              project-asp-surging   : "asp-surging",
+             project-dotnetspider  : "dotnetspider",
              project-asp-zkweb     : "asp-zkweb",
              project-asp-natasha   : "asp-natasha",
+             project-npoi          : "npoi",
+             project-alipay-sdk    : "alipay-sdk",
+             project-webapiclient  : "webapiclient",
+             project-easycaching   : "easycaching",
+             project-collecton     : "collecton",
      );
      @each $key ,$value in $project-background-list{
        .#{$key}{
