@@ -28,8 +28,8 @@
            </div>
            <section class="faq">
              <ul>
-               <li><a href="">成员项目说明</a></li>
-               <li><a href="">如何加入我们</a></li>
+               <li><a href="https://github.com/dotnetcore/Home" target="_blank">成员项目说明</a></li>
+               <li><a href="https://github.com/dotnetcore/Home" target="_blank">如何加入我们</a></li>
              </ul>
            </section>
         </div>

@@ -28,6 +28,12 @@
     @include flex-wrap(wrap);
   }
   @at-root {
+    .project-level {
+      font-size: 0.25rem;
+      font-weight: 600;
+      text-align: center;
+      margin: 0 0 15px 0;
+    }
     .project-group {
       $project-background-list: (
         project-asp-translate: "asp-translate",
@@ -36,7 +42,8 @@
         project-asp-util: "asp-util",
         project-asp-surging: "asp-surging",
         project-dotnetspider: "dotnetspider",
-        project-botsharp: "botsharp",
+        project-wtm: "wtm",
+        project-canal: "canal",
         project-asp-zkweb: "asp-zkweb",
         project-asp-natasha: "asp-natasha",
         project-npoi: "npoi",
