@@ -141,8 +141,23 @@
             <div class="project-meta">
                <span class="project-avator"></span>
                <p class="project-name">
-                  <a href="https://github.com/dotnetcore/EasyCaching"><strong>Easy Caching</strong></a>
+                  <a href="https://github.com/dotnetcore/EasyCaching"><strong>EasyCaching</strong></a>
                   <a href="https://github.com/catcherwong"><em>by Catcher Wong</em></a>
+               </p>
+            </div>
+         </div>
+      </li>
+       <li class="project-item project-flubucore">
+          <div class="inner">
+            <div class="project-summary">
+               <p class="summary-text">A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.</p>
+               <a href="https://github.com/dotnetcore/FlubuCore" class="skip"></a>
+            </div>
+            <div class="project-meta">
+               <span class="project-avator"></span>
+               <p class="project-name">
+                  <a href="https://github.com/dotnetcore/FlubuCore"><strong>FlubuCore</strong></a>
+                  <a href="https://github.com/catcherwong"><em>by Marko Zorec</em></a>
                </p>
             </div>
          </div>
@@ -165,13 +180,28 @@
       <li class="project-item project-smartcode">
          <div class="inner">
             <div class="project-summary">
-               <p class="summary-text">An excekkent open source code generator (of cause not only a generates code).</p>
+               <p class="summary-text">An excellent open source code generator (of cause not only a generates code).</p>
                <a href="https://github.com/dotnetcore/SmartCode" class="skip"></a>
             </div>
             <div class="project-meta">
                <span class="project-avator"></span>
                <p class="project-name">
                <a href="https://github.com/dotnetcore/SmartCode"><strong>SmartCode</strong></a>
+               <a href="https://github.com/Ahoo-Wang"><em>by Ahoo-Wang</em></a>
+            </p>
+         </div>
+      </div>
+   </li>
+      <li class="project-item project-smartsql">
+         <div class="inner">
+            <div class="project-summary">
+               <p class="summary-text">SmartSql = MyBatis + Cache(Memory | Redis) + R/W Splitting + Dynamic Repository + Diagnostics.</p>
+               <a href="https://github.com/dotnetcore/SmartSql" class="skip"></a>
+            </div>
+            <div class="project-meta">
+               <span class="project-avator"></span>
+               <p class="project-name">
+               <a href="https://github.com/dotnetcore/SmartSql"><strong>SmartSql</strong></a>
                <a href="https://github.com/Ahoo-Wang"><em>by Ahoo-Wang</em></a>
             </p>
          </div>

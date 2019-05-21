@@ -45,12 +45,14 @@
         project-wtm: "wtm",
         project-canal: "canal",
         project-smartcode: "smartcode",
+        project-smartsql: "smartsql",
         project-asp-zkweb: "asp-zkweb",
         project-asp-natasha: "asp-natasha",
         project-npoi: "npoi",
         project-alipay-sdk: "alipay-sdk",
         project-webapiclient: "webapiclient",
         project-easycaching: "easycaching",
+        project-flubucore: "flubucore",
         project-collecton: "collecton"
       );
       @each $key, $value in $project-background-list {
