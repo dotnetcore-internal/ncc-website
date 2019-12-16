@@ -34,7 +34,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/AspectCore-Framework"><strong>AspectCore</strong></a>
-                <a href="https://github.com/liuhaoyang"><em>by haoyang liu</em></a>
+                <a href="https://github.com/liuhaoyang"><em>Project leader: 刘浩杨</em></a>
               </p>
              </div>
           </div>
@@ -49,7 +49,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/CAP"><strong>CAP</strong></a>
-                <a href="http://savorboard.cnblogs.com/"><em>by Savorboard</em></a>
+                <a href="http://savorboard.cnblogs.com/"><em>Project leader: 杨晓东</em></a>
               </p>
              </div>
           </div>
@@ -64,7 +64,7 @@
                       <span class="project-avator"></span>
                       <p class="project-name">
                        <a href="https://github.com/dotnetcore/DotnetSpider"><strong>DotnetSpider</strong></a>
-                       <a href="https://github.com/zlzforever"><em>by Lewis Zou (邹嵩)</em></a>
+                       <a href="https://github.com/zlzforever"><em>Project leader: 邹嵩</em></a>
                      </p>
              </div>
           </div>
@@ -94,7 +94,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/surging"><strong>Surging</strong></a>
-                <a href="http://www.cnblogs.com/fanliang11/"><em>by Fanly</em></a>
+                <a href="http://www.cnblogs.com/fanliang11/"><em>Project leader: 范亮</em></a>
                </p>
              </div>
           </div>
@@ -112,7 +112,7 @@
                       <span class="project-avator"></span>
                       <p class="project-name">
                        <a href="https://github.com/dotnetcore/Alipay.AopSdk.Core"><strong>Alipay.AopSdk.Core</strong></a>
-                       <a href="https://github.com/stulzq"><em>by 晓晨</em></a>
+                       <a href="https://github.com/stulzq"><em>Project leader: 李志强</em></a>
                      </p>
                     </div>
                  </div>
@@ -127,7 +127,7 @@
                       <span class="project-avator"></span>
                       <p class="project-name">
                        <a href="https://github.com/dotnetcore/CanalSharp"><strong>CanalSharp</strong></a>
-                       <a href="https://github.com/withlin"><em>by WithLin</em></a>
+                       <a href="https://github.com/withlin"><em>Project leader: 付金林</em></a>
                      </p>
                     </div>
                  </div>
@@ -142,7 +142,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                   <a href="https://github.com/dotnetcore/EasyCaching"><strong>EasyCaching</strong></a>
-                  <a href="https://github.com/catcherwong"><em>by Catcher Wong</em></a>
+                  <a href="https://github.com/catcherwong"><em>Project leader: 汪文清</em></a>
                </p>
             </div>
          </div>
@@ -157,10 +157,25 @@
                <span class="project-avator"></span>
                <p class="project-name">
                   <a href="https://github.com/dotnetcore/FlubuCore"><strong>FlubuCore</strong></a>
-                  <a href="https://github.com/catcherwong"><em>by Marko Zorec</em></a>
+                  <a href="https://github.com/mzorec"><em>Project leader: Marko Zorec</em></a>
                </p>
             </div>
          </div>
+      </li>
+      <li class="project-item project-magicodes-ie">
+         <div class="inner">
+            <div class="project-summary">
+               <p class="summary-text">A common import and export library for Excel, Word, PDF and HTML.</p>
+               <a href="https://github.com/dotnetcore/Magicodes-IE" class="skip"></a>
+            </div>
+            <div class="project-meta">
+               <span class="project-avator"></span>
+               <p class="project-name">
+               <a href="https://github.com/dotnetcore/Magicodes-IE"><strong>Mgicodes IE</strong></a>
+               <a href="https://github.com/xin-lai"><em>Project leader: 李文强</em></a>
+            </p>
+         </div>
+      </div>
       </li>
       <li class="project-item project-asp-natasha">
          <div class="inner">
@@ -172,11 +187,11 @@
                <span class="project-avator"></span>
                <p class="project-name">
                <a href="https://github.com/dotnetcore/Natasha"><strong>Natasha</strong></a>
-               <a href="https://github.com/NMSAzulX"><em>by LanX</em></a>
+               <a href="https://github.com/NMSAzulX"><em>Project leader: LanX</em></a>
             </p>
          </div>
       </div>
-   </li>
+      </li>
       <li class="project-item project-smartcode">
          <div class="inner">
             <div class="project-summary">
@@ -187,7 +202,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                <a href="https://github.com/dotnetcore/SmartCode"><strong>SmartCode</strong></a>
-               <a href="https://github.com/Ahoo-Wang"><em>by Ahoo-Wang</em></a>
+               <a href="https://github.com/Ahoo-Wang"><em>Project leader: Ahoo-Wang</em></a>
             </p>
          </div>
       </div>
@@ -202,7 +217,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                <a href="https://github.com/dotnetcore/SmartSql"><strong>SmartSql</strong></a>
-               <a href="https://github.com/Ahoo-Wang"><em>by Ahoo-Wang</em></a>
+               <a href="https://github.com/Ahoo-Wang"><em>Project leader: Ahoo-Wang</em></a>
             </p>
          </div>
       </div>
@@ -217,7 +232,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/Util"><strong>Util</strong></a>
-                <a href="http://www.cnblogs.com/xiadao521/"><em>by 何镇汐</em></a>
+                <a href="http://www.cnblogs.com/xiadao521/"><em>Project leader: 何镇汐</em></a>
               </p>
              </div>
           </div>
@@ -232,7 +247,7 @@
                       <span class="project-avator"></span>
                       <p class="project-name">
                        <a href="https://github.com/dotnetcore/WebApiClient"><strong>WebApiClient</strong></a>
-                       <a href="https://github.com/xljiulang"><em>by 老九</em></a>
+                       <a href="https://github.com/xljiulang"><em>Project leader: 老九</em></a>
                      </p>
                     </div>
                  </div>
@@ -247,28 +262,47 @@
                       <span class="project-avator"></span>
                       <p class="project-name">
                        <a href="https://github.com/dotnetcore/WTM"><strong>WTM</strong></a>
-                       <a href="https://github.com/liuliang-wt"><em>by liuliang-wt</em></a>
+                       <a href="https://github.com/liuliang-wt"><em>Project leader: 刘亮</em></a>
                      </p>
                     </div>
                  </div>
               </li>
        
-       <li class="project-item project-asp-zkweb">
-          <div class="inner">
-             <div class="project-summary">
-              <p class="summary-text">ZKWeb is a flexible web framework support .Net Framework and .Net Core.</p>
-              <a href="https://github.com/zkweb-framework/zkweb" class="skip"></a>
-            </div>
-             <div class="project-meta">
-               <span class="project-avator"></span>
-               <p class="project-name">
-                <a href="https://github.com/zkweb-framework/zkweb"><strong>ZKWeb (ex)</strong></a>
-                <a href="https://www.cnblogs.com/zkweb"><em>by 老农 (303248153)</em></a>
-              </p>
-             </div>
-          </div>
-       </li>
+       
      </ul>
+     <div class="project-level"><h5>NCC External Sandbox Projects</h5></div>
+      <ul class="project-group"> 
+         <li class="project-item project-kooboojson">
+            <div class="inner">
+               <div class="project-summary">
+                  <p class="summary-text">Smaller and Faster C# JSON Serialization Tool (Construction Based on Expression Tree).</p>
+                  <a href="https://github.com/kooboo/Json" class="skip"></a>
+               </div>
+               <div class="project-meta">
+                  <span class="project-avator"></span>
+                  <p class="project-name">
+                     <a href="https://github.com/kooboo/Json"><strong>Kooboo Json (ex)</strong></a>
+                     <a href="https://github.com/Kooboo"><em>by Kooboo Team</em></a>
+                  </p>
+               </div>
+            </div>
+         </li>
+         <li class="project-item project-asp-zkweb">
+            <div class="inner">
+               <div class="project-summary">
+               <p class="summary-text">ZKWeb is a flexible web framework support .Net Framework and .Net Core.</p>
+               <a href="https://github.com/zkweb-framework/zkweb" class="skip"></a>
+               </div>
+               <div class="project-meta">
+                  <span class="project-avator"></span>
+                  <p class="project-name">
+                  <a href="https://github.com/zkweb-framework/zkweb"><strong>ZKWeb (ex)</strong></a>
+                  <a href="https://www.cnblogs.com/zkweb"><em>by ZKWeb Team</em></a>
+               </p>
+               </div>
+            </div>
+         </li>
+      </ul>
    <div class="project-level"><h5>NCC Other Projects</h5></div>
       <ul class="project-group"> 
       <li class="project-item project-asp-translate">
@@ -281,7 +315,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/aspnetcore-doc-cn"><strong>.NET Core 文档翻译</strong></a>
-                <a href="https://github.com/dotnetcore"><em>by Group of dotNET Translation </em></a>
+                <a href="https://github.com/dotnetcore"><em>by Group of .NET Translation </em></a>
               </p>
              </div>
           </div>
@@ -296,7 +330,7 @@
                <span class="project-avator"></span>
                <p class="project-name">
                 <a href="https://github.com/dotnetcore/Collections"><strong>NCC Collection</strong></a>
-                <a href="https://github.com/alexinea"><em>by AlexLEWIS</em></a>
+                <a href="https://github.com/alexinea"><em>by NCC Team</em></a>
               </p>
              </div>
           </div>

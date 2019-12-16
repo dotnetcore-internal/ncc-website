@@ -33,6 +33,7 @@
       font-weight: 600;
       text-align: center;
       margin: 0 0 15px 0;
+      padding: 20px;
     }
     .project-group {
       $project-background-list: (
@@ -47,12 +48,14 @@
         project-smartcode: "smartcode",
         project-smartsql: "smartsql",
         project-asp-zkweb: "asp-zkweb",
+        project-magicodes-ie: "magicodes-ie",
         project-asp-natasha: "asp-natasha",
         project-npoi: "npoi",
         project-alipay-sdk: "alipay-sdk",
         project-webapiclient: "webapiclient",
         project-easycaching: "easycaching",
         project-flubucore: "flubucore",
+        project-kooboojson: "kooboojson",
         project-collecton: "collecton"
       );
       @each $key, $value in $project-background-list {
