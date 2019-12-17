@@ -166,12 +166,12 @@
          <div class="inner">
             <div class="project-summary">
                <p class="summary-text">A common import and export library for Excel, Word, PDF and HTML.</p>
-               <a href="https://github.com/dotnetcore/Magicodes-IE" class="skip"></a>
+               <a href="https://github.com/dotnetcore/Magicodes.IE" class="skip"></a>
             </div>
             <div class="project-meta">
                <span class="project-avator"></span>
                <p class="project-name">
-               <a href="https://github.com/dotnetcore/Magicodes-IE"><strong>Mgicodes IE</strong></a>
+               <a href="https://github.com/dotnetcore/Magicodes.IE"><strong>Mgicodes IE</strong></a>
                <a href="https://github.com/xin-lai"><em>Project leader: 李文强</em></a>
             </p>
          </div>
