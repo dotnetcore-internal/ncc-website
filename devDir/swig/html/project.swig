@@ -69,6 +69,21 @@
              </div>
           </div>
        </li>
+       <li class="project-item project-flubucore">
+          <div class="inner">
+            <div class="project-summary">
+               <p class="summary-text">A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.</p>
+               <a href="https://github.com/dotnetcore/FlubuCore" class="skip"></a>
+            </div>
+            <div class="project-meta">
+               <span class="project-avator"></span>
+               <p class="project-name">
+                  <a href="https://github.com/dotnetcore/FlubuCore"><strong>FlubuCore</strong></a>
+                  <a href="https://github.com/mzorec"><em>Project leader: Marko Zorec</em></a>
+               </p>
+            </div>
+         </div>
+      </li>
        <li class="project-item project-npoi">
           <div class="inner">
              <div class="project-summary">
@@ -81,21 +96,6 @@
                 <a href="https://github.com/dotnetcore/NPOI"><strong>NPOI</strong></a>
                 <a href="https://github.com/dotnetcore/NPOI"><em>migrated by dotnetcore team</em></a>
               </p>
-             </div>
-          </div>
-       </li>
-       <li class="project-item project-asp-surging">
-          <div class="inner">
-             <div class="project-summary">
-              <p class="summary-text">A distributed micro-service engine that provides high-performance RPC remote service calls.</p>
-              <a href="https://github.com/dotnetcore/surging" class="skip"></a>
-            </div>
-             <div class="project-meta">
-               <span class="project-avator"></span>
-               <p class="project-name">
-                <a href="https://github.com/dotnetcore/surging"><strong>Surging</strong></a>
-                <a href="http://www.cnblogs.com/fanliang11/"><em>Project leader: 范亮</em></a>
-               </p>
              </div>
           </div>
        </li>
@@ -147,21 +147,36 @@
             </div>
          </div>
       </li>
-       <li class="project-item project-flubucore">
-          <div class="inner">
-            <div class="project-summary">
-               <p class="summary-text">A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.</p>
-               <a href="https://github.com/dotnetcore/FlubuCore" class="skip"></a>
-            </div>
-            <div class="project-meta">
-               <span class="project-avator"></span>
-               <p class="project-name">
-                  <a href="https://github.com/dotnetcore/FlubuCore"><strong>FlubuCore</strong></a>
-                  <a href="https://github.com/mzorec"><em>Project leader: Marko Zorec</em></a>
-               </p>
-            </div>
-         </div>
-      </li>
+      <li class="project-item project-freesql">
+         <div class="inner">
+           <div class="project-summary">
+              <p class="summary-text">FreeSql is the ORM in .NET Core, .NET Framework and Xamarin. It supports MySQL, PostgreSQL, SqlServer, Oracle, Sqlite, Odbc, 达梦, And MsAccess.</p>
+              <a href="https://github.com/dotnetcore/FreeSql" class="skip"></a>
+           </div>
+           <div class="project-meta">
+              <span class="project-avator"></span>
+              <p class="project-name">
+                 <a href="https://github.com/dotnetcore/FreeSql"><strong>FreeSql</strong></a>
+                 <a href="https://github.com/2881099"><em>Project leader: 叶先生</em></a>
+              </p>
+           </div>
+        </div>
+     </li>
+     <li class="project-item project-httpreports">
+        <div class="inner">
+          <div class="project-summary">
+             <p class="summary-text">HttpReports a lightweight APM system based on .NET Core, can be used to quickly build an integrated site of statistics, analysis, charts, monitoring, and distributed tracking in the .NET Core environment.</p>
+             <a href="https://github.com/dotnetcore/HttpReports" class="skip"></a>
+          </div>
+          <div class="project-meta">
+             <span class="project-avator"></span>
+             <p class="project-name">
+                <a href="https://github.com/dotnetcore/HttpReports"><strong>HttpReports</strong></a>
+                <a href="https://github.com/SpringLeee"><em>Project leader: SpringLeee</em></a>
+             </p>
+          </div>
+       </div>
+    </li>
       <li class="project-item project-magicodes-ie">
          <div class="inner">
             <div class="project-summary">
@@ -188,6 +203,21 @@
                <p class="project-name">
                <a href="https://github.com/dotnetcore/Natasha"><strong>Natasha</strong></a>
                <a href="https://github.com/NMSAzulX"><em>Project leader: LanX</em></a>
+            </p>
+         </div>
+      </div>
+      </li>
+      <li class="project-item project-osharp">
+         <div class="inner">
+            <div class="project-summary">
+               <p class="summary-text">OSharp is a rapid development framework based on .NET Core and to standardizes a set of business implementation code and operation processes, making the .NET Core framework easier to apply to the development of actual projects.</p>
+               <a href="https://github.com/dotnetcore/OSharp" class="skip"></a>
+            </div>
+            <div class="project-meta">
+               <span class="project-avator"></span>
+               <p class="project-name">
+               <a href="https://github.com/dotnetcore/OSharp"><strong>OSharp</strong></a>
+               <a href="https://github.com/gmf520"><em>Project leader: 郭明锋</em></a>
             </p>
          </div>
       </div>
@@ -284,21 +314,6 @@
                      <a href="https://github.com/kooboo/Json"><strong>Kooboo Json (ex)</strong></a>
                      <a href="https://github.com/Kooboo"><em>by Kooboo Team</em></a>
                   </p>
-               </div>
-            </div>
-         </li>
-         <li class="project-item project-asp-zkweb">
-            <div class="inner">
-               <div class="project-summary">
-               <p class="summary-text">ZKWeb is a flexible web framework support .Net Framework and .Net Core.</p>
-               <a href="https://github.com/zkweb-framework/zkweb" class="skip"></a>
-               </div>
-               <div class="project-meta">
-                  <span class="project-avator"></span>
-                  <p class="project-name">
-                  <a href="https://github.com/zkweb-framework/zkweb"><strong>ZKWeb (ex)</strong></a>
-                  <a href="https://www.cnblogs.com/zkweb"><em>by ZKWeb Team</em></a>
-               </p>
                </div>
             </div>
          </li>
