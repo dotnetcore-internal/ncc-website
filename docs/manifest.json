@@ -1,0 +1,31 @@
+{
+  "_vendor.js": {
+    "file": "assets/vendor.js"
+  },
+  "index.css": {
+    "file": "assets/index.css",
+    "src": "index.css"
+  },
+  "index.html": {
+    "css": [
+      "assets/index.css"
+    ],
+    "dynamicImports": [
+      "src/views/Home.vue"
+    ],
+    "file": "assets/index.js",
+    "imports": [
+      "_vendor.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "src/views/Home.vue": {
+    "file": "assets/Home.js",
+    "imports": [
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/Home.vue"
+  }
+}

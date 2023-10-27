@@ -1,0 +1,64 @@
+:root {
+    color-scheme: light dark;
+    --main-bg-color-from: #FAFCFF;
+    --main-bg-color-to: #EFF1F8;
+    --sub-bg-color: #FFFFFF;
+    --color: #524a58;
+    --sub-color: #000000;
+    --svg-pure-color: #524a58;
+    --delivery-line-color: #f4f4f4;
+    --logo-color: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --main-bg-color-from: #1F1E28;
+        --main-bg-color-to: #131428;
+        --sub-bg-color: #000000;
+        --color: #ffffff;
+        --sub-color: #ffffff;
+        --svg-pure-color: #ffffff;
+        --delivery-line-color: #2f2f2f;
+        --logo-color: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
+    }
+}
+
+body {
+    -webkit-text-size-adjust: none;
+    font: 1em/1.5 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+    background: linear-gradient(var(--main-bg-color-from), var(--main-bg-color-to));
+    min-width: 320px;
+    min-height: 100vh;
+}
+
+.max-h-50vh {
+    max-height: 50vh;
+}
+
+.max-w-90vw {
+    max-width: 90vw;
+}
+
+.h-50vh {
+    height: 50vh;
+}
+
+.top-25vh {
+    top: 25vh;
+}
+
+.mt-5px-negative{
+    margin-top: -5px;
+}
+
+.button {
+    @apply text-sm text-center w-1/2 mx-auto my-4 p-3 overflow-hidden;
+    @apply rounded-full border border-black border-solid;
+}
+
+@media (prefers-color-scheme: dark) {
+    .button {
+        @apply border-white/50;
+        @apply bg-gray-300/20;
+    }
+}
