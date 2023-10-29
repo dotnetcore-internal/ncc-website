@@ -26,9 +26,13 @@
 body {
     -webkit-text-size-adjust: none;
     font: 1em/1.5 'Microsoft YaHei', Helvetica, Arial, sans-serif;
-    background: linear-gradient(var(--main-bg-color-from), var(--main-bg-color-to));
-    min-width: 320px;
-    min-height: 100vh;
+    /*background: linear-gradient(var(--main-bg-color-from), var(--main-bg-color-to));*/
+    /*min-width: 320px;*/
+    /*min-height: 100vh;*/
+}
+
+.min-h-75vh {
+    min-height: 75vh;
 }
 
 .max-h-50vh {
@@ -51,14 +55,11 @@ body {
     margin-top: -5px;
 }
 
-.button {
-    @apply text-sm text-center w-1/2 mx-auto my-4 p-3 overflow-hidden;
-    @apply rounded-full border border-black border-solid;
+@media (prefers-color-scheme: dark) {
+
 }
 
-@media (prefers-color-scheme: dark) {
-    .button {
-        @apply border-white/50;
-        @apply bg-gray-300/20;
-    }
+.responsive-width{
+    @apply sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl max-w-lg;
+    @apply mx-auto;
 }
