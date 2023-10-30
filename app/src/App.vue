@@ -8,10 +8,8 @@ let footerIconWidth = ref(26);
 </script>
 
 <template>
-  <div
-      class="responsive-width bg-amber-200/40"
-      @contextmenu.prevent>
-    <RouterView class="min-h-75vh" />
+  <div @contextmenu.prevent>
+    <RouterView class="min-h-75vh"/>
   </div>
   <footer class="bg-black text-white">
     <div class="responsive-width">
@@ -26,8 +24,8 @@ let footerIconWidth = ref(26);
 
       <div class="clear-both"></div>
 
-      <div class="pb-2.5 px-5">
-        We <span class="text-xl font-bold">NCC</span>, an unofficial, non-profit open source community based on the .NET technology stack. <br />
+      <div class="pb-2.5 px-5 invisible h-0 lg:visible lg:h-auto">
+        We <span class="text-xl font-bold">NCC</span>, an unofficial, non-profit open source community based on the .NET technology stack. <br/>
         We hope that through our efforts, we can make the .NET ecosystem more exciting.
       </div>
 
@@ -48,7 +46,8 @@ let footerIconWidth = ref(26);
             <path d="M625.727964 666.847792q9.151997 9.151997 0 17.727994-35.423989 35.423989-113.727964 35.423989t-113.727964-35.423989q-9.151997-8.575997 0-17.727994 3.423999-3.423999 8.575997-3.423999t8.575997 3.423999q27.423991 27.999991 96.57597 27.999991 68.575979 0 96.57597-27.999991 3.423999-3.423999 8.575997-3.423999t8.575997 3.423999zM450.272019 563.423824q0 21.151993-14.847995 35.999989t-35.999989 14.847995-36.287989-14.847995-15.135995-35.999989q0-21.727993 15.135995-36.575989t36.287989-14.847995 35.999989 15.135995 14.847995 36.287989zM675.999949 563.423824q0 21.151993-15.135995 35.999989t-36.287989 14.847995-35.999989-14.847995-14.847995-35.999989 14.847995-36.287989 35.999989-15.135995 36.287989 14.847995 15.135995 36.575989zM819.423904 494.847845q0-27.999991-19.999994-47.999985t-48.575985-19.999994-49.151985 20.575994q-74.271977-51.423984-177.727944-54.847983l35.999989-161.727949 114.271964 25.727992q0 21.151993 14.847995 35.999989t35.999989 14.847995 36.287989-15.135995 15.135995-36.287989-15.135995-36.287989-36.287989-15.135995q-30.84799 0-45.727986 28.575991l-126.271961-27.999991q-10.847997-2.847999-14.271996 9.151997l-39.423988 178.271944q-102.847968 3.999999-176.575945 55.423983-19.999994-21.151993-49.727984-21.151993-28.575991 0-48.575985 19.999994t-19.999994 47.999985q0 19.999994 10.559997 36.575989t28.287991 25.151992q-3.423999 15.423995-3.423999 31.99999 0 81.151975 79.999975 138.847957t192.57594 57.727982q113.151965 0 193.15194-57.727982t79.999975-138.847957q0-18.271994-3.999999-32.57599 17.151995-8.575997 27.423991-24.863992t10.271997-36.287989zM1023.99984 511.99984q0 103.999968-40.575987 198.847938t-109.151966 163.423949-163.423949 109.151966-198.847938 40.575987-198.847938-40.575987-163.423949-109.151966-109.151966-163.423949-40.575987-198.847938 40.575987-198.847938 109.151966-163.423949 163.423949-109.151966 198.847938-40.575987 198.847938 40.575987 163.423949 109.151966 109.151966 163.423949 40.575987 198.847938z" p-id="4567" data-spm-anchor-id="a313x.search_index.0.i4.73f13a81QDVP27" class="selected" fill="#ffffff"></path>
           </svg>
         </a>
-        <a href="https://github.com/dotnetcore" title=".NET Core Community on GitHub" target="_blank" class="align-middle inline-block mx-2">
+        <a href="https://github.com/dotnetcore" title=".NET Core Community on GitHub" target="_blank"
+           class="align-middle inline-block mx-2">
           <Github theme="filled" :size="footerIconWidth" fill="#ffffff"/>
         </a>
         <a href="https://gitee.com/dotnetcore" title=".NET Core Community on Gitee" target="_blank" class="align-middle inline-block mx-2">
@@ -66,9 +65,9 @@ let footerIconWidth = ref(26);
 
       <div class="clear-both"></div>
 
-      <hr class="mx-5" />
+      <hr class="mx-5"/>
 
-      <div class="px-5 text-xs my-3.5" >
+      <div class="px-5 text-xs my-3.5">
         Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved.
       </div>
 
