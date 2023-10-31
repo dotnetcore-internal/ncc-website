@@ -1,0 +1,11 @@
+<script setup lang="ts">
+
+</script>
+
+<template>
+Community Rules
+</template>
+
+<style scoped lang="css">
+
+</style>

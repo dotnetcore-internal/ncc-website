@@ -89,7 +89,7 @@ import {go} from "@/hooks/usePageJump";
         <a href="/announcements" @click.prevent="go('announcements')" title="Announcements">Announcements</a>
       </span>
       <span class="nav-item">
-        <a href="/brand-guidelines" title="Brand Guidelines">Brand Guidelines</a>
+        <a href="/brand-guidelines" @click.prevent="go('brand-guidelines')" title="Brand Guidelines">Brand Guidelines</a>
       </span>
       <span class="nav-item">
         <a href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos">Project Logos</a>
