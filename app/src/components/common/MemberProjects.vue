@@ -45,12 +45,6 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
         <div class="project-name">
           <a href="/projects/easycaching" title="EasyCaching">EasyCaching</a>
         </div>
-        <div class="project-name">
-          <a href="/projects/efcore-gaussdb" title="EfCore GaussDB">EfCore GaussDB</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/efcore-kingbasees" title="EfCore KingbaseES">EfCore KingbaseES</a>
-        </div>
         <div class="project-letter">F</div>
         <div class="project-name">
           <a href="/projects/fastgithub" title="FastGithub">FastGithub</a>
@@ -61,13 +55,20 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
         <div class="project-name">
           <a href="/projects/freesql" title="FreeSql">FreeSql</a>
         </div>
+        <div class="project-letter">G</div>
+        <div class="project-name">
+          <a href="/projects/efcore-gaussdb" title="GaussDB for EntityFramework Core">GaussDB for EfCore</a>
+        </div>
         <div class="project-letter">H</div>
         <div class="project-name">
           <a href="/projects/httpreports" title="HttpReports">HttpReports</a>
         </div>
         <div class="project-letter">K</div>
         <div class="project-name">
-          <a href="/projects/kooboo-json" title="KoobooJson">KoobooJson</a>
+          <a href="/projects/efcore-kingbasees" title="KingbaseES for EntityFramework Core">KingbaseES for EfCore</a>
+        </div>
+        <div class="project-name">
+          <a href="/projects/kooboo-json" title="Kooboo Json">Kooboo Json</a>
         </div>
         <div class="project-letter">M</div>
         <div class="project-name">
@@ -89,10 +90,16 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
         </div>
         <div class="project-letter">S</div>
         <div class="project-name">
+          <a href="/projects/sharding-core" title="ShardingCore">ShardingCore</a>
+        </div>
+        <div class="project-name">
           <a href="/projects/smartsql" title="SmartSql">SmartSql</a>
         </div>
         <div class="project-name">
           <a href="/projects/smartcode" title="SmartCode">SmartCode</a>
+        </div>
+        <div class="project-name">
+          <a href="/projects/sourcelink-environment" title="SourceLink Environment">SourceLink Environment</a>
         </div>
         <div class="project-letter">U</div>
         <div class="project-name">

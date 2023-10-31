@@ -103,7 +103,8 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
       <HorizontalRuleElement colorMode="dark"/>
 
       <div class="px-5 text-xs my-3.5">
-        Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved.
+        Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved. <br />
+        <span class="leading-7">We ❤️ Open Source.</span>
       </div>
 
       <div class="clear-both"></div>
