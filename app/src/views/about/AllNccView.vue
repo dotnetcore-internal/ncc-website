@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import {useTitle} from "@vueuse/core";
 
+const title = useTitle();
+title.value = 'All NCC Sites | .NET Core Community';
 </script>
 
 <template>

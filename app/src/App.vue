@@ -2,7 +2,13 @@
 import {ref} from "vue";
 import {RouterView} from "vue-router";
 import {useMouseInElement} from '@vueuse/core'
-import {Twitter, Github, Telegram, Wechat} from '@icon-park/vue-next';
+import {Github, Telegram, Twitter, Wechat} from '@icon-park/vue-next';
+
+import {go} from "@/hooks/usePageJump";
+
+import NavigationResources from '@/components/common/NavigationResources.vue';
+import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 let footerIconWidth = ref(26);
 
@@ -20,110 +26,15 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
   <footer class="bg-black text-white">
     <div class="responsive-width">
 
-      <div class="h-5"></div>
+      <PlaceholderBlock height="1.25rem"/>
 
-      <div class="p-5 grid grid-cols-6 gap-4">
-        <div class="nav-about-us">
-          <span class="nav-title text-xs font-black pb-6 block">About Us</span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/about/who-we-are" title="Who We Are">Who We Are</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/people/project-management-committee" title="Project Management Committee">Project Management Committee</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/conduct" title="Code of Conduct">Code of Conduct</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/about/story" title="Story">Story</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/about/faq" title="FAQ">FAQ</a>
-          </span>
-          <hr class="my-5 w-5 border-white/50" />
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/about/contact" title="Contact Us">Contact Us</a>
-          </span>
-        </div>
-        <div class="nav-projects">
-          <span class="nav-title text-xs font-black pb-6 block">Projects</span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://contribute.ncc.work" title="Contribute">Contribute</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://landscape.ncc.work" title="Landscape">Landscape</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://tools.ncc.work" title="Project Tools">Project Tools</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/projects" title="Projects">Projects</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/archived-projects" title="Archived Projects">Archived Projects</a>
-          </span>
-          <hr class="my-5 w-5 border-white/50" />
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://contribute.ncc.work/project-join-ncc" title="How to Join Us">How to Join Us</a>
-          </span>
-        </div>
-        <div class="nav-Learning">
-          <span class="nav-title text-xs font-black pb-6 block">Learning</span>
-        </div>
-        <div class="nav-community">
-          <span class="nav-title text-xs font-black pb-6 block">Community</span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://events.ncc.work" title="Events">Events</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/meetup" title="Meetup">Meetup</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://2f.ncc.work" title="NCC 2F">NCC 2F</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/community-online" title="Community Online">Community Online</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://glossary.ncc.work" title="Glossary">Glossary</a>
-          </span>
-          <hr class="my-5 w-5 border-white/50" />
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/participation-guidelines" title="Participation Guidelines">Participation Guidelines</a>
-          </span>
-        </div>
-        <div class="nav-resource">
-          <span class="nav-title text-xs font-black pb-6 block">Resource & Media</span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/news" title="News">News</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/announcements" title="Announcements">Announcements</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="/brand-guidelines" title="Brand Guidelines">Brand Guidelines</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos">Project Logos</a>
-          </span>
-          <hr class="my-5 w-5 border-white/50" />
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://github.com/dotnetcore" title="NCC@GitHub">NCC@GitHub</a>
-          </span>
-          <span class="nav-item text-xs leading-7 block">
-            <a href="https://gitee.com/dotnetcore" title="NCC@Gitee">NCC@Gitee</a>
-          </span>
-        </div>
-        <div class="nav-resource">
-          Join Us
-        </div>
-      </div>
+      <NavigationResources/>
 
-      <div class="h-5"></div>
+      <PlaceholderBlock height="1.25rem"/>
 
       <div class="p-5">
         <div class="inline-block align-middle">
-          <a href="/" title=".NET Core Community">
+          <a href="/" @click.prevent="go('home')" title=".NET Core Community">
             <img src="/images/logo.black.png" width="220" alt="NCC"/>
           </a>
         </div>
@@ -140,7 +51,11 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
 
       <div class="p-5 align-middle relative float-left">
         <div class="inline-block align-middle">
-          <a href="/all-ncc" class="text-white font-bold border p-2 px-5">All NCC Sites</a>
+          <a href="/all-ncc"
+             @click.prevent="go('all-ncc')"
+             class="text-white font-bold border p-2 px-5">
+            All NCC Sites
+          </a>
         </div>
       </div>
 
@@ -170,7 +85,12 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
             <img src="/images/official-wechat-account-qrcode.jpg" alt="NCC WeChat QR Code"/>
           </div>
         </transition>
-        <a ref="qrCodeBoxRef" href="/wechat-open-ncc" title=".NET Core Community on WeChat" target="_blank" class="align-middle inline-block mx-2">
+        <a ref="qrCodeBoxRef"
+           href="/wechat-open-ncc"
+           @click.prevent="go('wechat-open-ncc')"
+           title=".NET Core Community on WeChat"
+           target="_blank"
+           class="align-middle inline-block mx-2">
           <Wechat theme="filled" :size="footerIconWidth" fill="#ffffff"/>
         </a>
         <a href="https://t.me/ncc_radio" title="The .NET Core Community Radio on Telegram" target="_blank" class="align-middle inline-block mx-2">
@@ -180,7 +100,7 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
 
       <div class="clear-both"></div>
 
-      <hr class="mx-5"/>
+      <HorizontalRuleElement colorMode="dark"/>
 
       <div class="px-5 text-xs my-3.5">
         Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved.
@@ -188,7 +108,7 @@ const {isOutside} = useMouseInElement(qrCodeBoxRef)
 
       <div class="clear-both"></div>
 
-      <div class="bg-black" style="height: 90px"></div>
+      <PlaceholderBlock height="90px" bg-color="bg-black"/>
 
     </div>
   </footer>
