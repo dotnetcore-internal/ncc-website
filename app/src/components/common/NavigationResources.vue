@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 
 import {go} from "@/hooks/usePageToolkits";
+import JoinUsButton from "@/components/common/JoinUsButton.vue";
 </script>
 
 <template>
 
-  <div class="p-5 grid grid-cols-6 gap-4">
+  <div class="p-5 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4">
     <div class="nav-about-us">
       <span class="nav-title">About Us</span>
       <span class="nav-item">
@@ -103,7 +104,7 @@ import {go} from "@/hooks/usePageToolkits";
       </span>
     </div>
     <div class="nav-resource">
-      Join Us
+      <join-us-button>JOIN NOW</join-us-button>
     </div>
   </div>
 </template>
@@ -115,10 +116,8 @@ import {go} from "@/hooks/usePageToolkits";
 
 .nav-item {
   @apply text-xs leading-7 block;
+  @apply no-underline;
+  @apply hover:underline underline-offset-4 hover:text-purple-100;
 }
 
-.nav-item a:hover {
-  @apply underline underline-offset-4;
-  @apply text-purple-100;
-}
 </style>
