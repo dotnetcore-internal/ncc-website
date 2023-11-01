@@ -4,13 +4,13 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('Project Detail');
+setTitle('Rules');
 </script>
 
 <template>
   <body-block>
 
-    <title-block>Project Detail</title-block>
+    <title-block>Rules</title-block>
 
   </body-block>
 </template>

@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/rules',
         name: 'rules',
-        component: () => import("../views/rules/index.vue"),
+        component: () => import("../views/rules/RulesIndexView.vue"),
     }
 ];
 

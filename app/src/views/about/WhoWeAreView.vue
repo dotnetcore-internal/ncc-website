@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import {setTitle} from "@/hooks/usePageToolkits";
+
+import BodyBlock from "@/components/blocks/BodyBlock.vue";
+import TitleBlock from "@/components/blocks/TitleBlock.vue";
+
 setTitle('Who We Are');
 </script>
 
 <template>
-Who We Are
+  <body-block>
+
+    <title-block>Who We Are</title-block>
+
+  </body-block>
 </template>
 
 <style scoped lang="css">

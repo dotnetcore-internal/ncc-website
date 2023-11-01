@@ -13,11 +13,11 @@ setTitle('Home');
 
   <div class="responsive-width text-2xl text-black dark:text-white min-h-75vh">Home</div>
 
-  <MemberProjects />
+  <member-projects />
 
-  <PartnersAndSponsors />
+  <partners-and-sponsors />
 
-  <Slogan />
+  <slogan />
 
 </template>
 

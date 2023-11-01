@@ -7,7 +7,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
   <div class="bg-gray-900 text-white">
     <div class="responsive-width">
 
-      <TitleBlock color-mode="dark">Our Slogan</TitleBlock>
+      <title-block h1-mode="false" color-mode="dark" :with-horizontal-rule="true" :is-font-black="false">Our Slogan</title-block>
 
       <div class="lg:text-3xl md:text-2xl sm:text-lg font-light italic px-5 pb-10">
         Gather the might of our age, merge the triumphs of the multitude, <br/>

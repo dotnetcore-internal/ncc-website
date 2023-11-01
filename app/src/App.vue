@@ -7,7 +7,7 @@ import NavigationResources from '@/components/common/NavigationResources.vue';
 import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import FooterPendant from "@/components/common/FooterPendant.vue";
-
+import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 </script>
 
 <template>
@@ -29,11 +29,11 @@ import FooterPendant from "@/components/common/FooterPendant.vue";
   <footer class="bg-black text-white">
     <div class="responsive-width">
 
-      <PlaceholderBlock height="1.25rem"/>
+      <placeholder-block height="1.25rem"/>
 
-      <NavigationResources/>
+      <navigation-resources/>
 
-      <PlaceholderBlock height="1.25rem"/>
+      <placeholder-block height="1.25rem"/>
 
       <div class="p-5">
         <div class="inline-block align-middle">
@@ -52,34 +52,36 @@ import FooterPendant from "@/components/common/FooterPendant.vue";
 
       <div class="clear-both"></div>
 
-      <div class="p-5 align-middle relative float-left">
-        <div class="inline-block align-middle">
-          <a href="/all-ncc"
-             @click.prevent="go('all-ncc')"
-             class="text-white font-bold border p-2 px-5">
-            All NCC Sites
-          </a>
-        </div>
-      </div>
+      <left-right-layout class="p-5">
 
-      <div class="p-5 relative float-right">
+        <template #left>
+          <div class="p-5 inline-block align-middle">
+            <a href="/all-ncc"
+               @click.prevent="go('all-ncc')"
+               class="text-white font-bold border p-2 px-5">
+              All NCC Sites
+            </a>
+          </div>
+        </template>
 
-        <FooterPendant />
+        <template #right>
+          <div class="p-5">
+            <footer-pendant/>
+          </div>
+        </template>
 
-      </div>
+      </left-right-layout>
 
-      <div class="clear-both"></div>
-
-      <HorizontalRuleElement colorMode="dark"/>
+      <horizontal-rule-element colorMode="dark"/>
 
       <div class="px-5 text-xs my-3.5">
-        Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved. <br />
+        Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved. <br/>
         <span class="leading-7">We ❤️ Open Source.</span>
       </div>
 
       <div class="clear-both"></div>
 
-      <PlaceholderBlock height="90px" bg-color="bg-black"/>
+      <placeholder-block height="90px" bg-color="bg-black"/>
 
     </div>
   </footer>

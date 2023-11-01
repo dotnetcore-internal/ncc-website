@@ -1,10 +1,18 @@
 <script setup lang="ts">
 import {setTitle} from "@/hooks/usePageToolkits";
+
+import BodyBlock from "@/components/blocks/BodyBlock.vue";
+import TitleBlock from "@/components/blocks/TitleBlock.vue";
+
 setTitle('Code of Conduct');
 </script>
 
 <template>
-  Code of Conduct
+  <body-block>
+
+    <title-block>Code of Conduct</title-block>
+
+  </body-block>
 </template>
 
 <style scoped lang="css">

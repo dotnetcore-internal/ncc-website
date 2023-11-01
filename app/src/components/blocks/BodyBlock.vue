@@ -1,10 +1,13 @@
 <script setup lang="ts">
-import {setTitle} from "@/hooks/usePageToolkits";
-setTitle('Community Rules');
+
 </script>
 
 <template>
-Community Rules
+  <div class="responsive-width text-black dark:text-white">
+
+    <slot></slot>
+
+  </div>
 </template>
 
 <style scoped lang="css">

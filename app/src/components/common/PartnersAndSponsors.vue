@@ -8,11 +8,11 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
   <div class="bg-gray-100 dark:bg-gray-900/50 dark:text-white">
     <div class="responsive-width">
 
-      <TitleBlock color-mode="auto">Our Partners & Sponsors</TitleBlock>
+      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">Our Partners & Sponsors</title-block>
 
       <div class="p-5"> Content</div>
 
-      <PlaceholderBlock height="1.25rem"/>
+      <placeholder-block height="1.25rem"/>
     </div>
 
   </div>

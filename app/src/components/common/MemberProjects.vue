@@ -7,7 +7,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
   <div class="">
     <div class="responsive-width">
 
-      <TitleBlock color-mode="auto">Our Projects</TitleBlock>
+      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">Our Projects</title-block>
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">
         <div class="project-letter">A</div>

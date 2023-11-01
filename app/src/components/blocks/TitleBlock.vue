@@ -1,11 +1,20 @@
 <script setup lang="ts">
-import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import {computed} from "vue";
+import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 const props = withDefaults(defineProps<{
+  h1Mode?: 'true' | 'false';
   colorMode?: 'auto' | 'dark' | 'light' | 'always-dark' | 'always-light';
+  withHorizontalRule?: boolean;
+  withPlaceholder?: boolean;
+  isFontBlack?: boolean;
 }>(), {
+  h1Mode: 'true',
   colorMode: 'auto',
+  withHorizontalRule: false,
+  withPlaceholder: undefined,
+  isFontBlack: true
 });
 
 const titleColor = computed(() => {
@@ -22,13 +31,35 @@ const titleColor = computed(() => {
   }
 });
 
+const titleFontBlack = computed(() => {
+  return props.isFontBlack ? 'font-black' : '';
+});
+
+const titleClass = computed(() => {
+  return `${titleColor.value} ${titleFontBlack.value}`;
+});
+
+const displayPlaceholder = computed(() => {
+  return props.withHorizontalRule
+      ? false
+      : props.withPlaceholder ?? true;
+});
+
 </script>
 
 <template>
-  <div class="text-3xl tracking-tight p-5 pb-0" :class="titleColor">
+
+  <h1 v-if="h1Mode" class="text-4xl tracking-tight p-5 pb-0" :class="titleClass">
+    <slot></slot>
+  </h1>
+  <div v-else class="text-3xl tracking-tight p-5 pb-0" :class="titleClass">
     <slot></slot>
   </div>
-  <HorizontalRuleElement :colorMode="colorMode"/>
+
+  <HorizontalRuleElement v-if="withHorizontalRule" :colorMode="colorMode"/>
+
+  <PlaceholderBlock v-else-if="displayPlaceholder" height="1.25rem"/>
+
 </template>
 
 <style scoped lang="css">
