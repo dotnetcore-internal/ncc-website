@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 
-import {go} from "@/hooks/usePageJump";
+import {go} from "@/hooks/usePageToolkits";
 </script>
 
 <template>

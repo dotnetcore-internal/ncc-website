@@ -1,12 +1,11 @@
 <script setup lang="ts">
-import { useTitle } from '@vueuse/core'
+import {setTitle} from "@/hooks/usePageToolkits";
 
 import MemberProjects from "@/components/common/MemberProjects.vue";
 import PartnersAndSponsors from "@/components/common/PartnersAndSponsors.vue";
 import Slogan from "@/components/common/Slogan.vue";
 
-const title = useTitle();
-title.value = 'Home | .NET Core Community';
+setTitle('Home');
 
 </script>
 

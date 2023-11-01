@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import {useTitle} from "@vueuse/core";
+import {setTitle} from "@/hooks/usePageToolkits";
 
-const title = useTitle();
-title.value = 'All NCC Sites | .NET Core Community';
+setTitle('All Our Sites');
 </script>
 
 <template>

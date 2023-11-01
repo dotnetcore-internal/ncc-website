@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import {setTitle} from "@/hooks/usePageToolkits";
-setTitle('Contact');
+setTitle('Participation Guidelines');
 </script>
 
 <template>
-Contact
+Participation Guidelines
 </template>
 
 <style scoped lang="css">

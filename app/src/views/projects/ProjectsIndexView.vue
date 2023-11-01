@@ -1,9 +1,10 @@
 <script setup lang="ts">
-
+import {setTitle} from "@/hooks/usePageToolkits";
+setTitle('All Member Projects');
 </script>
 
 <template>
-Brand Guidelines
+Projects
 </template>
 
 <style scoped lang="css">

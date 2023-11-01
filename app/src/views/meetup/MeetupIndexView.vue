@@ -1,9 +1,10 @@
 <script setup lang="ts">
-
+import {setTitle} from "@/hooks/usePageToolkits";
+setTitle('Meetup');
 </script>
 
 <template>
-Projects
+Meetup
 </template>
 
 <style scoped lang="css">

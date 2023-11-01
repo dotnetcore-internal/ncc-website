@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import {useTitle} from "@vueuse/core";
-
-const title = useTitle();
-title.value = 'NCC WeChat | .NET Core Community';
+import {setTitle} from "@/hooks/usePageToolkits";
+setTitle('Our WeChat');
 </script>
 
 <template>

@@ -1,5 +1,6 @@
 <script setup lang="ts">
-
+import {setTitle} from "@/hooks/usePageToolkits";
+setTitle('Community Online');
 </script>
 
 <template>

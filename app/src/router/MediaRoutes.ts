@@ -4,12 +4,12 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/news',
         name: 'news',
-        component: () => import("../views/news/index.vue"),
+        component: () => import("../views/news/NewsIndexView.vue"),
     },
     {
         path: '/announcements',
         name: 'announcements',
-        component: () => import("../views/announcements/index.vue"),
+        component: () => import("../views/announcements/AnnouncementsIndexView.vue"),
     }
 ];
 

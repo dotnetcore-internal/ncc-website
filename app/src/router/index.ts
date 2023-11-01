@@ -10,7 +10,7 @@ const baseRoutes: RouteRecordRaw[] = [
     {
         path: "/",
         name: "home",
-        component: () => import("../views/Home.vue"),
+        component: () => import("../views/HomeView.vue"),
     },
     {
         path: "/all-ncc",
@@ -35,17 +35,17 @@ const baseRoutes: RouteRecordRaw[] = [
     {
         path: "/participation-guidelines",
         name: "participation-guidelines",
-        component: () => import("../views/guidelines/ParticipationView.vue"),
+        component: () => import("../views/guidelines/ParticipationGuidelinesView.vue"),
     },
     {
         path: "/brand-guidelines",
         name: "brand-guidelines",
-        component: () => import("../views/guidelines/BrandView.vue"),
+        component: () => import("../views/guidelines/BrandGuidelinesView.vue"),
     },
     {
         path: "/:pathMatch(.*)*",
         name: "all",
-        component: () => import("../views/404.vue"),
+        component: () => import("../views/404View.vue"),
     }
 ];
 

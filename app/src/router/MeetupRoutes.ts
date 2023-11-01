@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/meetup',
         name: 'meetup',
-        component: () => import("../views/meetup/index.vue"),
+        component: () => import("../views/meetup/MeetupIndexView.vue"),
     }
 ];
 
