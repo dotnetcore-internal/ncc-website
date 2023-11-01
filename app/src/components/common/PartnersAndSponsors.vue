@@ -5,7 +5,7 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 <template>
 
-  <div class="bg-gray-100 dark:bg-gray-900/50 dark:text-white">
+  <div class="bg-gray-200/50 dark:bg-purple-900/10 dark:text-white">
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">Our Partners & Sponsors</title-block>
@@ -27,7 +27,7 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
       </a>
 
       <placeholder-block height="1.25rem"/>
-      
+
     </div>
 
   </div>

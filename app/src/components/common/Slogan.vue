@@ -4,7 +4,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
 <template>
 
-  <div class="bg-gray-900 text-white">
+  <div class="bg-gray-900 dark:bg-fuchsia-900/20 text-white">
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="dark" :with-horizontal-rule="true" :is-font-black="false">Our Slogan</title-block>

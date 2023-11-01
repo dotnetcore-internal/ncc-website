@@ -121,18 +121,15 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
 <style scoped lang="css">
 
 .project-letter {
-  @apply bg-gray-100 dark:bg-gray-800 w-1/6 m-0.5 rounded-2xl ;
-  @apply text-sm text-gray-600 dark:text-gray-200 text-center font-extrabold leading-8;
+  @apply bg-gray-100 dark:bg-gray-300/10 w-1/6 m-0.5 rounded-2xl ;
+  @apply text-xs text-gray-600 dark:text-gray-200 text-center font-extrabold leading-8;
 }
 
 .project-name {
   @apply dark:text-white leading-8;
+  @apply no-underline;
+  @apply hover:underline underline-offset-4 hover:text-purple-700 hover:dark:text-purple-100;
   font-size: 1rem;
-}
-
-.project-name:hover {
-  @apply underline underline-offset-4;
-  @apply text-purple-700 dark:text-purple-100;
 }
 
 </style>
