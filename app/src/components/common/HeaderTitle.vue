@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import {computed, ref} from "vue";
-import {useElementVisibility, usePreferredDark} from '@vueuse/core'
+import {useElementVisibility, useMouseInElement, usePreferredDark} from '@vueuse/core'
 
 import {go} from "@/hooks/usePageToolkits";
 
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import JoinUsButton from "@/components/common/JoinUsButton.vue";
-import {Close, HamburgerButton} from "@icon-park/vue-next";
+import {Close, Down, HamburgerButton} from "@icon-park/vue-next";
 
 const currentPrefersDarkMode = usePreferredDark();
 
@@ -39,10 +39,64 @@ const switchMobileMenu = () => {
   if (displayMobileMenu.value) {
     document.querySelector("body")?.setAttribute('style', 'overflow:unset; height:auto;');
   } else {
-    document.querySelector("body")?.setAttribute('style', 'overflow:hidden; height:100vh;');
+    document.querySelector("body")?.setAttribute('style', 'overflow:hidden; height:100%;');
   }
   displayMobileMenu.value = !displayMobileMenu.value;
 };
+
+//endregion
+
+//region PC Mode
+
+const aboutTarget = ref(null);
+const aboutPanelTarget = ref(null);
+const {isOutside: aboutIsOutside} = useMouseInElement(aboutTarget);
+const {isOutside: aboutPanelIsOutside} = useMouseInElement(aboutPanelTarget);
+
+const displayAboutPanel = computed(() => {
+  console.log(!aboutIsOutside.value || !aboutPanelIsOutside.value);
+  return !aboutIsOutside.value || !aboutPanelIsOutside.value;
+});
+
+const projectTarget = ref(null);
+const projectPanelTarget = ref(null);
+const {isOutside: projectIsOutside} = useMouseInElement(projectTarget);
+const {isOutside: projectPanelIsOutside} = useMouseInElement(projectPanelTarget);
+
+const displayProjectPanel = computed(() => {
+  console.log(!projectIsOutside.value || !projectPanelIsOutside.value);
+  return !projectIsOutside.value || !projectPanelIsOutside.value;
+});
+
+const learningTarget = ref(null);
+const learningPanelTarget = ref(null);
+const {isOutside: learningIsOutside} = useMouseInElement(learningTarget);
+const {isOutside: learningPanelIsOutside} = useMouseInElement(learningPanelTarget);
+
+const displayLearningPanel = computed(() => {
+  console.log(!learningIsOutside.value || !learningPanelIsOutside.value);
+  return !learningIsOutside.value || !learningPanelIsOutside.value;
+});
+
+const communityTarget = ref(null);
+const communityPanelTarget = ref(null);
+const {isOutside: communityIsOutside} = useMouseInElement(communityTarget);
+const {isOutside: communityPanelIsOutside} = useMouseInElement(communityPanelTarget);
+
+const displayCommunityPanel = computed(() => {
+  console.log(!communityIsOutside.value || !communityPanelIsOutside.value);
+  return !communityIsOutside.value || !communityPanelIsOutside.value;
+});
+
+const resourceTarget = ref(null);
+const resourcePanelTarget = ref(null);
+const {isOutside: resourceIsOutside} = useMouseInElement(resourceTarget);
+const {isOutside: resourcePanelIsOutside} = useMouseInElement(resourcePanelTarget);
+
+const displayResourcePanel = computed(() => {
+  console.log(!resourceIsOutside.value || !resourcePanelIsOutside.value);
+  return !resourceIsOutside.value || !resourcePanelIsOutside.value;
+});
 
 //endregion
 </script>
@@ -62,11 +116,11 @@ const switchMobileMenu = () => {
             </a>
           </div>
           <div class="text-gray-500 text-sm text-center ml-5 inline-block">
-            <a href="#" @click.prevent class="title-item">About</a>
-            <a href="#" @click.prevent class="title-item">Projects</a>
-            <a href="#" @click.prevent class="title-item">Learning</a>
-            <a href="#" @click.prevent class="title-item">Community</a>
-            <a href="#" @click.prevent class="title-item">Resource & Media</a>
+            <a href="#" @click.prevent class="title-item" ref="aboutTarget">About</a>
+            <a href="#" @click.prevent class="title-item" ref="projectTarget">Projects</a>
+            <a href="#" @click.prevent class="title-item" ref="learningTarget">Learning</a>
+            <a href="#" @click.prevent class="title-item" ref="communityTarget">Community</a>
+            <a href="#" @click.prevent class="title-item" ref="resourceTarget">Resource & Media</a>
           </div>
         </template>
 
@@ -92,9 +146,9 @@ const switchMobileMenu = () => {
         </template>
 
         <template #right>
-          <div class="mx-auto mt-8" @click="switchMobileMenu">
-            <hamburger-button v-show="!displayMobileMenu" theme="filled" size="32" :fill="useIconColor"/>
-            <close v-show="displayMobileMenu" theme="filled" size="32" :fill="useIconColor"/>
+          <div class="mx-auto mt-8 cursor-pointer" @click="switchMobileMenu">
+            <hamburger-button v-show="!displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
+            <close v-show="displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
           </div>
         </template>
 
@@ -103,8 +157,98 @@ const switchMobileMenu = () => {
   </header>
 
   <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
-    <div id="mobile-menu" v-show="displayMobileMenu">
-      12
+    <div id="pc-menu-about" class="pc-menu" ref="aboutPanelTarget" v-show="targetIsVisible && displayAboutPanel">
+      About
+    </div>
+  </transition>
+  <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
+
+    <div id="pc-menu-projects" class="pc-menu" ref="projectPanelTarget" v-show="targetIsVisible && displayProjectPanel">
+      Project
+    </div>
+  </transition>
+
+  <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
+    <div id="pc-menu-learning" class="pc-menu" ref="learningPanelTarget" v-show="targetIsVisible && displayLearningPanel">
+      Learning
+    </div>
+  </transition>
+
+  <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
+    <div id="pc-menu-community" class="pc-menu" ref="communityPanelTarget" v-show="targetIsVisible && displayCommunityPanel">
+      Community
+    </div>
+  </transition>
+
+  <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
+    <div id="pc-menu-resource" class="pc-menu" ref="resourcePanelTarget" v-show="targetIsVisible && displayResourcePanel">
+      Resource & Media
+    </div>
+  </transition>
+
+  <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
+    <div id="mobile-menu" v-show="!targetIsVisible && displayMobileMenu">
+      <div class="fixed top-20 left-0 right-0 bottom-0 overflow-scroll">
+        <ul class="title-ul">
+          <li class="title-li-item">
+            <left-right-layout>
+              <template #left>About</template>
+              <template #right>
+                <div class="m-3">
+                  <down theme="filled" size="16" :fill="useIconColor"/>
+                </div>
+              </template>
+            </left-right-layout>
+          </li>
+          <li class="title-li-item">
+            <left-right-layout>
+              <template #left>Projects</template>
+              <template #right>
+                <div class="m-3">
+                  <down theme="filled" size="16" :fill="useIconColor"/>
+                </div>
+              </template>
+            </left-right-layout>
+          </li>
+          <li class="title-li-item">
+            <left-right-layout>
+              <template #left>Learning</template>
+              <template #right>
+                <div class="m-3">
+                  <down theme="filled" size="16" :fill="useIconColor"/>
+                </div>
+              </template>
+            </left-right-layout>
+          </li>
+          <li class="title-li-item">
+            <left-right-layout>
+              <template #left>Community</template>
+              <template #right>
+                <div class="m-3">
+                  <down theme="filled" size="16" :fill="useIconColor"/>
+                </div>
+              </template>
+            </left-right-layout>
+          </li>
+          <li class="title-li-item">
+            <left-right-layout>
+              <template #left>Resource & Media</template>
+              <template #right>
+                <div class="m-3">
+                  <down theme="filled" size="16" :fill="useIconColor"/>
+                </div>
+              </template>
+            </left-right-layout>
+          </li>
+        </ul>
+
+        <div class="px-10">
+          <join-us-button mode="block">
+            <span class="text-lg">JOIN</span>
+          </join-us-button>
+        </div>
+
+      </div>
     </div>
   </transition>
 
@@ -119,13 +263,28 @@ const switchMobileMenu = () => {
   line-height: 3.5rem;
 }
 
+.title-ul {
+  @apply p-10;
+}
+
+.title-li-item {
+  @apply block;
+  @apply border-b border-gray-200 dark:border-gray-700;;
+  line-height: 3rem;
+}
+
+.pc-menu {
+  @apply fixed w-full top-20 left-0 right-0;
+  @apply shadow-md shadow-gray-200;
+  @apply bg-white dark:bg-black;
+  height: 36rem;
+}
+
 #mobile-menu {
   @apply fixed top-0 left-0 right-0 bottom-0;
   @apply z-30;
   @apply transition-all duration-300;
-  @apply overflow-hidden;
   @apply flex flex-col justify-center items-center;
-  @apply pointer-events-none;
   @apply bg-white dark:bg-black;
 }
 </style>
