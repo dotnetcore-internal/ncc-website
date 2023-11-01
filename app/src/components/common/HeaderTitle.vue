@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, ref, watch} from "vue";
 import {useElementVisibility, useMouseInElement, usePreferredDark} from '@vueuse/core'
 
 import {go} from "@/hooks/usePageToolkits";
@@ -30,6 +30,15 @@ const useHeaderClass = computed(() => {
       ? 'backdrop-blur-md bg-white/30 dark:bg-black/30'
       : 'bg-white dark:bg-black';
 });
+
+watch(
+    targetIsVisible,
+    (n, o) => {
+      if (n) {
+        document.querySelector("body")?.setAttribute('style', 'overflow:unset; height:auto;');
+      }
+    }
+)
 
 //region Mobile Mode
 
@@ -138,15 +147,15 @@ const displayResourcePanel = computed(() => {
       <left-right-layout>
 
         <template #left>
-          <div class="inline-block align-top">
+          <div class="inline-block align-top mt-2 ml-4">
             <a href="/" @click.prevent="go('home')" title=".NET Core Community">
-              <img :src="useLogoUrl" width="180" alt="NCC"/>
+              <img :src="useLogoUrl" width="140" alt="NCC"/>
             </a>
           </div>
         </template>
 
         <template #right>
-          <div class="mx-auto mt-8 cursor-pointer" @click="switchMobileMenu">
+          <div class="mr-8 mt-8 cursor-pointer" @click="switchMobileMenu">
             <hamburger-button v-show="!displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
             <close v-show="displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
           </div>
@@ -189,63 +198,67 @@ const displayResourcePanel = computed(() => {
   <transition enter-active-class="animate__animated animate__fadeIn animate__faster" leave-active-class="animate__animated animate__fadeOut animate__faster">
     <div id="mobile-menu" v-show="!targetIsVisible && displayMobileMenu">
       <div class="fixed top-20 left-0 right-0 bottom-0 overflow-scroll">
-        <ul class="title-ul">
-          <li class="title-li-item">
-            <left-right-layout>
-              <template #left>About</template>
-              <template #right>
-                <div class="m-3">
-                  <down theme="filled" size="16" :fill="useIconColor"/>
-                </div>
-              </template>
-            </left-right-layout>
-          </li>
-          <li class="title-li-item">
-            <left-right-layout>
-              <template #left>Projects</template>
-              <template #right>
-                <div class="m-3">
-                  <down theme="filled" size="16" :fill="useIconColor"/>
-                </div>
-              </template>
-            </left-right-layout>
-          </li>
-          <li class="title-li-item">
-            <left-right-layout>
-              <template #left>Learning</template>
-              <template #right>
-                <div class="m-3">
-                  <down theme="filled" size="16" :fill="useIconColor"/>
-                </div>
-              </template>
-            </left-right-layout>
-          </li>
-          <li class="title-li-item">
-            <left-right-layout>
-              <template #left>Community</template>
-              <template #right>
-                <div class="m-3">
-                  <down theme="filled" size="16" :fill="useIconColor"/>
-                </div>
-              </template>
-            </left-right-layout>
-          </li>
-          <li class="title-li-item">
-            <left-right-layout>
-              <template #left>Resource & Media</template>
-              <template #right>
-                <div class="m-3">
-                  <down theme="filled" size="16" :fill="useIconColor"/>
-                </div>
-              </template>
-            </left-right-layout>
-          </li>
-        </ul>
+        <div class="responsive-width">
 
-        <div class="px-10">
-          <join-us-button mode="block">
-            <span class="text-lg">JOIN</span>
-          </join-us-button>
+          <ul class="title-ul">
+            <li class="title-li-item">
+              <left-right-layout>
+                <template #left>About</template>
+                <template #right>
+                  <div class="m-3">
+                    <down theme="filled" size="16" :fill="useIconColor"/>
+                  </div>
+                </template>
+              </left-right-layout>
+            </li>
+            <li class="title-li-item">
+              <left-right-layout>
+                <template #left>Projects</template>
+                <template #right>
+                  <div class="m-3">
+                    <down theme="filled" size="16" :fill="useIconColor"/>
+                  </div>
+                </template>
+              </left-right-layout>
+            </li>
+            <li class="title-li-item">
+              <left-right-layout>
+                <template #left>Learning</template>
+                <template #right>
+                  <div class="m-3">
+                    <down theme="filled" size="16" :fill="useIconColor"/>
+                  </div>
+                </template>
+              </left-right-layout>
+            </li>
+            <li class="title-li-item">
+              <left-right-layout>
+                <template #left>Community</template>
+                <template #right>
+                  <div class="m-3">
+                    <down theme="filled" size="16" :fill="useIconColor"/>
+                  </div>
+                </template>
+              </left-right-layout>
+            </li>
+            <li class="title-li-item">
+              <left-right-layout>
+                <template #left>Resource & Media</template>
+                <template #right>
+                  <div class="m-3">
+                    <down theme="filled" size="16" :fill="useIconColor"/>
+                  </div>
+                </template>
+              </left-right-layout>
+            </li>
+          </ul>
+
+          <div class="px-10">
+            <join-us-button mode="block" :need-refresh="true">
+              <span class="text-lg">JOIN</span>
+            </join-us-button>
+          </div>
+
         </div>
 
       </div>
@@ -269,13 +282,14 @@ const displayResourcePanel = computed(() => {
 
 .title-li-item {
   @apply block;
+  @apply dark:text-white;
   @apply border-b border-gray-200 dark:border-gray-700;;
   line-height: 3rem;
 }
 
 .pc-menu {
   @apply fixed w-full top-20 left-0 right-0;
-  @apply shadow-md shadow-gray-200;
+  @apply shadow-md shadow-gray-200 dark:shadow-black;
   @apply bg-white dark:bg-black;
   height: 36rem;
 }
