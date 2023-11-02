@@ -3,7 +3,7 @@ import {computed, ref} from "vue";
 import {usePreferredDark} from "@vueuse/core";
 
 import {useUiStore} from "@/stores/uiStore";
-import {go} from "@/hooks/usePageToolkits";
+import {go, lockBody, unlockBody} from "@/hooks/usePageToolkits";
 
 import {Close, HamburgerButton} from "@icon-park/vue-next";
 
@@ -38,9 +38,9 @@ const displayMobileMenu = ref(false);
 
 const switchMobileMenu = () => {
   if (displayMobileMenu.value) {
-    document.querySelector("body")?.setAttribute('style', 'overflow:unset; height:auto;');
+    unlockBody();
   } else {
-    document.querySelector("body")?.setAttribute('style', 'overflow:hidden; height:100%;');
+    lockBody();
   }
   displayMobileMenu.value = !displayMobileMenu.value;
 };

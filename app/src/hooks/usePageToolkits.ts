@@ -22,7 +22,21 @@ const setTitle = (newTitle: string) => {
 
 //endregion
 
+//region Lock and Unlock Body
+
+const lockBody = () => {
+    document.querySelector("body")?.setAttribute('style', 'overflow:hidden; height:100%;');
+}
+
+const unlockBody = () => {
+    document.querySelector("body")?.setAttribute('style', 'overflow:unset; height:auto;');
+}
+
+//endregion
+
 export {
     go,
-    setTitle
+    setTitle,
+    lockBody,
+    unlockBody
 }

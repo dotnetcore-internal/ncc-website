@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {onMounted, watch} from "vue";
 import {useWindowSize} from '@vueuse/core'
+import {unlockBody} from "@/hooks/usePageToolkits";
 
 import {useUiStore} from "@/stores/uiStore";
 
@@ -14,7 +15,7 @@ const {width} = useWindowSize();
 const updateMobileMode = (n: number) => {
   if (n < 1024) {
     uiStore.setMobileMode(true);
-    document.querySelector("body")?.setAttribute('style', 'overflow:unset; height:auto;');
+    unlockBody();
   } else {
     uiStore.setMobileMode(false);
   }
