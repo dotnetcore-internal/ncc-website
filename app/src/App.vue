@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {RouterView} from "vue-router";
 
+import {useUiStore} from "@/stores/uiStore";
 import {go} from "@/hooks/usePageToolkits";
 
 import NavigationResources from '@/components/common/NavigationResources.vue';
@@ -9,6 +10,8 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import HeaderTitle from "@/components/header/HeaderTitle.vue";
 import FooterPendant from "@/components/common/FooterPendant.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
+
+const uiStore = useUiStore();
 
 </script>
 
@@ -23,7 +26,7 @@ import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
     <footer class="bg-black text-white">
       <div class="responsive-width">
 
-        <placeholder-block height="1.25rem"/>
+        <placeholder-block height="90px"/>
 
         <navigation-resources/>
 
@@ -39,7 +42,7 @@ import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 
         <div class="clear-both"></div>
 
-        <div class="pb-2.5 px-5 invisible lg:visible lg:h-auto">
+        <div class="pb-2.5 px-5" v-show="!uiStore.isMobileMode">
           We <span class="text-xl font-bold">NCC</span>, an unofficial, non-profit open source community based on the .NET technology stack. <br/>
           We hope that through our efforts, we can make the .NET ecosystem more exciting.
         </div>
@@ -68,9 +71,16 @@ import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 
         <horizontal-rule-element colorMode="dark"/>
 
-        <div class="px-5 text-xs my-3.5">
+        <div class="px-5 text-xs my-3.5 align-middle float-left">
           Copyright © 2016-2024 .NET Core Community (NCC). All rights reserved. <br/>
           <span class="leading-7">We ❤️ Open Source.</span>
+        </div>
+
+        <div class="p-5 mx-auto align-middle float-right">
+          <a href="/home"
+             @click.prevent="go('home')">
+            <img src="/images/logo-seq.wire-black.png" width="36" alt="NCC"/>
+          </a>
         </div>
 
         <div class="clear-both"></div>

@@ -22,7 +22,7 @@ const switchPanel = () => {
 
 <template>
   <li class="title-li-item">
-    <div @click="switchPanel">
+    <div @click="switchPanel" class="cursor-pointer">
       <left-right-layout>
         <template #left>
           <slot></slot>
@@ -36,7 +36,7 @@ const switchPanel = () => {
       </left-right-layout>
     </div>
 
-    <div class="block-body" v-show="displayPanel">
+    <div class="block-body-mobile" v-show="displayPanel">
 
       <div class="responsive-width" >
 
@@ -67,5 +67,7 @@ const switchPanel = () => {
   line-height: 3rem;
 }
 
-
+.block-body-mobile{
+  @apply border-t-4 border-purple-800 dark:border-purple-500;
+}
 </style>

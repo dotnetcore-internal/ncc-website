@@ -6,6 +6,10 @@ import Mobile from "@/components/header/TitleContentForMobile.vue";
 
 const uiStore = useUiStore();
 
+const props = withDefaults(defineProps<{
+  featureKey: string
+}>(), {});
+
 </script>
 
 <template>
@@ -25,7 +29,7 @@ const uiStore = useUiStore();
     </template>
   </mobile>
 
-  <desktop v-else>
+  <desktop v-else :feature-key="props.featureKey">
     <template #default>
       <slot></slot>
     </template>

@@ -1,14 +1,58 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, nextTick, onMounted, onUnmounted, ref, watch} from "vue";
 import {useMouseInElement} from '@vueuse/core'
+import {useEmitter} from "@/hooks/useEmitter";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
+
+const props = withDefaults(defineProps<{
+  featureKey: string
+}>(), {});
+
+const emitter = useEmitter();
 
 const itemTarget = ref(null);
 const panelTarget = ref(null);
 const {isOutside: itemIsOutside} = useMouseInElement(itemTarget);
 const {isOutside: panelIsOutside} = useMouseInElement(panelTarget);
 
+const hidePanelCommandRef = ref<boolean | null>(null);
+
+const hidePanelCommand = (keyPassed: string) => {
+  if (keyPassed === props.featureKey) {
+    hidePanelCommandRef.value = true;
+  }
+  nextTick(() => {
+    hidePanelCommandRef.value = null;
+  });
+};
+
 const displayPanel = computed(() => {
+  if (hidePanelCommandRef.value)
+    return false;
   return !itemIsOutside.value || !panelIsOutside.value;
+});
+
+
+watch(displayPanel, (value) => {
+  if (value) {
+    console.log("displayPanel", props.featureKey);
+    emitter.emit("toSelectHeaderPanelFor", {featureKey: props.featureKey});
+  } else {
+    console.log("hidePanel", props.featureKey);
+  }
+});
+
+onMounted(() => {
+  emitter.on("toSelectHeaderPanelFor", (e) => {
+    const event = e as { featureKey: string; };
+    if (event.featureKey === props.featureKey)
+      return;
+    hidePanelCommand(event.featureKey);
+  });
+});
+
+onUnmounted(() => {
+  emitter.off("toSelectHeaderPanelFor");
 });
 </script>
 
@@ -26,10 +70,13 @@ const displayPanel = computed(() => {
     <slot></slot>
   </a>
 
+
   <transition enter-active-class="animate__animated animate__fadeIn animate__faster"
               leave-active-class="animate__animated animate__fadeOut animate__faster">
 
     <div class="block-body" ref="panelTarget" v-show="displayPanel">
+
+      <div class="w-full h-0.5 bg-purple-600/40"></div>
 
       <div class="responsive-width h-full">
 
@@ -51,6 +98,8 @@ const displayPanel = computed(() => {
 
       </div>
 
+      <placeholder-block height="1.25rem"></placeholder-block>
+
     </div>
 
   </transition>
@@ -67,11 +116,17 @@ const displayPanel = computed(() => {
 }
 
 .block-body {
-  @apply fixed w-full top-20 left-0 right-0 z-30;
+  @apply fixed w-full left-0 right-0 z-30 h-auto overflow-hidden;
   @apply shadow-md shadow-gray-200 dark:shadow-black;
   @apply bg-white dark:bg-black;
   @apply text-left;
-  height: 36rem;
+  /*height: 36rem;*/
+  top: calc(5rem - 2px);
+  /*
+   * 此处临时性地进行了注释，以便在目前内容不丰富时不至于过多留白
+   * 1、注释 height: 36rem，启用 h-auto 和 overflow-hidden，让 Panel 自动适配
+   * 2、不使用
+   */
 }
 
 @media (prefers-color-scheme: dark) {

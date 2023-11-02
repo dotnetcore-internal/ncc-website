@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-
-import {go} from "@/hooks/usePageToolkits";
 import JoinUsButton from "@/components/common/JoinUsButton.vue";
+import Anchor from "@/components/basic/AnchorElement.vue";
+
 </script>
 
 <template>
@@ -10,47 +10,47 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
     <div class="nav-about-us">
       <span class="nav-title">About Us</span>
       <span class="nav-item">
-        <a href="/about/who-we-are" @click.prevent="go('about/who-we-are')" title="Who We Are">Who We Are</a>
+        <anchor href="/about/who-we-are" route-name="about/who-we-are" title="Who We Are">Who We Are</anchor>
       </span>
       <span class="nav-item">
-        <a href="/people/project-management-committee" @click.prevent="go('people/project-management-committee')" title="Project Management Committee">Project Management Committee</a>
+        <anchor href="/people/project-management-committee" route-name="people/project-management-committee" title="Project Management Committee">Project Management Committee</anchor>
       </span>
       <span class="nav-item">
-        <a href="/conduct" @click.prevent="go('conduct')" title="Code of Conduct">Code of Conduct</a>
+        <anchor href="/conduct" route-name="conduct" title="Code of Conduct">Code of Conduct</anchor>
       </span>
       <span class="nav-item">
-        <a href="/about/story" @click.prevent="go('about/story')" title="Story">Story</a>
+        <anchor href="/about/story" route-name="about/story" title="Story">Story</anchor>
       </span>
       <span class="nav-item">
-        <a href="/about/faq" @click.prevent="go('about/faq')" title="FAQ">FAQ</a>
+        <anchor href="/about/faq" route-name="about/faq" title="FAQ">FAQ</anchor>
       </span>
 
       <hr class="my-5 w-5 border-white/50"/>
 
       <span class="nav-item">
-        <a href="/about/contact" @click.prevent="go('about/contact')" title="Contact Us">Contact Us</a>
+        <anchor href="/about/contact" route-name="about/contact" title="Contact Us">Contact Us</anchor>
       </span>
     </div>
     <div class="nav-projects">
       <span class="nav-title">Projects</span>
       <span class="nav-item">
-        <a href="https://contribute.ncc.work" title="Contribute" target="_blank">Contribute</a>
+        <anchor href="https://contribute.ncc.work" title="Contribute" target="_blank" mode="classic">Contribute</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://landscape.ncc.work" title="Landscape" target="_blank">Landscape</a>
+        <anchor href="https://landscape.ncc.work" title="Landscape" target="_blank" mode="classic">Landscape</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://tools.ncc.work" title="Project Tools" target="_blank">Project Tools</a>
+        <anchor href="https://tools.ncc.work" title="Project Tools" target="_blank" mode="classic">Project Tools</anchor>
       </span>
       <span class="nav-item">
-        <a href="/projects" @click.prevent="go('projects')" title="Projects">Projects</a>
+        <anchor href="/projects" route-name="projects" title="All Our Projects">Member Projects</anchor>
       </span>
       <span class="nav-item">
-        <a href="/archived-projects" @click.prevent="go('archived-projects')" title="Archived Projects">Archived Projects</a>
+        <anchor href="/archived-projects" route-name="archived-projects" title="Archived Projects">Archived Projects</anchor>
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
-        <a href="https://contribute.ncc.work/project-join-ncc" title="How to Join Us" target="_blank">How to Join Us</a>
+        <anchor href="https://contribute.ncc.work/project-join-ncc" title="How to Join Us" target="_blank" mode="classic">How to Join Us</anchor>
       </span>
     </div>
     <div class="nav-Learning">
@@ -59,51 +59,51 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
     <div class="nav-community">
       <span class="nav-title">Community</span>
       <span class="nav-item">
-        <a href="https://events.ncc.work" title="Events" target="_blank">Events</a>
+        <anchor href="https://events.ncc.work" title="Events" target="_blank" mode="classic">Events</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://events.ncc.work/meetup" title="Meetup" target="_blank">Meetup</a>
+        <anchor href="https://events.ncc.work/meetup" title="Meetup" target="_blank" mode="classic">Meetup</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://2f.ncc.work" title="NCC 2F" target="_blank">NCC 2F</a>
+        <anchor href="https://2f.ncc.work" title="NCC 2F" target="_blank" mode="classic">NCC 2F</anchor>
       </span>
       <span class="nav-item">
-        <a href="/community-online" @click.prevent="go('community-online')" title="Community Online">Community Online</a>
+        <anchor href="/community-online" route-name="community-online" title="Community Online">Community Online</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://glossary.ncc.work" title="Glossary" target="_blank">Glossary</a>
+        <anchor href="https://glossary.ncc.work" title="Glossary" target="_blank" mode="classic">Glossary</anchor>
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
-        <a href="/participation-guidelines" @click.prevent="go('participation-guidelines')" title="Participation Guidelines">Participation Guidelines</a>
+        <anchor href="/participation-guidelines" route-name="participation-guidelines" title="Participation Guidelines">Participation Guidelines</anchor>
       </span>
       <span class="nav-item">
-        <a href="/rules" @click.prevent="go('rules')" title="Community Rules">Community Rules</a>
+        <anchor href="/rules" route-name="rules" title="Community Rules">Community Rules</anchor>
       </span>
     </div>
     <div class="nav-resource">
       <span class="nav-title">Resource & Media</span>
       <span class="nav-item">
-        <a href="/news" @click.prevent="go('news')" title="News">News</a>
+        <anchor href="/news" route-name="news" title="News">News</anchor>
       </span>
       <span class="nav-item">
-        <a href="/weekly" @click.prevent="go('weekly')" title="Weekly">Weekly</a>
+        <anchor href="/weekly" route-name="weekly" title="Weekly">Weekly</anchor>
       </span>
       <span class="nav-item">
-        <a href="/announcements" @click.prevent="go('announcements')" title="Announcements">Announcements</a>
+        <anchor href="/announcements" route-name="announcements" title="Announcements">Announcements</anchor>
       </span>
       <span class="nav-item">
-        <a href="/brand-guidelines" @click.prevent="go('brand-guidelines')" title="Brand Guidelines">Brand Guidelines</a>
+        <anchor href="/brand-guidelines" route-name="brand-guidelines" title="Brand Guidelines">Brand Guidelines</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos" target="_blank">Project Logos</a>
+        <anchor href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos" target="_blank" mode="classic">Project Logos</anchor>
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
-        <a href="https://github.com/dotnetcore" title="NCC@GitHub" target="_blank">NCC@GitHub</a>
+        <anchor href="https://github.com/dotnetcore" title="NCC@GitHub" target="_blank" mode="classic">NCC@GitHub</anchor>
       </span>
       <span class="nav-item">
-        <a href="https://gitee.com/dotnetcore" title="NCC@Gitee" target="_blank">NCC@Gitee</a>
+        <anchor href="https://gitee.com/dotnetcore" title="NCC@Gitee" target="_blank" mode="classic">NCC@Gitee</anchor>
       </span>
     </div>
     <div class="nav-resource">
