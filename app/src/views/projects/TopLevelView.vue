@@ -5,14 +5,14 @@ import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import MemberProjects from "@/components/common/MemberProjects.vue";
 
-setTitle('Archived Projects');
+setTitle('Top-Level Projects');
 </script>
 
 <template>
 
   <body-block>
 
-    <title-block>Archived Projects</title-block>
+    <title-block>Top-Level Projects</title-block>
 
   </body-block>
 

@@ -3,6 +3,7 @@ import {setTitle} from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import MemberProjects from "@/components/common/MemberProjects.vue";
 
 setTitle('All Member Projects');
 </script>
@@ -13,6 +14,9 @@ setTitle('All Member Projects');
     <title-block>All Member Projects</title-block>
 
   </body-block>
+
+  <member-projects />
+
 </template>
 
 <style scoped lang="css">
