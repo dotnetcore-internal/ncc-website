@@ -1,7 +1,6 @@
 import {createRouter, createWebHistory, type RouteRecordRaw} from "vue-router";
 import peopleRoutes from "@/router/PeopleRoutes";
 import projectRoutes from "@/router/ProjectRoutes";
-import meetupRoutes from "@/router/MeetupRoutes";
 import mediaRoutes from "@/router/MediaRoutes";
 import ruleRoutes from "@/router/RuleRoutes";
 import aboutRoutes from "@/router/AboutRoutes";
@@ -49,7 +48,7 @@ const baseRoutes: RouteRecordRaw[] = [
     }
 ];
 
-const routes = baseRoutes.concat(peopleRoutes, projectRoutes, meetupRoutes, mediaRoutes, ruleRoutes, aboutRoutes);
+const routes = baseRoutes.concat(peopleRoutes, projectRoutes, mediaRoutes, ruleRoutes, aboutRoutes);
 
 const router = createRouter({
     history: createWebHistory(import.meta.env.BASE_URL),

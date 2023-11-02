@@ -34,13 +34,13 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
     <div class="nav-projects">
       <span class="nav-title">Projects</span>
       <span class="nav-item">
-        <a href="https://contribute.ncc.work" title="Contribute">Contribute</a>
+        <a href="https://contribute.ncc.work" title="Contribute" target="_blank">Contribute</a>
       </span>
       <span class="nav-item">
-        <a href="https://landscape.ncc.work" title="Landscape">Landscape</a>
+        <a href="https://landscape.ncc.work" title="Landscape" target="_blank">Landscape</a>
       </span>
       <span class="nav-item">
-        <a href="https://tools.ncc.work" title="Project Tools">Project Tools</a>
+        <a href="https://tools.ncc.work" title="Project Tools" target="_blank">Project Tools</a>
       </span>
       <span class="nav-item">
         <a href="/projects" @click.prevent="go('projects')" title="Projects">Projects</a>
@@ -50,7 +50,7 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
-        <a href="https://contribute.ncc.work/project-join-ncc" title="How to Join Us">How to Join Us</a>
+        <a href="https://contribute.ncc.work/project-join-ncc" title="How to Join Us" target="_blank">How to Join Us</a>
       </span>
     </div>
     <div class="nav-Learning">
@@ -59,19 +59,19 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
     <div class="nav-community">
       <span class="nav-title">Community</span>
       <span class="nav-item">
-        <a href="https://events.ncc.work" title="Events">Events</a>
+        <a href="https://events.ncc.work" title="Events" target="_blank">Events</a>
       </span>
       <span class="nav-item">
-        <a href="/meetup" @click.prevent="go('meetup')" title="Meetup">Meetup</a>
+        <a href="https://events.ncc.work/meetup" title="Meetup" target="_blank">Meetup</a>
       </span>
       <span class="nav-item">
-        <a href="https://2f.ncc.work" title="NCC 2F">NCC 2F</a>
+        <a href="https://2f.ncc.work" title="NCC 2F" target="_blank">NCC 2F</a>
       </span>
       <span class="nav-item">
         <a href="/community-online" @click.prevent="go('community-online')" title="Community Online">Community Online</a>
       </span>
       <span class="nav-item">
-        <a href="https://glossary.ncc.work" title="Glossary">Glossary</a>
+        <a href="https://glossary.ncc.work" title="Glossary" target="_blank">Glossary</a>
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
@@ -87,20 +87,23 @@ import JoinUsButton from "@/components/common/JoinUsButton.vue";
         <a href="/news" @click.prevent="go('news')" title="News">News</a>
       </span>
       <span class="nav-item">
+        <a href="/weekly" @click.prevent="go('weekly')" title="Weekly">Weekly</a>
+      </span>
+      <span class="nav-item">
         <a href="/announcements" @click.prevent="go('announcements')" title="Announcements">Announcements</a>
       </span>
       <span class="nav-item">
         <a href="/brand-guidelines" @click.prevent="go('brand-guidelines')" title="Brand Guidelines">Brand Guidelines</a>
       </span>
       <span class="nav-item">
-        <a href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos">Project Logos</a>
+        <a href="https://github.com/dotnetcore/ncc-artwork" title="Project Logos" target="_blank">Project Logos</a>
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
-        <a href="https://github.com/dotnetcore" title="NCC@GitHub">NCC@GitHub</a>
+        <a href="https://github.com/dotnetcore" title="NCC@GitHub" target="_blank">NCC@GitHub</a>
       </span>
       <span class="nav-item">
-        <a href="https://gitee.com/dotnetcore" title="NCC@Gitee">NCC@Gitee</a>
+        <a href="https://gitee.com/dotnetcore" title="NCC@Gitee" target="_blank">NCC@Gitee</a>
       </span>
     </div>
     <div class="nav-resource">

@@ -7,6 +7,11 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../views/news/NewsIndexView.vue"),
     },
     {
+        path: '/weekly',
+        name: 'weekly',
+        component: () => import("../views/weekly/WeeklyIndexView.vue"),
+    },
+    {
         path: '/announcements',
         name: 'announcements',
         component: () => import("../views/announcements/AnnouncementsIndexView.vue"),
