@@ -6,7 +6,7 @@ import {go} from "@/hooks/usePageToolkits";
 import NavigationResources from '@/components/common/NavigationResources.vue';
 import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
-import HeaderTitle from "@/components/common/HeaderTitle.vue";
+import HeaderTitle from "@/components/header/HeaderTitle.vue";
 import FooterPendant from "@/components/common/FooterPendant.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 
