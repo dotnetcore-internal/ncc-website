@@ -1,0 +1,1 @@
+import{f as t,b as a}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as o}from"./BodyBlock.js";import{a as r,B as s,i as e,o as c,h as l,j as i}from"./vendor.js";const d=r({__name:"DetailView",setup(n){return t("Project Detail"),(_,f)=>(c(),s(o,null,{default:e(()=>[l(a,null,{default:e(()=>[i("Project Detail")]),_:1})]),_:1}))}});export{d as default};

@@ -1,0 +1,1 @@
+import{f as t,b as a}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as o}from"./BodyBlock.js";import{a as s,B as l,i as e,o as r,h as c,j as i}from"./vendor.js";const d=s({__name:"AllNccView",setup(n){return t("All Our Sites"),(_,f)=>(r(),l(o,null,{default:e(()=>[c(a,null,{default:e(()=>[i("All NCC Sites")]),_:1})]),_:1}))}});export{d as default};

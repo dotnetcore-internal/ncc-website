@@ -1,4 +1,58 @@
 {
+  "MemberProjects.css": {
+    "file": "assets/MemberProjects.css",
+    "src": "MemberProjects.css"
+  },
+  "_BodyBlock.js": {
+    "file": "assets/BodyBlock.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js"
+    ]
+  },
+  "_MemberProjects.js": {
+    "css": [
+      "assets/MemberProjects.css"
+    ],
+    "file": "assets/MemberProjects.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js"
+    ]
+  },
+  "_TitleBlock.vue_vue_type_script_setup_true_lang.js": {
+    "dynamicImports": [
+      "src/views/people/ProjectManagementCommitteeView.vue",
+      "src/views/projects/ProjectsIndexView.vue",
+      "src/views/projects/ArchivedView.vue",
+      "src/views/projects/TopLevelView.vue",
+      "src/views/projects/DetailView.vue",
+      "src/views/news/NewsIndexView.vue",
+      "src/views/weekly/WeeklyIndexView.vue",
+      "src/views/announcements/AnnouncementsIndexView.vue",
+      "src/views/rules/RulesIndexView.vue",
+      "src/views/about/WhoWeAreView.vue",
+      "src/views/about/JoinView.vue",
+      "src/views/about/StoryView.vue",
+      "src/views/about/FaqView.vue",
+      "src/views/about/ContactView.vue",
+      "src/views/HomeView.vue",
+      "src/views/about/AllNccView.vue",
+      "src/views/about/OpenNccView.vue",
+      "src/views/CodeOfConductView.vue",
+      "src/views/CommunityOnlineView.vue",
+      "src/views/guidelines/ParticipationGuidelinesView.vue",
+      "src/views/guidelines/BrandGuidelinesView.vue",
+      "src/views/404View.vue"
+    ],
+    "file": "assets/TitleBlock.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_vendor.js"
+    ]
+  },
+  "_official-wechat-account-qrcode.js": {
+    "file": "assets/official-wechat-account-qrcode.js"
+  },
   "_vendor.js": {
     "file": "assets/vendor.js"
   },
@@ -10,22 +64,244 @@
     "css": [
       "assets/index.css"
     ],
-    "dynamicImports": [
-      "src/views/Home.vue"
-    ],
     "file": "assets/index.js",
     "imports": [
-      "_vendor.js"
+      "_vendor.js",
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_official-wechat-account-qrcode.js"
     ],
     "isEntry": true,
     "src": "index.html"
   },
-  "src/views/Home.vue": {
-    "file": "assets/Home.js",
+  "src/views/404View.vue": {
+    "file": "assets/404View.js",
     "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
       "_vendor.js"
     ],
     "isDynamicEntry": true,
-    "src": "src/views/Home.vue"
+    "src": "src/views/404View.vue"
+  },
+  "src/views/CodeOfConductView.vue": {
+    "file": "assets/CodeOfConductView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/CodeOfConductView.vue"
+  },
+  "src/views/CommunityOnlineView.vue": {
+    "file": "assets/CommunityOnlineView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/CommunityOnlineView.vue"
+  },
+  "src/views/HomeView.css": {
+    "file": "assets/HomeView.css",
+    "src": "src/views/HomeView.css"
+  },
+  "src/views/HomeView.vue": {
+    "css": [
+      "assets/HomeView.css"
+    ],
+    "file": "assets/HomeView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MemberProjects.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/HomeView.vue"
+  },
+  "src/views/about/AllNccView.vue": {
+    "file": "assets/AllNccView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/AllNccView.vue"
+  },
+  "src/views/about/ContactView.vue": {
+    "file": "assets/ContactView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/ContactView.vue"
+  },
+  "src/views/about/FaqView.vue": {
+    "file": "assets/FaqView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/FaqView.vue"
+  },
+  "src/views/about/JoinView.vue": {
+    "file": "assets/JoinView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/JoinView.vue"
+  },
+  "src/views/about/OpenNccView.vue": {
+    "file": "assets/OpenNccView.js",
+    "imports": [
+      "_official-wechat-account-qrcode.js",
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/OpenNccView.vue"
+  },
+  "src/views/about/StoryView.vue": {
+    "file": "assets/StoryView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/StoryView.vue"
+  },
+  "src/views/about/WhoWeAreView.vue": {
+    "file": "assets/WhoWeAreView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/WhoWeAreView.vue"
+  },
+  "src/views/announcements/AnnouncementsIndexView.vue": {
+    "file": "assets/AnnouncementsIndexView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/announcements/AnnouncementsIndexView.vue"
+  },
+  "src/views/guidelines/BrandGuidelinesView.vue": {
+    "file": "assets/BrandGuidelinesView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/guidelines/BrandGuidelinesView.vue"
+  },
+  "src/views/guidelines/ParticipationGuidelinesView.vue": {
+    "file": "assets/ParticipationGuidelinesView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/guidelines/ParticipationGuidelinesView.vue"
+  },
+  "src/views/news/NewsIndexView.vue": {
+    "file": "assets/NewsIndexView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/news/NewsIndexView.vue"
+  },
+  "src/views/people/ProjectManagementCommitteeView.vue": {
+    "file": "assets/ProjectManagementCommitteeView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/people/ProjectManagementCommitteeView.vue"
+  },
+  "src/views/projects/ArchivedView.vue": {
+    "file": "assets/ArchivedView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_MemberProjects.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/ArchivedView.vue"
+  },
+  "src/views/projects/DetailView.vue": {
+    "file": "assets/DetailView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/DetailView.vue"
+  },
+  "src/views/projects/ProjectsIndexView.vue": {
+    "file": "assets/ProjectsIndexView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_MemberProjects.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/ProjectsIndexView.vue"
+  },
+  "src/views/projects/TopLevelView.vue": {
+    "file": "assets/TopLevelView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_MemberProjects.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/TopLevelView.vue"
+  },
+  "src/views/rules/RulesIndexView.vue": {
+    "file": "assets/RulesIndexView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/rules/RulesIndexView.vue"
+  },
+  "src/views/weekly/WeeklyIndexView.vue": {
+    "file": "assets/WeeklyIndexView.js",
+    "imports": [
+      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/weekly/WeeklyIndexView.vue"
   }
 }

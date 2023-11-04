@@ -1,0 +1,1 @@
+import{f as a,b as t}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as o}from"./BodyBlock.js";import{a as s,B as r,i as e,o as n,h as c,j as _}from"./vendor.js";const u=s({__name:"NewsIndexView",setup(l){return a("News"),(f,i)=>(n(),r(o,null,{default:e(()=>[c(t,null,{default:e(()=>[_("News")]),_:1})]),_:1}))}});export{u as default};

@@ -1,0 +1,1 @@
+import{f as n,b as t}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as o}from"./BodyBlock.js";import{a,B as s,i as e,o as c,h as r,j as m}from"./vendor.js";const d=a({__name:"AnnouncementsIndexView",setup(_){return n("Announcements"),(l,u)=>(c(),s(o,null,{default:e(()=>[r(t,null,{default:e(()=>[m("Announcements")]),_:1})]),_:1}))}});export{d as default};

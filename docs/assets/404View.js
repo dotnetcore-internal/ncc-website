@@ -1,0 +1,1 @@
+import{f as a,b as t}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as o}from"./BodyBlock.js";import{a as s,B as r,i as e,o as n,h as c,j as _}from"./vendor.js";const d=s({__name:"404View",setup(l){return a("Page Not Found"),(f,i)=>(n(),r(o,null,{default:e(()=>[c(t,null,{default:e(()=>[_("404")]),_:1})]),_:1}))}});export{d as default};

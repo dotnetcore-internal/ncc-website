@@ -1,0 +1,1 @@
+import{f as t,b as o}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as a}from"./BodyBlock.js";import{a as r,B as s,i as e,o as c,h as n,j as _}from"./vendor.js";const d=r({__name:"StoryView",setup(l){return t("Our Story"),(f,i)=>(c(),s(a,null,{default:e(()=>[n(o,null,{default:e(()=>[_("Our Story")]),_:1})]),_:1}))}});export{d as default};

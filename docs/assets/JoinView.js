@@ -1,0 +1,1 @@
+import{f as o,b as a}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as t}from"./BodyBlock.js";import{a as s,B as n,i as e,o as r,h as i,j as c}from"./vendor.js";const d=s({__name:"JoinView",setup(_){return o("Join NCC"),(l,f)=>(r(),n(t,null,{default:e(()=>[i(a,null,{default:e(()=>[c("Join NCC")]),_:1})]),_:1}))}});export{d as default};

@@ -1,0 +1,1 @@
+import{f as o,b as t}from"./TitleBlock.vue_vue_type_script_setup_true_lang.js";import{B as a}from"./BodyBlock.js";import{a as s,B as c,i as e,o as n,h as r,j as d}from"./vendor.js";const p=s({__name:"CodeOfConductView",setup(f){return o("Code of Conduct"),(_,l)=>(n(),c(a,null,{default:e(()=>[r(t,null,{default:e(()=>[d("Code of Conduct")]),_:1})]),_:1}))}});export{p as default};
