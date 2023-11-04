@@ -1,4 +1,5 @@
 import {createRouter, createWebHistory, type RouteRecordRaw} from "vue-router";
+
 import peopleRoutes from "@/router/PeopleRoutes";
 import projectRoutes from "@/router/ProjectRoutes";
 import mediaRoutes from "@/router/MediaRoutes";

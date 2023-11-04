@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<{
     <span v-if="$slots.default">
       <slot></slot>
       </span>
-    <span v-else>Join</span>
+    <span v-else>{{ $t('join-at-header-default') }}</span>
   </a>
 
   <a v-else
@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<{
     <span v-if="$slots.default">
       <slot></slot>
       </span>
-    <span v-else>Join</span>
+    <span v-else>{{ $t('join-at-header-default') }}</span>
   </a>
 </template>
 

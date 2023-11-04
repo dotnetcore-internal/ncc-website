@@ -8,7 +8,9 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
   <div class="bg-gray-200/50 dark:bg-purple-900/10 dark:text-white">
     <div class="responsive-width">
 
-      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">Our Partners & Sponsors</title-block>
+      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+        {{ $t('our-partners-title')}}
+      </title-block>
 
       <a href="https://www.jetbrains.com/?from=.NETCoreCommunity(NCC)" target="_blank" title="JetBrains" class="partner-item">
         <img src="/images/partners/jetbrains.svg" alt="JetBrains" class="w-full h-full">

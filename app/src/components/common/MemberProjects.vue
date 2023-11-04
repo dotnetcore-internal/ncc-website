@@ -7,7 +7,9 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
   <div class="">
     <div class="responsive-width">
 
-      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">Our Projects</title-block>
+      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+        {{ $t('our-projects-title')}}
+      </title-block>
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">
         <div class="project-letter">A</div>

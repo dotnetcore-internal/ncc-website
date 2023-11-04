@@ -73,7 +73,9 @@ const switchMobileMenu = () => {
 
         <template #right>
           <div class="mx-auto mt-6">
-            <join-us-button/>
+            <join-us-button>
+              {{ $t('join-at-header-desktop') }}
+            </join-us-button>
           </div>
         </template>
 
@@ -117,7 +119,7 @@ const switchMobileMenu = () => {
 
           <div class="px-10">
             <join-us-button mode="block" :need-refresh="true">
-              <span class="text-lg">JOIN</span>
+              <span class="text-lg">{{ $t('join-at-header-mobile') }}</span>
             </join-us-button>
           </div>
 
