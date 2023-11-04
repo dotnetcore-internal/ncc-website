@@ -4,7 +4,7 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('Project Management Committee');
+setTitle('pmc', 'i18n');
 
 </script>
 
@@ -12,7 +12,7 @@ setTitle('Project Management Committee');
 
   <body-block>
 
-    <title-block>Project Management Committee</title-block>
+    <title-block>{{ $t('pmc') }}</title-block>
 
   </body-block>
 

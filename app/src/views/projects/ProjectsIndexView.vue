@@ -5,13 +5,13 @@ import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import MemberProjects from "@/components/common/MemberProjects.vue";
 
-setTitle('All Member Projects');
+setTitle('project-all-full', 'i18n');
 </script>
 
 <template>
   <body-block>
 
-    <title-block>All Member Projects</title-block>
+    <title-block>{{ $t('project-all-full') }}</title-block>
 
   </body-block>
 

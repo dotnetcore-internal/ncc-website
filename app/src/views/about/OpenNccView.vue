@@ -4,7 +4,7 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 
-setTitle('Our WeChat');
+setTitle('wechat.our-official-wechat-account', 'i18n');
 </script>
 
 <template>

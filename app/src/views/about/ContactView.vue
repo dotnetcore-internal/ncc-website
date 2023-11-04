@@ -4,13 +4,13 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('Contact');
+setTitle('contact-us', 'i18n');
 </script>
 
 <template>
   <body-block>
 
-    <title-block>Contact Us</title-block>
+    <title-block>{{ $t('contact-us') }}</title-block>
 
   </body-block>
 </template>

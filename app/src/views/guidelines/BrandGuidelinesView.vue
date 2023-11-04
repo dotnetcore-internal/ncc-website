@@ -4,14 +4,14 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('Brand Guidelines');
+setTitle('media-brand', 'i18n');
 </script>
 
 <template>
 
   <body-block>
 
-    <title-block>Brand Guidelines</title-block>
+    <title-block>{{ $t('media-brand') }}</title-block>
 
   </body-block>
 

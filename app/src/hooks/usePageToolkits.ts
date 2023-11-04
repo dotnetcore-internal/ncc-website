@@ -1,3 +1,4 @@
+import {inject} from "vue";
 import {useTitle} from "@vueuse/core";
 import {useCookies} from "@vueuse/integrations/useCookies";
 import router from "@/router";
@@ -17,8 +18,19 @@ const go = function (routeName: string) {
 
 //region Page Title
 
-const setTitle = (newTitle: string) => {
+const setTitleInternal = (newTitle: string) => {
     useTitle(`${newTitle} | .NET Core Community`);
+}
+
+const setTitle = (newTitle: string, mode: 'i18n' | 'direct' = 'i18n') => {
+    if (mode === 'i18n') {
+        // @ts-ignore
+        const {t} = inject('$i18n').global;
+        setTitleInternal(t(newTitle));
+        return;
+    } else {
+        setTitleInternal(newTitle);
+    }
 }
 
 //endregion

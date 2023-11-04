@@ -4,13 +4,13 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('FAQ');
+setTitle('faq', 'i18n');
 </script>
 
 <template>
   <body-block>
 
-    <title-block>FAQ</title-block>
+    <title-block>{{ $t('faq') }}</title-block>
 
   </body-block>
 </template>

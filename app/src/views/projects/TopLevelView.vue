@@ -5,14 +5,14 @@ import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import MemberProjects from "@/components/common/MemberProjects.vue";
 
-setTitle('Top-Level Projects');
+setTitle('project-top-level-full', 'i18n');
 </script>
 
 <template>
 
   <body-block>
 
-    <title-block>Top-Level Projects</title-block>
+    <title-block>{{ $t('project-top-level-full') }}</title-block>
 
   </body-block>
 

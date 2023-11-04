@@ -4,13 +4,13 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('Community Online');
+setTitle('community-online', 'i18n');
 </script>
 
 <template>
   <body-block>
 
-    <title-block>Community Online</title-block>
+    <title-block>{{ $t('community-online') }}</title-block>
 
   </body-block>
 </template>

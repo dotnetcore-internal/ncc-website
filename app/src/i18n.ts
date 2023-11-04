@@ -35,8 +35,6 @@ export async function loadLocaleMessages(i18n, locale, path: string) {
     //get the language resource from local storage first
     const localStorageMessages = getLocaleResource(path, locale);
 
-    console.log(localStorageMessages);
-
     if (!!localStorageMessages && !needUpdate(localStorageMessages[resourceName]['version'])) {
         // set locale and locale message
         if (isLocaleSupport(locale)) {

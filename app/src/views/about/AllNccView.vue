@@ -4,15 +4,15 @@ import {setTitle} from "@/hooks/usePageToolkits";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('All Our Sites');
+setTitle('nav.all-our-sites', 'i18n');
 </script>
 
 <template>
 
   <body-block>
 
-    <title-block>All NCC Sites</title-block>
-    
+    <title-block>{{ $t('nav.all-ncc-sites') }}</title-block>
+
   </body-block>
 
 </template>
