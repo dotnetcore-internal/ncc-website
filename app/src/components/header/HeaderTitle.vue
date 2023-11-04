@@ -51,18 +51,18 @@ onMounted(() => {
   <title-frame>
 
     <title-content-block feature-key="about">
-      <span class="header-title">{{ $t('nav.titles.about') }}</span>
+      <span class="header-title">{{ $t('about') }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('nav.titles.about-discover-ncc') }}</li>
+          <li class="header-sub-title">{{ $t('about-block-discover-ncc') }}</li>
 
           <li class="header-content">
             <anchor href="/about/who-we-are" :title="$t('who-we-are')" mode="classic">
               {{ $t('who-we-are') }}
               <span>
-                NCC Community is a vendor-neutral, business-neutral technology community dedicated to fostering a thriving ecosystem for .NET
+                {{ $t('who-we-are-desc') }}
               </span>
             </anchor>
           </li>
@@ -71,7 +71,7 @@ onMounted(() => {
             <anchor href="/people/project-management-committee" :title="$t('pmc')" mode="classic">
               {{ $t('pmc') }}
               <span>
-                The PMC is responsible for project management, community oversight, and budget decisions for NCC
+                {{ $t('pmc-desc') }}
               </span>
             </anchor>
           </li>
@@ -83,7 +83,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.about-additional-info') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('about-block-additional-info') }}</li>
 
           <li class="header-content">
             <anchor href="/conduct" :title="$t('code-of-conduct')" mode="classic">
@@ -104,13 +104,13 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.about-featured-reads') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('about-block-featured-reads') }}</li>
 
           <li class="header-content">
             <anchor href="/about/story" :title="$t('story')" mode="classic">
               {{ $t('story') }}
               <span>
-                NCC sets sail from the birthplace of dreams, and to make .NET greater together
+                {{ $t('story-desc') }}
               </span>
             </anchor>
           </li>
@@ -121,18 +121,18 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="projects">
-      <span class="header-title">{{ $t('nav.titles.projects') }}</span>
+      <span class="header-title">{{ $t('projects') }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('nav.titles.projects-ncc-projects') }}</li>
+          <li class="header-sub-title">{{ $t('projects-block-ncc-projects') }}</li>
 
           <li class="header-content">
             <anchor href="/projects" :title="$t('project-all-full')" mode="classic">
               {{ $t('project-all') }}
               <span>
-                All projects entering the community have undergone  PMC evaluation, and community voting
+                {{ $t('project-all-desc') }}
               </span>
             </anchor>
           </li>
@@ -141,7 +141,7 @@ onMounted(() => {
             <anchor href="/top-level-projects" :title="$t('project-top-level-full')" mode="classic">
               {{ $t('project-top-level') }}
               <span>
-                The project is considered stable and widely adopted in production environments, attracting numerous contributors
+                {{ $t('project-top-level-desc') }}
               </span>
             </anchor>
           </li>
@@ -150,7 +150,7 @@ onMounted(() => {
             <anchor href="/archived-projects" :title="$t('project-archived-full')" mode="classic">
               {{ $t('project-archived') }}
               <span>
-                Projects that have reached the end of their lifecycle and have become inactive
+                {{ $t('project-archived-desc') }}
               </span>
             </anchor>
           </li>
@@ -162,14 +162,14 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.projects-get-involved') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('projects-block-get-involved') }}</li>
 
           <li class="header-content">
             <anchor href="https://contribute.ncc.work" :title="$t('project-contribute')" target="_blank" mode="classic">
               {{ $t('project-contribute') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
               <span>
-                Join us and become a part of our team, contributing to NCC member projects with passion and expertise
+                {{ $t('project-contribute-desc') }}
               </span>
             </anchor>
           </li>
@@ -179,7 +179,7 @@ onMounted(() => {
               {{ $t('project-landscape') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
               <span>
-                A comprehensive categorical overview of member projects, their extended initiatives, and the ecosystem projects and products that have emerged based on them
+                {{ $t('project-landscape-desc') }}
               </span>
             </anchor>
           </li>
@@ -198,7 +198,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.projects-tools-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('projects-block-tools-resources') }}</li>
 
           <li class="header-content">
             <anchor href="https://tools.ncc.work" :title="$t('project-tools')" target="_blank" mode="classic">
@@ -227,12 +227,12 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="learning">
-      <span class="header-title">{{ $t('nav.titles.learning') }}</span>
+      <span class="header-title">{{ $t('learning') }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('nav.titles.learning-applying') }}</li>
+          <li class="header-sub-title">{{ $t('learning-block-applying') }}</li>
 
         </ul>
 
@@ -241,7 +241,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.learning-additional-info') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('learning-block-additional-info') }}</li>
 
         </ul>
 
@@ -250,7 +250,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.learning-featured-reads') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('learning-block-featured-reads') }}</li>
 
         </ul>
 
@@ -258,19 +258,19 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="community">
-      <span class="header-title">{{ $t('nav.titles.community') }}</span>
+      <span class="header-title">{{ $t('community') }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('nav.titles.community-take-part') }}</li>
+          <li class="header-sub-title">{{ $t('community-block-take-part') }}</li>
 
           <li class="header-content">
             <anchor href="https://events.ncc.work" :title="$t('community-events')" target="_blank" mode="classic">
               {{ $t('community-events') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
               <span>
-                Meet with NCC community members during the events, and learn about the latest developments in the community
+                {{ $t('community-events-desc') }}
               </span>
             </anchor>
           </li>
@@ -280,7 +280,7 @@ onMounted(() => {
               {{ $t('community-meetups') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
               <span>
-                Participate in small-scale community meet-up events where the community thrives because of you
+                {{ $t('community-meetups-desc') }}
               </span>
             </anchor>
           </li>
@@ -290,7 +290,7 @@ onMounted(() => {
               {{ $t('community-2f') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
               <span>
-                The second floor of the world, capable of accommodating a desk amidst the chaotic world, capable of carrying a tranquil heart and bright eyes
+                {{ $t('community-2f-desc') }}
               </span>
             </anchor>
           </li>
@@ -302,13 +302,13 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.community-content') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('community-block-content') }}</li>
 
           <li class="header-content">
             <anchor href="/community-online" :title="$t('community-online')" mode="classic">
               {{ $t('community-online') }}
               <span>
-                Join us in the online and offline worlds
+                {{ $t('community-online-desc') }}
               </span>
             </anchor>
           </li>
@@ -317,7 +317,7 @@ onMounted(() => {
             <anchor href="/participation-guidelines" :title="$t('community-participation')" mode="classic">
               {{ $t('community-participation') }}
               <span>
-                A diverse community guide: embracing differences and contributing constructively in a healthy way
+                {{ $t('community-participation-desc')}}
               </span>
             </anchor>
           </li>
@@ -326,7 +326,7 @@ onMounted(() => {
             <anchor href="/rules" :title="$t('community-rules')" mode="classic">
               {{ $t('community-rules') }}
               <span>
-                Community Standards established, reviewed, and approved by PMC: these normative documents will guide the community's operations and development
+                {{ $t('community-rules-desc')}}
               </span>
             </anchor>
           </li>
@@ -338,13 +338,15 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.community-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('community-block-resources') }}</li>
 
           <li class="header-content">
             <anchor href="https://glossary.ncc.work" :title="$t('glossary')" target="_blank" mode="classic">
               {{ $t('glossary') }}
               <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
-              <span>Describing abstract and profound technical concepts in clear and simple language</span>
+              <span>
+                {{ $t('glossary-desc') }}
+              </span>
             </anchor>
           </li>
 
@@ -354,18 +356,18 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="resource">
-      <span class="header-title">{{ $t('nav.titles.resources-and-media') }}</span>
+      <span class="header-title">{{ $t('resources-and-media') }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('nav.titles.media-news') }}</li>
+          <li class="header-sub-title">{{ $t('media-block-news') }}</li>
 
           <li class="header-content">
             <anchor href="/news" :title="$t('media-news')" mode="classic">
               {{ $t('media-news') }}
               <span>
-                NCC and its member projects in the news media
+                {{ $t('media-news-desc')}}
               </span>
             </anchor>
           </li>
@@ -374,7 +376,7 @@ onMounted(() => {
             <anchor href="/weekly" :title="$t('media-weekly')" mode="classic">
               {{ $t('media-weekly') }}
               <span>
-                Weekly recap and commentary
+                {{ $t('media-weekly-desc')}}
               </span>
             </anchor>
           </li>
@@ -383,7 +385,7 @@ onMounted(() => {
             <anchor href="/announcements" :title="$t('media-announcements')" mode="classic">
               {{ $t('media-announcements') }}
               <span>
-                Media releases and official NCC announcements
+                {{ $t('media-announcements-desc')}}
               </span>
             </anchor>
           </li>
@@ -395,7 +397,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('nav.titles.media-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t('media-block-resources') }}</li>
 
           <li class="header-content">
             <anchor href="/brand-guidelines" :title="$t('media-brand')" mode="classic">

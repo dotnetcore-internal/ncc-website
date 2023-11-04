@@ -7,7 +7,7 @@ import Anchor from "@/components/basic/AnchorElement.vue";
 
   <div class="p-5 grid lg:grid-cols-6 md:grid-cols-3 grid-cols-2 gap-4">
     <div class="nav-about-us">
-      <span class="nav-title">{{ $t('nav.titles.about-us') }}</span>
+      <span class="nav-title">{{ $t('about-us') }}</span>
       <span class="nav-item">
         <anchor href="/about/who-we-are" route-name="about/who-we-are" :title="$t('who-we-are')">{{ $t('who-we-are') }}</anchor>
       </span>
@@ -31,7 +31,7 @@ import Anchor from "@/components/basic/AnchorElement.vue";
       </span>
     </div>
     <div class="nav-projects">
-      <span class="nav-title">{{ $t('nav.titles.projects') }}</span>
+      <span class="nav-title">{{ $t('projects') }}</span>
       <span class="nav-item">
         <anchor href="https://contribute.ncc.work" :title="$t('project-contribute')" target="_blank" mode="classic">{{ $t('project-contribute') }}</anchor>
       </span>
@@ -53,10 +53,10 @@ import Anchor from "@/components/basic/AnchorElement.vue";
       </span>
     </div>
     <div class="nav-Learning">
-      <span class="nav-title">{{ $t('nav.titles.learning') }}</span>
+      <span class="nav-title">{{ $t('learning') }}</span>
     </div>
     <div class="nav-community">
-      <span class="nav-title">{{ $t('nav.titles.community') }}</span>
+      <span class="nav-title">{{ $t('community') }}</span>
       <span class="nav-item">
         <anchor href="https://events.ncc.work" :title="$t('community-events')" target="_blank" mode="classic">{{ $t('community-events') }}</anchor>
       </span>
@@ -81,7 +81,7 @@ import Anchor from "@/components/basic/AnchorElement.vue";
       </span>
     </div>
     <div class="nav-resource">
-      <span class="nav-title">{{ $t('nav.titles.resources-and-media') }}</span>
+      <span class="nav-title">{{ $t('resources-and-media') }}</span>
       <span class="nav-item">
         <anchor href="/news" route-name="news" :title="$t('media-news')">{{ $t('media-news') }}</anchor>
       </span>

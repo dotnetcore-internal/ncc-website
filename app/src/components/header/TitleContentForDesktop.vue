@@ -90,7 +90,7 @@ onUnmounted(() => {
 
   <transition enter-active-class="animate__animated animate__fadeIn animate__faster">
   <!--leave-active-class="animate__animated animate__fadeOut animate__fast"-->
-    
+
     <div class="block-body" ref="panelTarget" v-show="displayPanel">
 
       <div class="w-full h-0.5 bg-purple-600/40"></div>
