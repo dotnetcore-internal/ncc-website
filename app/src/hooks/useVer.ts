@@ -1,4 +1,4 @@
-const version = "20231104001";
+const version = "20231104002";
 
 const needUpdate = (current?: string): boolean => {
     if (current === null) {

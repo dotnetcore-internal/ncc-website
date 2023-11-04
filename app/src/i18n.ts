@@ -35,8 +35,9 @@ export async function loadLocaleMessages(i18n, locale, path: string) {
     //get the language resource from local storage first
     const localStorageMessages = getLocaleResource(path, locale);
 
-    if (localStorageMessages && !needUpdate(localStorageMessages[resourceName]['version'])) {
+    console.log(localStorageMessages);
 
+    if (!needUpdate(localStorageMessages[resourceName]['version'])) {
         // set locale and locale message
         if (isLocaleSupport(locale)) {
             i18n.global.mergeLocaleMessage(locale, localStorageMessages);
@@ -104,31 +105,6 @@ export function registerPath(path: string, locale: string) {
 
 export function hasRegisteredPath(path: string, locale: string): boolean {
     return REGISTERED_PATHS.includes(`${locale}#${path}`);
-}
-
-//endregion
-
-//region Truncate Path
-
-function truncatePath(path: string): string | null {
-    const regex = /^(\/news|\/announcements|\/weekly|\/projects|\/rules)/;
-
-    const match = path.match(regex);
-    if (match) {
-        return match[0];
-    }
-
-    return null;
-}
-
-export function toFixedPath(path: string): string {
-    const truncate = truncatePath(path);
-
-    if (truncate) {
-        return truncate;
-    }
-
-    return path;
 }
 
 //endregion

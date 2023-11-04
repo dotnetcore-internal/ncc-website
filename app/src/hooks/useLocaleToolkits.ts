@@ -1,6 +1,21 @@
-import {hasRegisteredPath, loadLocaleMessages, setI18nLanguage, toFixedPath} from "@/i18n";
+import {hasRegisteredPath, loadLocaleMessages, setI18nLanguage} from "@/i18n";
+import {isLegitimatePage, truncatePath} from "@/utils/LegitimatePageHelper";
+
+function toFixedPath(path: string): string {
+    const truncate = truncatePath(path);
+
+    if (truncate) {
+        return truncate;
+    }
+
+    return path;
+}
 
 const toSetOrLoadLanguage = async (i18n: unknown, locale: string, path: string) => {
+
+    if (!isLegitimatePage(path)) {
+        return;
+    }
 
     const fixedPath = toFixedPath(path);
 
