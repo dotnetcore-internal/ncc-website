@@ -5,7 +5,7 @@ import {onClickOutside} from "@vueuse/core";
 
 import {Earth} from "@icon-park/vue-next";
 import {setLocaleToCookie} from "@/hooks/usePageToolkits";
-import {hasRegisteredPath, loadLocaleMessages, setI18nLanguage, toFixedPath} from "@/i18n";
+import {toSetOrLoadLanguage} from "@/hooks/useLocaleToolkits";
 
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
@@ -29,28 +29,9 @@ const setLanguage = async (locale: string) => {
 
   hideLanguagesBox();
 
-  const path = toFixedPath(route.path);
-  //to check whether the resource is registered
-  //if registered, the resource has been loaded into the i18n manager
-  //and return.
-  if (!hasRegisteredPath(path, locale)) {
-
-    // load locale messages
-    await loadLocaleMessages(i18n, locale, path);
-  }
-
-  //force to load common language resource
-  if (!hasRegisteredPath('/', locale)) {
-    // load locale messages
-    await loadLocaleMessages(i18n, locale, '/');
-  }
-
-  // set i18n language
-  setI18nLanguage(i18n, locale);
+  await toSetOrLoadLanguage(i18n, locale, route.path);
 
   setLocaleToCookie(locale);
-
-  console.log(locale);
 }
 </script>
 

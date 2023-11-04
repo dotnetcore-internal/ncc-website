@@ -1,7 +1,8 @@
 import {createApp} from "vue";
 import {createPinia} from "pinia";
 import {getLocaleFromCookie} from "@/hooks/usePageToolkits";
-import {hasRegisteredPath, loadLocaleMessages, setI18nLanguage, setupI18n, toFixedPath} from '@/i18n';
+import {toSetOrLoadLanguage} from "@/hooks/useLocaleToolkits";
+import {setupI18n} from '@/i18n';
 
 import App from "./App.vue";
 import router from "./router";
@@ -15,25 +16,7 @@ const i18n = setupI18n();
 router.beforeEach(async (to, from, next) => {
     const locale = getLocaleFromCookie();
 
-    const path = toFixedPath(to.path);
-
-    //to check whether the resource is registered
-    //if registered, the resource has been loaded into the i18n manager
-    //and return.
-    if (!hasRegisteredPath(path, locale)) {
-
-        // load locale messages
-        await loadLocaleMessages(i18n, locale, path);
-    }
-
-    //force to load common language resource
-    if (!hasRegisteredPath('/', locale)) {
-        // load locale messages
-        await loadLocaleMessages(i18n, locale, '/');
-    }
-
-    // set i18n language
-    setI18nLanguage(i18n, locale);
+    await toSetOrLoadLanguage(i18n, locale, to.path);
 
     return next();
 });

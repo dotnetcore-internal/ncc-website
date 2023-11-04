@@ -1,5 +1,6 @@
 import {nextTick} from 'vue';
 import {createI18n} from 'vue-i18n';
+import {needUpdate} from "@/hooks/useVer";
 
 export function setupI18n(options = {locale: 'en'}) {
     const i18n = createI18n(options)
@@ -31,22 +32,43 @@ export async function loadLocaleMessages(i18n, locale, path: string) {
     const resourceName = path === '/' ? '_common' : path.replace(/\//g, '_');
     const queryPath = `/locales/${locale}/t_${resourceName}.json`;
 
-    //load locale messages from remote
-    await fetch(queryPath)
-        .then(response => response.json())
-        .then(messages => {
-            // set locale and locale message
-            if (isLocaleSupport(locale)) {
-                i18n.global.mergeLocaleMessage(locale, messages);
-            } else {
-                appendNewSupportLocals(locale);
-                i18n.global.setLocaleMessage(locale, messages);
-            }
-        })
-        .catch(err => {
-            console.log(err);
-            locale = 'en';
-        });
+    //get the language resource from local storage first
+    const localStorageMessages = getLocaleResource(path, locale);
+
+    if (localStorageMessages && !needUpdate(localStorageMessages[resourceName]['version'])) {
+
+        // set locale and locale message
+        if (isLocaleSupport(locale)) {
+            i18n.global.mergeLocaleMessage(locale, localStorageMessages);
+        } else {
+            appendNewSupportLocals(locale);
+            i18n.global.setLocaleMessage(locale, localStorageMessages);
+        }
+
+    } else {
+
+        //load locale messages from remote
+        await fetch(queryPath)
+            .then(response => response.json())
+            .then(messages => {
+                // set locale and locale message
+                if (isLocaleSupport(locale)) {
+                    i18n.global.mergeLocaleMessage(locale, messages);
+                } else {
+                    appendNewSupportLocals(locale);
+                    i18n.global.setLocaleMessage(locale, messages);
+                }
+
+                //to update language resource into local storage
+                updateLocalResource(path, locale, messages);
+
+            })
+            .catch(err => {
+                console.log(err);
+                locale = 'en';
+            });
+
+    }
 
     //After the resource is loaded, the Path is written to the registration list
     registerPath(path, locale);
@@ -86,7 +108,7 @@ export function hasRegisteredPath(path: string, locale: string): boolean {
 
 //endregion
 
-//region
+//region Truncate Path
 
 function truncatePath(path: string): string | null {
     const regex = /^(\/news|\/announcements|\/weekly|\/projects|\/rules)/;
@@ -107,6 +129,19 @@ export function toFixedPath(path: string): string {
     }
 
     return path;
+}
+
+//endregion
+
+//region LocalStorage Operations
+
+export function getLocaleResource(path: string, locale: string): any | null {
+    const v = localStorage.getItem(`${locale}#${path}`);
+    return v ? JSON.parse(v) : null;
+}
+
+export function updateLocalResource(path: string, locale: string, resource: any) {
+    localStorage.setItem(`${locale}#${path}`, JSON.stringify(resource));
 }
 
 //endregion
