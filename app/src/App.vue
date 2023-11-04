@@ -13,6 +13,7 @@ import FooterLocale from "@/components/common/FooterLocale.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import FooterCopyright from "@/components/common/FooterCopyright.vue";
 import FooterNccLogo from "@/components/common/FooterNccLogo.vue";
+import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();
 
@@ -78,7 +79,13 @@ uiStore.setLocale(locale ?? 'en');
 
       <horizontal-rule-element colorMode="dark"/>
 
-      <footer-copyright/>
+      <footer-copyright>
+        <template #maintain-by>
+          <anchor href="/" title=".NET Core Community" mode="classic">
+            NCC
+          </anchor>
+        </template>
+      </footer-copyright>
 
       <footer-ncc-logo/>
 

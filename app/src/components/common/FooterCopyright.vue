@@ -1,14 +1,60 @@
 <script setup lang="ts">
+import {useRoute} from "vue-router";
+import Anchor from "@/components/basic/AnchorElement.vue";
+
+const route = useRoute();
 
 </script>
 
 <template>
-  <div class="px-5 text-xs my-3.5 align-middle float-left">
-    {{ $t('copyright') }} <br/>
-    <span class="leading-7">{{ $t('we-love-os') }}</span>
+  <div class="copyright">
+
+    <span class="leading-6">
+      {{ $t('copyright') }}
+    </span>
+
+    <br/>
+
+    <span class="leading-6">
+      {{ $t('footer-note-part1') }}
+
+      <slot name="maintain-by"></slot>
+
+      {{ $t('footer-note-part2') }}
+      <anchor href="https://ncc.work" target="_blank" mode="classic" title="The NCC Website">
+      {{ $t('footer-note-part3') }}
+      </anchor>
+
+      <anchor href="https://ncc.work/about/website-source-code-usage-guidelines" target="_blank" mode="classic" title="The NCC Website Source Code Usage Guidelines">
+      {{ $t('footer-note-part4') }}
+      </anchor>
+
+      {{ $t('footer-note-part5') }}
+    </span>
+
+    <br/><br/>
+
+    <span class="pr-2 leading-6">
+      <anchor
+          mode="classic"
+          :href="'https://github.com/dotnetcore/ncc-website/issues/new?title=Your+issue&projects=dotnetcore/ncc-website/1&body=From+URL%3A+https%3A%2F%2Fncc.work'+route.path.replace(/\//g, '%2F')"
+          target="_blank"
+          :title="$t('submit-website-bug')">
+        {{ $t('submit-website-bug') }}
+        </anchor>
+    </span>
+
+    |
+
+    <span class="pl-2 leading-6">
+       {{ $t('we-love-os') }}
+    </span>
+
   </div>
 </template>
 
 <style scoped lang="css">
-
+.copyright {
+  @apply px-5 text-xs my-3.5 align-middle float-left;
+}
 </style>
