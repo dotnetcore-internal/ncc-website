@@ -3,7 +3,12 @@
     "version": "20231104002"
   },
   "nav": {
-    "all-ncc-sites": "所有 NCC 站点",
-    "all-our-sites": "所有 NCC 站点"
+    "all-ncc-sites": "浏览所有 NCC 站点",
+    "all-our-sites": "浏览所有 NCC 站点",
+    "discover-resource": "在我们的站点和资源中，找到你所需要的项目或社区。",
+    "discover-chinese-part1": "中文用户可在",
+    "discover-chinese-part2": ".NET China 社区",
+    "discover-chinese-part3": "中进一步探索。",
+    "discover-chinese-tip": "访问 .NET in China 网站"
   }
 }
