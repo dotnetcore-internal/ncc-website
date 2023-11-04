@@ -4,6 +4,10 @@ import Anchor from "@/components/basic/AnchorElement.vue";
 
 const route = useRoute();
 
+const clearAllCache = () => {
+  localStorage.clear();
+}
+
 </script>
 
 <template>
@@ -42,6 +46,12 @@ const route = useRoute();
           :title="$t('submit-website-bug')">
         {{ $t('submit-website-bug') }}
         </anchor>
+    </span>
+
+    |
+
+    <span class="pl-2 leading-6">
+      <span @click="clearAllCache" :title="$t('clear-all-cache')" class="cursor-pointer">{{ $t('clear-all-cache') }}</span>
     </span>
 
     |
