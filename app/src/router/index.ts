@@ -43,6 +43,11 @@ const baseRoutes: RouteRecordRaw[] = [
         component: () => import("../views/guidelines/BrandGuidelinesView.vue"),
     },
     {
+        path: "/website-source-code-usage-guidelines",
+        name: "website-source-code-usage-guidelines",
+        component: () => import("../views/guidelines/SourceCodeUsageGuidelinesView.vue"),
+    },
+    {
         path: "/:pathMatch(.*)*",
         name: "all",
         component: () => import("../views/404View.vue"),

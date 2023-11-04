@@ -17,11 +17,6 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../views/about/StoryView.vue"),
     },
     {
-        path: "/about/website-source-code-usage-guidelines",
-        name: "about/website-source-code-usage-guidelines",
-        component: () => import("../views/about/TheNccWebsiteView.vue"),
-    },
-    {
         path: "/about/faq",
         name: "about/faq",
         component: () => import("../views/about/FaqView.vue"),

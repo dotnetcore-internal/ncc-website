@@ -25,7 +25,7 @@ const route = useRoute();
       {{ $t('footer-note-part3') }}
       </anchor>
 
-      <anchor href="https://ncc.work/about/website-source-code-usage-guidelines" target="_blank" mode="classic" title="The NCC Website Source Code Usage Guidelines">
+      <anchor href="https://ncc.work/website-source-code-usage-guidelines" target="_blank" mode="classic" title="The NCC Website Source Code Usage Guidelines">
       {{ $t('footer-note-part4') }}
       </anchor>
 
