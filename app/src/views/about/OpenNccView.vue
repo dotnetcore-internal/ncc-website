@@ -11,11 +11,15 @@ setTitle('Our WeChat');
 
   <body-block>
 
-    <title-block>Our Official WeChat Account</title-block>
+    <title-block>
+      {{ $t('wechat.our-official-wechat-account') }}
+    </title-block>
 
-    <div class="text-2xl p-5">Connect with us on WeChat by scanning this QR code!</div>
+    <div class="text-2xl p-5">
+      {{ $t('wechat.connect-with-us-on-wechat') }}
+    </div>
 
-    <div>
+    <div class="p-5">
       <img src="/images/official-wechat-account-qrcode.jpg" alt="NCC WeChat QR Code" width="500"/>
     </div>
 
