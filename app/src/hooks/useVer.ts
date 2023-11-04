@@ -4,7 +4,10 @@ const needUpdate = (current?: string): boolean => {
     if (current === null) {
         return true;
     }
-    return current !== version;
+    const currentNum = Number.parseInt(current ?? '0');
+    const versionNum = Number.parseInt(version);
+
+    return currentNum < versionNum;
 }
 
 export {

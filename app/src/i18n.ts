@@ -37,7 +37,7 @@ export async function loadLocaleMessages(i18n, locale, path: string) {
 
     console.log(localStorageMessages);
 
-    if (!needUpdate(localStorageMessages[resourceName]['version'])) {
+    if (!!localStorageMessages && !needUpdate(localStorageMessages[resourceName]['version'])) {
         // set locale and locale message
         if (isLocaleSupport(locale)) {
             i18n.global.mergeLocaleMessage(locale, localStorageMessages);
