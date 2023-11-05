@@ -12,9 +12,7 @@ setTitle('project-archived-full', 'i18n');
 
   <body-block>
 
-    <project-header feature-key="archived">
-      {{ $t('project-archived-full') }}
-    </project-header>
+    <project-header feature-key="archived"/>
 
   </body-block>
 

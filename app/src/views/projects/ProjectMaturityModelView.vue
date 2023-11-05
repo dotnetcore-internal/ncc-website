@@ -10,9 +10,7 @@ setTitle('project-maturity-model-full', 'i18n');
 <template>
   <body-block>
 
-    <project-header feature-key="maturity-model">
-      {{ $t('project-maturity-model-full') }}
-    </project-header>
+    <project-header feature-key="maturity-model"/>
 
   </body-block>
 

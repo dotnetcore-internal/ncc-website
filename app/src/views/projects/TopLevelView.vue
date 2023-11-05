@@ -12,9 +12,7 @@ setTitle('project-top-level-full', 'i18n');
 
   <body-block>
 
-    <project-header feature-key="top-level">
-      {{ $t('project-top-level-full') }}
-    </project-header>
+    <project-header feature-key="top-level"/>
 
   </body-block>
 

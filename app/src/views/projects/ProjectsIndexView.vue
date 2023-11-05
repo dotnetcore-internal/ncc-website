@@ -12,9 +12,7 @@ setTitle('project-all-full', 'i18n');
 <template>
   <body-block>
 
-    <project-header feature-key="all">
-      {{ $t('project-all-full') }}
-    </project-header>
+    <project-header feature-key="all"/>
 
 
   </body-block>
