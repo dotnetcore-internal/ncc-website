@@ -49,6 +49,9 @@ import Anchor from "@/components/basic/AnchorElement.vue";
       </span>
       <hr class="my-5 w-5 border-white/50"/>
       <span class="nav-item">
+        <anchor href="/project-maturity-model" route-name="project-maturity-model" :title="$t('project-maturity-model-full')">{{ $t('project-maturity-model-full') }}</anchor>
+      </span>
+      <span class="nav-item">
         <anchor href="https://contribute.ncc.work/project-join-ncc" :title="$t('project-how-to-join-us')" target="_blank" mode="classic">{{ $t('project-how-to-join-us') }}</anchor>
       </span>
     </div>

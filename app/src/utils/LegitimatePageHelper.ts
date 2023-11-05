@@ -23,6 +23,7 @@ const isBuildInPath = (path: string): boolean => {
         case '/people/technical-oversight-committee':
         case '/top-level-projects':
         case "/archived-projects":
+        case "/project-maturity-model":
         case "/community-online":
         case "/brand-guidelines":
         case "/participation-guidelines":

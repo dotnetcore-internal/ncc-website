@@ -1,26 +1,22 @@
 <script setup lang="ts">
 import {setTitle} from "@/hooks/usePageToolkits";
-
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MemberProjects from "@/components/common/MemberProjects.vue";
 import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 
-setTitle('project-all-full', 'i18n');
-
+setTitle('project-maturity-model-full', 'i18n');
 </script>
 
 <template>
   <body-block>
 
-    <project-header feature-key="all">
-      {{ $t('project-all-full') }}
+    <project-header feature-key="maturity-model">
+      {{ $t('project-maturity-model-full') }}
     </project-header>
-
 
   </body-block>
 
   <member-projects/>
-
 </template>
 
 <style scoped lang="css">

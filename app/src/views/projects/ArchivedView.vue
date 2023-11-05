@@ -2,8 +2,8 @@
 import {setTitle} from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
-import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import MemberProjects from "@/components/common/MemberProjects.vue";
+import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 
 setTitle('project-archived-full', 'i18n');
 </script>
@@ -12,11 +12,13 @@ setTitle('project-archived-full', 'i18n');
 
   <body-block>
 
-    <title-block>{{ $t('project-archived-full') }}</title-block>
+    <project-header feature-key="archived">
+      {{ $t('project-archived-full') }}
+    </project-header>
 
   </body-block>
 
-  <member-projects />
+  <member-projects/>
 
 </template>
 

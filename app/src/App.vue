@@ -81,9 +81,7 @@ uiStore.setLocale(locale ?? 'en');
 
       <footer-copyright>
         <template #maintain-by>
-          <anchor href="/" title=".NET Core Community" mode="classic">
-            NCC
-          </anchor>
+          <anchor href="/" title=".NET Core Community" mode="classic" class="underline hover:underline underline-offset-4">NCC</anchor>
         </template>
       </footer-copyright>
 

@@ -155,6 +155,15 @@ onMounted(() => {
             </anchor>
           </li>
 
+          <li class="header-content">
+            <anchor href="/project-maturity-model" :title="$t('project-maturity-model-full')" mode="classic">
+              {{ $t('project-maturity-model') }}
+              <span>
+                {{ $t('project-maturity-model-desc') }}
+              </span>
+            </anchor>
+          </li>
+
         </ul>
 
       </template>
