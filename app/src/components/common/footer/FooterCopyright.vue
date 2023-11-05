@@ -25,13 +25,10 @@ const clearAllCache = () => {
       <slot name="maintain-by"></slot>
 
       {{ $t('footer-note-part2') }}
-      <anchor href="https://ncc.work" target="_blank" mode="classic" title="The NCC Website">
-      {{ $t('footer-note-part3') }}
-      </anchor>
 
-      <anchor href="https://ncc.work/website-source-code-usage-guidelines" target="_blank" mode="classic" title="The NCC Website Source Code Usage Guidelines">
-      {{ $t('footer-note-part4') }}
-      </anchor>
+      <span class="dev" v-html="$t('footer-note-part3')"></span>
+
+      <span class="dev" v-html="$t('footer-note-part4')"></span>
 
       {{ $t('footer-note-part5') }}
     </span>
@@ -68,5 +65,9 @@ const clearAllCache = () => {
 <style scoped lang="css">
 .copyright {
   @apply px-5 text-xs my-3.5 align-middle float-left;
+}
+
+.dev > a{
+  @apply underline underline-offset-2;
 }
 </style>

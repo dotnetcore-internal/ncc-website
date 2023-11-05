@@ -39,6 +39,9 @@
   "project-how-to-join-us": "如何加入",
   "project-tools": "專案工具",
   "project-growing-for-ecosystem": "NCC 專案為生態而戰",
+  "project-maturity-model": "成熟度模型",
+  "project-maturity-model-full": "專案成熟度模型",
+  "project-maturity-model-desc": "NCC 專案成熟度模型是一套評估專案成熟度的指導方針",
   "learning": "學習",
   "community": "社區",
   "community-events": "活動",
@@ -104,8 +107,9 @@
   "clear-all-cache": "清理緩存",
   "footer-note-part1": "此站點由",
   "footer-note-part2": "維護，",
-  "footer-note-part3": "由 NCC 社區設計、開發。",
-  "footer-note-part4": "站點源碼採用 MIT 許可證",
+  "footer-note-part3": "由 <a class='underline hover:underline underline-offset-4' href='https://ncc.work' target='_blank' title='The NCC Website'>NCC</a> 社區設計、開發。",
+  "footer-note-part4": "<a class='underline hover:underline underline-offset-4' href='https://github.com/dotnetcore/ncc-website' target='_blank' title='The NCC Website Source Code Usage Guidelines'>站點源碼</a>採用 MIT 許可證",
   "footer-note-part5": "，站點內內容版權所有。",
+
   "submit-website-bug": "提交網站錯誤"
 }
