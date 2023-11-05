@@ -111,25 +111,26 @@ onUnmounted(() => {
 
       <div class="responsive-width h-full">
 
-        <div class="grid grid-cols-3 gap-4 h-full">
+        <div class="grid grid-cols-3 h-full">
 
-          <div class="col1 h-full block pr-7">
+          <div class="col1 h-full block pr-6">
             <slot name="col1"></slot>
+            <placeholder-block height="1.25rem"></placeholder-block>
           </div>
 
-          <div class="col2 h-full block pr-7">
+          <div class="col2 h-full block pr-3">
             <slot name="col2"></slot>
+            <placeholder-block height="1.25rem"></placeholder-block>
           </div>
 
-          <div class="col3 h-full block border-l-2 border-gray-200 dark:border-white/10">
+          <div class="col3 h-full block border-l-2 border-gray-200/40 dark:border-white/10 pl-3">
             <slot name="col3"></slot>
+            <placeholder-block height="1.25rem"></placeholder-block>
           </div>
 
         </div>
 
       </div>
-
-      <placeholder-block height="1.25rem"></placeholder-block>
 
     </div>
 
