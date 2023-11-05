@@ -32,15 +32,29 @@ const itemIsOutsideRef = ref(true);
 const panelIsOutsideRef = ref(true);
 
 watch(itemIsOutside, (value) => {
-  nextTick(() => {
-    itemIsOutsideRef.value = value;
-  });
+  let timeout = 200;
+  if (value) {
+    timeout = 500;
+  }
+  setTimeout(() => {
+    nextTick(() => {
+      itemIsOutsideRef.value = value;
+    });
+  }, timeout);
+
 });
 
 watch(panelIsOutside, (value) => {
-  nextTick(() => {
-    panelIsOutsideRef.value = value;
-  });
+  let timeout = 200;
+  if (value) {
+    timeout = 500;
+  }
+  setTimeout(() => {
+    nextTick(() => {
+      panelIsOutsideRef.value = value;
+    });
+  }, timeout);
+
 });
 
 const displayPanel = computed(() => {
@@ -89,7 +103,7 @@ onUnmounted(() => {
 
 
   <transition enter-active-class="animate__animated animate__fadeIn animate__faster">
-  <!--leave-active-class="animate__animated animate__fadeOut animate__fast"-->
+    <!--leave-active-class="animate__animated animate__fadeOut animate__fast"-->
 
     <div class="block-body" ref="panelTarget" v-show="displayPanel">
 

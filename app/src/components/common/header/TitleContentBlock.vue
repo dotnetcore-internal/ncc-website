@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import {useUiStore} from "@/stores/uiStore";
 
-import Desktop from "@/components/header/TitleContentForDesktop.vue";
-import Mobile from "@/components/header/TitleContentForMobile.vue";
+import Desktop from "@/components/common/header/TitleContentForDesktop.vue";
+import Mobile from "@/components/common/header/TitleContentForMobile.vue";
 
 const uiStore = useUiStore();
 

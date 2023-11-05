@@ -6,8 +6,8 @@ import {unlockBody} from "@/hooks/usePageToolkits";
 import {useUiStore} from "@/stores/uiStore";
 import {RightSmallUp} from "@icon-park/vue-next";
 
-import TitleFrame from "@/components/header/TitleFrame.vue";
-import TitleContentBlock from "@/components/header/TitleContentBlock.vue";
+import TitleFrame from "@/components/common/header/TitleFrame.vue";
+import TitleContentBlock from "@/components/common/header/TitleContentBlock.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();

@@ -1,7 +1,8 @@
 <script setup lang="ts">
 import {inject, ref} from "vue";
-import {useRoute} from "vue-router";
 import {onClickOutside} from "@vueuse/core";
+import {useRoute} from "vue-router";
+import {useUiStore} from "@/stores/uiStore";
 
 import {Earth} from "@icon-park/vue-next";
 import {setLocaleToCookie} from "@/hooks/usePageToolkits";
@@ -11,6 +12,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
 const i18n = inject('$i18n');
 const route = useRoute();
+const uiStore = useUiStore();
 
 const target = ref(null);
 const displayLanguagesBox = ref(false);
@@ -30,6 +32,8 @@ const setLanguage = async (locale: string) => {
   hideLanguagesBox();
 
   await toSetOrLoadLanguage(i18n, locale, route.path);
+
+  uiStore.setLocale(locale);
 
   setLocaleToCookie(locale);
 }

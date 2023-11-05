@@ -29,7 +29,7 @@ const useIconColor = computed(() => {
 const useHeaderClass = computed(() => {
   return uiStore.isMobileMode
       ? 'bg-white dark:bg-black'
-      : 'backdrop-blur-md bg-white/30 dark:bg-black/30';
+      : 'backdrop-blur-md bg-white/75 dark:bg-black/75';
 });
 
 //region Mobile Mode
@@ -59,7 +59,7 @@ const switchMobileMenu = () => {
       <left-right-layout>
         <template #left>
           <div class="inline-block align-top">
-            <a href="/" @click.prevent="go('home')" title=".NET Core Community">
+            <a href="/app/public" @click.prevent="go('home')" title=".NET Core Community">
               <img :src="useLogoUrl" width="180" alt="NCC"/>
             </a>
           </div>

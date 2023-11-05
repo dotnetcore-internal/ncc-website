@@ -50,8 +50,10 @@ const clearAllCache = () => {
 
     |
 
-    <span class="pl-2 leading-6">
-      <span @click="clearAllCache" :title="$t('clear-all-cache')" class="cursor-pointer">{{ $t('clear-all-cache') }}</span>
+    <span class="px-2 leading-6">
+      <span @click="clearAllCache" :title="$t('clear-all-cache')" class="cursor-pointer">
+        {{ $t('clear-all-cache') }}
+      </span>
     </span>
 
     |
