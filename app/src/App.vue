@@ -7,12 +7,12 @@ import {getCookieValueWithDefaults, go} from "@/hooks/usePageToolkits";
 import NavigationResources from '@/components/common/NavigationResources.vue';
 import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
-import HeaderTitle from "@/components/header/HeaderTitle.vue";
-import FooterPendant from "@/components/common/FooterPendant.vue";
-import FooterLocale from "@/components/common/FooterLocale.vue";
+import HeaderTitle from "@/components/common/header/HeaderTitle.vue";
+import FooterPendant from "@/components/common/footer/FooterPendant.vue";
+import FooterLocale from "@/components/common/footer/FooterLocale.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
-import FooterCopyright from "@/components/common/FooterCopyright.vue";
-import FooterNccLogo from "@/components/common/FooterNccLogo.vue";
+import FooterCopyright from "@/components/common/footer/FooterCopyright.vue";
+import FooterNccLogo from "@/components/common/footer/FooterNccLogo.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();
