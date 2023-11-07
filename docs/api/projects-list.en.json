@@ -1,0 +1,467 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "_catalogues": {
+    "infra-middleware": "Infrastructure & Middleware",
+    "data": "Data",
+    "dev-fx": "Development Framework",
+    "application-library": "Application Library",
+    "tools-env": "Tools & Environment",
+    "ui": "UI Components",
+    "translation": "Translation",
+    "labs": "Labs"
+  },
+  "projects": [
+    {
+      "id": "agileconfig",
+      "name": "AgileConfig",
+      "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/AgileConfig",
+      "catalogue": "infra-middleware",
+      "status": "sandbox",
+      "leader": {
+        "name": "ZJ ZHOU",
+        "url": "https://github.com/kklldog"
+      },
+      "external": false
+    },
+    {
+      "id": "alipay-sdk",
+      "name": "Alipay SDK",
+      "description": "A third-party Alipay server SDK, based on .NET Standard 2.0 development, provides a more reliable design than the official, but remains consistent with the official APIs.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Alipay.AopSdk.Core",
+      "catalogue": "tools-env",
+      "status": "archived",
+      "leader": {
+        "name": "Zhiqiang Li",
+        "url": "https://github.com/stulzq"
+      },
+      "external": false
+    },
+    {
+      "id": "aspectcore",
+      "name": "AspectCore",
+      "description": "An AOP-based cross platform framework for .NET Standard.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/AspectCore-Framework",
+      "catalogue": "application-library",
+      "status": "top-level",
+      "leader": {
+        "name": "Liu Haoyang",
+        "url": "https://github.com/liuhaoyang"
+      },
+      "external": false
+    },
+    {
+      "id": "bootstrapblazor",
+      "name": "BootstrapBlazor",
+      "description": "A set of enterprise-class UI components based on Bootstrap and Blazor.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/BootstrapBlazor",
+      "gitee": "https://gitee.com/LongbowEnterprise/BootstrapBlazor",
+      "website": "https://www.blazor.zone/",
+      "catalogue": "ui",
+      "status": "sandbox",
+      "leader": {
+        "name": "Argo Zhang",
+        "url": "https://github.com/ArgoZhang"
+      },
+      "external": false
+    },
+    {
+      "id": "canalsharp",
+      "name": "CanalSharp",
+      "description": "An open source .net client for Alibaba Canal. Alibaba Canal is an incremental publish & subscription component based on MySQL's binlog.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/CanalSharp",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "WithLin",
+        "url": "https://github.com/withlin"
+      },
+      "external": false
+    },
+    {
+      "id": "cap",
+      "name": "CAP",
+      "description": "A distributed transaction solution in microservice based on eventually consistency, also an eventbus with Outbox pattern.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/CAP",
+      "catalogue": "infra-middleware",
+      "status": "top-level",
+      "leader": {
+        "name": "杨晓东",
+        "url": "https://github.com/yang-xiaodong"
+      },
+      "external": false
+    },
+    {
+      "id": "collections",
+      "name": "Collections",
+      "description": "Utilities and extensions for Collections includes Collections.Paginable and so on...",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Collections",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "Alex Lewis",
+        "url": "https://github.com/alexinea"
+      },
+      "external": false
+    },
+    {
+      "id": "compile-environment",
+      "name": "Compile Environment",
+      "description": "When using the Roslyn library for dynamic compilation, you can introduce the library to provide a dynamic compilation environment.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Compile.Environment",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "dotnetspider",
+      "name": "DotnetSpider",
+      "description": "A .NET Standard web crawling library similar to WebMagic and Scrapy. It is a lightweight ,efficient and fast high-level web crawling & scraping framework for .NET.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/DotnetSpider",
+      "catalogue": "data",
+      "status": "top-level",
+      "leader": {
+        "name": "Lewis Zou",
+        "url": "https://github.com/zlzforever"
+      },
+      "external": false
+    },
+    {
+      "id": "easycaching",
+      "name": "EasyCaching",
+      "description": "An open source caching library that contains basic usage and some advanced usages of caching which can help us to handle caching more easier.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EasyCaching",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "汪文清",
+        "url": "https://github.com/catcherwang"
+      },
+      "external": false
+    },
+    {
+      "id": "flubucore",
+      "name": "FlubuCore",
+      "description": "A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/FlubuCore",
+      "catalogue": "tools-env",
+      "status": "top-level",
+      "leader": {
+        "name": "Marko Zorec",
+        "url": "https://github.com/mzorec"
+      },
+      "external": false
+    },
+    {
+      "id": "efcore-gaussdb",
+      "name": "GaussDB for EFCore",
+      "description": "An Entity Framework Core provider for GaussDB.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EntityFrameworkCore.GaussDB",
+      "catalogue": "data",
+      "status": "incubation",
+      "leader": {
+        "name": "Jeffcky",
+        "url": "https://github.com/wangpengxpy"
+      },
+      "external": false
+    },
+    {
+      "id": "efcore-kingbasees",
+      "name": "KingbaseES for EFCore",
+      "description": "An Entity Framework Core provider for KingbaseES.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES",
+      "catalogue": "data",
+      "status": "incubation",
+      "leader": {
+        "name": "Jeffcky",
+        "url": "https://github.com/wangpengxpy"
+      },
+      "external": false
+    },
+    {
+      "id": "fastgithub",
+      "name": "FastGithub",
+      "description": "A GitHub accelerator. Used to solve the problems of GitHub unable to open, unable to load user avatar, unable to upload and download releases, git-clone git-pull git-push failure, etc.",
+      "logo": "",
+      "catalogue": "tools-env",
+      "status": "archived",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "freesql",
+      "name": "FreeSql",
+      "description": "FreeSql is the ORM in .NET Core, .NET Framework and Xamarin. It supports MySQL, PostgreSQL, SqlServer, Oracle, Sqlite, Firebird, ODBC, 达梦, 瀚高, KingbaseES, 神通, HUAWEI GaussDB and Microsoft Access.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/FreeSql",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "2881099",
+        "url": "https://github.com/2881099"
+      },
+      "external": false
+    },
+    {
+      "id": "httpreports",
+      "name": "HttpReports",
+      "description": "A lightweight APM system based on .NET Core, can be used to quickly build an integrated site of statistics, analysis, charts, monitoring, and distributed tracking in the .NET Core environment. HttpReports applies to ASP.NET Core MVC/WebAPI, is simple to get started and suitable for use in microservice architecture.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/HttpReports",
+      "catalogue": "infra-middleware",
+      "status": "sandbox",
+      "leader": {
+        "name": "SpringLee",
+        "url": "https://github.com/SpringLee"
+      },
+      "external": false
+    },
+    {
+      "id": "magicodes-ie",
+      "name": "Magicodes-IE",
+      "description": "A common import and export library for Excel, Word, PDF and HTML.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Magicodes.IE",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Xin-Lai",
+        "url": "https://github.com/xin-lai"
+      },
+      "external": false
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha",
+      "description": "An application performance monitor tools based on OpenTelemetry, which also provides a scalable platform for observability data analysis and storage.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/mocha",
+      "catalogue": "infra-middleware",
+      "status": "incubation",
+      "leader": {
+        "name": "Liu Haoyang",
+        "url": "https://github.com/liuhaoyang"
+      },
+      "external": false
+    },
+    {
+      "id": "natasha",
+      "name": "Natasha",
+      "description": "A simplify IL operations, optimize the IL programming flow, and write dynamic caches that provide high performance.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Natasha",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "AzulX",
+        "url": "https://github.com/NMSAzulX"
+      },
+      "external": false
+    },
+    {
+      "id": "npoi",
+      "name": "NPOI",
+      "description": "A .net library for reading and writing MsOffice binary and OOXML file formats.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/NPOI",
+      "catalogue": "data",
+      "status": "archived",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "osharp",
+      "name": "OSharp",
+      "description": "A rapid development framework based on .NET Core with the latest .NET Core SDK LTS version (currently .NET Core 3.1). The OSharp framework highly automates the following modules of ASP.NET Core: configuration, dependency injection, Logging, caching, entity framework, MVC / WebAPI, identity authentication, permission authorization, etc. OSharp also standardizes a set of business implementation code and operation processes, making the .NET Core framework easier to apply to the development of actual projects.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/OSharp",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "郭明峰",
+        "url": "https://github.com/gmf520"
+      },
+      "external": false
+    },
+    {
+      "id": "shardingcore",
+      "name": "ShardingCore",
+      "description": "A high performance lightweight solution for efcore sharding table and sharding database support read-write-separation.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/sharding-core",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Xuejmnet",
+        "url": "https://github.com/Xuejmnet"
+      },
+      "external": false
+    },
+    {
+      "id": "smartcode",
+      "name": "SmartCode",
+      "description": "An excellent open source code generator (of cause not only a generates code). It's based on execution flow, supports ETL mode, highly flexible and scalable, also supports custom templates and multiple template styles, and multiple databases.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SmartCode",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Ahoo-Wang",
+        "url": "https://github.com/Ahoo-Wang"
+      },
+      "external": false
+    },
+    {
+      "id": "smartsql",
+      "name": "SmartSql",
+      "description": "SmartSql provides a progressive development experience with simple connection string configuration to run, XML configuration to decouple SQL and a variety of performance observation methods to make performance problems clear at a glance. SmartSql maintains the same level of performance as Dapper and provides a number of features: dynamic proxy storage/distributed cache/type processor/automatic generation of CUD code/distributed Id generator/performance diagnosis/AOP level of things/caches (memory, distributed cache)/read/write separation/code generator/high performance batch insertion, etc.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SmartSql",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Ahoo-Wang",
+        "url": "https://github.com/Ahoo-Wang"
+      },
+      "external": false
+    },
+    {
+      "id": "sourcelink-environment",
+      "name": "SourceLink Environment",
+      "description": "Provide an inheritable NuGet package for the SourceLink feature.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SourceLink.Environment",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "util",
+      "name": "Util",
+      "description": "An open source application framework under the .NET Core platform, designed to improve the development efficiency of small teams. It is composed of common helpers, hierarchical architecture design, UI components, third-party component and service interface packages.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Util",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "何镇汐",
+        "url": "https://github.com/xiadao521"
+      },
+      "external": false
+    },
+    {
+      "id": "webapiclient",
+      "name": "WebApiClient",
+      "description": "An open source project based on the HttpClient. You only need to define the c# interface and modify the related features to invoke the client library of the remote http interface asynchronously.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/WebApiClient",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "老九",
+        "url": "https://github.com/xljiuliang"
+      },
+      "external": false
+    },
+    {
+      "id": "wtm",
+      "name": "WTM",
+      "description": "A development tool for small and medium-sized back-end management systems. Implement zero-code creation project, zero-code generation management module.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/WTM",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "Liu Liang",
+        "url": "https://github.com/liuliang-wt"
+      },
+      "external": false
+    },
+    {
+      "id": "kooboo-json",
+      "name": "Kooboo Json",
+      "description": "A smaller and faster C# JSON serialization tool (construction based on expression tree).",
+      "logo": "",
+      "github": "https://github.com/kooboo/Json",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "Kooboo Team",
+        "url": "https://github.com/Kooboo"
+      },
+      "external": true
+    },
+    {
+      "id": "aspnetcore-translation",
+      "name": "ASP.NET Core Documentation",
+      "description": "The Simplified Chinese edition of Microsoft ASP.NET Core documentation, translated by .NET China Foundation.",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/aspnetcore-doc-cn",
+      "catalogue": "translation",
+      "status": "translation",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "btfindtree",
+      "name": "BTFindTree",
+      "description": "This project provides efficient data structures for the Leo, optimizing search performance using a combination of binary search and bucketing.",
+      "logo": "",
+      "github": "https://github.com/dotnet-lab/BTFindTree",
+      "catalogue": "application-library",
+      "status": "labs",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "papper",
+      "name": "Papper",
+      "description": "This project is based on Roslyn, it is a wrapper for the syntax tree, making it easier for developers to manipulate the syntax tree.",
+      "logo": "",
+      "github": "https://github.com/dotnet-lab/Papper",
+      "catalogue": "application-library",
+      "status": "labs",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    }
+  ]
+}

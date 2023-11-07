@@ -1,0 +1,1 @@
+import{_ as o}from"./TitleBlock.js";import{o as a,c as r,a as t,r as s,F as l}from"./vendor.js";const c={},n={class:"relative float-left"},i={class:"relative float-right"},_=t("div",{class:"clear-both"},null,-1);function f(e,d){return a(),r(l,null,[t("div",n,[s(e.$slots,"left")]),t("div",i,[s(e.$slots,"right")]),_],64)}const p=o(c,[["render",f]]);export{p as L};

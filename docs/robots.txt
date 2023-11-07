@@ -1,1 +1,1 @@
-Sitemap: https://ncc-test.alexinea.com/sitemap.txt
+Sitemap: https://ncc.work/sitemap.txt

@@ -1,12 +1,45 @@
 {
+  "BodyBlock.css": {
+    "file": "assets/BodyBlock.css",
+    "src": "BodyBlock.css"
+  },
   "MemberProjects.css": {
     "file": "assets/MemberProjects.css",
     "src": "MemberProjects.css"
   },
+  "ProjectCards.css": {
+    "file": "assets/ProjectCards.css",
+    "src": "ProjectCards.css"
+  },
+  "ProjectHeader.css": {
+    "file": "assets/ProjectHeader.css",
+    "src": "ProjectHeader.css"
+  },
+  "TitleBlock.css": {
+    "file": "assets/TitleBlock.css",
+    "src": "TitleBlock.css"
+  },
+  "_AnchorElement.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/AnchorElement.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_vendor.js",
+      "_TitleBlock.js"
+    ]
+  },
   "_BodyBlock.js": {
+    "css": [
+      "assets/BodyBlock.css"
+    ],
     "file": "assets/BodyBlock.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
+      "_vendor.js"
+    ]
+  },
+  "_LeftRightLayout.js": {
+    "file": "assets/LeftRightLayout.js",
+    "imports": [
+      "_TitleBlock.js",
       "_vendor.js"
     ]
   },
@@ -16,16 +49,45 @@
     ],
     "file": "assets/MemberProjects.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_vendor.js"
     ]
   },
-  "_TitleBlock.vue_vue_type_script_setup_true_lang.js": {
+  "_ProjectCards.vue_vue_type_script_setup_true_lang.js": {
+    "css": [
+      "assets/ProjectCards.css"
+    ],
+    "file": "assets/ProjectCards.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_TitleBlock.js"
+    ]
+  },
+  "_ProjectHeader.js": {
+    "css": [
+      "assets/ProjectHeader.css"
+    ],
+    "file": "assets/ProjectHeader.js",
+    "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js"
+    ]
+  },
+  "_TitleBlock.js": {
+    "css": [
+      "assets/TitleBlock.css"
+    ],
     "dynamicImports": [
       "src/views/people/ProjectManagementCommitteeView.vue",
       "src/views/projects/ProjectsIndexView.vue",
       "src/views/projects/ArchivedView.vue",
       "src/views/projects/TopLevelView.vue",
+      "src/views/projects/ProjectMaturityModelView.vue",
       "src/views/projects/DetailView.vue",
       "src/views/news/NewsIndexView.vue",
       "src/views/weekly/WeeklyIndexView.vue",
@@ -43,15 +105,28 @@
       "src/views/CommunityOnlineView.vue",
       "src/views/guidelines/ParticipationGuidelinesView.vue",
       "src/views/guidelines/BrandGuidelinesView.vue",
+      "src/views/guidelines/SourceCodeUsageGuidelinesView.vue",
       "src/views/404View.vue"
     ],
-    "file": "assets/TitleBlock.vue_vue_type_script_setup_true_lang.js",
+    "file": "assets/TitleBlock.js",
     "imports": [
       "_vendor.js"
     ]
   },
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
+  },
+  "_uiStore.js": {
+    "file": "assets/uiStore.js",
+    "imports": [
+      "_vendor.js"
+    ]
+  },
+  "_useEmitter.js": {
+    "file": "assets/useEmitter.js",
+    "imports": [
+      "_vendor.js"
+    ]
   },
   "_vendor.js": {
     "file": "assets/vendor.js"
@@ -67,7 +142,11 @@
     "file": "assets/index.js",
     "imports": [
       "_vendor.js",
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_LeftRightLayout.js",
       "_official-wechat-account-qrcode.js"
     ],
     "isEntry": true,
@@ -76,7 +155,7 @@
   "src/views/404View.vue": {
     "file": "assets/404View.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -86,7 +165,7 @@
   "src/views/CodeOfConductView.vue": {
     "file": "assets/CodeOfConductView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -96,7 +175,7 @@
   "src/views/CommunityOnlineView.vue": {
     "file": "assets/CommunityOnlineView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -113,9 +192,12 @@
     ],
     "file": "assets/HomeView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
-      "_MemberProjects.js",
-      "_vendor.js"
+      "_TitleBlock.js",
+      "_LeftRightLayout.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_uiStore.js",
+      "_MemberProjects.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/HomeView.vue"
@@ -123,8 +205,9 @@
   "src/views/about/AllNccView.vue": {
     "file": "assets/AllNccView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js"
     ],
     "isDynamicEntry": true,
@@ -133,7 +216,7 @@
   "src/views/about/ContactView.vue": {
     "file": "assets/ContactView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -143,7 +226,7 @@
   "src/views/about/FaqView.vue": {
     "file": "assets/FaqView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -153,7 +236,7 @@
   "src/views/about/JoinView.vue": {
     "file": "assets/JoinView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -164,7 +247,7 @@
     "file": "assets/OpenNccView.js",
     "imports": [
       "_official-wechat-account-qrcode.js",
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -174,7 +257,7 @@
   "src/views/about/StoryView.vue": {
     "file": "assets/StoryView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -184,7 +267,7 @@
   "src/views/about/WhoWeAreView.vue": {
     "file": "assets/WhoWeAreView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -194,7 +277,7 @@
   "src/views/announcements/AnnouncementsIndexView.vue": {
     "file": "assets/AnnouncementsIndexView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -204,7 +287,7 @@
   "src/views/guidelines/BrandGuidelinesView.vue": {
     "file": "assets/BrandGuidelinesView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -214,17 +297,27 @@
   "src/views/guidelines/ParticipationGuidelinesView.vue": {
     "file": "assets/ParticipationGuidelinesView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/guidelines/ParticipationGuidelinesView.vue"
   },
+  "src/views/guidelines/SourceCodeUsageGuidelinesView.vue": {
+    "file": "assets/SourceCodeUsageGuidelinesView.js",
+    "imports": [
+      "_TitleBlock.js",
+      "_BodyBlock.js",
+      "_vendor.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/guidelines/SourceCodeUsageGuidelinesView.vue"
+  },
   "src/views/news/NewsIndexView.vue": {
     "file": "assets/NewsIndexView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -234,7 +327,7 @@
   "src/views/people/ProjectManagementCommitteeView.vue": {
     "file": "assets/ProjectManagementCommitteeView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -244,10 +337,15 @@
   "src/views/projects/ArchivedView.vue": {
     "file": "assets/ArchivedView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
-      "_vendor.js"
+      "_ProjectHeader.js",
+      "_ProjectCards.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_useEmitter.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/ArchivedView.vue"
@@ -255,20 +353,39 @@
   "src/views/projects/DetailView.vue": {
     "file": "assets/DetailView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/DetailView.vue"
   },
+  "src/views/projects/ProjectMaturityModelView.vue": {
+    "file": "assets/ProjectMaturityModelView.js",
+    "imports": [
+      "_TitleBlock.js",
+      "_BodyBlock.js",
+      "_MemberProjects.js",
+      "_ProjectHeader.js",
+      "_vendor.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/ProjectMaturityModelView.vue"
+  },
   "src/views/projects/ProjectsIndexView.vue": {
     "file": "assets/ProjectsIndexView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
-      "_vendor.js"
+      "_ProjectHeader.js",
+      "_ProjectCards.vue_vue_type_script_setup_true_lang.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/ProjectsIndexView.vue"
@@ -276,10 +393,15 @@
   "src/views/projects/TopLevelView.vue": {
     "file": "assets/TopLevelView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
-      "_vendor.js"
+      "_ProjectHeader.js",
+      "_ProjectCards.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_useEmitter.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/TopLevelView.vue"
@@ -287,7 +409,7 @@
   "src/views/rules/RulesIndexView.vue": {
     "file": "assets/RulesIndexView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
@@ -297,7 +419,7 @@
   "src/views/weekly/WeeklyIndexView.vue": {
     "file": "assets/WeeklyIndexView.js",
     "imports": [
-      "_TitleBlock.vue_vue_type_script_setup_true_lang.js",
+      "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js"
     ],
