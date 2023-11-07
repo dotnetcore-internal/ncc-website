@@ -50,7 +50,7 @@ const baseRoutes: RouteRecordRaw[] = [
     {
         path: "/:pathMatch(.*)*",
         name: "all",
-        component: () => import("../views/404View.vue"),
+        component: () => import("../views/Page404.vue"),
     }
 ];
 
