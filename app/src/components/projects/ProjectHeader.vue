@@ -38,7 +38,7 @@ const useIconColor = computed(() => {
             href="/projects"
             route-name="projects"
             :title="$t('project-all-full')"
-            mode="classic">
+            mode="h5">
 
       {{ $t('project-all') }}
 
@@ -49,7 +49,7 @@ const useIconColor = computed(() => {
             href="/top-level-projects"
             route-name="top-level-projects"
             :title="$t('project-top-level-full')"
-            mode="classic">
+            mode="h5">
 
       {{ $t('project-top-level') }}
 
@@ -60,7 +60,7 @@ const useIconColor = computed(() => {
             href="/archived-projects"
             route-name="archived-projects"
             :title="$t('project-archived-full')"
-            mode="classic">
+            mode="h5">
 
       {{ $t('project-archived') }}
 
@@ -71,7 +71,7 @@ const useIconColor = computed(() => {
             href="/project-maturity-model"
             route-name="project-maturity-model"
             :title="$t('project-maturity-model')"
-            mode="classic">
+            mode="h5">
       {{ $t('project-maturity-model') }}
 
     </anchor>
@@ -88,7 +88,7 @@ const useIconColor = computed(() => {
   </div>
 
   <div v-show="isMobileMode">
-    <title-block :with-placeholder="false">
+    <title-block :with-placeholder="false" :is-font-black="true">
       <span v-if="featureKey === 'all'">{{ $t('project-all-full') }}</span>
       <span v-else-if="featureKey === 'top-level'">{{ $t('project-top-level-full') }}</span>
       <span v-else-if="featureKey === 'archived'">{{ $t('project-archived-full') }}</span>

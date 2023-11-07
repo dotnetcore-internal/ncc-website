@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, onUnmounted, reactive, ref} from "vue";
+import {onMounted, onUnmounted, reactive} from "vue";
 import {useEmitter} from "@/hooks/useEmitter";
 import {useUiStore} from "@/stores/uiStore";
 
@@ -74,11 +74,13 @@ onUnmounted(() => {
       {{ $t('our-laboratory-projects-title') }}
     </title-block>
 
-    <placeholder-block height="20px"/>
+    <span class="the-labs">
+      {{ $t('project-laboratory-desc') }}
+    </span>
 
     <project-cards :models="projects" for="labs"/>
 
-    <placeholder-block height="20px"/>
+    <placeholder-block height="90px"/>
 
     <title-block h1-mode="false"
                  color-mode="auto"
@@ -87,11 +89,13 @@ onUnmounted(() => {
       {{ $t('our-translation-projects-title') }}
     </title-block>
 
-    <placeholder-block height="20px"/>
+    <span class="the-translation">
+      {{ $t('project-translation-desc') }}
+    </span>
 
     <project-cards :models="projects" for="translation"/>
 
-    <placeholder-block height="20px"/>
+    <placeholder-block height="90px"/>
 
   </body-block>
 
@@ -102,5 +106,8 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="css">
-
+.the-labs, .the-translation {
+  @apply block text-gray-500 dark:text-gray-400 text-lg;
+  @apply p-5 mb-5;
+}
 </style>

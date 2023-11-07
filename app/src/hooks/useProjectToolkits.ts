@@ -112,12 +112,12 @@ const groupProjectsByCatalogue = (models: ProjectCardModel[]) => {
 
 const groupProjectsByStatus = (models: ProjectCardModel[]) => {
     const groupedProjects = filterProjects(models, 'all').reduce((acc, model) => {
-        const {status: groupName, ...rest} = model;
+        const {status: groupName} = model;
         if (!acc[groupName]) {
             acc[groupName] = [];
         }
         //@ts-ignore
-        acc[groupName].push(rest);
+        acc[groupName].push(model);
         return acc;
     }, {} as { [key: string]: ProjectCardModel[] });
 

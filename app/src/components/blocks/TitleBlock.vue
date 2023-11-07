@@ -8,12 +8,14 @@ const props = withDefaults(defineProps<{
   colorMode?: 'auto' | 'dark' | 'light' | 'always-dark' | 'always-light';
   withHorizontalRule?: boolean;
   withPlaceholder?: boolean;
+  isFontBold?: boolean;
   isFontBlack?: boolean;
 }>(), {
   h1Mode: 'true',
   colorMode: 'auto',
   withHorizontalRule: false,
   withPlaceholder: undefined,
+  isFontBold: false,
   isFontBlack: true
 });
 
@@ -35,8 +37,12 @@ const titleFontBlack = computed(() => {
   return props.isFontBlack ? 'font-black' : '';
 });
 
+const titleFontBold = computed(() => {
+  return props.isFontBold ? 'font-bold' : '';
+});
+
 const titleClass = computed(() => {
-  return `${titleColor.value} ${titleFontBlack.value}`;
+  return `${titleColor.value} ${titleFontBlack.value} ${titleFontBold.value}`;
 });
 
 const displayPlaceholder = computed(() => {
@@ -63,7 +69,7 @@ const displayPlaceholder = computed(() => {
 </template>
 
 <style scoped lang="css">
-.title-block{
+.title-block {
   font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
 </style>

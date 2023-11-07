@@ -44,7 +44,7 @@ const useTips = computed(() => {
 <template>
   <div class="block card hover:scale-105 transition-all ease-in-out duration-500"
        :title="useTips">
-    <anchor :href="`/projects/${project.id}`" :title="useTips" mode="classic">
+    <anchor v-if="project.status !== 'other'" :href="`/projects/${project.id}`" :title="useTips" mode="classic">
       <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name"/>
       <span class="block text-lg text-center leading-7 px-5 pt-2">{{ useTitle }}</span>
       <span v-if="project.status==='archived'" class="tip archived">{{ $t('project-archived') }}</span>
@@ -54,6 +54,11 @@ const useTips = computed(() => {
       <span v-else-if="project.status==='translation'" class="tip translation">{{ $t('project-translation') }}</span>
       <span v-if="project.external" class="tip external">{{ $t('project-external') }}</span>
     </anchor>
+    <span v-else>
+      <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name"/>
+      <span class="block text-lg text-center leading-7 px-5 pt-2">{{ useTitle }}</span>
+      <span class="tip other">{{ $t('project-other') }}</span>
+    </span>
   </div>
 </template>
 
@@ -70,7 +75,8 @@ const useTips = computed(() => {
 }
 
 .card .archived,
-.card .external {
+.card .external,
+.card .other {
   @apply text-gray-800 dark:text-gray-200;
   @apply bg-gray-300/50 dark:bg-gray-700/50;
 }
