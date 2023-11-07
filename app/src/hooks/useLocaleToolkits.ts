@@ -13,19 +13,20 @@ function toFixedPath(path: string): string {
 
 const toSetOrLoadLanguage = async (i18n: unknown, locale: string, path: string) => {
 
-    if (!isLegitimatePage(path)) {
-        return;
-    }
+    if (isLegitimatePage(path)) {
 
-    const fixedPath = toFixedPath(path);
+        //to fixed path
+        const fixedPath = toFixedPath(path);
 
-    //to check whether the resource is registered
-    //if registered, the resource has been loaded into the i18n manager
-    //and return.
-    if (!hasRegisteredPath(fixedPath, locale)) {
+        //to check whether the resource is registered
+        //if registered, the resource has been loaded into the i18n manager
+        //and return.
+        if (!hasRegisteredPath(fixedPath, locale)) {
 
-        // load locale messages
-        await loadLocaleMessages(i18n, locale, fixedPath);
+            // load locale messages
+            await loadLocaleMessages(i18n, locale, fixedPath);
+        }
+
     }
 
     //force to load common language resource
