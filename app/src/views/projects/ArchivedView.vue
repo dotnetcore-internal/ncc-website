@@ -12,6 +12,7 @@ import MemberProjects from "@/components/projects/MemberProjects.vue";
 import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 import ProjectCards from "@/components/projects/ProjectCards.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
+import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -50,6 +51,18 @@ onUnmounted(() => {
 
     <project-cards :models="projects" for="archived"/>
 
+    <placeholder-block height="90px"/>
+
+    <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+      {{ $t('project-other') }}
+    </title-block>
+
+    <span class="the-past">
+      {{ $t('project-other-desc') }}
+    </span>
+
+    <project-cards :models="projects" for="other"/>
+
   </body-block>
 
   <placeholder-block height="90px"/>
@@ -61,5 +74,8 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="css">
-
+.the-past{
+  @apply block text-gray-500 dark:text-gray-400 text-lg;
+  @apply p-5 mb-5;
+}
 </style>
