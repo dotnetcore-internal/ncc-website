@@ -17,7 +17,7 @@ const props = withDefaults(defineProps<{
 </script>
 
 <template>
-  <div class="m-7 mt-9 hover:text-purple-500 font-bold border-b-4 border-purple-500">
+  <div class="title-link-block">
     <anchor :href="href" :route-name="routeName" :title="title" :mode="mode" class="leading-7" :class-value="classValue" :target="target">
       <slot></slot>
     </anchor>
@@ -25,5 +25,8 @@ const props = withDefaults(defineProps<{
 </template>
 
 <style scoped lang="css">
-
+.title-link-block {
+  @apply m-7 mt-9 hover:text-purple-500 font-bold border-b-4 border-purple-500;
+  font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
 </style>

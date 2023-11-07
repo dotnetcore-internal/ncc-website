@@ -23,6 +23,107 @@
     }
 }
 
+/* Lexend font family */
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Black.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-ExtraBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-SemiBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Light.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 200;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-ExtraLight.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Lexend";
+    font-style: normal;
+    font-weight: 100;
+    font-display: swap;
+    src: url("fonts/Lexend/Lexend-Thin.woff2") format("woff2");
+}
+/* Poppins font family */
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("fonts/Poppins/Poppins-Bold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url("fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url("fonts/Poppins/Poppins-Medium.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+}
+@font-face {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("fonts/Poppins/Poppins-Light.woff2") format("woff2");
+}
+
 body {
     -webkit-text-size-adjust: none;
     font: 1em/1.5 'Microsoft YaHei', Helvetica, Arial, sans-serif;

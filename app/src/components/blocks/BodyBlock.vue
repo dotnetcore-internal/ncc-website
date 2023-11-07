@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="responsive-width text-black dark:text-white">
+  <div class="responsive-width body-block text-black dark:text-white">
 
     <slot></slot>
 
@@ -11,5 +11,7 @@
 </template>
 
 <style scoped lang="css">
-
+.body-block{
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+}
 </style>

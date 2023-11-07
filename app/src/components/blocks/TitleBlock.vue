@@ -49,10 +49,10 @@ const displayPlaceholder = computed(() => {
 
 <template>
 
-  <h1 v-if="h1Mode" class="text-4xl tracking-tight p-5 pb-0" :class="titleClass">
+  <h1 v-if="h1Mode" class="title-block text-4xl tracking-tight p-5 pb-0" :class="titleClass">
     <slot></slot>
   </h1>
-  <div v-else class="text-3xl tracking-tight p-5 pb-0" :class="titleClass">
+  <div v-else class="title-block text-3xl tracking-tight p-5 pb-0" :class="titleClass">
     <slot></slot>
   </div>
 
@@ -63,5 +63,7 @@ const displayPlaceholder = computed(() => {
 </template>
 
 <style scoped lang="css">
-
+.title-block{
+  font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
 </style>
