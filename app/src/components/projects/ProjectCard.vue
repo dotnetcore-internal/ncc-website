@@ -5,9 +5,9 @@ import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 
-const props = defineProps<{
+const props = withDefaults(defineProps<{
   project: ProjectCardModel;
-}>();
+}>(), {});
 
 const useLogo = computed(() => {
   let url = props.project.logo;
@@ -42,7 +42,7 @@ const useTips = computed(() => {
 </script>
 
 <template>
-  <div class="block card hover:scale-105 transition-all ease-in-out duration-1000"
+  <div class="block card hover:scale-105 transition-all ease-in-out duration-500"
        :title="useTips">
     <anchor :href="`/projects/${project.id}`" :title="useTips" mode="classic">
       <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name"/>
@@ -60,7 +60,7 @@ const useTips = computed(() => {
 <style scoped lang="css">
 .card {
   @apply w-auto h-56 p-5 overflow-hidden;
-  @apply hover:bg-white hover:dark:bg-black/50 rounded-2xl hover:shadow-lg;
+  @apply rounded-2xl;
   @apply text-black dark:text-white text-center;
 }
 
@@ -70,7 +70,7 @@ const useTips = computed(() => {
 }
 
 .card .archived,
-.card .external{
+.card .external {
   @apply text-gray-800 dark:text-gray-200;
   @apply bg-gray-300/50 dark:bg-gray-700/50;
 }
@@ -80,7 +80,7 @@ const useTips = computed(() => {
   @apply bg-yellow-200/50 dark:bg-yellow-800/50;
 }
 
-.card .incubation{
+.card .incubation {
   @apply text-pink-700 dark:text-pink-300;
   @apply bg-pink-200/50 dark:bg-pink-800/50;
 }

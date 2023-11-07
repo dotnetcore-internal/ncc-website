@@ -1,88 +1,144 @@
 <script setup lang="ts">
-import {computed, onMounted, onUnmounted, reactive} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
-import {ProjectCardModel, queryProjectList} from "@/apis/QueryProjectListApi";
+import {computed, ref} from "vue";
+import {usePreferredDark} from "@vueuse/core";
+import {filterProjects, groupProjectsByCatalogue, groupProjectsByLetter, groupProjectsByStatus, sortProjects} from "@/hooks/useProjectToolkits";
+import {type CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
 
-import {getLocaleResource, updateLocalResource} from "@/i18n";
-import {needUpdate} from "@/hooks/useProjectVer";
-
+import {AlphabeticalSorting, AlphabeticalSortingTwo} from "@icon-park/vue-next";
 import ProjectCard from "@/components/projects/ProjectCard.vue";
 
-const uiStore = useUiStore();
-const emitter = useEmitter();
-const projects = reactive<ProjectCardModel[]>([]);
-
 const props = withDefaults(defineProps<{
-  for?: 'all' | 'sandbox' | 'top-level' | 'archived' | 'incubation' | 'labs' | 'translation';
+  models: ProjectCardModel[];
+  catalogues?: CatalogueMap;
+  for?: 'all' | 'full' | 'sandbox' | 'top-level' | 'archived' | 'incubation' | 'labs' | 'translation' | 'other';
+  box?: boolean;
+  enableSort?: boolean;
+  enableGroupedByCatalogue?: boolean;
+  enableGroupByStatus?: boolean;
+  enableGroupByLetter?: boolean;
+  groupedAsDefault?: 'catalogue' | 'letter' | 'status';
+  sortAsDefault?: 'asc' | 'desc';
 }>(), {
-  for: 'all'
+  for: 'all',
+  box: false,
+  enableSort: true,
+  enableGroupedByCatalogue: false,
+  enableGroupByStatus: false,
+  enableGroupByLetter: false,
+  groupedAsDefault: 'catalogue',
+  sortAsDefault: 'asc',
 });
 
-const updateProjects = (models: ProjectCardModel[]) => {
-  projects.length = 0;
-  for (const model of models) {
-    projects.push(model);
-  }
-}
-
-const filterProjects = (status: 'all' | 'sandbox' | 'top-level' | 'archived' | 'incubation' | 'labs' | 'translation') => {
-  if (status === 'all')
-    return projects.filter(project => project.status !== 'labs' && project.status !== 'translation');
-  return projects.filter(project => project.status === status);
-}
-
-const sortProjects = (models: ProjectCardModel[]) => {
-  return models.sort((a, b) => a.name.localeCompare(b.name));
-}
+const isGroupedMode = ref<boolean>(props.enableSort === false && (props.enableGroupedByCatalogue || props.enableGroupByStatus || props.enableGroupByLetter));
+const groupedBy = ref<'catalogue' | 'letter' | 'status'>(props.groupedAsDefault);
+const sortBy = ref<'asc' | 'desc'>(props.sortAsDefault);
 
 const useProjects = computed(() => {
-  return sortProjects(filterProjects(props.for));
+  return sortProjects(filterProjects(props.models, props.for), sortBy.value);
 });
 
-const loadProjectList = (locale: string) => {
-  // get the projects from local storage first
-  const localStorageProjects = getLocaleResource('project-list-api', locale);
+const useGroupedProjects = computed(() => {
+  if (groupedBy.value === 'catalogue')
+    return groupProjectsByCatalogue(filterProjects(props.models, 'full'));
+  if (groupedBy.value === 'letter')
+    return groupProjectsByLetter(filterProjects(props.models, 'full'));
+  if (groupedBy.value === 'status')
+    return groupProjectsByStatus(filterProjects(props.models, 'full'));
+  return groupProjectsByCatalogue(filterProjects(props.models, 'full'));
+});
 
-  if (!!localStorageProjects && !needUpdate(Number.parseInt(localStorageProjects['_metadata']['version']))) {
-    updateProjects(localStorageProjects['projects']);
-  } else {
-
-    queryProjectList(
-        locale,
-        (data) => {
-          updateProjects(data.projects);
-          updateLocalResource('project-list-api', locale, data)
-        },
-        () => {
-        }
-    )
-
-  }
+const getCatalogueName = (groupName: string): string => {
+  if (groupedBy.value === 'catalogue')
+    return props.catalogues ? props.catalogues[groupName] : groupName;
+  return groupName;
 }
 
-onMounted(() => {
-  emitter.on('toChangeLocale', (e) => {
-    const event = e as { locale: string };
-    loadProjectList(event.locale);
-  });
+const switchGroupedMode = (name?: string) => {
+  if (name) {
+    groupedBy.value = name as 'catalogue' | 'letter' | 'status';
+    isGroupedMode.value = true;
+    return;
+  } else {
+    isGroupedMode.value = false;
+  }
+};
 
-  loadProjectList(uiStore.locale);
+const switchSortMode = () => {
+  sortBy.value = sortBy.value === 'asc' ? 'desc' : 'asc';
+};
+
+const displayOpsBtnGroup = computed(() => {
+  const a = props.enableSort ? 1 : 0;
+  const b = props.enableGroupedByCatalogue ? 1 : 0;
+  const c = props.enableGroupByStatus ? 1 : 0;
+  const d = props.enableGroupByLetter ? 1 : 0;
+  return a + b + c + d >= 2;
 });
 
-onUnmounted(() => {
-  emitter.off("toChangeLocale");
+const currentPrefersDarkMode = usePreferredDark();
+const useIconColor = computed(() => {
+  return currentPrefersDarkMode.value
+      ? '#f8f8f8'
+      : '#000000';
 });
+
 </script>
 
 <template>
 
-  <div class="grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-cols-2 gap-7">
-    <project-card v-for="project in useProjects" :project="project" :key="project.id"/>
+  <div v-show="displayOpsBtnGroup">
+    <span>
+      <button v-show="groupedBy !== 'catalogue'" @click="switchGroupedMode('catalogue')" class="btn btn-sm btn-outline-primary">按分类查看</button>
+      <button v-show="groupedBy !== 'status'" @click="switchGroupedMode('status')" class="btn btn-sm btn-outline-primary">按状态查看</button>
+      <button v-show="isGroupedMode" @click="switchGroupedMode()" class="btn btn-sm btn-outline-primary">按项目查看</button>
+    </span>
+    <span @click="switchSortMode">
+      <alphabetical-sorting v-show="sortBy === 'desc'" theme="filled" size="16" :fill="useIconColor" title="A to Z"/>
+      <alphabetical-sorting-two v-show="sortBy === 'asc'" theme="filled" size="16" :fill="useIconColor" title="Z to A"/>
+    </span>
+  </div>
+
+  <div v-show="isGroupedMode">
+
+    <div v-for="(projects, groupName) in useGroupedProjects" :key="groupName" :class="{'project-group': box}">
+
+      <div class="project-group-title" v-if="groupedBy === 'catalogue'">
+        {{ catalogues ? catalogues[groupName] : groupName }}
+      </div>
+      <div class="project-group-title" v-if="groupedBy === 'status'">
+        {{ $t(`project-${groupName}`) }}
+      </div>
+
+      <div class="grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-cols-2 gap-7">
+        <project-card v-for="project in sortProjects(projects, sortBy)" :project="project" :key="project.id"/>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div v-show="!isGroupedMode" :class="{'project-group': box}">
+
+    <div class="grid sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 grid-cols-2 gap-7">
+      <project-card v-for="project in useProjects" :project="project" :key="project.id"/>
+    </div>
+
   </div>
 
 </template>
 
 <style scoped lang="css">
+
+.project-group {
+  @apply my-6 p-5 rounded-3xl shadow-md;
+  @apply bg-white;
+}
+
+.project-group-title {
+  @apply inline-block mt-3 mb-5 ml-6;
+  @apply text-black dark:text-white text-lg;
+  @apply border-b-4 border-pink-500;
+  font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
 
 </style>

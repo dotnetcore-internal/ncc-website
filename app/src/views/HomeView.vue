@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import {setTitle} from "@/hooks/usePageToolkits";
 
-import MemberProjects from "@/components/common/MemberProjects.vue";
-import PartnersAndSponsors from "@/components/common/PartnersAndSponsors.vue";
-import Slogan from "@/components/common/Slogan.vue";
+import LatestNews from "@/components/home/LatestNews.vue";
+import MemberProjects from "@/components/projects/MemberProjects.vue";
+import PartnersAndSponsors from "@/components/home/PartnersAndSponsors.vue";
+import Slogan from "@/components/home/Slogan.vue";
 
 setTitle('Home');
 
@@ -11,13 +12,45 @@ setTitle('Home');
 
 <template>
 
-  <div class="responsive-width text-2xl text-black dark:text-white min-h-75vh">Home</div>
+  <div class="responsive-width text-2xl text-black dark:text-white h-40">Home</div>
 
-  <member-projects />
+  <div class="bg-white dark:bg-black h-40">
+    <div class="responsive-width">
 
-  <partners-and-sponsors />
+      <h1>{{ $t('project-growing-for-ecosystem') }}</h1>
 
-  <slogan />
+      <hr />
+
+    </div>
+  </div>
+
+  <div class="bg-white dark:bg-black h-40">
+    <div class="responsive-width">
+
+      <h1>{{ $t('community-embrace-join') }}</h1>
+
+      <hr />
+
+    </div>
+  </div>
+
+  <div class="bg-white dark:bg-black h-40">
+    <div class="responsive-width">
+
+      <h1>{{ $t('community-together-with-us') }}</h1>
+
+      <hr />
+
+    </div>
+  </div>
+
+  <latest-news/>
+
+  <member-projects/>
+
+  <partners-and-sponsors/>
+
+  <slogan/>
 
 </template>
 

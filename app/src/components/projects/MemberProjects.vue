@@ -1,5 +1,40 @@
 <script setup lang="ts">
+import {computed, onMounted, reactive} from "vue";
+import {useUiStore} from "@/stores/uiStore";
+
+import {filterProjects, groupProjectsByLetter, loadProjectsAsync} from "@/hooks/useProjectToolkits";
+import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
+
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import Anchor from "@/components/basic/AnchorElement.vue";
+
+const uiStore = useUiStore();
+
+const props = withDefaults(defineProps<{
+  models?: ProjectCardModel[];
+}>(), {});
+
+const projects = reactive<ProjectCardModel[]>([]);
+
+const updateProjects = (models: ProjectCardModel[]) => {
+  projects.length = 0;
+  for (const model of models) {
+    projects.push(model);
+  }
+}
+
+const useGroupedProjectsByLetter = computed(() => {
+  return groupProjectsByLetter(filterProjects(projects, 'all'));
+});
+
+onMounted(async () => {
+  if (!!props.models && props.models.length > 0) {
+    updateProjects(props.models);
+  } else {
+    await loadProjectsAsync(uiStore.locale, updateProjects);
+  }
+});
+
 </script>
 
 <template>
@@ -17,109 +52,20 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
       </title-block>
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">
-        <div class="project-letter">A</div>
-        <div class="project-name">
-          <a href="/projects/agileconfig" title="AgileConfig">AgileConfig</a>
+
+        <div v-for="(projects, letter) in useGroupedProjectsByLetter" :key="letter">
+          <div class="project-letter">{{ letter }}</div>
+
+          <div v-for="project in projects" :key="project.id" class="project-name">
+            <anchor :href="`/projects/${project.id}`" :title="project.name" mode="classic">
+              {{ project.name }}
+            </anchor>
+          </div>
+
         </div>
-        <div class="project-name">
-          <a href="/projects/alipay-sdk" title="Alipay SDK">Alipay SDK</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/aspectcore" title="AspectCore">AspectCore</a>
-        </div>
-        <div class="project-letter">B</div>
-        <div class="project-name">
-          <a href="/projects/bootstrapblazor" title="BootstrapBlazor">BootstrapBlazor</a>
-        </div>
-        <div class="project-letter">C</div>
-        <div class="project-name">
-          <a href="/projects/canalsharp" title="CanelSharp">CanalSharp</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/cap" title="CAP">CAP</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/collections" title="Collections">Collections</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/compile-environment" title="Compile Environment">Compile Environment</a>
-        </div>
-        <div class="project-letter">D</div>
-        <div class="project-name">
-          <a href="/projects/dotnetspider" title="DotnetSpider">DotnetSpider</a>
-        </div>
-        <div class="project-letter">E</div>
-        <div class="project-name">
-          <a href="/projects/easycaching" title="EasyCaching">EasyCaching</a>
-        </div>
-        <div class="project-letter">F</div>
-        <div class="project-name">
-          <a href="/projects/fastgithub" title="FastGithub">FastGithub</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/flubucore" title="FlubuCore">FlubuCore</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/freesql" title="FreeSql">FreeSql</a>
-        </div>
-        <div class="project-letter">G</div>
-        <div class="project-name">
-          <a href="/projects/efcore-gaussdb" title="GaussDB for EntityFramework Core">GaussDB for EfCore</a>
-        </div>
-        <div class="project-letter">H</div>
-        <div class="project-name">
-          <a href="/projects/httpreports" title="HttpReports">HttpReports</a>
-        </div>
-        <div class="project-letter">K</div>
-        <div class="project-name">
-          <a href="/projects/efcore-kingbasees" title="KingbaseES for EntityFramework Core">KingbaseES for EfCore</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/kooboo-json" title="Kooboo Json">Kooboo Json</a>
-        </div>
-        <div class="project-letter">M</div>
-        <div class="project-name">
-          <a href="/projects/magicodes-ie" title="Magicodes Exporter & Importer">Magicodes IE</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/mocha" title="Mocha">Mocha</a>
-        </div>
-        <div class="project-letter">N</div>
-        <div class="project-name">
-          <a href="/projects/natasha" title="Natasha">Natasha</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/npoi" title="NPOI">NPOI</a>
-        </div>
-        <div class="project-letter">O</div>
-        <div class="project-name">
-          <a href="/projects/osharp" title="OSharp">OSharp</a>
-        </div>
-        <div class="project-letter">S</div>
-        <div class="project-name">
-          <a href="/projects/sharding-core" title="ShardingCore">ShardingCore</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/smartsql" title="SmartSql">SmartSql</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/smartcode" title="SmartCode">SmartCode</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/sourcelink-environment" title="SourceLink Environment">SourceLink Environment</a>
-        </div>
-        <div class="project-letter">U</div>
-        <div class="project-name">
-          <a href="/projects/util" title="Util">Util</a>
-        </div>
-        <div class="project-letter">W</div>
-        <div class="project-name">
-          <a href="/projects/webapiclient" title="WebApiClient">WebApiClient</a>
-        </div>
-        <div class="project-name">
-          <a href="/projects/wtm" title="WTM">WTM</a>
-        </div>
+
       </div>
+
     </div>
   </div>
 

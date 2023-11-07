@@ -1,27 +1,53 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
+import {computed, onMounted, onUnmounted, reactive, ref} from "vue";
+import {useEmitter} from "@/hooks/useEmitter";
+import {useUiStore} from "@/stores/uiStore";
+
 import {setTitle} from "@/hooks/usePageToolkits";
+import {loadProjectsAsync} from "@/hooks/useProjectToolkits";
+import type {CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MemberProjects from "@/components/projects/MemberProjects.vue";
 import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 import ProjectCards from "@/components/projects/ProjectCards.vue";
-import TranslationProjectCards from "@/components/projects/TranslationProjectCards.vue";
-import LaboratoryProjectCards from "@/components/projects/LaboratoryProjectCards.vue";
-import GroupedProjectCards from "@/components/projects/GroupedProjectCards.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
+import TitleBlock from "@/components/blocks/TitleBlock.vue";
+
+const uiStore = useUiStore();
+const emitter = useEmitter();
+
+const projects = reactive<ProjectCardModel[]>([]);
+const catalogues = reactive<CatalogueMap>({});
+
+const updateProjects = (models: ProjectCardModel[]) => {
+  projects.length = 0;
+  for (const model of models) {
+    projects.push(model);
+  }
+}
+
+const updateCatalogues = (catalog: CatalogueMap) => {
+  for (const key in catalog) {
+    catalogues[key] = catalog[key];
+  }
+}
 
 setTitle('project-all-full', 'i18n');
 
-const groupedMode = ref(false);
+onMounted(async () => {
 
-const useGroupedMode = computed(() => {
-  return groupedMode.value;
+  emitter.on('toChangeLocale', async (e) => {
+    const event = e as { locale: string };
+    await loadProjectsAsync(event.locale, updateProjects, updateCatalogues);
+  });
+
+  await loadProjectsAsync(uiStore.locale, updateProjects, updateCatalogues);
 });
 
-const switchGroupedMode = () => {
-  groupedMode.value = !groupedMode.value;
-};
+onUnmounted(() => {
+  emitter.off("toChangeLocale");
+});
 
 </script>
 
@@ -31,33 +57,45 @@ const switchGroupedMode = () => {
 
     <project-header feature-key="all"/>
 
-    <div @click="switchGroupedMode">A-Z</div>
+    <project-cards :models="projects"
+                   :catalogues="catalogues"
+                   for="full"
+                   :box="true"
+                   :enable-sort="true"
+                   :enable-grouped-by-catalogue="true"
+    />
 
-    <div v-show="!useGroupedMode">
-      <project-cards for="all" />
-    </div>
+    <placeholder-block height="90px"/>
 
-    <div v-show="useGroupedMode">
-      <grouped-project-cards />
-    </div>
+    <title-block h1-mode="false"
+                 color-mode="auto"
+                 :with-horizontal-rule="true"
+                 :is-font-black="false">
+      {{ $t('our-laboratory-projects-title') }}
+    </title-block>
+
+    <placeholder-block height="20px"/>
+
+    <project-cards :models="projects" for="labs"/>
+
+    <placeholder-block height="20px"/>
+
+    <title-block h1-mode="false"
+                 color-mode="auto"
+                 :with-horizontal-rule="true"
+                 :is-font-black="false">
+      {{ $t('our-translation-projects-title') }}
+    </title-block>
+
+    <placeholder-block height="20px"/>
+
+    <project-cards :models="projects" for="translation"/>
+
+    <placeholder-block height="20px"/>
 
   </body-block>
 
-  <placeholder-block height="90px"/>
-
-  <div v-show="!useGroupedMode">
-
-    <laboratory-project-cards/>
-
-    <placeholder-block height="90px"/>
-
-    <translation-project-cards/>
-
-    <placeholder-block height="90px"/>
-
-  </div>
-
-  <member-projects>
+  <member-projects :models="projects">
     {{ $t('our-projects-title-by-name') }}
   </member-projects>
 
