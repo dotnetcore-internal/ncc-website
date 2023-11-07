@@ -241,7 +241,7 @@
     },
     {
       "id": "magicodes-ie",
-      "name": "Magicodes-IE",
+      "name": "Magicodes Import & Export",
       "description": "A common import and export library for Excel, Word, PDF and HTML.",
       "logo": "",
       "github": "https://github.com/dotnetcore/Magicodes.IE",
@@ -462,6 +462,45 @@
         "url": "https://github.com/dotnetcore"
       },
       "external": false
+    },
+    {
+      "id": "surging",
+      "name": "Surging",
+      "description": "A microservices framework.",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "fanliang",
+        "url": ""
+      },
+      "external": true
+    },
+    {
+      "id": "zkweb",
+      "name": "ZKWeb",
+      "description": "A flexible web framework based on .NET Core.",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "Old Farmer",
+        "url": ""
+      },
+      "external": true
+    },
+    {
+      "id": "botsharp",
+      "name": "BotSharp",
+      "description": "A machine learning framework to create intelligent chat bots.",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "The SciSharp",
+        "url": "https://github.com/scisharp"
+      },
+      "external": true
     }
   ]
 }
