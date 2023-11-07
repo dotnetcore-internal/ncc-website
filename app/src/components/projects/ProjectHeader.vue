@@ -37,7 +37,8 @@ const useIconColor = computed(() => {
             :class="{'title-highlight': featureKey === 'all'}"
             href="/projects"
             route-name="projects"
-            :title="$t('project-all-full')">
+            :title="$t('project-all-full')"
+            mode="classic">
 
       {{ $t('project-all') }}
 
@@ -47,7 +48,8 @@ const useIconColor = computed(() => {
             :class="{'title-highlight': featureKey === 'top-level'}"
             href="/top-level-projects"
             route-name="top-level-projects"
-            :title="$t('project-top-level-full')">
+            :title="$t('project-top-level-full')"
+            mode="classic">
 
       {{ $t('project-top-level') }}
 
@@ -57,7 +59,8 @@ const useIconColor = computed(() => {
             :class="{'title-highlight': featureKey === 'archived'}"
             href="/archived-projects"
             route-name="archived-projects"
-            :title="$t('project-archived-full')">
+            :title="$t('project-archived-full')"
+            mode="classic">
 
       {{ $t('project-archived') }}
 
@@ -67,7 +70,8 @@ const useIconColor = computed(() => {
             :class="{'title-highlight': featureKey === 'maturity-model'}"
             href="/project-maturity-model"
             route-name="project-maturity-model"
-            :title="$t('project-maturity-model')">
+            :title="$t('project-maturity-model')"
+            mode="classic">
       {{ $t('project-maturity-model') }}
 
     </anchor>
@@ -117,11 +121,11 @@ const useIconColor = computed(() => {
 }
 
 .title {
-  @apply p-2 block hover:bg-purple-100/40;
+  @apply p-2 block hover:bg-purple-100/40 dark:hover:bg-purple-900/40;
 }
 
 .title-highlight {
-  @apply bg-purple-100 hover:bg-purple-100;
+  @apply bg-purple-100 hover:bg-purple-100 dark:bg-purple-900/40 dark:hover:bg-purple-900/40;
   @apply text-purple-900 dark:text-purple-100 font-bold;
 }
 

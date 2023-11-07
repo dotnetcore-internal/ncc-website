@@ -8,7 +8,12 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-        {{ $t('our-projects-title')}}
+        <span v-if="$slots['default']">
+          <slot> </slot>
+        </span>
+        <span v-else>
+          {{ $t('our-projects-title') }}
+        </span>
       </title-block>
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">
@@ -34,7 +39,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
           <a href="/projects/cap" title="CAP">CAP</a>
         </div>
         <div class="project-name">
-          <a href="/projects/collection" title="Collection">Collection</a>
+          <a href="/projects/collections" title="Collections">Collections</a>
         </div>
         <div class="project-name">
           <a href="/projects/compile-environment" title="Compile Environment">Compile Environment</a>

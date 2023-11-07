@@ -1,0 +1,467 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "zh-tw"
+  },
+  "_catalogues": {
+    "infra-middleware": "基礎設施與中間件",
+    "data": "數據",
+    "dev-fx": "開發框架",
+    "application-library": "應用程序庫",
+    "tools-env": "工具與環境",
+    "ui": "UI 組件",
+    "translation": "翻譯",
+    "labs": "實驗室"
+  },
+  "projects": [
+    {
+      "id": "agileconfig",
+      "name": "AgileConfig",
+      "description": "一個基於 .NET Core 的輕量級配置中心。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/AgileConfig",
+      "catalogue": "infra-middleware",
+      "status": "sandbox",
+      "leader": {
+        "name": "ZJ ZHOU",
+        "url": "https://github.com/kklldog"
+      },
+      "external": false
+    },
+    {
+      "id": "alipay-sdk",
+      "name": "Alipay SDK",
+      "description": "基於 .NET Standard 2.0 開發的第三方支付寶服務端 SDK，提供比官方更可靠的設計，但仍與官方 APIs 保持一致。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Alipay.AopSdk.Core",
+      "catalogue": "tools-env",
+      "status": "archived",
+      "leader": {
+        "name": "Zhiqiang Li",
+        "url": "https://github.com/stulzq"
+      },
+      "external": false
+    },
+    {
+      "id": "aspectcore",
+      "name": "AspectCore",
+      "description": ".NET Standard 跨平台 AOP 框架。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/AspectCore-Framework",
+      "catalogue": "application-library",
+      "status": "top-level",
+      "leader": {
+        "name": "Liu Haoyang",
+        "url": "https://github.com/liuhaoyang"
+      },
+      "external": false
+    },
+    {
+      "id": "bootstrapblazor",
+      "name": "BootstrapBlazor",
+      "description": "基於 Bootstrap 的 Blazor 企業級 UI 組件庫。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/BootstrapBlazor",
+      "gitee": "https://gitee.com/LongbowEnterprise/BootstrapBlazor",
+      "website": "https://www.blazor.zone/",
+      "catalogue": "ui",
+      "status": "sandbox",
+      "leader": {
+        "name": "Argo Zhang",
+        "url": "https://github.com/ArgoZhang"
+      },
+      "external": false
+    },
+    {
+      "id": "canalsharp",
+      "name": "CanalSharp",
+      "description": "Alibaba Canal 的開源 .NET 客戶端。Alibaba Canal 是一個基於 MySQL binlog 的增量發佈與訂閱組件。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/CanalSharp",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "WithLin",
+        "url": "https://github.com/withlin"
+      },
+      "external": false
+    },
+    {
+      "id": "cap",
+      "name": "CAP",
+      "description": "基於最終一致性的微服務分布式事務解決方案，具有 Outbox 模式的事件總線。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/CAP",
+      "catalogue": "infra-middleware",
+      "status": "top-level",
+      "leader": {
+        "name": "杨晓东",
+        "url": "https://github.com/yang-xiaodong"
+      },
+      "external": false
+    },
+    {
+      "id": "collections",
+      "name": "Collections",
+      "description": "包括分頁組件在內的集合擴展。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Collections",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "Alex Lewis",
+        "url": "https://github.com/alexinea"
+      },
+      "external": false
+    },
+    {
+      "id": "compile-environment",
+      "name": "Compile Environment",
+      "description": "使用 Roslyn 庫進行動態編譯時，可以引入該庫提供動態編譯的環境。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Compile.Environment",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "dotnetspider",
+      "name": "DotnetSpider",
+      "description": "類似 WebMagic 與 Scrapy 的 .NET Standard 輕量級、高效且高速的高級爬蟲庫。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/DotnetSpider",
+      "catalogue": "data",
+      "status": "top-level",
+      "leader": {
+        "name": "Lewis Zou",
+        "url": "https://github.com/zlzforever"
+      },
+      "external": false
+    },
+    {
+      "id": "easycaching",
+      "name": "EasyCaching",
+      "description": "開源緩存庫，包含基本用法和緩存的高級用法，可助我們更輕松地處理緩存。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EasyCaching",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "汪文清",
+        "url": "https://github.com/catcherwang"
+      },
+      "external": false
+    },
+    {
+      "id": "flubucore",
+      "name": "FlubuCore",
+      "description": "跨平台構建與部署自動化系統，基於 C# 代碼構建項目和執行部署腳本。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/FlubuCore",
+      "catalogue": "tools-env",
+      "status": "top-level",
+      "leader": {
+        "name": "Marko Zorec",
+        "url": "https://github.com/mzorec"
+      },
+      "external": false
+    },
+    {
+      "id": "efcore-gaussdb",
+      "name": "GaussDB for EFCore",
+      "description": "華為 GaussDB 的 Entity Framework Core 驅動。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EntityFrameworkCore.GaussDB",
+      "catalogue": "data",
+      "status": "incubation",
+      "leader": {
+        "name": "Jeffcky",
+        "url": "https://github.com/wangpengxpy"
+      },
+      "external": false
+    },
+    {
+      "id": "efcore-kingbasees",
+      "name": "KingbaseES for EFCore",
+      "description": "人大金倉 KingbaseES 的 Entity Framework Core 驅動。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES",
+      "catalogue": "data",
+      "status": "incubation",
+      "leader": {
+        "name": "Jeffcky",
+        "url": "https://github.com/wangpengxpy"
+      },
+      "external": false
+    },
+    {
+      "id": "fastgithub",
+      "name": "FastGithub",
+      "description": "GitHub 加速神器，解決 GitHub 打不開、用戶頭像無法加載、releases 無法上傳下載、git-clone git-pull git-push 失敗等問題。",
+      "logo": "",
+      "catalogue": "tools-env",
+      "status": "archived",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "freesql",
+      "name": "FreeSql",
+      "description": "一款功能強大的 ORM 組件，支持 .NET Core、.NET Framework 和 Xamarin。目前 FreeSql 支持以下數據庫：MySQL、PostgreSQL、SqlServer、Oracle、Sqlite、Firebird、ODBC、微軟 Access 以及國產數據庫達夢、人大金倉、神通、瀚高、華為 GaussDB。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/FreeSql",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "2881099",
+        "url": "https://github.com/2881099"
+      },
+      "external": false
+    },
+    {
+      "id": "httpreports",
+      "name": "HttpReports",
+      "description": "是一款基於 .NET Core 的輕量級 APM 系統，可在 .NET Core 環境下快速搭建統計、分析、圖標、監控和分布式跟蹤一體化的站點，適用於 ASP.NET Core MVC/WebAPI。HttpReports 上手簡單，適合在微服務中使用。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/HttpReports",
+      "catalogue": "infra-middleware",
+      "status": "sandbox",
+      "leader": {
+        "name": "SpringLee",
+        "url": "https://github.com/SpringLee"
+      },
+      "external": false
+    },
+    {
+      "id": "magicodes-ie",
+      "name": "Magicodes-IE",
+      "description": "導入導出通用庫，支持 Excel、Word、PDF 與 HTML。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Magicodes.IE",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Xin-Lai",
+        "url": "https://github.com/xin-lai"
+      },
+      "external": false
+    },
+    {
+      "id": "mocha",
+      "name": "Mocha",
+      "description": "一款基於OpenTelemetry 的應用程序性能監控工具，為可觀測性數據分析和存儲提供了可擴展的平台。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/mocha",
+      "catalogue": "infra-middleware",
+      "status": "incubation",
+      "leader": {
+        "name": "Liu Haoyang",
+        "url": "https://github.com/liuhaoyang"
+      },
+      "external": false
+    },
+    {
+      "id": "natasha",
+      "name": "Natasha",
+      "description": "簡化 IL 操作，優化 IL 編程流程，並編寫具有高性能的動態緩存。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Natasha",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "AzulX",
+        "url": "https://github.com/NMSAzulX"
+      },
+      "external": false
+    },
+    {
+      "id": "npoi",
+      "name": "NPOI",
+      "description": "用於讀寫 Microsoft Office 二進制文件和 OOXML 文件格式的 .NET 類庫。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/NPOI",
+      "catalogue": "data",
+      "status": "archived",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "osharp",
+      "name": "OSharp",
+      "description": "全稱 OSharp Framework with .NetStandard2.x，是一個基於 .NetStandard2.x 開發的一個 .NetCore 快速開發框架。這個框架使用最新穩定版的 .NetCore SDK（當前是.NET Core 3.1），對 AspNetCore 的配置、依賴注入、日志、緩存、實體框架、Mvc(WebApi)、身份認證、權限授權等模塊進行更高一級的自動化封裝，並規範了一套業務實現的代碼結構與操作流程，使 .Net Core 框架更易於應用到實際項目開發中。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/OSharp",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "郭明峰",
+        "url": "https://github.com/gmf520"
+      },
+      "external": false
+    },
+    {
+      "id": "shardingcore",
+      "name": "ShardingCore",
+      "description": "一款 EFCore 下高性能、輕量級針對分表分庫讀寫分離的解決方案，具有零依賴、零學習成本、零業務代碼入侵。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/sharding-core",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Xuejmnet",
+        "url": "https://github.com/Xuejmnet"
+      },
+      "external": false
+    },
+    {
+      "id": "smartcode",
+      "name": "SmartCode",
+      "description": "優秀的開源代碼生成器（不僅僅是生成代碼），它基於執行流程，支持 ETL 模式，高度靈活和可擴展，還支持自定義模板和多種模板樣式，以及多種數據庫。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SmartCode",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Ahoo-Wang",
+        "url": "https://github.com/Ahoo-Wang"
+      },
+      "external": false
+    },
+    {
+      "id": "smartsql",
+      "name": "SmartSql",
+      "description": "通過簡單的連接字符串來運行，解析 SQL 的 XML 配置和各種性能觀察方法，使性能問題一目了然。 SmartSql 具有與 Dapper 相似的性能水平，並提供許多特性：動態代理存儲、分布式緩存、類型處理器、自動生成 CUD 代碼、分布式 Id 生成器、性能診斷、AOP 級別的事務/緩存（內存，分布式緩存）、讀/寫分離、代碼生成器、高性能的批量插入等。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SmartSql",
+      "catalogue": "data",
+      "status": "sandbox",
+      "leader": {
+        "name": "Ahoo-Wang",
+        "url": "https://github.com/Ahoo-Wang"
+      },
+      "external": false
+    },
+    {
+      "id": "sourcelink-environment",
+      "name": "SourceLink Environment",
+      "description": "為 SourceLink 功能提供可繼承性值的 Nuget 包。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/SourceLink.Environment",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "util",
+      "name": "Util",
+      "description": ".NET Core 平台下的開源應用程序，旨在提高小型團隊的開發效率。 它由通用幫助程序，分層體系結構設計，UI 組件，第三方組件和服務接口包組成。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/Util",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "何镇汐",
+        "url": "https://github.com/xiadao521"
+      },
+      "external": false
+    },
+    {
+      "id": "webapiclient",
+      "name": "WebApiClient",
+      "description": "基於 HttpClient 的開源項目，只需通過定義 C# 接口並修改一些細節便可異步調用遠程 HTTP 接口。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/WebApiClient",
+      "catalogue": "application-library",
+      "status": "sandbox",
+      "leader": {
+        "name": "老九",
+        "url": "https://github.com/xljiuliang"
+      },
+      "external": false
+    },
+    {
+      "id": "wtm",
+      "name": "WTM",
+      "description": "針對中小規模後台管理系統的開發利器，基於 .NET Core，實現零編碼創建項目、零編碼生成業務模塊。框架嚴格遵循 MVVM 的開發模式，經過數十個真實項目檢測，可以極大提高開發效率，降低開發成本。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/WTM",
+      "catalogue": "dev-fx",
+      "status": "sandbox",
+      "leader": {
+        "name": "Liu Liang",
+        "url": "https://github.com/liuliang-wt"
+      },
+      "external": false
+    },
+    {
+      "id": "kooboo-json",
+      "name": "Kooboo Json",
+      "description": "更小更快的 C# JSON 序列化工具（基於表達式樹構建）。",
+      "logo": "",
+      "github": "https://github.com/kooboo/Json",
+      "catalogue": "tools-env",
+      "status": "sandbox",
+      "leader": {
+        "name": "Kooboo Team",
+        "url": "https://github.com/Kooboo"
+      },
+      "external": true
+    },
+    {
+      "id": "aspnetcore-translation",
+      "name": "ASP.NET Core Documentation",
+      "description": "由 .NET China Foundation（已更名為 NCC）發起的微軟 ASP.NET Core 文檔翻譯計劃。",
+      "logo": "",
+      "github": "https://github.com/dotnetcore/aspnetcore-doc-cn",
+      "catalogue": "translation",
+      "status": "translation",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "btfindtree",
+      "name": "BTFindTree",
+      "description": "此項目為 Leo 項目中的高效查找數據結構，使用二分+桶的方式優化查找性能。",
+      "logo": "",
+      "github": "https://github.com/dotnet-lab/BTFindTree",
+      "catalogue": "application-library",
+      "status": "labs",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    },
+    {
+      "id": "papper",
+      "name": "Papper",
+      "description": "基於 Roslyn 對語法樹的一個封裝, 使開發者更容易操作語法樹。",
+      "logo": "",
+      "github": "https://github.com/dotnet-lab/Papper",
+      "catalogue": "application-library",
+      "status": "labs",
+      "leader": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore"
+      },
+      "external": false
+    }
+  ]
+}

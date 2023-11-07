@@ -2,8 +2,10 @@
 import {setTitle} from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
-import MemberProjects from "@/components/common/MemberProjects.vue";
+import MemberProjects from "@/components/projects/MemberProjects.vue";
 import ProjectHeader from "@/components/projects/ProjectHeader.vue";
+import ProjectCards from "@/components/projects/ProjectCards.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 setTitle('project-archived-full', 'i18n');
 </script>
@@ -14,9 +16,15 @@ setTitle('project-archived-full', 'i18n');
 
     <project-header feature-key="archived"/>
 
+    <project-cards for="archived"/>
+
   </body-block>
 
-  <member-projects/>
+  <placeholder-block height="90px"/>
+
+  <member-projects>
+    {{ $t('our-projects-title-by-name') }}
+  </member-projects>
 
 </template>
 

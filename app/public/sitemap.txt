@@ -11,6 +11,7 @@ https://ncc.work/people/project-management-committee
 https://ncc.work/projects
 https://ncc.work/top-level-projects
 https://ncc.work/archived-projects
+https://ncc.work/project-maturity-model
 https://ncc.work/community-online
 https://ncc.work/rules
 https://ncc.work/brand-guidelines
