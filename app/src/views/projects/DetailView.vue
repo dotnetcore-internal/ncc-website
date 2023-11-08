@@ -1,6 +1,8 @@
 <script setup lang="ts">
-import {computed, onMounted, onUnmounted, reactive, useAttrs} from "vue";
-import router from "@/router";
+import {computed, onMounted, onUnmounted, reactive, ref, useAttrs} from "vue";
+import {useRouter} from "vue-router";
+import {usePreferredDark} from "@vueuse/core";
+
 import {useEmitter} from "@/hooks/useEmitter";
 import {useUiStore} from "@/stores/uiStore";
 import {setTitle} from "@/hooks/usePageToolkits";
@@ -12,13 +14,13 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import {Github, Home} from "@icon-park/vue-next";
-import {usePreferredDark} from "@vueuse/core/index";
 
 setTitle('Member Project Detail');
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
 const attrs = useAttrs();
+const router = useRouter();
 
 const akaId = attrs.akaId as string;
 const projects = reactive<ProjectCardModel[]>([]);
@@ -81,6 +83,12 @@ const displayWebSite = computed(() => {
   return !!w && w.length > 0;
 });
 
+const currentProjectPaper = ref('');
+const displayProjectPaper = (paper: string) => {
+  currentProjectPaper.value = paper;
+  router.push({path: `/projects/${useProject.value.id}/${paper}`});
+}
+
 onMounted(async () => {
 
   emitter.on('toChangeLocale', async (e) => {
@@ -88,10 +96,16 @@ onMounted(async () => {
     await loadProjectsAsync(event.locale, updateProjects, updateCatalogues);
   });
 
+  emitter.on('toChangeProjectPaper', (e) => {
+    const event = e as { paper: string };
+    currentProjectPaper.value = event.paper;
+  });
+
 });
 
 onUnmounted(() => {
   emitter.off("toChangeLocale");
+  emitter.off("toChangeProjectPaper");
 });
 </script>
 
@@ -174,19 +188,21 @@ onUnmounted(() => {
 
     </div>
 
+    <div class="px-5">
+      {{ useProject.description }}
+    </div>
+
     <div class="sub-catalog">
-      <button class="sub-catalog-text sub-catalog-current">General</button>
-      <button class="sub-catalog-text">Metrics</button>
-      <button class="sub-catalog-text">Get Started</button>
-      <button class="sub-catalog-text">Features</button>
+      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === ''}" @click="displayProjectPaper('')">General</button>
+      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'metrics'}" @click="displayProjectPaper('metrics')">Metrics</button>
+      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'get-started'}" @click="displayProjectPaper('get-started')">Get Started</button>
+      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'features'}" @click="displayProjectPaper('features')">Features</button>
       <button class="sub-catalog-text">License</button>
     </div>
 
     <div class="paper">
 
-      <span>
-        {{ useProject.description }}
-      </span>
+      <router-view/>
 
     </div>
 
@@ -266,10 +282,5 @@ onUnmounted(() => {
 
 .sub-catalog-current {
   @apply font-black;
-}
-
-.paper {
-  @apply my-6 p-5 rounded-lg shadow;
-  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
 }
 </style>

@@ -31,5 +31,10 @@
       "sort": 4,
       "in-built": true
     }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
   ]
 }

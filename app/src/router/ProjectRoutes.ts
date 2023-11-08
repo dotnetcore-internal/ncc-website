@@ -36,7 +36,25 @@ const routes: RouteRecordRaw[] = [
         path: '/projects/:id',
         name: 'projects/:id',
         component: () => import("../views/projects/DetailView.vue"),
-        props: projectDetailPropFn
+        props: projectDetailPropFn,
+        children: [
+            {
+                path: "metrics",
+                component: () => import("../views/projects/MetricsPage.vue")
+            },
+            {
+                path: "get-started",
+                component: () => import("../views/projects/GetStartedPage.vue")
+            },
+            {
+                path: "features",
+                component: () => import("../views/projects/FeaturesPage.vue")
+            },
+            {
+                path: "",
+                component: () => import("../views/projects/GeneralPage.vue")
+            }
+        ]
     }
 ];
 
