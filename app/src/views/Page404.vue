@@ -17,7 +17,7 @@ setTitle('Page Not Found');
     </div>
     <div class="err-jump">
       <anchor href="/" title="Go to Homepage" mode="classic">
-        <span class="px-5 py-2 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg">
+        <span class="text-white px-5 py-2 bg-gradient-to-br from-pink-700 to-purple-700 rounded-lg">
           Go to Homepage
         </span>
       </anchor>

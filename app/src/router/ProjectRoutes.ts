@@ -1,4 +1,10 @@
-import type {RouteRecordRaw} from "vue-router";
+import type {RouteLocationNormalized, RouteRecordRaw} from "vue-router";
+
+const projectDetailPropFn = function (route: RouteLocationNormalized) {
+    return {
+        akaId: route.params.id
+    };
+};
 
 const routes: RouteRecordRaw[] = [
     {
@@ -22,9 +28,15 @@ const routes: RouteRecordRaw[] = [
         component: () => import("../views/projects/ProjectMaturityModelView.vue"),
     },
     {
+        path: '/project/not-found',
+        name: 'project-not-found',
+        component: () => import("../views/projects/ProjectNotFound.vue"),
+    },
+    {
         path: '/projects/:id',
         name: 'projects/:id',
         component: () => import("../views/projects/DetailView.vue"),
+        props: projectDetailPropFn
     }
 ];
 
