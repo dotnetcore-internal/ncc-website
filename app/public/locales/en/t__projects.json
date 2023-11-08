@@ -3,11 +3,12 @@
     "version": "20231104002"
   },
   "project-laboratory-desc": "Experimental projects initiated by the community are generally small in scale and have clear project goals. Once these goals are achieved, they no longer require excessive maintenance, and therefore, they are not affected by the project maturity model.",
-  "project-translation-desc": "Translation projects initiated by the community are participated in by community volunteers and developers at large. Through translation, they learn and make progress, collectively providing better documentation and tools for developers."
+  "project-translation-desc": "Translation projects initiated by the community are participated in by community volunteers and developers at large. Through translation, they learn and make progress, collectively providing better documentation and tools for developers.",
   "project-detail": {
     "general": "General",
     "metrics": "Metrics",
     "get-started": "Get Started",
     "features": "Features"
-  }
+  },
+  "project-summary": "Summary"
 }
