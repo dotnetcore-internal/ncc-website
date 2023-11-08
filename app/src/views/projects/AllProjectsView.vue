@@ -59,7 +59,8 @@ onUnmounted(() => {
 
     <project-cards :models="projects"
                    :catalogues="catalogues"
-                   for="full"
+                   for="all"
+                   for-when-group="full"
                    :box="true"
                    :enable-sort="true"
                    :enable-grouped-by-catalogue="true"

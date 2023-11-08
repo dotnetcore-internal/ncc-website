@@ -11,6 +11,7 @@ const props = withDefaults(defineProps<{
   models: ProjectCardModel[];
   catalogues?: CatalogueMap;
   for?: 'all' | 'full' | 'sandbox' | 'top-level' | 'archived' | 'incubation' | 'labs' | 'translation' | 'other';
+  forWhenGroup?: 'all' | 'full' | 'sandbox' | 'top-level' | 'archived' | 'incubation' | 'labs' | 'translation' | 'other';
   box?: boolean;
   enableSort?: boolean;
   enableGroupedByCatalogue?: boolean;
@@ -20,6 +21,7 @@ const props = withDefaults(defineProps<{
   sortAsDefault?: 'asc' | 'desc';
 }>(), {
   for: 'all',
+  forWhenGroup: 'full',
   box: false,
   enableSort: true,
   enableGroupedByCatalogue: false,
@@ -33,8 +35,12 @@ const isGroupedMode = ref<boolean>(props.enableSort === false && (props.enableGr
 const groupedBy = ref<'catalogue' | 'letter' | 'status'>(props.groupedAsDefault);
 const sortBy = ref<'asc' | 'desc'>(props.sortAsDefault);
 
+const useFor = computed(() => {
+  return isGroupedMode.value ? props.forWhenGroup : props.for;
+});
+
 const useProjects = computed(() => {
-  return sortProjects(filterProjects(props.models, props.for), sortBy.value);
+  return sortProjects(filterProjects(props.models, useFor.value), sortBy.value);
 });
 
 const useGroupedProjects = computed(() => {
@@ -83,7 +89,7 @@ const useIconColor = computed(() => {
   <div v-show="displayOpsBtnGroup">
 
     <div class="group-btn cursor-pointer relative float-left">
-      <span class="pl-3 text-xs align-middle">{{ $t('grouped-by')}} </span>
+      <span class="pl-3 text-xs align-middle">{{ $t('grouped-by') }} </span>
       <button @click="switchGroupedMode()" class="group-btn-text" :class="{'group-btn-current': !isGroupedMode}">{{ $t('grouped-by-none') }}</button>
       <button @click="switchGroupedMode('catalogue')" class="group-btn-text" :class="{'group-btn-current': isGroupedMode && groupedBy === 'catalogue'}">{{ $t('grouped-by-category') }}</button>
       <button @click="switchGroupedMode('status')" class="group-btn-text" :class="{'group-btn-current': isGroupedMode && groupedBy === 'status'}">{{ $t('grouped-by-status') }}</button>
@@ -170,7 +176,7 @@ const useIconColor = computed(() => {
   @apply first:pl-5 last:pr-5;
 }
 
-.group-btn-current{
+.group-btn-current {
   @apply font-black;
 }
 

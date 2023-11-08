@@ -4,7 +4,7 @@ const routes: RouteRecordRaw[] = [
     {
         path: '/projects',
         name: 'projects',
-        component: () => import("../views/projects/ProjectsIndexView.vue"),
+        component: () => import("../views/projects/AllProjectsView.vue"),
     },
     {
         path: '/archived-projects',

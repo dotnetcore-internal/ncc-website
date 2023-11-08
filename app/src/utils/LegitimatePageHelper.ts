@@ -1,9 +1,9 @@
 const truncatePath = (path: string): string | null => {
-    const regex = /^(\/news|\/announcements|\/weekly|\/projects|\/rules|\/story)/;
+    const regex = /^(\/news\/|\/announcements\/|\/weekly\/|\/projects\/|\/rules\/|\/story\/)/;
 
     const match = path.match(regex);
     if (match) {
-        return match[0];
+        return match[0].replace(/\/$/, "");
     }
 
     return null;
@@ -21,6 +21,7 @@ const isBuildInPath = (path: string): boolean => {
         case '/about/contact':
         case '/people/project-management-committee':
         case '/people/technical-oversight-committee':
+        case '/projects':
         case '/top-level-projects':
         case "/archived-projects":
         case "/project-maturity-model":
@@ -28,6 +29,11 @@ const isBuildInPath = (path: string): boolean => {
         case "/brand-guidelines":
         case "/participation-guidelines":
         case "/website-source-code-usage-guidelines":
+        case "/news":
+        case "/announcements":
+        case "/weekly":
+        case "/rules":
+        case "/story":
             return true;
         default:
             return false;
