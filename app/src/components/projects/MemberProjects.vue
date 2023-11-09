@@ -5,14 +5,19 @@ import {useUiStore} from "@/stores/uiStore";
 import {filterProjects, groupProjectsByLetter, loadProjectsAsync} from "@/hooks/useProjectToolkits";
 import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
 
+import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import TitleLink from "@/components/blocks/TitleLink.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();
 
 const props = withDefaults(defineProps<{
   models?: ProjectCardModel[];
-}>(), {});
+  displayMoreBtn?: boolean;
+}>(), {
+  displayMoreBtn: false
+});
 
 const projects = reactive<ProjectCardModel[]>([]);
 
@@ -42,14 +47,31 @@ onMounted(async () => {
   <div class="">
     <div class="responsive-width">
 
-      <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-        <span v-if="$slots['default']">
-          <slot> </slot>
-        </span>
-        <span v-else>
-          {{ $t('our-projects-title') }}
-        </span>
-      </title-block>
+      <left-right-layout>
+
+        <template #left>
+
+          <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+            <span v-if="$slots['default']">
+              <slot> </slot>
+            </span>
+            <span v-else>
+              {{ $t('our-projects-title') }}
+            </span>
+          </title-block>
+
+        </template>
+
+        <template #right>
+
+          <title-link v-if="displayMoreBtn" href="/projects" :title="$t('project-all')" mode="classic">
+            {{ $t('more-project') }}
+          </title-link>
+
+        </template>
+
+      </left-right-layout>
+
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">
 

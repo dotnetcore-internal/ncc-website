@@ -46,7 +46,7 @@ setTitle('Home');
 
   <latest-news/>
 
-  <member-projects/>
+  <member-projects :display-more-btn="true"/>
 
   <partners-and-sponsors/>
 
