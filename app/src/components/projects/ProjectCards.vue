@@ -2,7 +2,7 @@
 import {computed, ref} from "vue";
 import {usePreferredDark} from "@vueuse/core";
 import {filterProjects, groupProjectsByCatalogue, groupProjectsByLetter, groupProjectsByStatus, sortProjects} from "@/hooks/useProjectToolkits";
-import {type CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
+import type {CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
 
 import {AlphabeticalSorting, AlphabeticalSortingTwo} from "@icon-park/vue-next";
 import ProjectCard from "@/components/projects/ProjectCard.vue";

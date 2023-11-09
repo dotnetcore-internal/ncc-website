@@ -1,11 +1,52 @@
 <script setup lang="ts">
-import {nextTick, onMounted} from "vue";
+import {computed, nextTick, onMounted} from "vue";
 import {useEmitter} from "@/hooks/useEmitter";
+import {useProjectStore} from "@/stores/projectStore";
+
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import LicenseBlock from "@/components/projects/LicenseBlock.vue";
-import IFrameBlock from "@/components/basic/IFrameBlock.vue";
+import AnchorElement from "@/components/basic/AnchorElement.vue";
 
 const emitter = useEmitter();
+const projectStore = useProjectStore();
+
+const useLicenseNumber = computed(() => {
+  const target = projectStore.currentProjectMetadata?.license;
+  if (!target)
+    return 0;
+  if (Array.isArray(target))
+    return target.length;
+  else
+    return 1;
+});
+
+const useLicenseName = computed(() => {
+  const target = projectStore.currentProjectMetadata?.license;
+  if (Array.isArray(target)) {
+    // array
+    return target.map(x => x.name);
+  } else if (typeof target === 'object') {
+    // object
+    return target.name;
+  } else {
+    // undefined
+    return '';
+  }
+});
+
+const useLicenseUrl = computed(() => {
+  const target = projectStore.currentProjectMetadata?.license;
+  if (Array.isArray(target)) {
+    // array
+    return target.map(x => x.file);
+  } else if (typeof target === 'object') {
+    // object
+    return target.file;
+  } else {
+    // undefined
+    return '';
+  }
+});
 
 onMounted(() => {
   nextTick(() => {
@@ -17,25 +58,44 @@ onMounted(() => {
 
 <template>
 
-  <body-block class="project-paper">
+  <div v-if="useLicenseNumber === 0" class="project-paper p-5">
+    <p class="text-center">No License</p>
+  </div>
 
-    License
+  <div v-else-if="useLicenseNumber === 1">
+    <license-block :license="useLicenseName"/>
 
-  </body-block>
+    <body-block class="project-paper p-5">
 
-  <body-block class="project-paper">
+      <p>Raw License Content:</p>
 
-    <license-block />
+      <anchor-element class="underline hover:underline underline-offset-2 text-blue-500" :src="useLicenseUrl" target="_blank" title="Raw License Content" mode="classic">
+        {{ useLicenseUrl }}
+      </anchor-element>
 
-  </body-block>
+    </body-block>
 
-  <body-block class="project-paper">
+  </div>
 
-    <div>URL 展示与进度条显示</div>
+  <div v-else>
 
-   <i-frame-block></i-frame-block>
+    <license-block v-for="(item, index) in useLicenseName" :key="index" :license="item"/>
 
-  </body-block>
+    <body-block class="project-paper p-5">
+
+      <p>Raw License Content:</p>
+
+      <ul class="list-disc list-inside">
+        <li v-for="(item, index) in useLicenseUrl" :key="index">
+          <anchor-element class="underline hover:underline underline-offset-2 text-blue-500" :src="item" target="_blank" title="Raw License Content" mode="classic">
+            {{ item }}
+          </anchor-element>
+        </li>
+      </ul>
+
+    </body-block>
+
+  </div>
 
 </template>
 

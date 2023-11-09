@@ -1,28 +1,12 @@
 import axios from "axios";
+import type {ProjectDescriptionModel, BaseProjectModel} from "@/apis/QueryProjectProfileApi";
 
 export class NumberVersionModel {
     version: number = 0;
     locale: string = 'en';
 }
 
-export class ProjectCardModel {
-    id: string = '';
-    name: string = "";
-    description: string = "";
-    logo: string = "";
-    github?: string = "";
-    gitee?: string = "";
-    website?: string = "";
-    catalogue: string = '';
-    status: string = 'sandbox';
-    leader: ProjectCardLeaderModel = new ProjectCardLeaderModel();
-    external: boolean = false;
-}
-
-export class ProjectCardLeaderModel {
-    name: string = '';
-    url: string = '';
-}
+export type ProjectCardModel = BaseProjectModel & ProjectDescriptionModel;
 
 export interface CatalogueMap {
     [key: string]: string
