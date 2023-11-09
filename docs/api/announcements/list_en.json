@@ -1,0 +1,41 @@
+{
+  "_page": {
+    "current": 1,
+    "total": 1
+  },
+  "list": [
+    {
+      "id": "ncc-cloud-native-wind-rises",
+      "title": "ITAI: The NCC has initiated the incubation of two ITAI projects",
+      "date": "2023-10-16",
+      "author": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "image": ""
+    },
+    {
+      "id": "ncc-cloud-native-wind-rises",
+      "title": "MOCHA: Cloud Native APM and Large-Scale Observability Data Processing Platform project has been launched",
+      "date": "2023-10-09",
+      "author": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "image": ""
+    },
+    {
+      "id": "ncc-cloud-native-wind-rises",
+      "title": "WIND RISES: The NCC cloud native project incubation program",
+      "date": "2023-10-08",
+      "author": {
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "image": ""
+    }
+  ]
+}

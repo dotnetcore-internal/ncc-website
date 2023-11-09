@@ -1,5 +1,14 @@
 {
   "_projects": {
     "version": "20231104002"
-  }
+  },
+  "project-laboratory-desc": "由社區發起的實驗性質的項目，它們一般都比較小巧，具有明確的項目目標。在目標達成後便不再需要額外過度維護，因此它們不受項目成熟度模型的影響。",
+  "project-translation-desc": "由社區發起的翻譯項目，由社區志願者和廣大開發者共同參與，在翻譯中學習，在學習中進步，共同為開發者提供更好的文檔和工具。",
+  "project-detail": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "開始",
+    "features": "功能特征"
+  },
+  "project-summary": "簡介"
 }

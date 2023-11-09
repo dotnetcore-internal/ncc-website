@@ -1,0 +1,40 @@
+{
+  "id": "agileconfig",
+  "name": "AgileConfig",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/AgileConfig",
+  "catalogue": "infra-middleware",
+  "status": "sandbox",
+  "leader": {
+    "name": "ZJ ZHOU",
+    "url": "https://github.com/kklldog"
+  },
+  "external": false,
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "metrics",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "features",
+      "sort": 4,
+      "in-built": true
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

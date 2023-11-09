@@ -38,7 +38,9 @@
   "project-laboratory": "實驗室@:projects",
   "project-translation": "翻譯@:projects",
   "project-incubation": "孵化@:projects",
+  "project-sandbox": "沙箱@:projects",
   "project-external": "外部@:projects",
+  "project-other": "過往@:projects",
   "project-contribute": "捐贈與貢獻",
   "project-contribute-desc": "加入我們，成為我們的一員，用熱情與專業知識為 NCC 成員專案做貢獻",
   "project-landscape": "專案全景圖",
@@ -49,6 +51,7 @@
   "project-maturity-model": "成熟度模型",
   "project-maturity-model-full": "專案成熟度模型",
   "project-maturity-model-desc": "NCC 專案成熟度模型是一套評估專案成熟度的指導方針",
+  "more-project": "更多專案",
   "learning": "學習",
   "community": "社區",
   "community-events": "活動",
@@ -117,6 +120,11 @@
   "footer-note-part3": "由 <a class='underline hover:underline underline-offset-4' href='https://ncc.work' target='_blank' title='The NCC Website'>NCC</a> 社區設計、開發。",
   "footer-note-part4": "<a class='underline hover:underline underline-offset-4' href='https://github.com/dotnetcore/ncc-website' target='_blank' title='The NCC Website Source Code Usage Guidelines'>站點源碼</a>採用 MIT 許可證",
   "footer-note-part5": "，站點內內容版權所有。",
-
-  "submit-website-bug": "提交網站錯誤"
+  "submit-website-bug": "提交網站錯誤",
+  "sort-a-to-z": "正序",
+  "sort-z-to-a": "逆序",
+  "grouped-by": "",
+  "grouped-by-category": "根據目錄分組",
+  "grouped-by-status": "根據狀態分組",
+  "grouped-by-none": "不分組"
 }

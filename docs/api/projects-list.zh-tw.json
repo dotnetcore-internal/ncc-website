@@ -241,7 +241,7 @@
     },
     {
       "id": "magicodes-ie",
-      "name": "Magicodes-IE",
+      "name": "Magicodes Import & Export",
       "description": "導入導出通用庫，支持 Excel、Word、PDF 與 HTML。",
       "logo": "",
       "github": "https://github.com/dotnetcore/Magicodes.IE",
@@ -462,6 +462,45 @@
         "url": "https://github.com/dotnetcore"
       },
       "external": false
+    },
+    {
+      "id": "surging",
+      "name": "Surging",
+      "description": "一個微服務框架",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "fanliang",
+        "url": ""
+      },
+      "external": true
+    },
+    {
+      "id": "zkweb",
+      "name": "ZKWeb",
+      "description": "一個靈活的 Web 框架",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "Old Farmer",
+        "url": ""
+      },
+      "external": true
+    },
+    {
+      "id": "botsharp",
+      "name": "BotSharp",
+      "description": "一個創建智能聊天機器人的機器學習框架。",
+      "logo": "",
+      "catalogue": "other",
+      "status": "other",
+      "leader": {
+        "name": "The SciSharp",
+        "url": "https://github.com/scisharp"
+      },
+      "external": true
     }
   ]
 }

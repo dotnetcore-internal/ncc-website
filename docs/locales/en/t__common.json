@@ -38,7 +38,9 @@
   "project-laboratory": "Laboratory",
   "project-translation": "Translation",
   "project-incubation": "Incubation",
+  "project-sandbox": "Sandbox",
   "project-external": "External",
+  "project-other": "Past",
   "project-contribute": "Contribute",
   "project-contribute-desc": "Join us and become a part of our team, contributing to NCC member projects with passion and expertise",
   "project-landscape": "Landscape",
@@ -49,6 +51,7 @@
   "project-maturity-model": "Maturity Model",
   "project-maturity-model-full": "Project Maturity Model",
   "project-maturity-model-desc": "The NCC Project Maturity Model is a set of guidelines for evaluating the maturity of a project",
+  "more-project": "View More",
   "learning": "Learning",
   "community": "Community",
   "community-events": "Events",
@@ -117,5 +120,11 @@
   "footer-note-part3": "designed and developed by <a class='underline hover:underline underline-offset-4' href='https://ncc.work' target='_blank' title='The NCC Website'>NCC</a>. ",
   "footer-note-part4": "The <a class='underline hover:underline underline-offset-4' href='https://github.com/dotnetcore/ncc-website' target='_blank' title='The NCC Website Source Code Usage Guidelines'>source code</a> of this website is licensed under the MIT License.",
   "footer-note-part5": "All rights reserved for the site's content.",
-  "submit-website-bug": "Submit Website Bug"
+  "submit-website-bug": "Submit Website Bug",
+  "sort-a-to-z": "ASC",
+  "sort-z-to-a": "DESC",
+  "grouped-by": "Grouped by:",
+  "grouped-by-category": "Category",
+  "grouped-by-status": "Status",
+  "grouped-by-none": "None"
 }

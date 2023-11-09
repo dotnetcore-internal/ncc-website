@@ -1,0 +1,1 @@
+import{B as e}from"./BodyBlock.js";import{d as a,y as o,e as t,o as _,f as r}from"./vendor.js";import{_ as s}from"./_plugin-vue_export-helper.js";const c=a({__name:"GeneralPage",setup(n){return(p,l)=>(_(),o(e,{class:"project-paper"},{default:t(()=>[r(" General ")]),_:1}))}});const i=s(c,[["__scopeId","data-v-f4a28051"]]);export{i as default};

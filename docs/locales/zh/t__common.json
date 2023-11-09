@@ -38,7 +38,9 @@
   "project-laboratory": "实验室@:projects",
   "project-translation": "翻译@:projects",
   "project-incubation": "孵化@:projects",
+  "project-sandbox": "沙盒@:projects",
   "project-external": "外部@:projects",
+  "project-other": "过往@:projects",
   "project-contribute": "捐赠与贡献",
   "project-contribute-desc": "加入我们，成为我们的一员，用热情与专业知识为 NCC 成员项目做贡献",
   "project-landscape": "项目全景图",
@@ -49,6 +51,7 @@
   "project-maturity-model": "成熟度模型",
   "project-maturity-model-full": "项目成熟度模型",
   "project-maturity-model-desc": "NCC 项目成熟度模型是一套评估项目成熟度的指导方针",
+  "more-project": "更多项目",
   "learning": "学习",
   "community": "社区",
   "community-events": "活动",
@@ -117,5 +120,11 @@
   "footer-note-part3": "由 <a class='underline hover:underline underline-offset-4' href='https://ncc.work' target='_blank' title='The NCC Website'>NCC</a> 社区设计、开发。",
   "footer-note-part4": "<a class='underline hover:underline underline-offset-4' href='https://github.com/dotnetcore/ncc-website' target='_blank' title='The NCC Website Source Code Usage Guidelines'>站点源码</a>采用 MIT 许可证",
   "footer-note-part5": "，站点内内容版权所有。",
-  "submit-website-bug": "提交网站错误"
+  "submit-website-bug": "提交网站错误",
+  "sort-a-to-z": "正排序",
+  "sort-z-to-a": "倒排序",
+  "grouped-by": "",
+  "grouped-by-category": "根据目录分组",
+  "grouped-by-status": "根据状态分组",
+  "grouped-by-none": "不分组"
 }

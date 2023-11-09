@@ -1,0 +1,1 @@
+import o from"./Page404.js";import{d as t,y as r,o as e}from"./vendor.js";import"./usePageToolkits.js";import"./BodyBlock.js";import"./_plugin-vue_export-helper.js";import"./AnchorElement.vue_vue_type_script_setup_true_lang.js";const u=t({__name:"ProjectNotFound",setup(p){return(m,a)=>(e(),r(o))}});export{u as default};
