@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "This project provides efficient data structures for the Leo, optimizing search performance using a combination of binary search and bucketing.",
   "modules": {
     "general": "General",

@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "fastgithub",
   "name": "FastGithub",
   "logo": "",
@@ -9,7 +13,9 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit"
+  },
   "modules": [
     {
       "name": "general",

@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "基于 HttpClient 的开源项目，只需通过定义 C# 接口并修改一些细节便可异步调用远程 HTTP 接口。",
   "modules": {
     "general": "概述",

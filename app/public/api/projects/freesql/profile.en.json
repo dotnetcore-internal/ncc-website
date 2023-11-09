@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "FreeSql is the ORM in .NET Core, .NET Framework and Xamarin. It supports MySQL, PostgreSQL, SqlServer, Oracle, Sqlite, Firebird, ODBC, 达梦, 瀚高, KingbaseES, 神通, HUAWEI GaussDB and Microsoft Access.",
   "modules": {
     "general": "General",

@@ -103,7 +103,7 @@
     {
       "id": "collections",
       "name": "Collections",
-      "description": "Utilities and extensions for Collections includes Collections.Paginable and so on...",
+      "description": "Utilities and extensions for Collections includes Collections. Paginable and so on...",
       "logo": "",
       "github": "https://github.com/dotnetcore/Collections",
       "catalogue": "application-library",
@@ -471,7 +471,7 @@
       "catalogue": "other",
       "status": "other",
       "leader": {
-        "name": "fanliang",
+        "name": "fanliang11",
         "url": ""
       },
       "external": true
@@ -484,7 +484,7 @@
       "catalogue": "other",
       "status": "other",
       "leader": {
-        "name": "Old Farmer",
+        "name": "The ZKWeb Team",
         "url": ""
       },
       "external": true

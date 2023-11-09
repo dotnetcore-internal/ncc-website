@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "collections",
   "name": "Collections",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/alexinea"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/Collections/dev/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

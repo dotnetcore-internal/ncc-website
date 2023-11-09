@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "smartcode",
   "name": "SmartCode",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/Ahoo-Wang"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/SmartCode/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

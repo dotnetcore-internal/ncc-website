@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "httpreports",
   "name": "HttpReports",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/SpringLee"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/HttpReports/master/docs/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

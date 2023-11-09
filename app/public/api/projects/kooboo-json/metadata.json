@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "kooboo-json",
   "name": "Kooboo Json",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/Kooboo"
   },
   "external": true,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/Kooboo/Json/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "bootstrapblazor",
   "name": "BootstrapBlazor",
   "logo": "",
@@ -12,7 +16,10 @@
     "url": "https://github.com/ArgoZhang"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://github.com/dotnetcore/BootstrapBlazor/blob/main/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

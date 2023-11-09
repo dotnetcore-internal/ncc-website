@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "alipay-sdk",
   "name": "Alipay SDK",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/stulzq"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://github.com/dotnetcore/Alipay.AopSdk.Core/blob/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

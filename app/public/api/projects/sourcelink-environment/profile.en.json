@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "Provide an inheritable NuGet package for the SourceLink feature.",
   "modules": {
     "general": "General",

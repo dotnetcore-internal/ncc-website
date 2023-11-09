@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A distributed transaction solution in microservice based on eventually consistency, also an eventbus with Outbox pattern.",
   "modules": {
     "general": "General",

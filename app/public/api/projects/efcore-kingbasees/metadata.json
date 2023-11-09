@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "efcore-kingbasees",
   "name": "KingbaseES for EFCore",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/wangpengxpy"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "postgresql",
+    "file": "https://raw.githubusercontent.com/dotnetcore/EntityFrameworkCore.KingbaseES/main/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

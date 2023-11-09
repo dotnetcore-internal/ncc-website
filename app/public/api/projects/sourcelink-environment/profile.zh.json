@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "为 SourceLink 功能提供可继承性值的 Nuget 包。",
   "modules": {
     "general": "概述",

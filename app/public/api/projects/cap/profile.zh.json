@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "基于最终一致性的微服务分布式事务解决方案，具有 Outbox 模式的事件总线。",
   "modules": {
     "general": "概述",

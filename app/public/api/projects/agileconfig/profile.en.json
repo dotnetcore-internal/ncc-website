@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
   "modules": {
     "general": "General",

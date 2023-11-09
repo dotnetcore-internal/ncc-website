@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "osharp",
   "name": "OSharp",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/gmf520"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/osharp/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

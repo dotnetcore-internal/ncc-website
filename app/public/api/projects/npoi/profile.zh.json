@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "用于读写 Microsoft Office 二进制文件和 OOXML 文件格式的 .NET 类库。",
   "modules": {
     "general": "概述",

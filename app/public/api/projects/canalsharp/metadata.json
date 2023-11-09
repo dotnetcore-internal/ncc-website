@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "canalsharp",
   "name": "CanalSharp",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/withlin"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/CanalSharp/main/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

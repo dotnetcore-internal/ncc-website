@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A lightweight APM system based on .NET Core, can be used to quickly build an integrated site of statistics, analysis, charts, monitoring, and distributed tracking in the .NET Core environment. HttpReports applies to ASP.NET Core MVC/WebAPI, is simple to get started and suitable for use in microservice architecture.",
   "modules": {
     "general": "General",

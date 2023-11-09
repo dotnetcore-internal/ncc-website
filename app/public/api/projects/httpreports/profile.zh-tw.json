@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "是一款基於 .NET Core 的輕量級 APM 系統，可在 .NET Core 環境下快速搭建統計、分析、圖標、監控和分布式跟蹤一體化的站點，適用於 ASP.NET Core MVC/WebAPI。HttpReports 上手簡單，適合在微服務中使用。",
   "modules": {
     "general": "概述",

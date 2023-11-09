@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "An application performance monitor tools based on OpenTelemetry, which also provides a scalable platform for observability data analysis and storage.",
   "modules": {
     "general": "General",

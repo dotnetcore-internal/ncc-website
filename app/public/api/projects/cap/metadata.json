@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "cap",
   "name": "CAP",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/yang-xiaodong"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/CAP/master/LICENSE.txt"
+  },
   "modules": [
     {
       "name": "general",

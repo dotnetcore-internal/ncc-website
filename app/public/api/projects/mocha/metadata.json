@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "mocha",
   "name": "Mocha",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/liuhaoyang"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/mocha/main/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

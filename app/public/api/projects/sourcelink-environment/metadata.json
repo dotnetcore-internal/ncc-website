@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "sourcelink-environment",
   "name": "SourceLink Environment",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/SourceLink.Environment/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "使用 Roslyn 库进行动态编译时，可以引入该库提供动态编译的环境。",
   "modules": {
     "general": "概述",

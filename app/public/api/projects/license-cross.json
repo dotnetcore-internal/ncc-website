@@ -1,0 +1,86 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "licenses": [
+    {
+      "id": "mit",
+      "name": "MIT License",
+      "description": "A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+      "permissions": [
+        "Commercial use",
+        "Modification",
+        "Distribution",
+        "Private use"
+      ],
+      "limitations": [
+        "Liability",
+        "Warranty"
+      ],
+      "conditions": [
+        "License and copyright notice"
+      ]
+    },
+    {
+      "id": "apache-2.0",
+      "name": "Apache License 2.0",
+      "description": "A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.",
+      "permissions": [
+        "Commercial use",
+        "Modification",
+        "Distribution",
+        "Patent use",
+        "Private use"
+      ],
+      "limitations": [
+        "Trademark use",
+        "Liability",
+        "Warranty"
+      ],
+      "conditions": [
+        "License and copyright notice",
+        "State changes"
+      ]
+    },
+    {
+      "id": "postgresql",
+      "name": "PostgreSQL License",
+      "description": "A very short, BSD-style license, used specifically for PostgreSQL.",
+      "permissions": [
+        "Commercial use",
+        "Modification",
+        "Distribution",
+        "Private use"
+      ],
+      "limitations": [
+        "Liability",
+        "Warranty"
+      ],
+      "conditions": [
+        "License and trademark notice"
+      ]
+    },
+    {
+      "id": "cc-by-4.0",
+      "name": "Creative Commons Attribution 4.0 International",
+      "description": "Permits almost any use subject to providing credit and license notice. Frequently used for media assets and educational materials. The most common license for Open Access scientific publications. Not recommended for software.",
+      "permissions": [
+        "Commercial use",
+        "Modification",
+        "Distribution",
+        "Private use"
+      ],
+      "limitations": [
+        "Liability",
+        "Trademark use",
+        "Patent use",
+        "Warranty"
+      ],
+      "conditions": [
+        "License and copyright notice",
+        "State changes"
+      ]
+    }
+  ]
+}

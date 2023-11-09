@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "導入導出通用庫，支持 Excel、Word、PDF 與 HTML。",
   "modules": {
     "general": "概述",

@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "npoi",
   "name": "NPOI",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/NPOI/master/LICENSE.txt"
+  },
   "modules": [
     {
       "name": "general",

@@ -1,4 +1,12 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": ".NET Core 平台下的開源應用程序，旨在提高小型團隊的開發效率。 它由通用幫助程序，分層體系結構設計，UI 組件，第三方組件和服務接口包組成。",
   "modules": {
     "general": "概述",

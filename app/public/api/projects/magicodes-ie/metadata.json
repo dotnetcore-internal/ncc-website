@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "magicodes-ie",
   "name": "Magicodes Import & Export",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/xin-lai"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/Magicodes.IE/master/LICENSE"
+  },
   "modules": [
     {
       "name": "general",

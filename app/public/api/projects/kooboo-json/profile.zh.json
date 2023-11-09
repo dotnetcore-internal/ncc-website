@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "更小更快的 C# JSON 序列化工具（基于表达式树构建）。",
   "modules": {
     "general": "概述",

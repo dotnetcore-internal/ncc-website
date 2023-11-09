@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.",
   "modules": {
     "general": "General",

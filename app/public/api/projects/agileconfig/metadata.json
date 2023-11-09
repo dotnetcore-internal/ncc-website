@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "agileconfig",
   "name": "AgileConfig",
   "logo": "",
@@ -10,7 +14,10 @@
     "url": "https://github.com/kklldog"
   },
   "external": false,
-  "licence": "MIT",
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/AgileConfig/master/License.txt"
+  },
   "modules": [
     {
       "name": "general",

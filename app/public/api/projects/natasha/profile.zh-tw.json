@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "簡化 IL 操作，優化 IL 編程流程，並編寫具有高性能的動態緩存。",
   "modules": {
     "general": "概述",

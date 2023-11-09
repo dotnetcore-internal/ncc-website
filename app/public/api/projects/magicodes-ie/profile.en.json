@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A common import and export library for Excel, Word, PDF and HTML.",
   "modules": {
     "general": "General",

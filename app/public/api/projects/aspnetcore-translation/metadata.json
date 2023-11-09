@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "aspnetcore-translation",
   "name": "ASP.NET Core Documentation",
   "logo": "",
@@ -10,7 +14,16 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
-  "licence": "MIT",
+  "license": [
+    {
+      "name": "cc-by-4.0",
+      "file": "https://raw.githubusercontent.com/dotnetcore/aspnetcore-doc-cn/dev/LICENSE"
+    },
+    {
+      "name": "mit",
+      "file": "https://raw.githubusercontent.com/dotnetcore/aspnetcore-doc-cn/dev/LICENSE-CODE"
+    }
+  ],
   "modules": [
     {
       "name": "general",

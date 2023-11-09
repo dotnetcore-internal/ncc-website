@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "一款基於OpenTelemetry 的應用程序性能監控工具，為可觀測性數據分析和存儲提供了可擴展的平台。",
   "modules": {
     "general": "概述",

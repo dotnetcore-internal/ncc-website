@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "An AOP-based cross platform framework for .NET Standard.",
   "modules": {
     "general": "General",

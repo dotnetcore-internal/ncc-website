@@ -1,4 +1,8 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "An Entity Framework Core provider for GaussDB.",
   "modules": {
     "general": "General",
