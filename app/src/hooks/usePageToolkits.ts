@@ -1,6 +1,6 @@
 import {inject} from "vue";
 import {useTitle} from "@vueuse/core";
-import {useCookies} from "@vueuse/integrations/useCookies";
+import {useCookies} from '@vueuse/integrations/useCookies'
 import router from "@/router";
 
 //region Route Jump
@@ -51,6 +51,7 @@ const unlockBody = () => {
 
 const getCookieValue = <T = any>(key: string): T => {
     return useCookies().get<T>(key);
+    //return 'en' as unknown as T;
 }
 
 const getCookieValueWithDefaults = <T = any>(key: string, condition: (t: T) => boolean, factory: () => T): T => {
@@ -63,9 +64,10 @@ const getCookieValueWithDefaults = <T = any>(key: string, condition: (t: T) => b
     }
 
     return value;
+    // return 'en' as unknown as T;
 }
 const setCookieValue = <T = any>(key: string, value: T) => {
-    useCookies().set(key, value);
+    useCookies().set(key, value, {path: '/'});
 }
 
 //endregion
