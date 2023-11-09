@@ -1,6 +1,7 @@
 import {nextTick} from 'vue';
 import {createI18n} from 'vue-i18n';
 import {needUpdate} from "@/hooks/useVer";
+import {getLocaleResource, updateLocaleResource} from "@/hooks/useResource";
 
 export function setupI18n(options = {locale: 'en'}) {
     const i18n = createI18n(options)
@@ -59,7 +60,7 @@ export async function loadLocaleMessages(i18n, locale, path: string) {
                 }
 
                 //to update language resource into local storage
-                updateLocalResource(path, locale, messages);
+                updateLocaleResource(path, locale, messages);
 
             })
             .catch(err => {
@@ -103,19 +104,6 @@ export function registerPath(path: string, locale: string) {
 
 export function hasRegisteredPath(path: string, locale: string): boolean {
     return REGISTERED_PATHS.includes(`${locale}#${path}`);
-}
-
-//endregion
-
-//region LocalStorage Operations
-
-export function getLocaleResource(path: string, locale: string): any | null {
-    const v = localStorage.getItem(`${locale}#${path}`);
-    return v ? JSON.parse(v) : null;
-}
-
-export function updateLocalResource(path: string, locale: string, resource: any) {
-    localStorage.setItem(`${locale}#${path}`, JSON.stringify(resource));
 }
 
 //endregion

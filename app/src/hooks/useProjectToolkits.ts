@@ -1,6 +1,10 @@
-import {getLocaleResource, updateLocalResource} from "@/i18n";
+import {getLocaleResource, getResource, updateLocaleResource, updateResource} from "@/hooks/useResource";
 import {type CatalogueMap, type ProjectCardModel, queryProjectList} from "@/apis/QueryProjectListApi";
 import {needUpdate} from "@/hooks/useProjectVer";
+import {type LicenseModel, queryProjectLicense} from "@/apis/QueryProjectLicelseApi";
+import {type ProjectMetadataModel, ProjectProfileModel, queryProjectMetadata, queryProjectProfile} from "@/apis/QueryProjectProfileApi";
+
+//region Project Catalogue & Status
 
 const catalogueTable = new Map<string, number>();
 catalogueTable.set('dev-fx', 1);
@@ -30,6 +34,10 @@ const internalSortForStatusName = (a: string, b: string) => {
     return (statusTable.get(a) ?? 0) - (statusTable.get(b) ?? 0);
 }
 
+//endregion
+
+//region Project List Operations
+
 const loadProjectsAsync = async (
     locale: string,
     updateProjectsFn: (projects: ProjectCardModel[]) => void,
@@ -53,7 +61,7 @@ const loadProjectsAsync = async (
                 if (updateCataloguesFn) {
                     updateCataloguesFn(data._catalogues);
                 }
-                updateLocalResource(projectsResourceKey, locale, data)
+                updateLocaleResource(projectsResourceKey, locale, data)
             },
             () => {
                 if (fallbackFn) {
@@ -149,11 +157,117 @@ const groupProjectsByLetter = (models: ProjectCardModel[]) => {
     }, {} as { [key: string]: ProjectCardModel[] });
 }
 
+//endregion
+
+//region Project License
+
+const loadLicensesAsync = async (
+    updateLicensesFn: (licenses: LicenseModel[]) => void,
+    fallbackFn?: () => void,
+    licenseResourceKey: string = 'project-license-api'
+) => {
+    // get the projects from local storage first
+    const storageLicenses = getResource(licenseResourceKey);
+
+    if (!!storageLicenses && !needUpdate(Number.parseInt(storageLicenses['_metadata']['version']))) {
+
+        updateLicensesFn(storageLicenses['licenses']);
+
+    } else {
+
+        await queryProjectLicense(
+            (data) => {
+                updateLicensesFn(data.licenses);
+                updateResource(licenseResourceKey, data)
+            },
+            () => {
+                if (fallbackFn) {
+                    fallbackFn();
+                }
+            }
+        )
+    }
+
+};
+
+
+//endregion
+
+//region Project Metadata & Profile
+
+const loadProjectMetadataAsync = async (
+    name: string,
+    updateMetadataFn: (metadata: ProjectMetadataModel) => void,
+    fallbackFn?: () => void,
+    metadataResourceKey: string = 'project-metadata-api'
+) => {
+    const key = `${metadataResourceKey}/${name}`;
+    const storageMetadata = getResource(key);
+
+    if (!!storageMetadata && !needUpdate(Number.parseInt(storageMetadata['_metadata']['version']))) {
+
+        updateMetadataFn(storageMetadata);
+
+    } else {
+
+        await queryProjectMetadata(
+            name,
+            (data) => {
+                updateMetadataFn(data);
+                updateResource(key, data)
+            },
+            () => {
+                if (fallbackFn) {
+                    fallbackFn();
+                }
+            }
+        )
+    }
+};
+
+const loadProjectProfileAsync = async (
+    locale: string,
+    name: string,
+    updateProfileFn: (profile: ProjectProfileModel) => void,
+    fallbackFn?: () => void,
+    profileResourceKey: string = 'project-profile-api'
+) => {
+    const key = `${profileResourceKey}/${name}`;
+    const localeStorageMetadata = getLocaleResource(key, locale);
+
+    if (!!localeStorageMetadata && !needUpdate(Number.parseInt(localeStorageMetadata['_metadata']['version']))) {
+
+        updateProfileFn(localeStorageMetadata);
+
+    } else {
+
+        await queryProjectProfile(
+            locale,
+            name,
+            (data) => {
+                updateProfileFn(data);
+                updateLocaleResource(key, locale, data)
+            },
+            () => {
+                if (fallbackFn) {
+                    fallbackFn();
+                }
+            }
+        )
+    }
+};
+
+
+//endregion
+
 export {
     filterProjects,
     sortProjects,
     groupProjectsByCatalogue,
     groupProjectsByStatus,
     groupProjectsByLetter,
-    loadProjectsAsync
+    loadProjectsAsync,
+    loadLicensesAsync,
+    loadProjectMetadataAsync,
+    loadProjectProfileAsync,
 };
