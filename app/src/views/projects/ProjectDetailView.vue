@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, onUnmounted, reactive, ref, useAttrs} from "vue";
+import {computed, nextTick, onMounted, onUnmounted, reactive, ref, useAttrs} from "vue";
 import {useRouter} from "vue-router";
 import {usePreferredDark} from "@vueuse/core";
 
@@ -9,6 +9,7 @@ import {useProjectStore} from "@/stores/projectStore";
 import {setTitle} from "@/hooks/usePageToolkits";
 import {loadProjectMetadataAsync, loadProjectProfileAsync, loadProjectsAsync} from "@/hooks/useProjectToolkits";
 import type {CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
+import type {ProjectModuleDescriptor} from "@/apis/QueryProjectProfileApi";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
@@ -92,21 +93,39 @@ const displayWebSite = computed(() => {
 });
 
 const currentProjectPaper = ref('');
-const displayProjectPaper = (paper: string, params?: any) => {
+const displayProjectPaper = (paper: string) => {
   currentProjectPaper.value = paper;
-  router.push({
-    path: `/projects/${useProject.value.id}/${paper}`,
-    params: {...params}
-  });
+  router.push({path: `/projects/${useProject.value.id}/${paper}`});
 }
 
-const useLeaderName = computed(() => {
-  return useProject.value.leader?.name;
+const toPaperNameAka = (paper: string) => {
+  if (paper === 'general')
+    return '';
+  return paper;
+}
+
+const usePapers = computed(() => {
+  const modules = projectStore.currentProjectMetadata?.modules as ProjectModuleDescriptor[];
+  if (!modules)
+    return [];
+  return modules.sort((a, b) => a.sort - b.sort);
 });
 
-const useLeaderUrl = computed(() => {
-  return useProject.value.leader?.url;
-});
+const getPaperAliasName = (name: string): string => {
+  const modules = projectStore.currentProjectProfile?.modules;
+  if (!modules)
+    return name;
+  const alias = modules[name]
+  if (!alias)
+    return name;
+  if (typeof alias === 'string')
+    return alias;
+  return alias['title'];
+};
+
+const hasModule = (paperName: string): boolean => {
+  return !!projectStore.currentProjectMetadata.modules.find(x => x.name === paperName);
+}
 
 onMounted(async () => {
 
@@ -117,8 +136,20 @@ onMounted(async () => {
   });
 
   emitter.on('toChangeProjectPaper', (e) => {
-    const event = e as { paper: string };
-    currentProjectPaper.value = event.paper;
+    const event = e as { paper: string, broadcast?: number };
+
+    nextTick(() => {
+      if (hasModule(event.paper)) {
+        currentProjectPaper.value = event.paper;
+      } else if (!event.broadcast) {
+        currentProjectPaper.value = '#404#';
+        router.push({name: "project-not-found"});
+      } else {
+        currentProjectPaper.value = '#404#';
+        emitter.emit(`toBind404Page${event.broadcast}`, {akaId: akaId});
+      }
+    });
+
   });
 
 });
@@ -213,11 +244,15 @@ onUnmounted(() => {
     </div>
 
     <div class="sub-catalog">
-      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === ''}" @click="displayProjectPaper('')">General</button>
-      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'metrics'}" @click="displayProjectPaper('metrics')">Metrics</button>
-      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'get-started'}" @click="displayProjectPaper('get-started')">Get Started</button>
-      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'features'}" @click="displayProjectPaper('features')">Features</button>
-      <button class="sub-catalog-text" :class="{'sub-catalog-current': currentProjectPaper === 'license'}" @click="displayProjectPaper('license')">License</button>
+
+      <button v-for="paper in usePapers"
+              :key="paper.name"
+              class="sub-catalog-text"
+              :class="{'sub-catalog-current': currentProjectPaper === toPaperNameAka(paper.name)}"
+              @click="displayProjectPaper(toPaperNameAka(paper.name))">
+        {{ getPaperAliasName(paper.name) }}
+      </button>
+
     </div>
 
     <div class="paper">

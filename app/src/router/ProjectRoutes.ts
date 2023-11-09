@@ -55,6 +55,14 @@ const routes: RouteRecordRaw[] = [
                 component: () => import("../views/projects/details/LicensePage.vue")
             },
             {
+                path: "paper-not-found",
+                component: () => import("../views/projects/details/CustomPageNotFound.vue")
+            },
+            {
+                path: ":customName",
+                component: () => import("../views/projects/details/CustomPage.vue")
+            },
+            {
                 path: "",
                 component: () => import("../views/projects/details/GeneralPage.vue")
             }
