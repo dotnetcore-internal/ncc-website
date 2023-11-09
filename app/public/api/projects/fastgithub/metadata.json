@@ -1,13 +1,12 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "fastgithub",
+  "name": "FastGithub",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "catalogue": "tools-env",
+  "status": "archived",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
   },
   "external": false,
   "licence": "MIT",

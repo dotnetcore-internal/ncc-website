@@ -1,5 +1,5 @@
 {
-  "description": "一个基于 .NET Core 的轻量级配置中心。",
+  "description": "基于 HttpClient 的开源项目，只需通过定义 C# 接口并修改一些细节便可异步调用远程 HTTP 接口。",
   "modules": {
     "general": "概述",
     "metrics": "指标",

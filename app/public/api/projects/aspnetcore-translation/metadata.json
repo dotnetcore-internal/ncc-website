@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "aspnetcore-translation",
+  "name": "ASP.NET Core Documentation",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/aspnetcore-doc-cn",
+  "catalogue": "translation",
+  "status": "translation",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
   },
   "external": false,
   "licence": "MIT",

@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "natasha",
+  "name": "Natasha",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/Natasha",
+  "catalogue": "application-library",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "AzulX",
+    "url": "https://github.com/NMSAzulX"
   },
   "external": false,
   "licence": "MIT",

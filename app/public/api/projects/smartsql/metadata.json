@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "smartsql",
+  "name": "SmartSql",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/SmartSql",
+  "catalogue": "data",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Ahoo-Wang",
+    "url": "https://github.com/Ahoo-Wang"
   },
   "external": false,
   "licence": "MIT",

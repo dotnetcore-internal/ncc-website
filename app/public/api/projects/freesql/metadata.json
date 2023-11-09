@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "freesql",
+  "name": "FreeSql",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/FreeSql",
+  "catalogue": "data",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "2881099",
+    "url": "https://github.com/2881099"
   },
   "external": false,
   "licence": "MIT",

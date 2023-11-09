@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A common import and export library for Excel, Word, PDF and HTML.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A distributed transaction solution in microservice based on eventually consistency, also an eventbus with Outbox pattern.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

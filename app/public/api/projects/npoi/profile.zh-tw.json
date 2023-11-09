@@ -1,5 +1,5 @@
 {
-  "description": "一個基於 .NET Core 的輕量級配置中心。",
+  "description": "用於讀寫 Microsoft Office 二進制文件和 OOXML 文件格式的 .NET 類庫。",
   "modules": {
     "general": "概述",
     "metrics": "指標",

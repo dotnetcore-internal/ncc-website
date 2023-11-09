@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "osharp",
+  "name": "OSharp",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/OSharp",
+  "catalogue": "dev-fx",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "郭明峰",
+    "url": "https://github.com/gmf520"
   },
   "external": false,
   "licence": "MIT",

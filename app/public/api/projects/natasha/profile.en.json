@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A simplify IL operations, optimize the IL programming flow, and write dynamic caches that provide high performance.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

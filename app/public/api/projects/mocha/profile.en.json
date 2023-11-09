@@ -1,0 +1,10 @@
+{
+  "description": "An application performance monitor tools based on OpenTelemetry, which also provides a scalable platform for observability data analysis and storage.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

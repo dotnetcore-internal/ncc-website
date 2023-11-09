@@ -1,13 +1,15 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "bootstrapblazor",
+  "name": "BootstrapBlazor",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/BootstrapBlazor",
+  "gitee": "https://gitee.com/LongbowEnterprise/BootstrapBlazor",
+  "website": "https://www.blazor.zone/",
+  "catalogue": "ui",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Argo Zhang",
+    "url": "https://github.com/ArgoZhang"
   },
   "external": false,
   "licence": "MIT",

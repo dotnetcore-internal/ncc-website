@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "aspectcore",
+  "name": "AspectCore",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/AspectCore-Framework",
+  "catalogue": "application-library",
+  "status": "top-level",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Liu Haoyang",
+    "url": "https://github.com/liuhaoyang"
   },
   "external": false,
   "licence": "MIT",

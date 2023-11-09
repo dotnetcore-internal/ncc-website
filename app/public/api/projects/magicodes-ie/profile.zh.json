@@ -1,5 +1,5 @@
 {
-  "description": "一个基于 .NET Core 的轻量级配置中心。",
+  "description": "导入导出通用库，支持 Excel、Word、PDF 与 HTML。",
   "modules": {
     "general": "概述",
     "metrics": "指标",

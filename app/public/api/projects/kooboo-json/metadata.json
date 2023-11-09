@@ -1,15 +1,15 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "kooboo-json",
+  "name": "Kooboo Json",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/kooboo/Json",
+  "catalogue": "tools-env",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Kooboo Team",
+    "url": "https://github.com/Kooboo"
   },
-  "external": false,
+  "external": true,
   "licence": "MIT",
   "modules": [
     {

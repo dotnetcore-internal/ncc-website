@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

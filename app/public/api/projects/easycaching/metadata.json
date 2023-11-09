@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "easycaching",
+  "name": "EasyCaching",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/EasyCaching",
+  "catalogue": "data",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "汪文清",
+    "url": "https://github.com/catcherwang"
   },
   "external": false,
   "licence": "MIT",

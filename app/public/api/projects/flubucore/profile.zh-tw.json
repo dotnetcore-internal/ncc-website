@@ -1,5 +1,5 @@
 {
-  "description": "一個基於 .NET Core 的輕量級配置中心。",
+  "description": "跨平台構建與部署自動化系統，基於 C# 代碼構建項目和執行部署腳本。",
   "modules": {
     "general": "概述",
     "metrics": "指標",

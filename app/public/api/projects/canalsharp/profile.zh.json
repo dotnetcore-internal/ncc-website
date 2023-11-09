@@ -1,5 +1,5 @@
 {
-  "description": "一个基于 .NET Core 的轻量级配置中心。",
+  "description": "Alibaba Canal 的开源 .NET 客户端，Alibaba Canal 是一个基于 MySQL binlog 的增量发布与订阅组件。",
   "modules": {
     "general": "概述",
     "metrics": "指标",

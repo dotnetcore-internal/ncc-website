@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A high performance lightweight solution for efcore sharding table and sharding database support read-write-separation.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

@@ -1,0 +1,10 @@
+{
+  "description": "一款 EFCore 下高性能、輕量級針對分表分庫讀寫分離的解決方案，具有零依賴、零學習成本、零業務代碼入侵。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證"
+  }
+}

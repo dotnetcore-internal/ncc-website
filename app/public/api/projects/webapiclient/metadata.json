@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "webapiclient",
+  "name": "WebApiClient",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/WebApiClient",
+  "catalogue": "application-library",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "老九",
+    "url": "https://github.com/xljiuliang"
   },
   "external": false,
   "licence": "MIT",

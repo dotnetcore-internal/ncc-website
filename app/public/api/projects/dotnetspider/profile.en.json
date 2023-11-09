@@ -1,0 +1,10 @@
+{
+  "description": "A .NET Standard web crawling library similar to WebMagic and Scrapy. It is a lightweight ,efficient and fast high-level web crawling & scraping framework for .NET.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

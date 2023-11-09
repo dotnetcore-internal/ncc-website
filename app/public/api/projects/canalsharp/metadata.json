@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "canalsharp",
+  "name": "CanalSharp",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/CanalSharp",
+  "catalogue": "data",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "WithLin",
+    "url": "https://github.com/withlin"
   },
   "external": false,
   "licence": "MIT",

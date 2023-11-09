@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "mocha",
+  "name": "Mocha",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
+  "github": "https://github.com/dotnetcore/mocha",
   "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "status": "incubation",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Liu Haoyang",
+    "url": "https://github.com/liuhaoyang"
   },
   "external": false,
   "licence": "MIT",

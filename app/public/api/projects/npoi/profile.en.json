@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A .net library for reading and writing MsOffice binary and OOXML file formats.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

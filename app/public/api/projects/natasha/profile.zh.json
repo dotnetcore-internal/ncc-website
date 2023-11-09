@@ -1,5 +1,5 @@
 {
-  "description": "一个基于 .NET Core 的轻量级配置中心。",
+  "description": "简化 IL 操作，优化 IL 编程流程，并编写具有高性能的动态缓存。 ",
   "modules": {
     "general": "概述",
     "metrics": "指标",

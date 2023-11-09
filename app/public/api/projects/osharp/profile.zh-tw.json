@@ -1,0 +1,10 @@
+{
+  "description": "全稱 OSharp Framework with .NetStandard2.x，是一個基於 .NetStandard2.x 開發的一個 .NetCore 快速開發框架。這個框架使用最新穩定版的 .NetCore SDK（當前是.NET Core 3.1），對 AspNetCore 的配置、依賴注入、日志、緩存、實體框架、Mvc(WebApi)、身份認證、權限授權等模塊進行更高一級的自動化封裝，並規範了一套業務實現的代碼結構與操作流程，使 .Net Core 框架更易於應用到實際項目開發中。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證"
+  }
+}

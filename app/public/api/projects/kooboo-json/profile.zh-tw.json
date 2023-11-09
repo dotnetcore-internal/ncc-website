@@ -1,5 +1,5 @@
 {
-  "description": "一個基於 .NET Core 的輕量級配置中心。",
+  "description": "更小更快的 C# JSON 序列化工具（基於表達式樹構建）。",
   "modules": {
     "general": "概述",
     "metrics": "指標",

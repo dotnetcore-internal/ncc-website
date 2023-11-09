@@ -1,5 +1,5 @@
 {
-  "description": "一個基於 .NET Core 的輕量級配置中心。",
+  "description": "基於 Bootstrap 的 Blazor 企業級 UI 組件庫。",
   "modules": {
     "general": "概述",
     "metrics": "指標",

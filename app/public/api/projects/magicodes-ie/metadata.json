@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "magicodes-ie",
+  "name": "Magicodes Import & Export",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/Magicodes.IE",
+  "catalogue": "data",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Xin-Lai",
+    "url": "https://github.com/xin-lai"
   },
   "external": false,
   "licence": "MIT",

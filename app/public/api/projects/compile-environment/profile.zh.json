@@ -1,5 +1,5 @@
 {
-  "description": "一个基于 .NET Core 的轻量级配置中心。",
+  "description": "使用 Roslyn 库进行动态编译时，可以引入该库提供动态编译的环境。",
   "modules": {
     "general": "概述",
     "metrics": "指标",

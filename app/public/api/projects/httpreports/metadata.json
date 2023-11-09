@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "httpreports",
+  "name": "HttpReports",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
+  "github": "https://github.com/dotnetcore/HttpReports",
   "catalogue": "infra-middleware",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "SpringLee",
+    "url": "https://github.com/SpringLee"
   },
   "external": false,
   "licence": "MIT",

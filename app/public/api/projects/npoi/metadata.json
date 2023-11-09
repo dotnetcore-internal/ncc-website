@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "npoi",
+  "name": "NPOI",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/NPOI",
+  "catalogue": "data",
+  "status": "archived",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
   },
   "external": false,
   "licence": "MIT",

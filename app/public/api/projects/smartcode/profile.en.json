@@ -1,0 +1,10 @@
+{
+  "description": "An excellent open source code generator (of cause not only a generates code). It's based on execution flow, supports ETL mode, highly flexible and scalable, also supports custom templates and multiple template styles, and multiple databases.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "A smaller and faster C# JSON serialization tool (construction based on expression tree).",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

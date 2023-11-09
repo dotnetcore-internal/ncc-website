@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "sourcelink-environment",
+  "name": "SourceLink Environment",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/SourceLink.Environment",
+  "catalogue": "tools-env",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
   },
   "external": false,
   "licence": "MIT",

@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "cap",
+  "name": "CAP",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
+  "github": "https://github.com/dotnetcore/CAP",
   "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "status": "top-level",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "杨晓东",
+    "url": "https://github.com/yang-xiaodong"
   },
   "external": false,
   "licence": "MIT",

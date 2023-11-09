@@ -1,0 +1,10 @@
+{
+  "description": "An open source project based on the HttpClient. You only need to define the c# interface and modify the related features to invoke the client library of the remote http interface asynchronously.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

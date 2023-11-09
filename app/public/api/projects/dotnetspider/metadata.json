@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "dotnetspider",
+  "name": "DotnetSpider",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/DotnetSpider",
+  "catalogue": "data",
+  "status": "top-level",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Lewis Zou",
+    "url": "https://github.com/zlzforever"
   },
   "external": false,
   "licence": "MIT",

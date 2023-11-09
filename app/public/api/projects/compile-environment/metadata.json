@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "compile-environment",
+  "name": "Compile Environment",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/Compile.Environment",
+  "catalogue": "tools-env",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
   },
   "external": false,
   "licence": "MIT",

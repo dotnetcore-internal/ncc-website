@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "An AOP-based cross platform framework for .NET Standard.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",

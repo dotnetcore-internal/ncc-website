@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "wtm",
+  "name": "WTM",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
+  "github": "https://github.com/dotnetcore/WTM",
+  "catalogue": "dev-fx",
   "status": "sandbox",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Liu Liang",
+    "url": "https://github.com/liuliang-wt"
   },
   "external": false,
   "licence": "MIT",

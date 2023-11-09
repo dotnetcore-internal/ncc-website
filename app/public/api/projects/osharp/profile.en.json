@@ -1,0 +1,10 @@
+{
+  "description": "A rapid development framework based on .NET Core with the latest .NET Core SDK LTS version (currently .NET Core 3.1). The OSharp framework highly automates the following modules of ASP.NET Core: configuration, dependency injection, Logging, caching, entity framework, MVC / WebAPI, identity authentication, permission authorization, etc. OSharp also standardizes a set of business implementation code and operation processes, making the .NET Core framework easier to apply to the development of actual projects.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

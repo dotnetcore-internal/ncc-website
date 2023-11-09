@@ -1,0 +1,10 @@
+{
+  "description": "A development tool for small and medium-sized back-end management systems. Implement zero-code creation project, zero-code generation management module.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License"
+  }
+}

@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "flubucore",
+  "name": "FlubuCore",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/FlubuCore",
+  "catalogue": "tools-env",
+  "status": "top-level",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Marko Zorec",
+    "url": "https://github.com/mzorec"
   },
   "external": false,
   "licence": "MIT",

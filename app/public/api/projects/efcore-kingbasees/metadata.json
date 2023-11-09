@@ -1,13 +1,13 @@
 {
-  "id": "agileconfig",
-  "name": "AgileConfig",
+  "id": "efcore-kingbasees",
+  "name": "KingbaseES for EFCore",
   "logo": "",
-  "github": "https://github.com/dotnetcore/AgileConfig",
-  "catalogue": "infra-middleware",
-  "status": "sandbox",
+  "github": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES",
+  "catalogue": "data",
+  "status": "incubation",
   "leader": {
-    "name": "ZJ ZHOU",
-    "url": "https://github.com/kklldog"
+    "name": "Jeffcky",
+    "url": "https://github.com/wangpengxpy"
   },
   "external": false,
   "licence": "MIT",

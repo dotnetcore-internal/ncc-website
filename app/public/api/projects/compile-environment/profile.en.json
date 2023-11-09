@@ -1,5 +1,5 @@
 {
-  "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
+  "description": "When using the Roslyn library for dynamic compilation, you can introduce the library to provide a dynamic compilation environment.",
   "modules": {
     "general": "General",
     "metrics": "Metrics",
