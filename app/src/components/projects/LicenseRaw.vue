@@ -58,13 +58,13 @@ onMounted(async () => {
 
     <pre class="raw-pre">{{ rawContent }}</pre>
 
-    <div v-show="!isLarge && !noLicenseFile" class="bg-gradient-to-b from-transparent to-white absolute bottom-0 left-0 w-full h-24"></div>
+    <div v-show="!isLarge && !noLicenseFile" class="bg-gradient-to-b from-transparent to-white dark:to-black absolute bottom-0 left-0 w-full h-24"></div>
 
     <div v-show="!isLarge && !noLicenseFile" class="absolute bottom-1.5 w-full text-center cursor-default" @click="toExpand" :title="$t('show-more')">
-      <span class="bg-black text-white dark:bg-white dark:text-black text-xs px-4 py-0.5 rounded-xl">{{ $t('show-more') }}</span>
+      <span class="bg-black text-white dark:bg-white/50 dark:text-black text-xs px-4 py-0.5 rounded-xl">{{ $t('show-more') }}</span>
     </div>
 
-    <div v-show="!noLicenseFile" class="text-xs absolute top-0 right-0 z-50 cursor-default" @click="switchSize">
+    <div v-show="!noLicenseFile" class="text-xs absolute top-5 right-5 z-50 cursor-default" @click="switchSize">
       {{ isLarge ? $t('collapse') : $t('expand') }}
     </div>
 
@@ -83,14 +83,8 @@ onMounted(async () => {
 }
 
 .raw-pre {
+  @apply p-5;
   white-space: pre-wrap;
   word-wrap: break-word;
-}
-
-.text-at-bottom {
-  @apply text-center w-max;
-  display: table-cell;
-  vertical-align: bottom;
-  text-align: center;
 }
 </style>

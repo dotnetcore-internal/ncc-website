@@ -64,6 +64,7 @@ onMounted(() => {
   </div>
 
   <div v-else-if="useLicenseNumber === 1">
+
     <license-block :license="useLicenseName"/>
 
     <body-block class="project-paper p-5">
@@ -76,7 +77,7 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block class="project-paper p-5">
+    <body-block class="project-paper">
 
       <license-raw :raw-url="useLicenseUrl"/>
 
@@ -102,7 +103,7 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="project-paper p-5">
+    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="project-paper overflow-hidden">
 
       <license-raw :raw-url="item"/>
 
@@ -115,7 +116,7 @@ onMounted(() => {
 <style scoped lang="css">
 
 .project-paper {
-  @apply my-6 p-5 rounded-lg shadow;
+  @apply my-6 rounded-lg shadow;
   @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
 }
 
