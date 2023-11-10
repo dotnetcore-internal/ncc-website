@@ -9,6 +9,14 @@
     "metrics": "Metrics",
     "get-started": "Get Started",
     "features": "Features",
-    "license": "License"
+    "license": "License",
+    "changelogs": {
+      "title": "Changelogs",
+      "url": "https://github.com/dotnetcore/WTM/blob/dotnet6/CHANGELOG.md"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/WTM/releases/latest"
+    }
   }
 }

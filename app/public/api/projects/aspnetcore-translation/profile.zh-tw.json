@@ -6,9 +6,10 @@
   "description": "由 .NET China Foundation（已更名為 NCC）發起的微軟 ASP.NET Core 文檔翻譯計劃。",
   "modules": {
     "general": "概述",
-    "metrics": "指標",
-    "get-started": "快速入門",
-    "features": "功能特性",
-    "license": "許可證"
+    "license": "許可證",
+    "participants": {
+      "title": "參與者",
+      "file": "/files/projects/aspnetcore-translation/participants.zh-tw.md"
+    }
   }
 }

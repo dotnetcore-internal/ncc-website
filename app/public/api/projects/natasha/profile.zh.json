@@ -9,6 +9,10 @@
     "metrics": "指标",
     "get-started": "快速上手",
     "features": "功能特性",
-    "license": "许可证"
+    "license": "许可证",
+    "release": {
+      "title": "发布日志",
+      "url": "https://github.com/dotnetcore/Natasha/blob/main/CHANGELOG.md"
+    }
   }
 }

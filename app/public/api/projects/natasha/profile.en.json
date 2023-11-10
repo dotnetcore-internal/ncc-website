@@ -9,6 +9,10 @@
     "metrics": "Metrics",
     "get-started": "Get Started",
     "features": "Features",
-    "license": "License"
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/Natasha/blob/main/CHANGELOG.md"
+    }
   }
 }

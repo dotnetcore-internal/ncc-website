@@ -45,6 +45,12 @@
       "name": "license",
       "sort": 5,
       "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
     }
   ],
   "i18n-support": [

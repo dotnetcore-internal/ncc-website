@@ -6,9 +6,10 @@
   "description": "The Simplified Chinese edition of Microsoft ASP.NET Core documentation, translated by .NET China Foundation.",
   "modules": {
     "general": "General",
-    "metrics": "Metrics",
-    "get-started": "Get Started",
-    "features": "Features",
-    "license": "License"
+    "license": "License",
+    "participants": {
+      "title": "Participants",
+      "file": "/files/projects/aspnetcore-translation/participants.en.md"
+    }
   }
 }

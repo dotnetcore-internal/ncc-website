@@ -16,7 +16,7 @@
   "external": false,
   "license": {
     "name": "mit",
-    "file": "https://github.com/dotnetcore/Alipay.AopSdk.Core/blob/master/LICENSE"
+    "file": "https://raw.githubusercontent.com/dotnetcore/Alipay.AopSdk.Core/master/LICENSE"
   },
   "modules": [
     {
@@ -43,6 +43,12 @@
       "name": "license",
       "sort": 5,
       "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
     }
   ],
   "i18n-support": [

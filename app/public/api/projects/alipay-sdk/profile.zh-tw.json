@@ -9,6 +9,10 @@
     "metrics": "指標",
     "get-started": "快速入門",
     "features": "功能特性",
-    "license": "許可證"
+    "license": "許可證",
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/AopSdk.Core/releases/latest"
+    }
   }
 }

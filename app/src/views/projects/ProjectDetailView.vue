@@ -42,23 +42,6 @@ const updateCatalogues = (catalog: CatalogueMap) => {
   }
 }
 
-loadProjectsAsync(uiStore.locale, updateProjects, updateCatalogues).then(() => {
-
-  if (!(useProject.value) ||
-      !projects.some(p => p.id === akaId) ||
-      projects.some(p => p.id === akaId && p.status === 'other')) {
-    router.push({name: "project-not-found"});
-  }
-
-  setTitle(`NCC ${useProject.value!.name}`, 'direct');
-}).then(() => {
-
-  loadProjectMetadataAsync(akaId, projectStore.setCurrentProjectMetadata);
-
-  loadProjectProfileAsync(uiStore.locale, akaId, projectStore.setCurrentProjectProfile);
-
-});
-
 const currentPrefersDarkMode = usePreferredDark();
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
@@ -71,30 +54,64 @@ const useProject = computed(() => {
 });
 
 const useProjectLogo = computed(() => {
-  let logo = useProject.value.logo;
-  if (logo.length === 0)
+  let logo = useProject?.value?.logo;
+  if (!logo || logo.length === 0)
     logo = `/images/projects/${akaId}.png`;
   return logo;
 });
 
 const displayGitHubSource = computed(() => {
-  const g = useProject.value.github;
+  const g = useProject?.value?.github;
   return !!g && g.length > 0;
 });
 
 const displayGiteeSource = computed(() => {
-  const g = useProject.value.gitee;
+  const g = useProject?.value?.gitee;
   return !!g && g.length > 0;
 });
 
 const displayWebSite = computed(() => {
-  const w = useProject.value.website;
+  const w = useProject?.value?.website;
   return !!w && w.length > 0;
 });
 
 const currentProjectPaper = ref('');
 const displayProjectPaper = (paper: string) => {
+
+  const previousPaper = currentProjectPaper.value;
   currentProjectPaper.value = paper;
+
+  if (paper === '') {
+    router.push({path: `/projects/${useProject.value.id}}`});
+    return;
+  }
+
+  const targetPaper = projectStore.currentProjectMetadata.modules.find(x => x.name === paper);
+
+  if (!targetPaper) {
+    router.push({path: `/projects/${useProject.value.id}/paper-not-found`});
+    return;
+  }
+
+  if (targetPaper["in-build"]) {
+    router.push({path: `/projects/${useProject.value.id}/${paper}`});
+    return;
+  }
+
+  //這裡要判斷， 非 built-in 按鈕，如果 target 為非空，則打開新頁面
+  const targetProfile = projectStore.currentProjectProfile.modules[paper];
+
+  if (!targetProfile) {
+    router.push({path: `/projects/${useProject.value.id}/${paper}`});
+    return;
+  }
+
+  if (targetProfile.url) {
+    currentProjectPaper.value = previousPaper;
+    window.open(targetProfile.url, '_blank');
+    return;
+  }
+
   router.push({path: `/projects/${useProject.value.id}/${paper}`});
 }
 
@@ -108,7 +125,14 @@ const usePapers = computed(() => {
   const modules = projectStore.currentProjectMetadata?.modules as ProjectModuleDescriptor[];
   if (!modules)
     return [];
-  return modules.sort((a, b) => a.sort - b.sort);
+  return modules.filter(x => x.float !== 'right').sort((a, b) => a.sort - b.sort);
+});
+
+const useRightPapers = computed(() => {
+  const modules = projectStore.currentProjectMetadata?.modules as ProjectModuleDescriptor[];
+  if (!modules)
+    return [];
+  return modules.filter(x => x.float === 'right').sort((a, b) => b.sort - a.sort);
 });
 
 const getPaperAliasName = (name: string): string => {
@@ -128,6 +152,23 @@ const hasModule = (paperName: string): boolean => {
 }
 
 onMounted(async () => {
+
+  loadProjectsAsync(uiStore.locale, updateProjects, updateCatalogues).then(() => {
+
+    if (!(useProject.value) ||
+        !projects.some(p => p.id === akaId) ||
+        projects.some(p => p.id === akaId && p.status === 'other')) {
+      router.push({name: "project-not-found"});
+    }
+
+    setTitle(`NCC ${useProject.value!.name}`, 'direct');
+  }).then(() => {
+
+    loadProjectMetadataAsync(akaId, projectStore.setCurrentProjectMetadata);
+
+    loadProjectProfileAsync(uiStore.locale, akaId, projectStore.setCurrentProjectProfile);
+
+  });
 
   emitter.on('toChangeLocale', async (e) => {
     const event = e as { locale: string };
@@ -167,10 +208,10 @@ onUnmounted(() => {
       <left-right-layout>
         <template #left>
           <span class="inline-block align-middle">
-            <img :src="useProjectLogo" width="40" :alt="useProject.name" :title="useProject.name"/>
+            <img :src="useProjectLogo" width="40" :alt="useProject?.name" :title="useProject?.name"/>
             </span>
           <span class="inline-block align-middle cursor-default px-3">
-              {{ useProject.name }}
+              {{ useProject?.name }}
            </span>
         </template>
         <template #right>
@@ -189,35 +230,35 @@ onUnmounted(() => {
         {{ useProject?.leader?.name }}
       </anchor>
 
-      <span v-if="useProject.status==='archived'" class="tip archived">
+      <span v-if="useProject?.status==='archived'" class="tip archived">
         <anchor href="/archived-projects" :title="$t('project-archived')" mode="classic">
            {{ $t('project-archived') }}
         </anchor>
       </span>
 
-      <span v-else-if="useProject.status==='top-level'" class="tip toplevel">
+      <span v-else-if="useProject?.status==='top-level'" class="tip toplevel">
         <anchor href="/top-level-projects" :title="$t('project-top-level')" mode="classic">
            {{ $t('project-top-level') }}
         </anchor>
       </span>
-      <span v-else-if="useProject.status==='sandbox'" class="tip sandbox">{{ $t('project-sandbox') }}</span>
-      <span v-else-if="useProject.status==='incubation'" class="tip incubation">{{ $t('project-incubation') }}</span>
-      <span v-else-if="useProject.status==='labs'" class="tip labs">{{ $t('project-laboratory') }}</span>
-      <span v-else-if="useProject.status==='translation'" class="tip translation">{{ $t('project-translation') }}</span>
+      <span v-else-if="useProject?.status==='sandbox'" class="tip sandbox">{{ $t('project-sandbox') }}</span>
+      <span v-else-if="useProject?.status==='incubation'" class="tip incubation">{{ $t('project-incubation') }}</span>
+      <span v-else-if="useProject?.status==='labs'" class="tip labs">{{ $t('project-laboratory') }}</span>
+      <span v-else-if="useProject?.status==='translation'" class="tip translation">{{ $t('project-translation') }}</span>
 
-      <span v-if="useProject.external" class="tip external">{{ $t('project-external') }}</span>
+      <span v-if="useProject?.external" class="tip external">{{ $t('project-external') }}</span>
 
-      <span class="tip catalogue">{{ catalogues[useProject.catalogue] }}</span>
+      <span class="tip catalogue">{{ catalogues[useProject?.catalogue] }}</span>
 
       <span v-if="displayGitHubSource" class="tip2 align-middle">
-        <anchor :href="useProject.github" title="GitHub" target="_blank" mode="classic">
+        <anchor :href="useProject?.github" title="GitHub" target="_blank" mode="classic">
              <github class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor"/>
               <span class="inline-block align-middle ml-1 font-medium">GitHub</span>
         </anchor>
       </span>
 
       <span v-if="displayGiteeSource" class="tip2 align-middle">
-        <anchor :href="useProject.gitee" title="Gitee" target="_blank" mode="classic">
+        <anchor :href="useProject?.gitee" title="Gitee" target="_blank" mode="classic">
               <svg class="inline-block align-middle icon"
                    t="1698644520030" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
                    p-id="4566" data-spm-anchor-id="a313x.search_index.0.i5.73f13a81QDVP27"
@@ -231,7 +272,7 @@ onUnmounted(() => {
       </span>
 
       <span v-if="displayWebSite" class="tip2 align-middle">
-        <anchor :href="useProject.website" title="WebSite" target="_blank" mode="classic">
+        <anchor :href="useProject?.website" title="WebSite" target="_blank" mode="classic">
              <home class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor"/>
               <span class="inline-block align-middle ml-1 font-medium">WebSite</span>
         </anchor>
@@ -240,18 +281,38 @@ onUnmounted(() => {
     </div>
 
     <div class="px-5">
-      {{ useProject.description }}
+      {{ useProject?.description }}
     </div>
 
     <div class="sub-catalog">
 
-      <button v-for="paper in usePapers"
-              :key="paper.name"
-              class="sub-catalog-text"
-              :class="{'sub-catalog-current': currentProjectPaper === toPaperNameAka(paper.name)}"
-              @click="displayProjectPaper(toPaperNameAka(paper.name))">
-        {{ getPaperAliasName(paper.name) }}
-      </button>
+      <left-right-layout>
+
+        <template #left>
+
+          <button v-for="paper in usePapers"
+                  :key="paper.name"
+                  class="sub-catalog-text"
+                  :class="{'sub-catalog-current': currentProjectPaper === toPaperNameAka(paper.name)}"
+                  @click="displayProjectPaper(toPaperNameAka(paper.name))">
+            {{ getPaperAliasName(paper.name) }}
+          </button>
+
+        </template>
+
+        <template #right>
+
+          <button v-for="paper in useRightPapers"
+                  :key="paper.name"
+                  class="sub-catalog-text"
+                  :class="{'sub-catalog-current': currentProjectPaper === toPaperNameAka(paper.name)}"
+                  @click="displayProjectPaper(toPaperNameAka(paper.name))">
+            {{ getPaperAliasName(paper.name) }}
+          </button>
+
+        </template>
+
+      </left-right-layout>
 
     </div>
 

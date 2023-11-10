@@ -9,6 +9,14 @@
     "metrics": "指标",
     "get-started": "快速上手",
     "features": "功能特性",
-    "license": "许可证"
+    "license": "许可证",
+    "changelogs": {
+      "title": "更新日志",
+      "url": "https://github.com/dotnetcore/WTM/blob/dotnet6/CHANGELOG.md"
+    },
+    "release": {
+      "title": "发布记录",
+      "url": "https://github.com/dotnetcore/WTM/releases/latest"
+    }
   }
 }

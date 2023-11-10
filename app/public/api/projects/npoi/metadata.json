@@ -25,24 +25,35 @@
       "in-built": true
     },
     {
-      "name": "metrics",
+      "name": "announcement",
       "sort": 2,
       "in-built": true
     },
     {
-      "name": "get-started",
+      "name": "metrics",
       "sort": 3,
       "in-built": true
     },
     {
-      "name": "features",
+      "name": "get-started",
       "sort": 4,
       "in-built": true
     },
     {
-      "name": "license",
+      "name": "features",
       "sort": 5,
       "in-built": true
+    },
+    {
+      "name": "license",
+      "sort": 6,
+      "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
     }
   ],
   "i18n-support": [

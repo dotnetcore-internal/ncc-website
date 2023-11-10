@@ -9,6 +9,14 @@
     "metrics": "Metrics",
     "get-started": "Get Started",
     "features": "Features",
-    "license": "License"
+    "license": "License",
+    "announcement": {
+      "title": "Announcement",
+      "file": "archived-announcement.en.md"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/NPOI/releases/latest"
+    }
   }
 }
