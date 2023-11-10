@@ -10,5 +10,9 @@
     "get-started": "开始",
     "features": "功能特征"
   },
-  "project-summary": "简介"
+  "project-summary": "简介",
+  "show-more": "显示更多",
+  "collapse": "收缩",
+  "expand": "展开",
+  "raw-license-content": "原始授权信息："
 }

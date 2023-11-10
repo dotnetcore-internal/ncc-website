@@ -41,6 +41,7 @@ export class ProjectProfileModel extends ProjectDescriptionModel {
 export class ProjectModuleDescriptor {
     name: string = "";
     sort: number = 0;
+    float?: 'left' | 'right' = 'left';
     "in-build": boolean = false;
 }
 

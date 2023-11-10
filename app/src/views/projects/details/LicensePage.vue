@@ -6,6 +6,7 @@ import {useProjectStore} from "@/stores/projectStore";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import LicenseBlock from "@/components/projects/LicenseBlock.vue";
 import AnchorElement from "@/components/basic/AnchorElement.vue";
+import LicenseRaw from "@/components/projects/LicenseRaw.vue";
 
 const emitter = useEmitter();
 const projectStore = useProjectStore();
@@ -75,6 +76,12 @@ onMounted(() => {
 
     </body-block>
 
+    <body-block class="project-paper p-5">
+
+      <license-raw :raw-url="useLicenseUrl"/>
+
+    </body-block>
+
   </div>
 
   <div v-else>
@@ -83,7 +90,7 @@ onMounted(() => {
 
     <body-block class="project-paper p-5">
 
-      <p>Raw License Content:</p>
+      <p>{{ $t('raw-license-content') }}</p>
 
       <ul class="list-disc list-inside">
         <li v-for="(item, index) in useLicenseUrl" :key="index">
@@ -92,6 +99,12 @@ onMounted(() => {
           </anchor-element>
         </li>
       </ul>
+
+    </body-block>
+
+    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="project-paper p-5">
+
+      <license-raw :raw-url="item"/>
 
     </body-block>
 

@@ -55,7 +55,7 @@ const useIconColor = computed(() => {
           </div>
         </div>
         <div class="text-xs text-gray-500 p-3 pl-0">
-          {{ useLicense.description }}
+          {{ useLicense?.description }}
         </div>
       </div>
       <div class="license-terms">
