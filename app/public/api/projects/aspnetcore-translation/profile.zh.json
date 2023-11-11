@@ -9,7 +9,8 @@
     "license": "许可证",
     "participants": {
       "title": "参与者",
-      "file": "/files/projects/aspnetcore-translation/participants.zh.md"
+      "scope": "projects",
+      "file": "aspnetcore-translation/participants"
     }
   }
 }

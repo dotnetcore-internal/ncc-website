@@ -9,7 +9,8 @@
     "license": "License",
     "participants": {
       "title": "Participants",
-      "file": "/files/projects/aspnetcore-translation/participants.en.md"
+      "scope": "projects",
+      "file": "aspnetcore-translation/participants"
     }
   }
 }
