@@ -8,7 +8,7 @@ import {useProjectStore} from "@/stores/projectStore";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
-import MarkdownBlock from "@/components/articles/MarkdownBlock.vue";
+import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
 
 const route = useRoute();
 const router = useRouter();
