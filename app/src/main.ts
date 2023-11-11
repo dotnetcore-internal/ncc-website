@@ -10,6 +10,7 @@ import router from "./router";
 import "./assets/app.css";
 import './main.css'
 import 'animate.css'
+import 'github-markdown-css'
 
 const i18n = setupI18n();
 

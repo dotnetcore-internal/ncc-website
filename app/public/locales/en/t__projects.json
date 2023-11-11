@@ -14,5 +14,6 @@
   "show-more": "Show More",
   "collapse": "Collapse",
   "expand": "Expand",
-  "raw-license-content": "Raw License Content:"
+  "raw-license-content": "Raw License Content:",
+  "reload-license": "Reload"
 }

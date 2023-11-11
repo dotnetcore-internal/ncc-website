@@ -14,5 +14,6 @@
   "show-more": "显示更多",
   "collapse": "收缩",
   "expand": "展开",
-  "raw-license-content": "原始授权信息："
+  "raw-license-content": "原始授权信息：",
+  "reload-license": "重新加载"
 }
