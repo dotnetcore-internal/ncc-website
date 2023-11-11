@@ -12,7 +12,7 @@
     "license": "License",
     "announcement": {
       "title": "Announcement",
-      "file": "archived-announcement.en.md"
+      "file": "npoi/archived-announcement"
     },
     "release": {
       "title": "Latest Release Logs",

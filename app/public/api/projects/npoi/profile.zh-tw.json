@@ -12,7 +12,7 @@
     "license": "許可證",
     "announcement": {
       "title": "公告",
-      "file": "archived-announcement.zh-tw.md"
+      "file": "npoi/archived-announcement"
     },
     "release": {
       "title": "發佈日誌",
