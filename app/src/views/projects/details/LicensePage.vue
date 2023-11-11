@@ -5,8 +5,9 @@ import {useProjectStore} from "@/stores/projectStore";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import LicenseBlock from "@/components/projects/LicenseBlock.vue";
-import AnchorElement from "@/components/basic/AnchorElement.vue";
+import Anchor from "@/components/basic/AnchorElement.vue";
 import LicenseRaw from "@/components/projects/LicenseRaw.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 const emitter = useEmitter();
 const projectStore = useProjectStore();
@@ -71,9 +72,9 @@ onMounted(() => {
 
       <p>Raw License Content:</p>
 
-      <anchor-element class="underline hover:underline underline-offset-2 text-blue-500" :src="useLicenseUrl" target="_blank" title="Raw License Content" mode="classic">
+      <anchor class="underline hover:underline underline-offset-2 text-blue-500" :href="useLicenseUrl" target="_blank" title="Raw License Content" mode="classic">
         {{ useLicenseUrl }}
-      </anchor-element>
+      </anchor>
 
     </body-block>
 
@@ -95,9 +96,9 @@ onMounted(() => {
 
       <ul class="list-disc list-inside">
         <li v-for="(item, index) in useLicenseUrl" :key="index">
-          <anchor-element class="underline hover:underline underline-offset-2 text-blue-500" :src="item" target="_blank" title="Raw License Content" mode="classic">
+          <anchor class="underline hover:underline underline-offset-2 text-blue-500" :href="item" target="_blank" title="Raw License Content" mode="classic">
             {{ item }}
-          </anchor-element>
+          </anchor>
         </li>
       </ul>
 
@@ -109,6 +110,8 @@ onMounted(() => {
 
     </body-block>
 
+    <placeholder-block height="90px"/>
+
   </div>
 
 </template>
@@ -116,7 +119,7 @@ onMounted(() => {
 <style scoped lang="css">
 
 .project-paper {
-  @apply my-6 rounded-lg shadow;
+  @apply my-6 rounded-lg shadow overflow-hidden;
   @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
 }
 

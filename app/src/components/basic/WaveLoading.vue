@@ -20,6 +20,7 @@
 
 <style scoped lang="css">
 .wave-loading {
+  @apply h-32;
   display: grid;
   place-items: center;
 }
