@@ -15,11 +15,14 @@ const props = withDefaults(defineProps<{
   fallbackLocale?: string;
   includeFileExtension?: boolean;
   fileExtension?: string;
+  retryTimeout?: number;
+  redirectTo404?: boolean;
 }>(), {
   i18n: false,
   fallbackLocale: 'en',
   includeFileExtension: true,
-  fileExtension: '.md'
+  fileExtension: '.md',
+  redirectTo404: true
 });
 
 const useLocaleSuffix = computed(() => {
@@ -40,16 +43,16 @@ const useFileExtensions = computed(() => {
   return '';
 });
 
-const toImportMarkdown = async (source: string, locale?: string) => {
+const toImportMarkdown = async (source: string, locale?: string, skipRetry: boolean = false) => {
   if (source.length === 0) {
 
     content.value = '';
 
   } else {
 
-    if (!locale) {
+    if (!locale || locale.length === 0) {
       locale = useLocaleSuffix.value;
-    } else {
+    } else if (!locale.startsWith('.')) {
       locale = `.${locale}`;
     }
 
@@ -59,9 +62,9 @@ const toImportMarkdown = async (source: string, locale?: string) => {
         })
         .catch(() => {
 
-          if (!locale) {
+          if (!locale || locale.length === 0) {
             locale = useFallbackLocaleSuffix.value;
-          } else {
+          } else if (!locale.startsWith('.')) {
             locale = `.${locale}`;
           }
 
@@ -70,11 +73,23 @@ const toImportMarkdown = async (source: string, locale?: string) => {
                 content.value = e.default;
               })
               .catch(() => {
-                router.replace('/404');
+
+                if (!skipRetry && !!props.retryTimeout) {
+                  retryToImportMarkdown(props.retryTimeout, source, locale);
+                } else if (props.redirectTo404) {
+                  router.replace('/404');
+                }
+
               });
 
         });
   }
+};
+
+const retryToImportMarkdown = async (timeout: number, source: string, locale?: string) => {
+  setTimeout(async () => {
+    await toImportMarkdown(source, locale, true);
+  }, timeout);
 };
 
 onMounted(async () => {
@@ -104,6 +119,6 @@ onUnmounted(() => {
 
 </template>
 
-<style scoped lang="css">
+<style lang="css">
 
 </style>

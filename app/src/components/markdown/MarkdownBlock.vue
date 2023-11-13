@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {computed, onMounted, onUnmounted, ref} from "vue";
 import {useEmitter} from "@/hooks/useEmitter";
+import {useUiStore} from "@/stores/uiStore";
 
 import MarkdownIt from "markdown-it";
 import MarkdownItAbbr from "markdown-it-abbr";
@@ -11,17 +12,29 @@ import MarkdownItSub from "markdown-it-sub";
 import MarkdownItSup from "markdown-it-sup";
 import MarkdownItTaskLists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
-import { align } from "@mdit/plugin-align";
+import MarkdownItPrism from 'markdown-it-prism';
+import {align} from "@mdit/plugin-align";
+import { mark } from "@mdit/plugin-mark";
 
 import WaveLoading from "@/components/basic/WaveLoading.vue";
 
+const emitter = useEmitter();
+const uiStore = useUiStore();
+
 const props = withDefaults(defineProps<{
   source: string;
-}>(), {});
+  i18n?: boolean;
+  fallbackLocale?: string;
+  includeFileExtension?: boolean;
+  fileExtension?: string;
+}>(), {
+  i18n: false,
+  fallbackLocale: 'en',
+  includeFileExtension: true,
+  fileExtension: '.md'
+});
 
-const emitter = useEmitter();
-
-const markdown = new MarkdownIt()
+const markdown = new MarkdownIt({html: true, xhtmlOut: true, breaks: true, linkify: true, typographer: true})
     .use(MarkdownItAbbr)
     .use(MarkdownItAnchor)
     .use(MarkdownItFootnote)
@@ -30,12 +43,32 @@ const markdown = new MarkdownIt()
     .use(MarkdownItSup)
     .use(MarkdownItTaskLists)
     .use(MarkdownItTOC)
-    .use(align);
+    .use(MarkdownItPrism)
+    .use(align)
+    .use(mark);
 
 const loading = ref(true);
 const success = ref(false);
 const content = ref('');
 const key = ref('');
+
+const useLocaleSuffix = computed(() => {
+  if (props.i18n)
+    return `.${uiStore.locale}`;
+  return '';
+});
+
+const useFallbackLocaleSuffix = computed(() => {
+  if (props.i18n)
+    return `.${props.fallbackLocale}`;
+  return '';
+});
+
+const useFileExtensions = computed(() => {
+  if (props.includeFileExtension)
+    return props.fileExtension;
+  return '';
+});
 
 const useMarkdownContent = computed(() => {
   return content.value;
@@ -45,31 +78,85 @@ const useMarkdownHtml = computed(() => {
   return markdown.render(useMarkdownContent.value);
 });
 
-const toLoadMarkdownContent = async (source: string) => {
+const toLoadMarkdownContent = async (source: string, locale?: string) => {
+
   key.value = source;
   loading.value = true;
   success.value = false;
 
   if (source.length === 0) {
+
     content.value = '';
     loading.value = false;
     success.value = false;
+
   } else {
 
+    if (!locale || locale.length === 0) {
+      locale = useLocaleSuffix.value;
+    } else if (!locale.startsWith('.')) {
+      locale = `.${locale}`;
+    }
+
     try {
-      const res = await fetch(source);
+
+      const res = await fetch(source + locale + useFileExtensions.value);
+
       if (res.ok) {
+
         content.value = await res.text();
         success.value = true;
+
       } else {
+
+        if (!locale || locale.length === 0) {
+          locale = useFallbackLocaleSuffix.value;
+        } else if (!locale.startsWith('.')) {
+          locale = `.${locale}`;
+        }
+
+        const res2 = await fetch(source + locale + useFileExtensions.value);
+
+        if (res2.ok) {
+
+          content.value = await res.text();
+          success.value = true;
+
+        } else {
+
+          content.value = '';
+          success.value = false;
+
+        }
+
+      }
+
+    } catch (error) {
+
+      if (!locale || locale.length === 0) {
+        locale = useFallbackLocaleSuffix.value;
+      } else if (!locale.startsWith('.')) {
+        locale = `.${locale}`;
+      }
+
+      const res2 = await fetch(source + locale + useFileExtensions.value);
+
+      if (res2.ok) {
+
+        content.value = await res2.text();
+        success.value = true;
+
+      } else {
+
         content.value = '';
         success.value = false;
+
       }
-    } catch (error) {
-      content.value = '';
-      success.value = false;
+
     } finally {
+
       loading.value = false;
+
     }
 
   }
@@ -78,8 +165,8 @@ const toLoadMarkdownContent = async (source: string) => {
 onMounted(async () => {
 
   emitter.on('toRerenderMarkdown', (e) => {
-    const event = e as { source: string };
-    toLoadMarkdownContent(event.source);
+    const event = e as { source: string, locale?: string };
+    toLoadMarkdownContent(event.source, event.locale);
   });
 
   await toLoadMarkdownContent(props.source);
@@ -103,9 +190,5 @@ onUnmounted(() => {
 </template>
 
 <style lang="css">
-
-.markdown-body {
-  @apply bg-transparent p-5 pb-10;
-}
 
 </style>
