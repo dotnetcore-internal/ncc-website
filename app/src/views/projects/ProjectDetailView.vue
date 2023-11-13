@@ -284,7 +284,7 @@ onUnmounted(() => {
       {{ useProject?.description }}
     </div>
 
-    <div class="sub-catalog">
+    <div class="sub-catalog z-20">
 
       <left-right-layout>
 
