@@ -82,7 +82,7 @@ const displayProjectPaper = (paper: string) => {
   currentProjectPaper.value = paper;
 
   if (paper === '') {
-    router.push({path: `/projects/${useProject.value.id}}`});
+    router.push({path: `/projects/${useProject.value.id}`});
     return;
   }
 
