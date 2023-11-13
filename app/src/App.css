@@ -24,6 +24,7 @@
 }
 
 /* Lexend font family */
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -31,6 +32,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Black.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -38,6 +41,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-ExtraBold.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -45,6 +50,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Bold.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -52,6 +59,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-SemiBold.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -59,6 +68,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Medium.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -66,6 +77,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Regular.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -73,6 +86,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Light.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -80,6 +95,8 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-ExtraLight.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Lexend";
     font-style: normal;
@@ -87,7 +104,9 @@
     font-display: swap;
     src: url("/fonts/Lexend/Lexend-Thin.woff2") format("woff2");
 }
+
 /* Poppins font family */
+/*noinspection ALL*/
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -95,6 +114,8 @@
     font-display: swap;
     src: url("/fonts/Poppins/Poppins-Bold.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -102,6 +123,8 @@
     font-display: swap;
     src: url("/fonts/Poppins/Poppins-SemiBold.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -109,6 +132,8 @@
     font-display: swap;
     src: url("/fonts/Poppins/Poppins-Medium.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -116,6 +141,8 @@
     font-display: swap;
     src: url("/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
 }
+
+/*noinspection ALL*/
 @font-face {
     font-family: "Poppins";
     font-style: normal;
@@ -163,4 +190,39 @@ body {
 .responsive-width{
     @apply sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl max-w-lg;
     @apply mx-auto;
+}
+
+.markdown-body {
+    @apply !bg-transparent p-5 pb-10;
+}
+
+.markdown-body li {
+    @apply list-disc list-inside;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents{
+    @apply fixed xl:p-5 p-0 top-10 right-0 xl:w-72 w-0 overflow-hidden;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents ol{
+    @apply py-3 pl-4;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents > ol{
+    @apply border-l border-gray-200 dark:border-gray-700;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents li{
+    @apply list-none;
+    @apply text-sm leading-7;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents li > ol > li{
+    @apply list-decimal;
+    @apply text-sm leading-7 text-black/50 dark:text-white/50;
+}
+
+.markdown-top-right .markdown-body nav.table-of-contents a{
+    @apply text-sm leading-7 text-black/50 dark:text-white/50;
+    @apply hover:decoration-gray-300 dark:hover:decoration-gray-700;
 }

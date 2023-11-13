@@ -1,5 +1,16 @@
 {
   "_conduct": {
     "version": "20231104002"
-  }
+  },
+  "coc-intro": "INTRODUCTION",
+  "coc-body": "BODY",
+  "coc-note": "NOTES",
+  "coc-intro-part1": "This code of conduct applies to all spaces the .NET Core Community (NCC) manages, including IRC, public and private mailing lists, issue trackers, wikis, blogs, Twitter, and any other communication channels our communities use.",
+  "coc-intro-part2": "We expect everyone who participates in the NCC community formally or informally, or claims any affiliation with the Community, in any TheNCC-related activities and especially when representing the NCC in any role to honor this code of conduct.",
+  "coc-intro-part3": "This code is not exhaustive or complete. It distills our common understanding of a collaborative, shared environment and goals. We expect all members of the NCC community to follow it in spirit as much as in the letter, so that it can enrich all of us and the technical communities in which we participate.",
+  "coc-note-part1": "This Code defines empathy as \"a vicarious participation in the emotions, ideas, or opinions of others; the ability to imagine oneself in the condition or predicament of another.\" Empathetic is the adjectival form of empathy.",
+  "coc-note-part2": "This statement draws on the following for content and inspiration:",
+  "coc-asf": "The Apache Foundation Code of Conduct",
+  "coc-dnf": ".NET Foundation's Contributor Covenant Code of Conduct",
+  "coc-mozilla": "Mozilla's code of conduct enforcement ladder"
 }

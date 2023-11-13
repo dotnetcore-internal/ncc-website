@@ -24,9 +24,13 @@ const setTitleInternal = (newTitle: string) => {
 
 const setTitle = (newTitle: string, mode: 'i18n' | 'direct' = 'i18n') => {
     if (mode === 'i18n') {
-        // @ts-ignore
-        const {t} = inject('$i18n').global;
-        setTitleInternal(t(newTitle));
+        try {
+            // @ts-ignore
+            const {t} = inject('$i18n').global;
+            setTitleInternal(t(newTitle));
+        } catch {
+            /* empty */
+        }
         return;
     } else {
         setTitleInternal(newTitle);

@@ -1,0 +1,129 @@
+/**
+ * Copyright (C) 2020 Dien Tran
+ *
+ * GitHub Markdown preview layout, remade in Tailwind CSS. Install tailwindcss from npm
+ * to compile into actual usable CSS.
+ */
+
+@layer components{
+    .font-default {
+        font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
+        sans-serif, Apple Color Emoji, Segoe UI Emoji;
+    }
+
+    .font-code {
+        font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    }
+}
+
+.md-container {
+    @apply flex w-full min-h-screen bg-white;
+}
+
+.markdown-body {
+    @apply px-0 py-4 font-default tracking-normal w-10/12 mx-auto;
+}
+
+@screen lg {
+    .markdown-body {
+        @apply w-7/12 px-20 py-12;
+    }
+}
+
+.markdown-body h1 {
+    @apply text-3xl font-medium py-2 mt-3 mb-3 border-b;
+}
+
+.markdown-body h2 {
+    @apply text-2xl font-medium py-2 mt-3 mb-3 border-b;
+}
+
+.markdown-body h3 {
+    @apply text-xl font-medium py-2 mt-3 mb-3;
+}
+
+.markdown-body h4 {
+    @apply text-base font-medium py-2 mt-3 mb-3;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+    @apply text-sm font-medium py-2 mt-3 mb-3;
+}
+
+.markdown-body h6 {
+    @apply text-gray-600;
+}
+
+.markdown-body a {
+    @apply text-blue-600;
+}
+
+.markdown-body a:hover {
+    @apply underline;
+}
+
+.markdown-body p {
+    @apply mb-4 py-1;
+}
+
+.markdown-body strong {
+    @apply font-medium;
+}
+
+.markdown-body img {
+    @apply inline;
+}
+
+.markdown-body pre {
+    @apply p-4 text-base overflow-auto leading-normal mb-4 font-mono;
+}
+
+.markdown-body code {
+    @apply font-code px-1 bg-gray-200 rounded-md;
+}
+
+.markdown-body pre code {
+    @apply p-0 bg-transparent bg-cover;
+}
+
+.markdown-body blockquote {
+    @apply pl-4 border-l-4 text-gray-600;
+}
+
+.markdown-body ol {
+    @apply list-decimal mt-2 pl-8 pb-3;
+}
+
+.markdown-body ul {
+    @apply list-disc mt-2 pl-8 pb-3;
+}
+
+.markdown-body li {
+    @apply mt-1;
+}
+
+.markdown-body th {
+    @apply font-medium table-cell border-2 border-gray-200;
+}
+
+.markdown-body tr {
+    @apply bg-white border-2 border-gray-200;
+}
+
+.markdown-body tr:nth-child(2n) {
+    @apply bg-gray-100;
+}
+
+.markdown-body td {
+    @apply border-2 border-gray-200;
+}
+
+.markdown-body th,
+.markdown-body td {
+    @apply px-3 py-1;
+}
+
+.markdown-body hr {
+    @apply my-8 border-2;
+}

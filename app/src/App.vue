@@ -31,7 +31,7 @@ uiStore.setLocale(locale ?? 'en');
     <RouterView/>
   </div>
 
-  <footer class="bg-black text-white">
+  <footer class="bg-black text-white relative">
     <div class="responsive-width">
 
       <placeholder-block height="90px"/>
