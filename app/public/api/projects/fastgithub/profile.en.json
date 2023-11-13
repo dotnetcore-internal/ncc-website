@@ -6,9 +6,7 @@
   "description": "A GitHub accelerator. Used to solve the problems of GitHub unable to open, unable to load user avatar, unable to upload and download releases, git-clone git-pull git-push failure, etc.",
   "modules": {
     "general": "General",
-    "metrics": "Metrics",
     "get-started": "Get Started",
-    "features": "Features",
     "license": "License"
   }
 }

@@ -6,9 +6,7 @@
   "description": "GitHub 加速神器，解決 GitHub 打不開、用戶頭像無法加載、releases 無法上傳下載、git-clone git-pull git-push 失敗等問題。",
   "modules": {
     "general": "概述",
-    "metrics": "指標",
     "get-started": "快速入門",
-    "features": "功能特性",
     "license": "許可證"
   }
 }
