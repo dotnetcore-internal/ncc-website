@@ -197,7 +197,7 @@ body {
 }
 
 .markdown-body li {
-    @apply list-disc list-inside;
+    @apply list-disc;
 }
 
 .markdown-top-right .markdown-body nav.table-of-contents{

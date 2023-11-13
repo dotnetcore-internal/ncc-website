@@ -7,7 +7,6 @@
   "modules": {
     "general": "General",
     "get-started": "Get Started",
-    "features": "Features",
     "license": "License",
     "announcement": {
       "title": "Announcement",
