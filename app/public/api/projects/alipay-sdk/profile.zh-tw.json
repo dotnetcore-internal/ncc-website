@@ -6,7 +6,6 @@
   "description": "基於 .NET Standard 2.0 開發的第三方支付寶服務端 SDK，提供比官方更可靠的設計，但仍與官方 APIs 保持一致。",
   "modules": {
     "general": "概述",
-    "metrics": "指標",
     "get-started": "快速入門",
     "features": "功能特性",
     "license": "許可證",

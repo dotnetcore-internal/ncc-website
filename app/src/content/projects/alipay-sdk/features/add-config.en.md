@@ -1,11 +1,3 @@
-## Installation
-
-```shell
-Install-Package Install-Package Alipay.AopSdk.AspnetCore
-```
-
-## Configuration
-
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
@@ -20,18 +12,4 @@ public void ConfigureServices(IServiceCollection services)
         options.Uid = "Merchant ID";
     });
 }
-```
-
-## Usage
-
-```csharp
-//DI injection
-private readonly AlipayService  _alipayService;
-
-public xxxController(AlipayService alipayService)
-{
-    _alipayService = alipayService;
-}
-
-_alipayService.Execute();
 ```
