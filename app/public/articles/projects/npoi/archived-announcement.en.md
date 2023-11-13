@@ -35,5 +35,5 @@ We don't intend to spend more time entangled with tony qu. After discussing with
 [We NCC](https://github.com/dotnetcore) thank the developers for their support and understanding, and we NCC are willing to work with developers and open source communities, including you, to make more contributions to .NET technology and ecology.
 
 ::: right
-[The NCC Project Management Committee](https://ncc.work/people/project-management-committee), Nov, 2020
+[The NCC Project Management Committee](https://ncc.work/people/project-management-committee) <br /> Nov, 2020
 :::

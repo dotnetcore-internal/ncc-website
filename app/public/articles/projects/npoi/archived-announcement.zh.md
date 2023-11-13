@@ -17,5 +17,5 @@ This project is for NPOI Core. NPOI is still under at [https://github.com/tonyqu
 我们无意花更多的时间与 tony qu 纠缠，经 NCC PMC 讨论，现决定将 [dotnetcore/NPOI](https://github.com/dotnetcore/NPOI) 存档，以避免 NCC 社区陷入更大的纠纷。如无意外，今后我们也不会再针对这件事做出任何回应。我们感谢海内外开发者们的支持和理解，愿与包括各位在内的广大开发者和开源社区一道，为 .NET 技术和生态做出更多贡献。
 
 ::: right
-[NCC 社区项目管理委员会](https://ncc.work/people/project-management-committee)，2020 年 11 月份
+[NCC 社区项目管理委员会](https://ncc.work/people/project-management-committee) <br /> 2020 年 11 月份
 :::

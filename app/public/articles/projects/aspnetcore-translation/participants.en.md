@@ -1,4 +1,4 @@
-Thank you for your contributions to the NCC community and to.NET developers at large!
+Thank you for your contributions to the NCC community and to .NET developers at large!
 
 *The following order is based on the Chinese pinyin of the contributors' real names*
 
