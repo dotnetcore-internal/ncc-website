@@ -8,12 +8,12 @@
     },
     {
       "id": "server-group",
-      "title": "Server Group",
+      "title": "Server-side usage",
       "sort": 2
     },
     {
       "id": "client-group",
-      "title": "Client Group",
+      "title": "Client-side usage",
       "sort": 3
     },
     {
