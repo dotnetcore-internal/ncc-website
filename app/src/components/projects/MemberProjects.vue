@@ -9,6 +9,7 @@ import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
+import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 
 const uiStore = useUiStore();
 
@@ -51,7 +52,7 @@ onMounted(async () => {
 
         <template #left>
 
-          <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+          <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="false" :is-font-black="false" :with-placeholder="false">
             <span v-if="$slots['default']">
               <slot> </slot>
             </span>
@@ -64,13 +65,15 @@ onMounted(async () => {
 
         <template #right>
 
-          <title-link v-if="displayMoreBtn" href="/projects" :title="$t('project-all')" mode="classic">
+          <title-link class="mr-7 mt-9" v-if="displayMoreBtn" href="/projects" :title="$t('project-all')" mode="classic">
             {{ $t('more-project') }}
           </title-link>
 
         </template>
 
       </left-right-layout>
+
+      <HorizontalRuleElement v-if="true" colorMode="auto"/>
 
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">

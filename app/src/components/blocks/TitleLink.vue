@@ -26,7 +26,7 @@ const props = withDefaults(defineProps<{
 
 <style scoped lang="css">
 .title-link-block {
-  @apply m-7 mt-9 text-black dark:text-white hover:text-purple-500 font-bold border-b-4 border-purple-500;
+  @apply text-black dark:text-white hover:text-purple-500 font-bold border-b-4 border-purple-500;
   font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
 </style>
