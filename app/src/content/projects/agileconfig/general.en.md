@@ -1,3 +1,5 @@
+[TOC]
+
 ## Overview
 
 This is a lightweight configuration center based on .NET Core. It is easy to deploy, to learn and to use.

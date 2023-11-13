@@ -1,3 +1,5 @@
+[TOC]
+
 ## windows-x64 桌面部署
 
 雙擊運行 `FastGithub.UI.exe`

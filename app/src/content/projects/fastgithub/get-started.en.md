@@ -1,3 +1,5 @@
+[TOC]
+
 ## Windows-x64 Desktop Deployment
 
 Double-click to run `FastGithub.UI.exe`

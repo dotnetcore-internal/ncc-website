@@ -1,3 +1,7 @@
+[TOC]
+
+## 簡介
+
 GitHub 加速神器，解決 GitHub 打不開、用戶頭像無法加載、`releases` 無法上傳下載，以及 `git-clone`、`git-pull`、`git-push` 等指令失敗等問題。
 
 - FastGithub 不具備「翻牆」功能,也沒有相關的計劃

@@ -1,3 +1,5 @@
+[TOC]
+
 ## Install NuGet Package
 
 ```powershell

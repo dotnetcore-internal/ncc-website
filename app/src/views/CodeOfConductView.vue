@@ -59,7 +59,7 @@ onUnmounted(() => {
 
   </div>
 
-  <body-block class="coc-paper markdown-top-right">
+  <body-block class="coc-paper markdown-toc-right">
 
     <div class="xl:flex xl：justify-between">
 

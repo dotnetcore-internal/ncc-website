@@ -200,33 +200,33 @@ body {
     @apply list-disc;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents{
+.markdown-toc-right .markdown-body nav.table-of-contents{
     @apply fixed xl:p-5 p-0 top-10 right-0 xl:w-72 w-0 overflow-hidden;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents ol{
+.markdown-toc-right .markdown-body nav.table-of-contents ol{
     @apply py-3 pl-4;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents > ol{
+.markdown-toc-right .markdown-body nav.table-of-contents > ol{
     @apply border-l border-gray-200 dark:border-gray-700;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents li{
+.markdown-toc-right .markdown-body nav.table-of-contents li{
     @apply list-none;
     @apply text-sm leading-7;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents li > ol > li{
+.markdown-toc-right .markdown-body nav.table-of-contents li > ol > li{
     @apply list-decimal;
     @apply text-sm leading-7 text-black/50 dark:text-white/50;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents li > ol > li > ol > li{
+.markdown-toc-right .markdown-body nav.table-of-contents li > ol > li > ol > li{
     @apply list-disc;
 }
 
-.markdown-top-right .markdown-body nav.table-of-contents a{
+.markdown-toc-right .markdown-body nav.table-of-contents a{
     @apply text-sm leading-7 text-black/50 dark:text-white/50;
     @apply hover:decoration-gray-300 dark:hover:decoration-gray-700;
 }

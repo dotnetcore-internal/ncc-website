@@ -10,7 +10,7 @@ const route = useRoute();
 
 <template>
 
-  <body-block class="project-paper">
+  <body-block class="project-paper markdown-toc-right">
 
     <div class="xl:flex xl：justify-between">
 

@@ -1,3 +1,7 @@
+[TOC]
+
+## Introduce
+
 GitHub acceleration artifact, solving the problem of GitHub not opening, user avatars not loading, `releases` not uploading or downloading, and command failures such as `git-clone`, `git-pull`, and `git-push`.
 
 - FastGithub does not have the function of "crossing the GFW", nor does it have any related plans.

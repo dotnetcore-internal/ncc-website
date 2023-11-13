@@ -1,3 +1,5 @@
+[TOC]
+
 ## Installation
 
 AgileConfig Client: 
