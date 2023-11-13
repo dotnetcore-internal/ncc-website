@@ -67,7 +67,7 @@ onUnmounted(() => {
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer source="code-of-conduct" :i18n="true"/>
+        <markdown-renderer source="about/code-of-conduct" :i18n="true"/>
 
       </div>
 
