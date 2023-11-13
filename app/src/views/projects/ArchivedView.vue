@@ -13,6 +13,7 @@ import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 import ProjectCards from "@/components/projects/ProjectCards.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -49,9 +50,19 @@ onUnmounted(() => {
 
     <project-header feature-key="archived"/>
 
+    <span class="the-archived">
+      {{ $t('project-archived-desc-more') }}
+    </span>
+
     <project-cards :models="projects" for="archived"/>
 
-    <placeholder-block height="90px"/>
+    <div class="the-archived archived-paper">
+
+      <markdown-renderer source="projects/projects-after-archived" :i18n="true"/>
+
+    </div>
+
+    <placeholder-block height="20px"/>
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
       {{ $t('project-other') }}
@@ -63,9 +74,15 @@ onUnmounted(() => {
 
     <project-cards :models="projects" for="other"/>
 
+    <div class="the-past past-paper">
+
+      <markdown-renderer source="projects/projects-as-past" :i18n="true"/>
+
+    </div>
+
   </body-block>
 
-  <placeholder-block height="90px"/>
+  <placeholder-block height="20px"/>
 
   <member-projects :models="projects">
     {{ $t('our-projects-title-by-name') }}
@@ -74,7 +91,15 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="css">
-.the-past{
+.archived-paper,.past-paper {
+  @apply my-6 p-5 rounded-lg shadow;
+  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
+}
+
+.the-archived,
+.the-archived .markdown-body,
+.the-past,
+.the-past .markdown-body {
   @apply block text-gray-500 dark:text-gray-400 text-lg;
   @apply p-5 mb-5;
 }
