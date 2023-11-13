@@ -6,13 +6,12 @@
   "description": "A .net library for reading and writing MsOffice binary and OOXML file formats.",
   "modules": {
     "general": "General",
-    "metrics": "Metrics",
     "get-started": "Get Started",
     "features": "Features",
     "license": "License",
     "announcement": {
       "title": "Announcement",
-      "file": "npoi/archived-announcement"
+      "file": "archived-announcement"
     },
     "release": {
       "title": "Latest Release Logs",

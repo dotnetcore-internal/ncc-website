@@ -30,23 +30,18 @@
       "in-built": true
     },
     {
-      "name": "metrics",
+      "name": "get-started",
       "sort": 3,
       "in-built": true
     },
     {
-      "name": "get-started",
+      "name": "features",
       "sort": 4,
       "in-built": true
     },
     {
-      "name": "features",
-      "sort": 5,
-      "in-built": true
-    },
-    {
       "name": "license",
-      "sort": 6,
+      "sort": 5,
       "in-built": true
     },
     {

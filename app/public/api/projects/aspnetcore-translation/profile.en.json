@@ -10,7 +10,7 @@
     "participants": {
       "title": "Participants",
       "scope": "projects",
-      "file": "aspnetcore-translation/participants"
+      "file": "participants"
     }
   }
 }

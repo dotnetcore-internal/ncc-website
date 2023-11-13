@@ -3,7 +3,6 @@ import {computed, nextTick, onMounted, onUnmounted} from "vue";
 import {useRoute, useRouter} from "vue-router";
 import {useEmitter} from "@/hooks/useEmitter";
 import {useRandomNumber} from "@/hooks/useMath";
-import {useUiStore} from "@/stores/uiStore";
 import {useProjectStore} from "@/stores/projectStore";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
@@ -13,9 +12,10 @@ import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
 const route = useRoute();
 const router = useRouter();
 const emitter = useEmitter();
-const uiStore = useUiStore();
 const projectStore = useProjectStore();
 const randomPageCode = useRandomNumber(1, 100000);
+
+console.log(route.params)
 
 const usePageModule = computed(() => {
   const key = route.params['customName'] as string;
@@ -38,7 +38,7 @@ const needDisplayFile = computed(() => {
 
 const usePageFileUrl = computed(() => {
   if (needDisplayFile.value) {
-    return usePageModule.value['file'];
+    return route.params.id + '/' + usePageModule.value['file'];
   } else {
     return '';
   }
@@ -59,7 +59,7 @@ onMounted(() => {
 
   emitter.on('toChangeLocale', async (e) => {
     const event = e as { locale: string };
-    emitter.emit('toRerenderMarkdown', {source: `/articles/${usePageFileScope.value}/${usePageFileUrl.value}.${event.locale}.md`});
+    emitter.emit('toRerenderMarkdown', {source: `/articles/${usePageFileScope.value}/${usePageFileUrl.value}`, locale: event.locale});
   });
 
   emitter.on(`toBind404Page${randomPageCode}`, (e) => {
@@ -83,9 +83,15 @@ onUnmounted(() => {
 
   <body-block class="project-paper">
 
-    <div v-if="needDisplayFile">
+    <div class="xl:flex xl：justify-between">
 
-      <markdown-block :source="`/articles/${usePageFileScope}/${usePageFileUrl}.${uiStore.locale}.md`" />
+      <div class="xl:flex-none xl:w-72 xl:order-last"></div>
+
+      <div v-if="needDisplayFile" class="xl:flex-1">
+
+        <markdown-block :source="`/articles/${usePageFileScope}/${usePageFileUrl}`" :i18n="true" fallback-locale="en" />
+
+      </div>
 
     </div>
 
