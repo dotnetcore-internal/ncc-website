@@ -10,8 +10,16 @@
     "get-started": "快速入門",
     "features": "功能特性",
     "license": "許可證",
+    "contact": {
+      "title": "联系我",
+      "file": "contact-me"
+    },
+    "changelogs": {
+      "title": "更新日志",
+      "url": "https://github.com/dotnetcore/AgileConfig/blob/master/CHANGELOG.md"
+    },
     "release": {
-      "title": "發佈日誌",
+      "title": "發佈記錄",
       "url": "https://github.com/dotnetcore/AgileConfig/releases/latest"
     }
   }

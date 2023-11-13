@@ -1,0 +1,100 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "未分類1",
+      "sort": 1,
+      "hidden": true
+    },
+    {
+      "id": "server-group",
+      "title": "服務端的使用",
+      "sort": 2
+    },
+    {
+      "id": "client-group",
+      "title": "客戶端的使用",
+      "sort": 3
+    },
+    {
+      "id": "unclassified-2",
+      "title": "未分類2",
+      "sort": 4,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "ha",
+      "title": "高可用",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "restful",
+      "title": "RESTful APIs",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "docker",
+      "title": "運行服務端",
+      "group": "server-group",
+      "sort": 1
+    },
+    {
+      "id": "init-admin-password",
+      "title": "初始化管理員密碼",
+      "group": "server-group",
+      "sort": 2
+    },
+    {
+      "id": "nodes",
+      "title": "節點",
+      "group": "server-group",
+      "sort": 3
+    },
+    {
+      "id": "applications",
+      "title": "應用",
+      "group": "server-group",
+      "sort": 4
+    },
+    {
+      "id": "configurations",
+      "title": "配置項",
+      "group": "server-group",
+      "sort": 5
+    },
+    {
+      "id": "clients",
+      "title": "客戶端",
+      "group": "server-group",
+      "sort": 6
+    },
+    {
+      "id": "system-logs",
+      "title": "系統日志",
+      "group": "server-group",
+      "sort": 7
+    },
+    {
+      "id": "install-clients",
+      "title": "安裝客戶端",
+      "group": "client-group",
+      "sort": 1
+    },
+    {
+      "id": "init-clients",
+      "title": "初始化客戶端",
+      "group": "client-group",
+      "sort": 2
+    },
+    {
+      "id": "read-config",
+      "title": "讀取配置",
+      "group": "unclassified-2",
+      "sort": 1
+    }
+  ]
+}

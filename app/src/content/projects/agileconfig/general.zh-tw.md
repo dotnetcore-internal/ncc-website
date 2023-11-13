@@ -30,8 +30,9 @@ AgileConfig 秉承輕量化的特點，部署簡單、配置簡單、使用簡�
 
 ## 客戶端
 
-- https://github.com/kklldog/AgileConfig_Client (.NET Core & .NET 5+)
+- https://github.com/kklldog/AgileConfig_Client （.NET Core & .NET 5+）
 - https://github.com/kklldog/AgileConfig.Client4FR （.NET Framework)
+- https://github.com/kklldog/agileconfig-jclient （Java）
 
 ## 架構
 

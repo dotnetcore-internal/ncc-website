@@ -1,0 +1,100 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    },
+    {
+      "id": "server-group",
+      "title": "Server Group",
+      "sort": 2
+    },
+    {
+      "id": "client-group",
+      "title": "Client Group",
+      "sort": 3
+    },
+    {
+      "id": "unclassified-2",
+      "title": "Unclassified 2",
+      "sort": 4,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "ha",
+      "title": "High Availability",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "restful",
+      "title": "RESTful APIs",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "docker",
+      "title": "Docker",
+      "group": "server-group",
+      "sort": 1
+    },
+    {
+      "id": "init-admin-password",
+      "title": "Initialize Administrator Password",
+      "group": "server-group",
+      "sort": 2
+    },
+    {
+      "id": "nodes",
+      "title": "Nodes",
+      "group": "server-group",
+      "sort": 3
+    },
+    {
+      "id": "applications",
+      "title": "Applications",
+      "group": "server-group",
+      "sort": 4
+    },
+    {
+      "id": "configurations",
+      "title": "Configurations",
+      "group": "server-group",
+      "sort": 5
+    },
+    {
+      "id": "clients",
+      "title": "Clients",
+      "group": "server-group",
+      "sort": 6
+    },
+    {
+      "id": "system-logs",
+      "title": "System Logs",
+      "group": "server-group",
+      "sort": 7
+    },
+    {
+      "id": "install-clients",
+      "title": "Install Clients",
+      "group": "client-group",
+      "sort": 1
+    },
+    {
+      "id": "init-clients",
+      "title": "Initialize Clients",
+      "group": "client-group",
+      "sort": 2
+    },
+    {
+      "id": "read-config",
+      "title": "Read Config",
+      "group": "unclassified-2",
+      "sort": 1
+    }
+  ]
+}

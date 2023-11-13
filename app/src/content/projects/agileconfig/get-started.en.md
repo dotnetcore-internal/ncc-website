@@ -2,7 +2,8 @@
 
 AgileConfig Client: 
 - https://github.com/kklldog/AgileConfig_Client (.NET Core & .NET 5+)
-- https://github.com/kklldog/AgileConfig.Client4FR （.NET Framework)
+- https://github.com/kklldog/AgileConfig.Client4FR (.NET Framework)
+- https://github.com/kklldog/agileconfig-jclient (Java)
 
 ```shell
 # For .NET Core & .NET 5+

@@ -7,6 +7,7 @@
   "name": "AgileConfig",
   "logo": "",
   "github": "https://github.com/dotnetcore/AgileConfig",
+  "gitee": "https://gitee.com/kklldog/AgileConfig",
   "catalogue": "infra-middleware",
   "status": "sandbox",
   "leader": {
@@ -40,9 +41,20 @@
       "in-built": true
     },
     {
-      "name": "license",
+      "name": "contact",
       "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 6,
       "in-built": true
+    },
+    {
+      "name": "changelogs",
+      "sort": 2,
+      "float": "right",
+      "in-built": false
     },
     {
       "name": "release",
