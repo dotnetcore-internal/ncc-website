@@ -40,8 +40,13 @@
       "in-built": true
     },
     {
-      "name": "license",
+      "name": "faq",
       "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 6,
       "in-built": true
     },
     {

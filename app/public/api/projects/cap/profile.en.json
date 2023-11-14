@@ -10,6 +10,10 @@
     "get-started": "Get Started",
     "features": "Features",
     "license": "License",
+    "faq": {
+      "title": "FAQ",
+      "file": "faq"
+    },
     "release": {
       "title": "Latest Release Logs",
       "url": "https://github.com/dotnetcore/CAP/releases/latest"

@@ -10,6 +10,10 @@
     "get-started": "快速上手",
     "features": "功能特性",
     "license": "许可证",
+    "faq": {
+      "title": "常见问题",
+      "file": "faq"
+    },
     "release": {
       "title": "发布日志",
       "url": "https://github.com/dotnetcore/CAP/releases/latest"
