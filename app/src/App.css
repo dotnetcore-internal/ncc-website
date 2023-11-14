@@ -196,7 +196,11 @@ body {
     @apply !bg-transparent p-5 pb-10;
 }
 
-.markdown-body li {
+.markdown-body ol li {
+    @apply list-decimal;
+}
+
+.markdown-body ul li {
     @apply list-disc;
 }
 
