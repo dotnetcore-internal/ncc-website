@@ -1,0 +1,117 @@
+{
+  "groups": [
+    {
+      "id": "aop-group",
+      "title": "AOP",
+      "sort": 1
+    },
+    {
+      "id": "di-group",
+      "title": "注入",
+      "sort": 2
+    },
+    {
+      "id": "reflection-group",
+      "title": "反射",
+      "sort": 3
+    }
+  ],
+  "features": [
+    {
+      "id": "global-interceptor",
+      "title": "全局拦截器",
+      "group": "aop-group",
+      "sort": 1
+    },
+    {
+      "id": "global-interceptor-with-con-params",
+      "title": "带构造器参数的全局拦截器",
+      "group": "aop-group",
+      "sort": 2
+    },
+    {
+      "id": "global-interceptor-as-services",
+      "title": "作为服务的全局拦截器",
+      "group": "aop-group",
+      "sort": 3
+    },
+    {
+      "id": "global-interceptor-to-a-service",
+      "title": "特定于服务或方法的全局拦截器",
+      "group": "aop-group",
+      "sort": 4
+    },
+    {
+      "id": "global-interceptor-prevent",
+      "title": "通过特性忽略代理",
+      "group": "aop-group",
+      "sort": 5
+    },
+    {
+      "id": "global-ignore-wildcards",
+      "title": "全局忽略配置与通配符",
+      "group": "aop-group",
+      "sort": 6
+    },
+    {
+      "id": "di-in-interceptors-property",
+      "title": "拦截器中的属性注入",
+      "group": "aop-group",
+      "sort": 7
+    },
+    {
+      "id": "di-in-interceptors-constructor",
+      "title": "拦截器中的构造函数注入",
+      "group": "aop-group",
+      "sort": 8
+    },
+    {
+      "id": "di-in-interceptors-service-locator",
+      "title": "拦截器中的服务定位器模式",
+      "group": "aop-group",
+      "sort": 9
+    },
+    {
+      "id": "register",
+      "title": "服务注册",
+      "group": "di-group",
+      "sort": 1
+    },
+    {
+      "id": "resolve",
+      "title": "服务解析",
+      "group": "di-group",
+      "sort": 2
+    },
+    {
+      "id": "di",
+      "title": "依赖注入",
+      "group": "di-group",
+      "sort": 3
+    },
+    {
+      "id": "lifecycle",
+      "title": "生命周期",
+      "group": "di-group",
+      "sort": 4
+    },
+    {
+      "id": "integration-aop",
+      "title": "与 AOP 集成",
+      "group": "di-group",
+      "sort": 5
+    },
+    {
+      "id": "used-in-aspnetcore",
+      "title": "在 ASP.NET Core 中使用",
+      "group": "di-group",
+      "sort": 6
+    },
+    {
+      "id": "reflection",
+      "title": "反射操作",
+      "group": "reflection-group",
+      "sort": 1
+    }
+  ]
+}
