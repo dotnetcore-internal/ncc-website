@@ -12,9 +12,10 @@ import MarkdownItSub from "markdown-it-sub";
 import MarkdownItSup from "markdown-it-sup";
 import MarkdownItTaskLists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
-import MarkdownItPrism from 'markdown-it-prism';
+// import MarkdownItPrism from 'markdown-it-prism';
+import MarkdownHighlight from 'markdown-it-highlight-lines';
 import {align} from "@mdit/plugin-align";
-import { mark } from "@mdit/plugin-mark";
+import {mark} from "@mdit/plugin-mark";
 
 import WaveLoading from "@/components/basic/WaveLoading.vue";
 
@@ -43,7 +44,8 @@ const markdown = new MarkdownIt({html: true, xhtmlOut: true, breaks: true, linki
     .use(MarkdownItSup)
     .use(MarkdownItTaskLists)
     .use(MarkdownItTOC)
-    .use(MarkdownItPrism)
+    // .use(MarkdownItPrism)
+    .use(MarkdownHighlight)
     .use(align)
     .use(mark);
 
