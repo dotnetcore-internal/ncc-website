@@ -7,8 +7,6 @@
   "modules": {
     "general": "概述",
     "metrics": "指標",
-    "get-started": "快速入門",
-    "features": "功能特性",
     "license": "許可證"
   }
 }
