@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {computed, nextTick, onMounted, onUnmounted, reactive, ref, useAttrs} from "vue";
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
 import {usePreferredDark} from "@vueuse/core";
 
 import {useEmitter} from "@/hooks/useEmitter";
@@ -23,6 +23,7 @@ const uiStore = useUiStore();
 const projectStore = useProjectStore();
 const emitter = useEmitter();
 const attrs = useAttrs();
+const route = useRoute();
 const router = useRouter();
 
 const akaId = attrs.akaId as string;
@@ -318,7 +319,7 @@ onUnmounted(() => {
 
     <div class="paper">
 
-      <router-view/>
+      <router-view :key="route.path"/>
 
     </div>
 

@@ -15,8 +15,6 @@ const emitter = useEmitter();
 const projectStore = useProjectStore();
 const randomPageCode = useRandomNumber(1, 100000);
 
-console.log(route.params)
-
 const usePageModule = computed(() => {
   const key = route.params['customName'] as string;
   const modules = projectStore.currentProjectProfile.modules;
