@@ -40,8 +40,18 @@
       "in-built": true
     },
     {
-      "name": "license",
+      "name": "plugins",
       "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "faq",
+      "sort": 6,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 7,
       "in-built": true
     },
     {

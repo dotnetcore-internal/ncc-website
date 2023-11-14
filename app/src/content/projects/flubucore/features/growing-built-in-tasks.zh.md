@@ -1,0 +1,1 @@
+[不断丰富中的 FlubuCore 插件补充着内置任务](https://flubucore.dotnetcore.xyz/AwesomePlugins/awesome-plugins/)。

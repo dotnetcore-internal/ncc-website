@@ -10,6 +10,14 @@
     "get-started": "Get Started",
     "features": "Features",
     "license": "License",
+    "plugins": {
+      "title": "Plugins",
+      "file": "plugins"
+    },
+    "faq": {
+      "title": "FAQ",
+      "file": "faq"
+    },
     "release": {
       "title": "Latest Release Logs",
       "url": "https://github.com/dotnetcore/FlubuCore/releases/latest"

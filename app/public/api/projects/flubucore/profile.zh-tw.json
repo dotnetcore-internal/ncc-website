@@ -10,6 +10,14 @@
     "get-started": "快速入門",
     "features": "功能特性",
     "license": "許可證",
+    "plugins": {
+      "title": "插件",
+      "file": "plugins"
+    },
+    "faq": {
+      "title": "常見問題",
+      "file": "faq"
+    },
     "release": {
       "title": "發佈日誌",
       "url": "https://github.com/dotnetcore/FlubuCore/releases/latest"
