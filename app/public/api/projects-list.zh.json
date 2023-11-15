@@ -340,7 +340,7 @@
     {
       "id": "smartsql",
       "name": "SmartSql",
-      "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。 SmartSql 具有与 Dapper 相似的性能水平，并提供许多特性：动态代理存储、分布式缓存、类型处理器、自动生成 CUD 代码、分布式 Id 生成器、性能诊断、AOP 级别的事务/缓存（内存，分布式缓存）、读/写分离、代码生成器、高性能的批量插入等。",
+      "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。",
       "logo": "",
       "github": "https://github.com/dotnetcore/SmartSql",
       "catalogue": "data",

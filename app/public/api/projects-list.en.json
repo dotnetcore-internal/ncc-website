@@ -340,7 +340,7 @@
     {
       "id": "smartsql",
       "name": "SmartSql",
-      "description": "SmartSql provides a progressive development experience with simple connection string configuration to run, XML configuration to decouple SQL and a variety of performance observation methods to make performance problems clear at a glance. SmartSql maintains the same level of performance as Dapper and provides a number of features: dynamic proxy storage/distributed cache/type processor/automatic generation of CUD code/distributed Id generator/performance diagnosis/AOP level of things/caches (memory, distributed cache)/read/write separation/code generator/high performance batch insertion, etc.",
+      "description": "SmartSql provides a progressive development experience with simple connection string configuration to run, XML configuration to decouple SQL and a variety of performance observation methods to make performance problems clear at a glance.",
       "logo": "",
       "github": "https://github.com/dotnetcore/SmartSql",
       "catalogue": "data",
