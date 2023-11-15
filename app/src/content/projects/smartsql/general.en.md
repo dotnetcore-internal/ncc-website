@@ -14,7 +14,7 @@ Dapper is really good and good performance, but the code that will be ceded to y
 
 ![Overview](/articles/projects/smartsql/assets/SmartSql-features.png)
 
-## Nuget Packages
+## NuGet Packages
 
 | Package                                                      | NuGet Stable                                                 | Downloads                                                    |
 | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |

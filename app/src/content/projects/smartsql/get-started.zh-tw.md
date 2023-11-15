@@ -23,7 +23,7 @@ Install-Package SmartSql.Schema
 
 ```powershell
 Install-Package SmartSql
-// 以及相應ADO.NET驅動
+// 以及相應 ADO.NET 驅動
 ```
 
 ## 從連接字符串創建SmartSql實例
