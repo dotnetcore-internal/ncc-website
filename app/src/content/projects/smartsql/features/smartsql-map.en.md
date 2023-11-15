@@ -1,0 +1,3 @@
+The true strength of SmartSql lies in its mapping statement, which is the magic of it. Because of its unusually powerful, the mapper's XML file is relatively simple. If you compare it to ADO.NET code with the same functionality, you'll immediately find that you've saved nearly 96% of your code, and SmartSql built to focus on SQL to reduce your hassle as much as possible, which is the difference from other ORM essentials.
+
+For more detail, please view [documentation](https://smartsql.net/en/config/sqlmap.html)
