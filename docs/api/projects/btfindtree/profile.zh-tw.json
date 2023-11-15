@@ -1,0 +1,13 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "此項目為 Leo 項目中的高效查找數據結構，使用二分+桶的方式優化查找性能。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "license": "許可證"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "开源缓存库，包含基本用法和缓存的高级用法，可助我们更轻松地处理缓存。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指标",
+    "get-started": "快速上手",
+    "features": "功能特性",
+    "license": "许可证",
+    "release": {
+      "title": "发布日志",
+      "url": "https://github.com/dotnetcore/EasyCaching/releases/latest"
+    }
+  }
+}

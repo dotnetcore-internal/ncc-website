@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "This project is based on Roslyn, it is a wrapper for the syntax tree, making it easier for developers to manipulate the syntax tree.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "license": "License"
+  }
+}

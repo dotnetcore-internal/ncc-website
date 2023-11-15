@@ -1,0 +1,26 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A cross platform build and deployment automation system for building projects and executing deployment scripts using C# code.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "plugins": {
+      "title": "Plugins",
+      "file": "plugins"
+    },
+    "faq": {
+      "title": "FAQ",
+      "file": "faq"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/FlubuCore/releases/latest"
+    }
+  }
+}

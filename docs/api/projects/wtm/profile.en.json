@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A development tool for small and medium-sized back-end management systems. Implement zero-code creation project, zero-code generation management module.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "changelogs": {
+      "title": "Changelogs",
+      "url": "https://github.com/dotnetcore/WTM/blob/dotnet6/CHANGELOG.md"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/WTM/releases/latest"
+    }
+  }
+}

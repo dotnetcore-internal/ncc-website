@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "An open source caching library that contains basic usage and some advanced usages of caching which can help us to handle caching more easier.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/EasyCaching/releases/latest"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "基于 Roslyn 对语法树的一个封装, 使开发者更容易操作语法树。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指标",
+    "license": "许可证"
+  }
+}

@@ -10,5 +10,10 @@
     "get-started": "Get Started",
     "features": "Features"
   },
-  "project-summary": "Summary"
+  "project-summary": "Summary",
+  "show-more": "Show More",
+  "collapse": "Collapse",
+  "expand": "Expand",
+  "raw-license-content": "Raw License Content:",
+  "reload-license": "Reload"
 }

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指标",
+    "get-started": "快速上手",
+    "features": "功能特性",
+    "license": "许可证",
+    "faq": {
+      "title": "常见问题",
+      "file": "faq"
+    },
+    "release": {
+      "title": "发布日志",
+      "url": "https://github.com/dotnetcore/SmartSql/releases/latest"
+    }
+  }
+}

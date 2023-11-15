@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "基於 HttpClient 的開源項目，只需通過定義 C# 接口並修改一些細節便可異步調用遠程 HTTP 接口。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證",
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/WebApiClient/releases/latest"
+    }
+  }
+}

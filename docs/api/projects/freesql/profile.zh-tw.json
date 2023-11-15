@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "一款功能強大的 ORM 組件，支持 .NET Core、.NET Framework 和 Xamarin。目前 FreeSql 支持以下數據庫：MySQL、PostgreSQL、SqlServer、Oracle、Sqlite、Firebird、ODBC、微軟 Access 以及國產數據庫達夢、人大金倉、神通、瀚高、華為 GaussDB。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證",
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/FreeSql/releases/latest"
+    }
+  }
+}

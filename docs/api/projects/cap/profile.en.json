@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A distributed transaction solution in microservice based on eventually consistency, also an eventbus with Outbox pattern.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "faq": {
+      "title": "FAQ",
+      "file": "faq"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/CAP/releases/latest"
+    }
+  }
+}

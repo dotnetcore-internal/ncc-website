@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "An open source .net client for Alibaba Canal. Alibaba Canal is an incremental publish & subscription component based on MySQL's binlog.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/CanalSharp/releases/latest"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "人大金倉 KingbaseES 的 Entity Framework Core 驅動。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "license": "許可證",
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES/releases/latest"
+    }
+  }
+}

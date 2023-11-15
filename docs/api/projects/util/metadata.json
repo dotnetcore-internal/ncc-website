@@ -1,0 +1,53 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "id": "util",
+  "name": "Util",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/Util",
+  "catalogue": "dev-fx",
+  "status": "sandbox",
+  "leader": {
+    "name": "何镇汐",
+    "url": "https://github.com/xiadao521"
+  },
+  "external": false,
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/Util/master/LICENSE.txt"
+  },
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "metrics",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "features",
+      "sort": 4,
+      "in-built": true
+    },
+    {
+      "name": "license",
+      "sort": 5,
+      "in-built": true
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

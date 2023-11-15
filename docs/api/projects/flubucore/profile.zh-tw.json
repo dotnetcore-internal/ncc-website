@@ -1,0 +1,26 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "跨平台構建與部署自動化系統，基於 C# 代碼構建項目和執行部署腳本。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證",
+    "plugins": {
+      "title": "插件",
+      "file": "plugins"
+    },
+    "faq": {
+      "title": "常見問題",
+      "file": "faq"
+    },
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/FlubuCore/releases/latest"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "針對中小規模後台管理系統的開發利器，基於 .NET Core，實現零編碼創建項目、零編碼生成業務模塊。框架嚴格遵循 MVVM 的開發模式，經過數十個真實項目檢測，可以極大提高開發效率，降低開發成本。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證",
+    "changelogs": {
+      "title": "更新日志",
+      "url": "https://github.com/dotnetcore/WTM/blob/dotnet6/CHANGELOG.md"
+    },
+    "release": {
+      "title": "發佈記錄",
+      "url": "https://github.com/dotnetcore/WTM/releases/latest"
+    }
+  }
+}

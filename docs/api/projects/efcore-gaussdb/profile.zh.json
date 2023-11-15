@@ -1,0 +1,13 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "华为 GaussDB 的 Entity Framework Core 驱动。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指标",
+    "get-started": "快速上手",
+    "license": "许可证"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "An AOP-based cross platform framework for .NET Standard.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/AspectCore-Framework/releases/latest"
+    }
+  }
+}

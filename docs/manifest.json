@@ -19,6 +19,10 @@
     "file": "assets/TitleBlock.css",
     "src": "TitleBlock.css"
   },
+  "WaveLoading.css": {
+    "file": "assets/WaveLoading.css",
+    "src": "WaveLoading.css"
+  },
   "_AnchorElement.vue_vue_type_script_setup_true_lang.js": {
     "file": "assets/AnchorElement.vue_vue_type_script_setup_true_lang.js",
     "imports": [
@@ -39,8 +43,17 @@
   "_LeftRightLayout.js": {
     "file": "assets/LeftRightLayout.js",
     "imports": [
+      "__plugin-vue_export-helper.js",
+      "_vendor.js"
+    ]
+  },
+  "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_preload-helper.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_useEmitter.js",
+      "_uiStore.js"
     ]
   },
   "_MemberProjects.js": {
@@ -49,12 +62,19 @@
     ],
     "file": "assets/MemberProjects.js",
     "imports": [
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_useProjectToolkits.js",
+      "_LeftRightLayout.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js"
+    ]
+  },
+  "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_vendor.js"
     ]
   },
   "_ProjectCards.js": {
@@ -76,9 +96,10 @@
     "file": "assets/ProjectHeader.js",
     "imports": [
       "_vendor.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
     ]
   },
@@ -89,7 +110,18 @@
     "file": "assets/TitleBlock.js",
     "imports": [
       "_vendor.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
+    ]
+  },
+  "_WaveLoading.js": {
+    "css": [
+      "assets/WaveLoading.css"
+    ],
+    "file": "assets/WaveLoading.js",
+    "imports": [
+      "__plugin-vue_export-helper.js",
+      "_vendor.js"
     ]
   },
   "__plugin-vue_export-helper.js": {
@@ -97,6 +129,21 @@
   },
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
+  },
+  "_preload-helper.js": {
+    "file": "assets/preload-helper.js"
+  },
+  "_projectStore.js": {
+    "file": "assets/projectStore.js",
+    "imports": [
+      "_vendor.js"
+    ]
+  },
+  "_uiStore.js": {
+    "file": "assets/uiStore.js",
+    "imports": [
+      "_vendor.js"
+    ]
   },
   "_useEmitter.js": {
     "file": "assets/useEmitter.js",
@@ -112,12 +159,14 @@
       "src/views/projects/TopLevelView.vue",
       "src/views/projects/ProjectMaturityModelView.vue",
       "src/views/projects/ProjectNotFound.vue",
-      "src/views/projects/DetailView.vue",
-      "src/views/projects/MetricsPage.vue",
-      "src/views/projects/GetStartedPage.vue",
-      "src/views/projects/FeaturesPage.vue",
-      "src/views/projects/LicensePage.vue",
-      "src/views/projects/GeneralPage.vue",
+      "src/views/projects/ProjectDetailView.vue",
+      "src/views/projects/details/MetricsPage.vue",
+      "src/views/projects/details/GetStartedPage.vue",
+      "src/views/projects/details/FeaturesPage.vue",
+      "src/views/projects/details/LicensePage.vue",
+      "src/views/projects/details/CustomPageNotFound.vue",
+      "src/views/projects/details/CustomPage.vue",
+      "src/views/projects/details/GeneralPage.vue",
       "src/views/news/NewsIndexView.vue",
       "src/views/weekly/WeeklyIndexView.vue",
       "src/views/announcements/AnnouncementsIndexView.vue",
@@ -139,14 +188,18 @@
     ],
     "file": "assets/usePageToolkits.js",
     "imports": [
-      "_vendor.js"
+      "_vendor.js",
+      "_preload-helper.js"
     ]
   },
   "_useProjectToolkits.js": {
     "file": "assets/useProjectToolkits.js",
     "imports": [
-      "_LeftRightLayout.js"
+      "_useResource.js"
     ]
+  },
+  "_useResource.js": {
+    "file": "assets/useResource.js"
   },
   "_vendor.js": {
     "file": "assets/vendor.js"
@@ -163,24 +216,40 @@
     "imports": [
       "_vendor.js",
       "_usePageToolkits.js",
-      "_LeftRightLayout.js",
+      "_useResource.js",
+      "_uiStore.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
       "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_LeftRightLayout.js",
       "_useEmitter.js",
-      "_official-wechat-account-qrcode.js"
+      "_official-wechat-account-qrcode.js",
+      "_preload-helper.js"
     ],
     "isEntry": true,
     "src": "index.html"
   },
+  "src/views/CodeOfConductView.css": {
+    "file": "assets/CodeOfConductView.css",
+    "src": "src/views/CodeOfConductView.css"
+  },
   "src/views/CodeOfConductView.vue": {
+    "css": [
+      "assets/CodeOfConductView.css"
+    ],
     "file": "assets/CodeOfConductView.js",
     "imports": [
+      "_useEmitter.js",
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_uiStore.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CodeOfConductView.vue"
@@ -192,7 +261,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CommunityOnlineView.vue"
@@ -211,10 +282,14 @@
       "_TitleBlock.js",
       "_LeftRightLayout.js",
       "_MemberProjects.js",
+      "_uiStore.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
-      "_useProjectToolkits.js"
+      "_preload-helper.js",
+      "_useProjectToolkits.js",
+      "_useResource.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/HomeView.vue"
@@ -233,7 +308,8 @@
       "_BodyBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/Page404.vue"
@@ -246,7 +322,9 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/AllNccView.vue"
@@ -258,7 +336,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/ContactView.vue"
@@ -270,7 +350,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/FaqView.vue"
@@ -282,7 +364,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/JoinView.vue"
@@ -295,6 +379,8 @@
       "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js",
+      "_preload-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
@@ -307,7 +393,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/StoryView.vue"
@@ -319,7 +407,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/WhoWeAreView.vue"
@@ -331,7 +421,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/announcements/AnnouncementsIndexView.vue"
@@ -343,7 +435,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/guidelines/BrandGuidelinesView.vue"
@@ -355,7 +449,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/guidelines/ParticipationGuidelinesView.vue"
@@ -367,7 +463,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/guidelines/SourceCodeUsageGuidelinesView.vue"
@@ -379,7 +477,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/news/NewsIndexView.vue"
@@ -391,7 +491,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/people/ProjectManagementCommitteeView.vue"
@@ -407,16 +509,20 @@
     "file": "assets/AllProjectsView.js",
     "imports": [
       "_useEmitter.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_usePageToolkits.js",
       "_useProjectToolkits.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
       "_ProjectHeader.js",
       "_ProjectCards.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_TitleBlock.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_useResource.js",
+      "_LeftRightLayout.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
@@ -433,132 +539,53 @@
     "file": "assets/ArchivedView.js",
     "imports": [
       "_useEmitter.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_usePageToolkits.js",
       "_useProjectToolkits.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
       "_ProjectHeader.js",
       "_ProjectCards.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_TitleBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_useResource.js",
+      "_LeftRightLayout.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/ArchivedView.vue"
   },
-  "src/views/projects/DetailView.css": {
-    "file": "assets/DetailView.css",
-    "src": "src/views/projects/DetailView.css"
+  "src/views/projects/ProjectDetailView.css": {
+    "file": "assets/ProjectDetailView.css",
+    "src": "src/views/projects/ProjectDetailView.css"
   },
-  "src/views/projects/DetailView.vue": {
+  "src/views/projects/ProjectDetailView.vue": {
     "css": [
-      "assets/DetailView.css"
+      "assets/ProjectDetailView.css"
     ],
-    "file": "assets/DetailView.js",
+    "file": "assets/ProjectDetailView.js",
     "imports": [
       "_vendor.js",
       "_useEmitter.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
+      "_projectStore.js",
       "_usePageToolkits.js",
       "_useProjectToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "__plugin-vue_export-helper.js"
+      "_LeftRightLayout.js",
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_useResource.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
-    "src": "src/views/projects/DetailView.vue"
-  },
-  "src/views/projects/FeaturesPage.css": {
-    "file": "assets/FeaturesPage.css",
-    "src": "src/views/projects/FeaturesPage.css"
-  },
-  "src/views/projects/FeaturesPage.vue": {
-    "css": [
-      "assets/FeaturesPage.css"
-    ],
-    "file": "assets/FeaturesPage.js",
-    "imports": [
-      "_useEmitter.js",
-      "_BodyBlock.js",
-      "_vendor.js",
-      "__plugin-vue_export-helper.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/projects/FeaturesPage.vue"
-  },
-  "src/views/projects/GeneralPage.css": {
-    "file": "assets/GeneralPage.css",
-    "src": "src/views/projects/GeneralPage.css"
-  },
-  "src/views/projects/GeneralPage.vue": {
-    "css": [
-      "assets/GeneralPage.css"
-    ],
-    "file": "assets/GeneralPage.js",
-    "imports": [
-      "_BodyBlock.js",
-      "_vendor.js",
-      "__plugin-vue_export-helper.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/projects/GeneralPage.vue"
-  },
-  "src/views/projects/GetStartedPage.css": {
-    "file": "assets/GetStartedPage.css",
-    "src": "src/views/projects/GetStartedPage.css"
-  },
-  "src/views/projects/GetStartedPage.vue": {
-    "css": [
-      "assets/GetStartedPage.css"
-    ],
-    "file": "assets/GetStartedPage.js",
-    "imports": [
-      "_useEmitter.js",
-      "_BodyBlock.js",
-      "_vendor.js",
-      "__plugin-vue_export-helper.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/projects/GetStartedPage.vue"
-  },
-  "src/views/projects/LicensePage.css": {
-    "file": "assets/LicensePage.css",
-    "src": "src/views/projects/LicensePage.css"
-  },
-  "src/views/projects/LicensePage.vue": {
-    "css": [
-      "assets/LicensePage.css"
-    ],
-    "file": "assets/LicensePage.js",
-    "imports": [
-      "_useEmitter.js",
-      "_BodyBlock.js",
-      "_vendor.js",
-      "__plugin-vue_export-helper.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/projects/LicensePage.vue"
-  },
-  "src/views/projects/MetricsPage.css": {
-    "file": "assets/MetricsPage.css",
-    "src": "src/views/projects/MetricsPage.css"
-  },
-  "src/views/projects/MetricsPage.vue": {
-    "css": [
-      "assets/MetricsPage.css"
-    ],
-    "file": "assets/MetricsPage.js",
-    "imports": [
-      "_useEmitter.js",
-      "_BodyBlock.js",
-      "_vendor.js",
-      "__plugin-vue_export-helper.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/projects/MetricsPage.vue"
+    "src": "src/views/projects/ProjectDetailView.vue"
   },
   "src/views/projects/ProjectMaturityModelView.vue": {
     "file": "assets/ProjectMaturityModelView.js",
@@ -567,11 +594,15 @@
       "_BodyBlock.js",
       "_MemberProjects.js",
       "_ProjectHeader.js",
-      "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
+      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_useProjectToolkits.js",
+      "_useResource.js",
+      "_LeftRightLayout.js",
+      "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
@@ -583,6 +614,7 @@
       "src/views/Page404.vue",
       "_vendor.js",
       "_usePageToolkits.js",
+      "_preload-helper.js",
       "_BodyBlock.js",
       "__plugin-vue_export-helper.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
@@ -594,20 +626,170 @@
     "file": "assets/TopLevelView.js",
     "imports": [
       "_useEmitter.js",
-      "_LeftRightLayout.js",
+      "_uiStore.js",
       "_usePageToolkits.js",
       "_useProjectToolkits.js",
       "_BodyBlock.js",
       "_MemberProjects.js",
       "_ProjectHeader.js",
       "_ProjectCards.js",
-      "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
+      "_preload-helper.js",
+      "_useResource.js",
       "__plugin-vue_export-helper.js",
+      "_LeftRightLayout.js",
+      "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/TopLevelView.vue"
+  },
+  "src/views/projects/details/CustomPage.css": {
+    "file": "assets/CustomPage.css",
+    "src": "src/views/projects/details/CustomPage.css"
+  },
+  "src/views/projects/details/CustomPage.vue": {
+    "css": [
+      "assets/CustomPage.css"
+    ],
+    "file": "assets/CustomPage.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_projectStore.js",
+      "_BodyBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_uiStore.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/CustomPage.vue"
+  },
+  "src/views/projects/details/CustomPageNotFound.vue": {
+    "file": "assets/CustomPageNotFound.js",
+    "imports": [
+      "src/views/Page404.vue",
+      "_vendor.js",
+      "_usePageToolkits.js",
+      "_preload-helper.js",
+      "_BodyBlock.js",
+      "__plugin-vue_export-helper.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/CustomPageNotFound.vue"
+  },
+  "src/views/projects/details/FeaturesPage.css": {
+    "file": "assets/FeaturesPage.css",
+    "src": "src/views/projects/details/FeaturesPage.css"
+  },
+  "src/views/projects/details/FeaturesPage.vue": {
+    "css": [
+      "assets/FeaturesPage.css"
+    ],
+    "file": "assets/FeaturesPage.js",
+    "imports": [
+      "_preload-helper.js",
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_BodyBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/FeaturesPage.vue"
+  },
+  "src/views/projects/details/GeneralPage.css": {
+    "file": "assets/GeneralPage.css",
+    "src": "src/views/projects/details/GeneralPage.css"
+  },
+  "src/views/projects/details/GeneralPage.vue": {
+    "css": [
+      "assets/GeneralPage.css"
+    ],
+    "file": "assets/GeneralPage.js",
+    "imports": [
+      "_vendor.js",
+      "_BodyBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_useEmitter.js",
+      "_uiStore.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/GeneralPage.vue"
+  },
+  "src/views/projects/details/GetStartedPage.css": {
+    "file": "assets/GetStartedPage.css",
+    "src": "src/views/projects/details/GetStartedPage.css"
+  },
+  "src/views/projects/details/GetStartedPage.vue": {
+    "css": [
+      "assets/GetStartedPage.css"
+    ],
+    "file": "assets/GetStartedPage.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_BodyBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_uiStore.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/GetStartedPage.vue"
+  },
+  "src/views/projects/details/LicensePage.css": {
+    "file": "assets/LicensePage.css",
+    "src": "src/views/projects/details/LicensePage.css"
+  },
+  "src/views/projects/details/LicensePage.vue": {
+    "css": [
+      "assets/LicensePage.css"
+    ],
+    "file": "assets/LicensePage.js",
+    "imports": [
+      "_useEmitter.js",
+      "_projectStore.js",
+      "_BodyBlock.js",
+      "_vendor.js",
+      "_useProjectToolkits.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
+      "_WaveLoading.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_useResource.js",
+      "_usePageToolkits.js",
+      "_preload-helper.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/LicensePage.vue"
+  },
+  "src/views/projects/details/MetricsPage.css": {
+    "file": "assets/MetricsPage.css",
+    "src": "src/views/projects/details/MetricsPage.css"
+  },
+  "src/views/projects/details/MetricsPage.vue": {
+    "css": [
+      "assets/MetricsPage.css"
+    ],
+    "file": "assets/MetricsPage.js",
+    "imports": [
+      "_useEmitter.js",
+      "_BodyBlock.js",
+      "_vendor.js",
+      "__plugin-vue_export-helper.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/projects/details/MetricsPage.vue"
   },
   "src/views/rules/RulesIndexView.vue": {
     "file": "assets/RulesIndexView.js",
@@ -616,7 +798,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/rules/RulesIndexView.vue"
@@ -628,7 +812,9 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "_preload-helper.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/weekly/WeeklyIndexView.vue"

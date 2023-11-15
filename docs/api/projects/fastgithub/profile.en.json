@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A GitHub accelerator. Used to solve the problems of GitHub unable to open, unable to load user avatar, unable to upload and download releases, git-clone git-pull git-push failure, etc.",
+  "modules": {
+    "general": "General",
+    "get-started": "Get Started",
+    "license": "License"
+  }
+}

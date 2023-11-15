@@ -1,0 +1,69 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "id": "flubucore",
+  "name": "FlubuCore",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/FlubuCore",
+  "catalogue": "tools-env",
+  "status": "top-level",
+  "leader": {
+    "name": "Marko Zorec",
+    "url": "https://github.com/mzorec"
+  },
+  "external": false,
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/FlubuCore/develop/LICENSE"
+  },
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "metrics",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "features",
+      "sort": 4,
+      "in-built": true
+    },
+    {
+      "name": "plugins",
+      "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "faq",
+      "sort": 6,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 7,
+      "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

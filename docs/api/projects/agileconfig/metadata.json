@@ -1,8 +1,13 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "id": "agileconfig",
   "name": "AgileConfig",
   "logo": "",
   "github": "https://github.com/dotnetcore/AgileConfig",
+  "gitee": "https://gitee.com/kklldog/AgileConfig",
   "catalogue": "infra-middleware",
   "status": "sandbox",
   "leader": {
@@ -10,6 +15,10 @@
     "url": "https://github.com/kklldog"
   },
   "external": false,
+  "license": {
+    "name": "mit",
+    "file": "https://raw.githubusercontent.com/dotnetcore/AgileConfig/master/License.txt"
+  },
   "modules": [
     {
       "name": "general",
@@ -30,6 +39,28 @@
       "name": "features",
       "sort": 4,
       "in-built": true
+    },
+    {
+      "name": "contact",
+      "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 6,
+      "in-built": true
+    },
+    {
+      "name": "changelogs",
+      "sort": 2,
+      "float": "right",
+      "in-built": false
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
     }
   ],
   "i18n-support": [

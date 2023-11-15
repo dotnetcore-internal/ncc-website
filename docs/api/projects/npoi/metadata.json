@@ -1,0 +1,54 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "id": "npoi",
+  "name": "NPOI",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/NPOI",
+  "catalogue": "data",
+  "status": "archived",
+  "leader": {
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore"
+  },
+  "external": false,
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/NPOI/master/LICENSE.txt"
+  },
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "announcement",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "license",
+      "sort": 5,
+      "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

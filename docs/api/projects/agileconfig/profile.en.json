@@ -1,6 +1,26 @@
 {
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
   "description": "A lightweight configuration center based on .net core . It is easy to deploy , easy to learn , easy to use. ",
-  "modules": [
-
-  ]
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "contact": {
+      "title": "Contact Me",
+      "file": "contact-me"
+    },
+    "changelogs": {
+      "title": "Changelogs",
+      "url": "https://github.com/dotnetcore/AgileConfig/blob/master/CHANGELOG.md"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/AgileConfig/releases/latest"
+    }
+  }
 }

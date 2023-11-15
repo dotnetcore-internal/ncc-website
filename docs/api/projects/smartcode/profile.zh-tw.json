@@ -1,0 +1,21 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "優秀的開源代碼生成器（不僅僅是生成代碼），它基於執行流程，支持 ETL 模式，高度靈活和可擴展，還支持自定義模板和多種模板樣式，以及多種數據庫。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "license": "許可證",
+    "faq": {
+      "title": "常見問題",
+      "file": "faq"
+    },
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/SmartCode/releases/latest"
+    }
+  }
+}

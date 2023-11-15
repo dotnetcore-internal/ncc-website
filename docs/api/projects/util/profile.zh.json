@@ -1,0 +1,14 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": ".NET Core 平台下的开源应用程序，旨在提高小型团队的开发效率。 它由通用帮助程序，分层体系结构设计，UI 组件，第三方组件和服务接口包组成。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指标",
+    "get-started": "快速上手",
+    "features": "功能特性",
+    "license": "许可证"
+  }
+}

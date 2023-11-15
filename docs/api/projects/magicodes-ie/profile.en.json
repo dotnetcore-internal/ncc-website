@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A common import and export library for Excel, Word, PDF and HTML.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "features": "Features",
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/Magicodes.IE/blob/master/RELEASE.md"
+    }
+  }
+}

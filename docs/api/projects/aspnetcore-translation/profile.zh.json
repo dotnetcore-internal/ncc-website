@@ -1,0 +1,16 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "由 .NET China Foundation（已更名为 NCC）发起的微软 ASP.NET Core 文档翻译计划。",
+  "modules": {
+    "general": "概述",
+    "license": "许可证",
+    "participants": {
+      "title": "参与者",
+      "scope": "projects",
+      "file": "participants"
+    }
+  }
+}

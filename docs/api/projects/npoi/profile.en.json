@@ -1,0 +1,20 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "A .net library for reading and writing MsOffice binary and OOXML file formats.",
+  "modules": {
+    "general": "General",
+    "get-started": "Get Started",
+    "license": "License",
+    "announcement": {
+      "title": "Announcement",
+      "file": "archived-announcement"
+    },
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/NPOI/releases/latest"
+    }
+  }
+}

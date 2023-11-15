@@ -1,0 +1,17 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "基于 .NET Standard 2.0 开发的第三方支付宝服务端 SDK，提供比官方更可靠的设计，但仍与官方 APIs 保持一致。",
+  "modules": {
+    "general": "概述",
+    "get-started": "快速上手",
+    "features": "功能特性",
+    "license": "许可证",
+    "release": {
+      "title": "发布日志",
+      "url": "https://github.com/dotnetcore/AopSdk.Core/releases/latest"
+    }
+  }
+}

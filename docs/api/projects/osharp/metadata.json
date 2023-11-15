@@ -1,0 +1,59 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "id": "osharp",
+  "name": "OSharp",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/OSharp",
+  "catalogue": "dev-fx",
+  "status": "sandbox",
+  "leader": {
+    "name": "郭明峰",
+    "url": "https://github.com/gmf520"
+  },
+  "external": false,
+  "license": {
+    "name": "apache-2.0",
+    "file": "https://raw.githubusercontent.com/dotnetcore/osharp/master/LICENSE"
+  },
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "metrics",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "features",
+      "sort": 4,
+      "in-built": true
+    },
+    {
+      "name": "license",
+      "sort": 5,
+      "in-built": true
+    },
+    {
+      "name": "release",
+      "sort": 1,
+      "float": "right",
+      "in-built": false
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

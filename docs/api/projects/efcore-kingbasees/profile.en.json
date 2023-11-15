@@ -1,0 +1,17 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "An Entity Framework Core provider for KingbaseES.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "get-started": "Get Started",
+    "license": "License",
+    "release": {
+      "title": "Latest Release Logs",
+      "url": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES/releases/latest"
+    }
+  }
+}

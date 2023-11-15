@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "When using the Roslyn library for dynamic compilation, you can introduce the library to provide a dynamic compilation environment.",
+  "modules": {
+    "general": "General",
+    "metrics": "Metrics",
+    "license": "License"
+  }
+}

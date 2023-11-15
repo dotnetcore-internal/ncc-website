@@ -1,0 +1,16 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "The Simplified Chinese edition of Microsoft ASP.NET Core documentation, translated by .NET China Foundation.",
+  "modules": {
+    "general": "General",
+    "license": "License",
+    "participants": {
+      "title": "Participants",
+      "scope": "projects",
+      "file": "participants"
+    }
+  }
+}

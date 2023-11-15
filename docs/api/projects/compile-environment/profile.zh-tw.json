@@ -1,0 +1,12 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "使用 Roslyn 庫進行動態編譯時，可以引入該庫提供動態編譯的環境。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "license": "許可證"
+  }
+}

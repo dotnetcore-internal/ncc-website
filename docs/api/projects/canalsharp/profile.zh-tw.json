@@ -1,0 +1,18 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "Alibaba Canal 的開源 .NET 客戶端。Alibaba Canal 是一個基於 MySQL binlog 的增量發佈與訂閱組件。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "features": "功能特性",
+    "license": "許可證",
+    "release": {
+      "title": "發佈日誌",
+      "url": "https://github.com/dotnetcore/CanalSharp/releases/latest"
+    }
+  }
+}

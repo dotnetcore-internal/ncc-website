@@ -1,5 +1,16 @@
 {
   "_conduct": {
     "version": "20231104002"
-  }
+  },
+  "coc-intro": "介紹",
+  "coc-body": "正文",
+  "coc-note": "說明",
+  "coc-intro-part1": "本行為准則適用於 .NET Core Community (NCC) 管理的所有空間，包括 IRC、公共和私人郵件列表、問題跟蹤器、wiki、博客、Twitter 以及我們社區使用的任何其他通信渠道。",
+  "coc-intro-part2": "我們希望在任何 TheNCC 相關活動中正式或非正式參與 NCC 社區或聲稱與社區有任何聯系的每個人，尤其是在代表 NCC 擔任任何角色時，遵守本行為准則。",
+  "coc-intro-part3": "此代碼並不詳盡或完整。它提煉了我們對協作、共享環境和目標的共同理解。我們希望 NCC 社區的所有成員都能在精神上和字面上一樣遵循它，以便它能夠豐富我們所有人以及我們參與的技術社區。",
+  "coc-note-part1": "該守則將同理心定義為「對他人的情感、想法或意見的替代參與；想象自己處於他人的狀況或困境的能力」。同理心是同理心的形容詞形式。",
+  "coc-note-part2": "本聲明的內容和靈感來源於以下內容：",
+  "coc-asf": "The Apache Foundation Code of Conduct",
+  "coc-dnf": ".NET Foundation's Contributor Covenant Code of Conduct",
+  "coc-mozilla": "Mozilla's code of conduct enforcement ladder"
 }

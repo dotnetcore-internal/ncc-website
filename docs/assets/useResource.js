@@ -1,0 +1,1 @@
+function a(t,e){const o=localStorage.getItem(`${e}#${t}`);return o?JSON.parse(o):null}function r(t,e,o){localStorage.setItem(`${e}#${t}`,JSON.stringify(o))}function c(t){const e=localStorage.getItem(`${t}`);return e?JSON.parse(e):null}function n(t,e){localStorage.setItem(`${t}`,JSON.stringify(e))}export{c as a,n as b,a as g,r as u};
