@@ -35,9 +35,9 @@
       "in-built": true
     },
     {
-      "name": "features",
+      "name": "faq",
       "sort": 4,
-      "in-built": true
+      "in-built": false
     },
     {
       "name": "license",
