@@ -20,7 +20,10 @@
       ],
       "conditions": [
         "License and copyright notice"
-      ]
+      ],
+      "osi-approved": true,
+      "osi-link": "https://opensource.org/license/mit/",
+      "def-link": "https://tlo.mit.edu/learn-about-intellectual-property/software-and-open-source-licensing/open-source-licensing"
     },
     {
       "id": "apache-2.0",
@@ -41,7 +44,10 @@
       "conditions": [
         "License and copyright notice",
         "State changes"
-      ]
+      ],
+      "osi-approved": true,
+      "osi-link": "https://opensource.org/license/apache-2-0/",
+      "def-link": "https://www.apache.org/licenses/LICENSE-2.0"
     },
     {
       "id": "postgresql",
@@ -59,7 +65,10 @@
       ],
       "conditions": [
         "License and trademark notice"
-      ]
+      ],
+      "osi-approved": true,
+      "osi-link": "https://opensource.org/license/postgresql/",
+      "def-link": "https://www.postgresql.org/about/licence/"
     },
     {
       "id": "cc-by-4.0",
@@ -80,7 +89,10 @@
       "conditions": [
         "License and copyright notice",
         "State changes"
-      ]
+      ],
+      "osi-approved": false,
+      "osi-link": "",
+      "def-link": "https://creativecommons.org/licenses/by/4.0/"
     }
   ]
 }

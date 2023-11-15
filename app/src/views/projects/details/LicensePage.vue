@@ -70,7 +70,7 @@ onMounted(() => {
 
     <body-block class="project-paper p-5">
 
-      <p>Raw License Content:</p>
+      <p>{{ $t('raw-license-content') }}</p>
 
       <anchor class="underline hover:underline underline-offset-2 text-blue-500" :href="useLicenseUrl" target="_blank" title="Raw License Content" mode="classic">
         {{ useLicenseUrl }}

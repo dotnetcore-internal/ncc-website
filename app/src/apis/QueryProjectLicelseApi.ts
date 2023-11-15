@@ -8,6 +8,9 @@ export interface LicenseModel {
     permissions: string[];
     limitations: string[];
     conditions: string[];
+    'osi-approved': boolean;
+    'osi-link': string;
+    'def-link': string;
 }
 
 export class LicenseQueryDto {

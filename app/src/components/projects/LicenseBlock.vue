@@ -4,8 +4,9 @@ import {usePreferredDark} from "@vueuse/core";
 import type {LicenseModel} from "@/apis/QueryProjectLicelseApi";
 import {loadLicensesAsync} from "@/hooks/useProjectToolkits";
 
-import {BalanceTwo, Correct, Error, Info} from "@icon-park/vue-next";
+import {BalanceTwo, Correct, Error, Info, Pound} from "@icon-park/vue-next";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
+import AnchorElement from "@/components/basic/AnchorElement.vue";
 
 const props = withDefaults(defineProps<{
   license?: string
@@ -44,7 +45,7 @@ const useIconColor = computed(() => {
 <template>
   <body-block v-if="hasLicense" class="license-block">
 
-    <div class="grid grid-cols-5 gap-4 p-5">
+    <div class="grid grid-cols-5 gap-4 p-5 cursor-default">
       <div class="col-span-2">
         <div class="flex">
           <div class="flex-none">
@@ -52,10 +53,20 @@ const useIconColor = computed(() => {
           </div>
           <div class="flex-1">
             <span class="text-2xl inline-block align-middle px-3">{{ useLicense?.name }}</span>
+            <span v-if="useLicense?.['osi-approved']" class="align-middle inline-block">
+              <anchor-element :href="useLicense?.['osi-link']" target="_blank" title="OSI Approved" mode="classic">
+                <img src="/images/orgs/osi.png" alt="OSI Approved" class="w-5"/>
+              </anchor-element>
+            </span>
           </div>
         </div>
         <div class="text-xs text-gray-500 p-3 pl-0">
           {{ useLicense?.description }}
+          <span class="align-middle inline-block">
+              <anchor-element :href="useLicense?.['def-link']" target="_blank" title="License Definition" mode="classic">
+                <pound theme="filled" size="14" fill="#9013fe" :strokeWidth="2"/>
+              </anchor-element>
+            </span>
         </div>
       </div>
       <div class="license-terms">
