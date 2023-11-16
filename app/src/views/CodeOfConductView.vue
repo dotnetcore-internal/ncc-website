@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import {nextTick, onMounted, onUnmounted} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {setTitle} from "@/hooks/usePageToolkits";
+import { nextTick, onMounted, onUnmounted } from "vue";
+import { useEmitter } from "@/hooks/useEmitter";
+import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
-setTitle('code-of-conduct', 'i18n');
+setTitle("code-of-conduct", "i18n");
 
 const emitter = useEmitter();
 
 onMounted(async () => {
 
-  emitter.on('toChangeLocale', async (e) => {
-    nextTick(()=>{
+  emitter.on("toChangeLocale", async (e) => {
+    nextTick(() => {
       const event = e as { locale: string };
-      setTitle('code-of-conduct', 'i18n');
+      setTitle("code-of-conduct", "i18n");
     });
   });
 
@@ -33,28 +33,28 @@ onUnmounted(() => {
 
   <body-block>
 
-    <title-block :is-font-black="false" :is-font-bold="true">{{ $t('code-of-conduct') }}</title-block>
+    <title-block :is-font-black="false" :is-font-bold="true">{{ $t("code-of-conduct") }}</title-block>
 
   </body-block>
 
   <div class="responsive-width coc-note">
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-      {{ $t('coc-intro') }}
+      {{ $t("coc-intro") }}
     </title-block>
 
-    <p>{{ $t('coc-intro-part1') }}</p>
-    <p>{{ $t('coc-intro-part2') }}</p>
-    <p>{{ $t('coc-intro-part3') }}</p>
+    <p>{{ $t("coc-intro-part1") }}</p>
+    <p>{{ $t("coc-intro-part2") }}</p>
+    <p>{{ $t("coc-intro-part3") }}</p>
 
   </div>
 
-  <placeholder-block height="20px"/>
+  <placeholder-block height="20px" />
 
   <div class="responsive-width">
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-      {{ $t('coc-body') }}
+      {{ $t("coc-body") }}
     </title-block>
 
   </div>
@@ -67,7 +67,7 @@ onUnmounted(() => {
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer source="about/code-of-conduct" :i18n="true"/>
+        <markdown-renderer source="about/code-of-conduct" :i18n="true" />
 
       </div>
 
@@ -75,30 +75,30 @@ onUnmounted(() => {
 
   </body-block>
 
-  <placeholder-block height="20px"/>
+  <placeholder-block height="20px" />
 
   <div class="responsive-width coc-note">
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-      {{ $t('coc-note') }}
+      {{ $t("coc-note") }}
     </title-block>
 
     <div class="coc-note">
 
-      <p>{{ $t('coc-note-part1') }}</p>
-      <p>{{ $t('coc-note-part2') }}</p>
+      <p>{{ $t("coc-note-part1") }}</p>
+      <p>{{ $t("coc-note-part2") }}</p>
 
       <ul>
-        <li><a href="https://apache.org/foundation/policies/conduct" target="_blank">{{ $t('coc-asf') }}</a></li>
-        <li><a href="https://dotnetfoundation.org/about/policies/code-of-conduct" target="_blank">{{ $t('coc-dnf') }}</a></li>
-        <li><a href="https://github.com/mozilla/inclusion" target="_blank">{{ $t('coc-mozilla') }}</a></li>
+        <li><a href="https://apache.org/foundation/policies/conduct" target="_blank">{{ $t("coc-asf") }}</a></li>
+        <li><a href="https://dotnetfoundation.org/about/policies/code-of-conduct" target="_blank">{{ $t("coc-dnf") }}</a></li>
+        <li><a href="https://github.com/mozilla/inclusion" target="_blank">{{ $t("coc-mozilla") }}</a></li>
       </ul>
 
     </div>
 
   </div>
 
-  <placeholder-block height="90px"/>
+  <placeholder-block height="90px" />
 
 </template>
 
@@ -109,21 +109,26 @@ onUnmounted(() => {
   @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
 }
 
-.coc-note p {
-  @apply px-10 py-2;
-  @apply text-gray-700 dark:text-gray-300 text-base;
+.coc-note {
+
+  p {
+    @apply px-10 py-2;
+    @apply text-gray-700 dark:text-gray-300 text-base;
+  }
+
+  ul {
+    @apply px-10 py-2;
+    @apply text-gray-700 dark:text-gray-300 text-base;
+  }
+
+  li {
+    @apply list-disc list-inside leading-7;
+  }
+
+  a {
+    @apply hover:underline underline-offset-2 decoration-gray-400;
+  }
+
 }
 
-.coc-note ul {
-  @apply px-10 py-2;
-  @apply text-gray-700 dark:text-gray-300 text-base;
-}
-
-.coc-note li{
-  @apply list-disc list-inside leading-7;
-}
-
-.coc-note a{
-  @apply hover:underline underline-offset-2 decoration-gray-400;
-}
 </style>
