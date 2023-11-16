@@ -177,60 +177,70 @@ body {
     top: 25vh;
 }
 
-.mt-5px-negative{
+.mt-5px-negative {
     margin-top: -5px;
 }
 
 @media (prefers-color-scheme: dark) {
-    body{
+    body {
         background: #1d1f20;
     }
 }
 
-.responsive-width{
+.responsive-width {
     @apply sm:max-w-xl md:max-w-3xl lg:max-w-5xl xl:max-w-7xl max-w-lg;
     @apply mx-auto;
 }
 
 .markdown-body {
     @apply !bg-transparent p-5 pb-10;
+
+    :is(ol) li {
+        @apply list-decimal;
+    }
+
+    :is(ul) li {
+        @apply list-disc;
+    }
 }
 
-.markdown-body ol li {
-    @apply list-decimal;
+.markdown-toc-right {
+
+    .markdown-body {
+
+        & nav.table-of-contents {
+
+            @apply fixed xl:p-5 p-0 top-10 right-0 xl:w-72 w-0 overflow-hidden;
+
+            :is(ol) {
+                @apply py-3 pl-4;
+            }
+
+            > ol {
+                @apply border-l border-gray-200 dark:border-gray-700;
+            }
+
+            :is(li) {
+                @apply list-none;
+                @apply text-sm leading-7;
+            }
+
+            :is(li) > ol > li {
+                @apply list-decimal;
+                @apply text-sm leading-7 text-black/50 dark:text-white/50;
+            }
+
+            :is(li) > ol > li > ol > li {
+                @apply list-disc;
+            }
+
+            :is(a) {
+                @apply text-sm leading-7 text-black/50 dark:text-white/50;
+                @apply hover:decoration-gray-300 dark:hover:decoration-gray-700;
+            }
+        }
+
+    }
 }
 
-.markdown-body ul li {
-    @apply list-disc;
-}
 
-.markdown-toc-right .markdown-body nav.table-of-contents{
-    @apply fixed xl:p-5 p-0 top-10 right-0 xl:w-72 w-0 overflow-hidden;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents ol{
-    @apply py-3 pl-4;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents > ol{
-    @apply border-l border-gray-200 dark:border-gray-700;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents li{
-    @apply list-none;
-    @apply text-sm leading-7;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents li > ol > li{
-    @apply list-decimal;
-    @apply text-sm leading-7 text-black/50 dark:text-white/50;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents li > ol > li > ol > li{
-    @apply list-disc;
-}
-
-.markdown-toc-right .markdown-body nav.table-of-contents a{
-    @apply text-sm leading-7 text-black/50 dark:text-white/50;
-    @apply hover:decoration-gray-300 dark:hover:decoration-gray-700;
-}

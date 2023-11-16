@@ -4,15 +4,19 @@ import {useEmitter} from "@/hooks/useEmitter";
 import {useUiStore} from "@/stores/uiStore";
 
 import MarkdownIt from "markdown-it";
+// @ts-ignore
 import MarkdownItAbbr from "markdown-it-abbr";
 import MarkdownItAnchor from "markdown-it-anchor";
 import MarkdownItFootnote from "markdown-it-footnote";
 import MarkdownItHighlightJS from "markdown-it-highlightjs";
+// @ts-ignore
 import MarkdownItSub from "markdown-it-sub";
+// @ts-ignore
 import MarkdownItSup from "markdown-it-sup";
+// @ts-ignore
 import MarkdownItTaskLists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
-// import MarkdownItPrism from 'markdown-it-prism';
+// @ts-ignore
 import MarkdownHighlight from 'markdown-it-highlight-lines';
 import {align} from "@mdit/plugin-align";
 import {mark} from "@mdit/plugin-mark";
@@ -44,7 +48,6 @@ const markdown = new MarkdownIt({html: true, xhtmlOut: true, breaks: true, linki
     .use(MarkdownItSup)
     .use(MarkdownItTaskLists)
     .use(MarkdownItTOC)
-    // .use(MarkdownItPrism)
     .use(MarkdownHighlight)
     .use(align)
     .use(mark);
