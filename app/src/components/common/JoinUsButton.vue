@@ -6,7 +6,7 @@ const props = withDefaults(defineProps<{
   needRefresh?: boolean;
 }>(), {
   mode: 'inline-block',
-  needRefresh: false,
+  needRefresh: true,
 });
 </script>
 

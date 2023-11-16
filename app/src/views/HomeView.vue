@@ -10,7 +10,7 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 
-import { ArrowRightDown } from "@icon-park/vue-next";
+import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
 setTitle("Home");
 
@@ -144,6 +144,24 @@ setTitle("Home");
 
     </div>
 
+    <div class="responsive-width grid grid-cols-1 lg:grid-cols-8 py-5">
+
+      <div class="text-4xl lg:col-start-4 lg:col-span-4 text-center lg:text-left">
+        New to NCC ?
+        <arrow-right class="inline-block align-middle" theme="outline" size="36" fill="#FFF" />
+
+        <div class="inline-block align-middle ml-10">
+          <img src="/images/logo-seq.gray-white.png" alt="NCC" class="about-ncc-logo" />
+          <title-link href="/about/who-we-are" route-name="about/who-we-are" target="_blank" class="about-ncc">
+            About NCC
+          </title-link>
+        </div>
+
+      </div>
+
+
+    </div>
+
   </div>
 
   <div class="bg-white dark:bg-black h-40">
@@ -239,9 +257,10 @@ setTitle("Home");
       @apply dark:to-black/40 dark:border-black/75;
       @apply rounded-b-xl;
 
-      .join-btn{
+      .join-btn {
         @apply uppercase pt-6;
         @apply text-white hover:text-white;
+        @apply decoration-white;
       }
     }
   }
@@ -271,6 +290,18 @@ setTitle("Home");
     .join-card-title {
       @apply bg-green-500/30;
     }
+  }
+
+  .about-ncc-logo{
+    @apply xl:inline-block xl:align-middle;
+    @apply m-5 mb-2 xl:m-0;
+    @apply w-16;
+  }
+
+  .about-ncc {
+    @apply xl:inline-block xl:align-middle xl:ml-8;
+    @apply text-white uppercase text-lg;
+    @apply decoration-white;
   }
 }
 
