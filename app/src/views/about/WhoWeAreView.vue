@@ -8,11 +8,13 @@ setTitle('who-we-are', 'i18n');
 </script>
 
 <template>
+
   <body-block>
 
-    <title-block>{{ $t('who-we-are') }}</title-block>
+    <title-block :is-font-black="false" :is-font-bold="true">{{ $t("who-we-are") }}</title-block>
 
   </body-block>
+
 </template>
 
 <style scoped lang="css">

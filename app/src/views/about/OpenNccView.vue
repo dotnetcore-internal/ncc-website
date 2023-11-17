@@ -11,9 +11,11 @@ setTitle('wechat.our-official-wechat-account', 'i18n');
 
   <body-block>
 
-    <title-block>
-      {{ $t('wechat.our-official-wechat-account') }}
-    </title-block>
+    <title-block :is-font-black="false" :is-font-bold="true"> {{ $t('wechat.our-official-wechat-account') }}</title-block>
+
+  </body-block>
+
+  <body-block>
 
     <div class="text-2xl p-5">
       {{ $t('wechat.connect-with-us-on-wechat') }}
