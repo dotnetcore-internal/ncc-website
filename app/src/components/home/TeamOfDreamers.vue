@@ -25,18 +25,18 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
       <div class="join-card become-a-member">
         <div class="join-card-title">
-          Members
+          {{ $t('home.as-a-member') }}
         </div>
 
-        <p class="card-first-line">Building .NET technologies?</p>
+        <p class="card-first-line">{{ $t('home.as-a-member-q') }}</p>
 
-        <p>Join NCC and our member projects to shape the technology ecosystem and make the .NET community even stronger.</p>
+        <p>{{ $t('home.as-a-member-a') }}</p>
 
         <placeholder-block height="90px" />
 
         <div class="card-bottom">
           <title-link href="/about/join" route-name="about/join" target="_blank" class="join-btn">
-            Become a member
+            {{ $t('home.as-a-member-b') }}
           </title-link>
         </div>
 
@@ -44,18 +44,18 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
       <div class="join-card become-a-contributor">
         <div class="join-card-title">
-          Contributors
+          {{ $t('home.as-a-contributor') }}
         </div>
 
-        <p class="card-first-line">Looking to get involved?</p>
+        <p class="card-first-line">{{ $t('home.as-a-contributor-q') }}</p>
 
-        <p>Whether you are a programmer or a designer, become a part of us and help open source projects move towards a better future.</p>
+        <p>{{ $t('home.as-a-contributor-a') }}</p>
 
         <placeholder-block height="90px" />
 
         <div class="card-bottom">
           <title-link href="https://contribute.ncc.work" target="_blank" mode="classic" class="join-btn">
-            Start Contributing
+            {{ $t('home.as-a-contributor-b') }}
           </title-link>
         </div>
 
@@ -63,18 +63,18 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
       <div class="join-card as-an-end-user">
         <div class="join-card-title">
-          End Users
+          {{ $t('home.as-an-end-user') }}
         </div>
 
-        <p class="card-first-line">Using .NET technologies?</p>
+        <p class="card-first-line">{{ $t('home.as-an-end-user-q') }}</p>
 
-        <p>Connect closely with the community, peers, and open source project teams to make the NCC project your best solution.</p>
+        <p>{{ $t('home.as-an-end-user-a') }}</p>
 
         <placeholder-block height="90px" />
 
         <div class="card-bottom">
-          <title-link href="/about/who-we-are" route-name="about/who-we-are" target="_blank" class="join-btn">
-            Become a member
+          <title-link href="/community-online" route-name="community-online" target="_blank" class="join-btn">
+            {{ $t('home.as-an-end-user-b') }}
           </title-link>
         </div>
 

@@ -129,6 +129,18 @@
     "growing-for-ecosystem": "NCC 项目是 .NET 生态系统中盛开的花骨朵",
     "independently-operated-by": "<span class=\"font-bold\">.NET Core Community</span> 社区是由<span class=\"highlight\">个体开发者</span>们独立运作的、<span class=\"highlight\">非盈利性</span>的、<span class=\"highlight\">非官方性质</span>的<span class=\"highlight\">技术中立</span>的开源技术社区。",
     "embrace-net": "想拥抱 .NET 吗？",
-    "join-the-dreamers": "与 NCC 的追梦者们在一起"
+    "join-the-dreamers": "与 NCC 的追梦者们在一起",
+    "as-a-member": "成员",
+    "as-a-member-q": "正使用 .NET 技术构建项目？",
+    "as-a-member-a": "与 NCC 一道，与我们的成员项目一起，为技术生态系统的塑造加油喝彩。让 .NET 的社区力量变得更加强大。",
+    "as-a-member-b": "成为社区成员",
+    "as-a-contributor": "贡献者",
+    "as-a-contributor-q": "寻找参与的机会？",
+    "as-a-contributor-a": "无论你是程序员还是设计师，成为我们的一员，助开源项目走向更好的未来。",
+    "as-a-contributor-b": "开始贡献",
+    "as-an-end-user": "用户",
+    "as-an-end-user-q": "正使用 .NET 技术开发？",
+    "as-an-end-user-a": "与社区、同行和开源项目团队密切连接，使 NCC 项目成为你方案的最优解。",
+    "as-an-end-user-b": "加入社区"
   }
 }

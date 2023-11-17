@@ -129,6 +129,18 @@
     "growing-for-ecosystem": "TheNCC projects are the blooming flowers in the .NET ecosystem",
     "independently-operated-by": "<span class=\"font-bold\">.NET Core Community</span> is an open-source technology community that is independently operated by <span class=\"highlight\">individual developers</span>, <span class=\"highlight\">non-profit</span>, <span class=\"highlight\">unofficial</span>, and <span class=\"highlight\">technology-neutral</span>.",
     "embrace-net": "Embrace .NET?",
-    "join-the-dreamers": "Join the team of dreamers at NCC"
+    "join-the-dreamers": "Join the team of dreamers at NCC",
+    "as-a-member": "Members",
+    "as-a-member-q": "Building .NET technologies?",
+    "as-a-member-a": "Join NCC and our member projects to shape the technology ecosystem and make the .NET community even stronger.",
+    "as-a-member-b": "Become a member",
+    "as-a-contributor": "Contributors",
+    "as-a-contributor-q": "Looking to get involved?",
+    "as-a-contributor-a": "Whether you are a programmer or a designer, become a part of us and help open source projects move towards a better future.",
+    "as-a-contributor-b": "Start Contributing",
+    "as-an-end-user": "End Users",
+    "as-an-end-user-q": "Using .NET technologies?",
+    "as-an-end-user-a": "Connect closely with the community, peers, and open source project teams to make the NCC project your best solution.",
+    "as-an-end-user-b": "Join the community"
   }
 }
