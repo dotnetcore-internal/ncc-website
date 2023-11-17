@@ -104,7 +104,7 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="content-paper overflow-hidden">
+    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="content-paper">
 
       <license-raw :raw-url="item" />
 

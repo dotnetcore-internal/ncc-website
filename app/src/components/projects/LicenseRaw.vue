@@ -67,7 +67,7 @@ onMounted(async () => {
 
   <wave-loading v-if="loading"/>
 
-  <div v-else class="raw-wrap relative" :class="{'raw-large': isLarge, 'raw-small': !isLarge}">
+  <div v-else class="raw-wrap relative overflow-hidden" :class="{'raw-large': isLarge, 'raw-small': !isLarge}">
 
     <pre class="raw-pre">{{ rawContent }}</pre>
 
