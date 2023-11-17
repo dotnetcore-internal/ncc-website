@@ -343,6 +343,7 @@
       "description": "SmartSql provides a progressive development experience with simple connection string configuration to run, XML configuration to decouple SQL and a variety of performance observation methods to make performance problems clear at a glance.",
       "logo": "",
       "github": "https://github.com/dotnetcore/SmartSql",
+      "website": "https://smartsql.net/",
       "catalogue": "data",
       "status": "sandbox",
       "leader": {

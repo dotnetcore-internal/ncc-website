@@ -343,6 +343,7 @@
       "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。",
       "logo": "",
       "github": "https://github.com/dotnetcore/SmartSql",
+      "website": "https://smartsql.net/",
       "catalogue": "data",
       "status": "sandbox",
       "leader": {
