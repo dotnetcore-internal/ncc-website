@@ -266,4 +266,11 @@ onUnmounted(() => {
   z-index: 1;
 }
 
+@media (prefers-color-scheme: dark) {
+  .feature-end{
+    background: linear-gradient(rgba(29, 31, 32, 0), rgba(29, 31, 32, 0.8), rgba(29, 31, 32, 1));
+  }
+}
+
+
 </style>
