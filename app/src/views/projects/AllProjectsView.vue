@@ -13,6 +13,7 @@ import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 import ProjectCards from "@/components/projects/ProjectCards.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import ProjectStatBlock from "@/components/projects/ProjectStatBlock.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -95,6 +96,17 @@ onUnmounted(() => {
     </span>
 
     <project-cards :models="projects" for="translation"/>
+
+    <placeholder-block height="90px"/>
+
+    <title-block h1-mode="false"
+                 color-mode="auto"
+                 :with-horizontal-rule="true"
+                 :is-font-black="false">
+      {{ $t('project-stat-title') }}
+    </title-block>
+
+    <project-stat-block />
 
     <placeholder-block height="90px"/>
 

@@ -6,6 +6,7 @@ const props = withDefaults(defineProps<{
   from?: number;
   to: number;
   duration?: number;
+  delay?: number;
 }>(), {
   from: 0,
   duration: 500
@@ -16,14 +17,12 @@ const target = ref(props.to);
 tween({
   from: { x: props.from },
   to: { x: props.to },
-  delay: 1000,
+  delay: props.delay,
   duration: props.duration,
   easing: "easeOutExpo",
   render: state => {
-    const n = Math.round(Number.parseFloat(state["x"]));
-    // if (n > props.to)
-    //   return;
-    target.value = n;
+    //@ts-ignore
+    target.value = Math.round(Number.parseFloat(state.x));
   }
 });
 

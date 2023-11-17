@@ -21,16 +21,16 @@ setTitle("Home");
 
   <team-of-dreamers />
 
-  <div class="bg-white dark:bg-black h-40">
+<!--  <div class="bg-white dark:bg-black h-40">-->
 
-    <div class="responsive-width">
+<!--    <div class="responsive-width">-->
 
-      <h1>{{ $t("community-together-with-us") }}</h1>
+<!--      <h1>{{ $t("community-together-with-us") }}</h1>-->
 
-      <hr />
+<!--      <hr />-->
 
-    </div>
-  </div>
+<!--    </div>-->
+<!--  </div>-->
 
   <latest-news />
 
