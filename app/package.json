@@ -32,6 +32,7 @@
     "markdown-it-toc-done-right": "^4.2.0",
     "mitt": "^3.0.0",
     "pinia": "^2.0.33",
+    "shifty": "^3.0.3",
     "universal-cookie": "^6.1.1",
     "unplugin-vue-markdown": "^0.25.0",
     "vue": "^3.2.45",
