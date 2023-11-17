@@ -1,14 +1,13 @@
 <script setup lang="ts">
-import {computed, nextTick, onMounted, onUnmounted, reactive, ref, watch} from "vue";
-import {useIntersectionObserver, useWindowScroll} from '@vueuse/core'
-import {useRoute} from "vue-router";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
-import {promiseDebounce} from "@/utils/debounceUtils";
-import type {FeatureConfig, FeatureGroupModel, FeatureModel} from "@/apis/ProjectFeatureModels";
+import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
+import { useIntersectionObserver, useWindowScroll } from "@vueuse/core";
+import { useRoute } from "vue-router";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useUiStore } from "@/stores/uiStore";
+import { promiseDebounce } from "@/utils/debounceUtils";
+import type { FeatureConfig, FeatureGroupModel, FeatureModel } from "@/apis/ProjectFeatureModels";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
-import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
 
 const route = useRoute();
@@ -20,17 +19,17 @@ const uiStore = useUiStore();
 const focusedRef = ref(null);
 
 useIntersectionObserver(
-    focusedRef,
-    ([{isIntersecting}],) => {
-      featureFloatState.value = !isIntersecting;
-    },
-)
+  focusedRef,
+  ([{ isIntersecting }]) => {
+    featureFloatState.value = !isIntersecting;
+  }
+);
 
-const {y} = useWindowScroll();
+const { y } = useWindowScroll();
 
 watch(y, async (value) => {
   promiseDebounce(() => {
-    let sections = document.getElementsByTagName('section');
+    let sections = document.getElementsByTagName("section");
     for (let i = sections.length - 1; i >= 0; i--) {
       if ((sections[i]).offsetTop < value + 112) {
         currentFeatureId.value = sections[i].id;
@@ -49,11 +48,11 @@ const features = reactive<FeatureModel[]>([]);
 
 const updateGroups = (models: FeatureGroupModel[]) => {
   groups.splice(0, groups.length, ...models);
-}
+};
 
 const updateFeatures = (models: FeatureModel[]) => {
   features.splice(0, features.length, ...models);
-}
+};
 
 const getFeatureConfigPath = (locale?: string) => {
   return `../../../content/projects/${route.params.id}/features${locale ? `.${locale}` : `.${uiStore.locale}`}.json`;
@@ -62,23 +61,23 @@ const getFeatureConfigPath = (locale?: string) => {
 const getProjectFeatureConfig = async (path: string): Promise<FeatureConfig> => {
   const awaitConfig = await import(/* @vite-ignore */path);
   return awaitConfig as unknown as FeatureConfig;
-}
+};
 
 const featureFloatState = ref(false);
-const currentFeatureId = ref('');
+const currentFeatureId = ref("");
 
 const goFeatureSection = (id: string) => {
   const element = document.getElementById(`${id}-anchor`);
   if (element) {
-    element.scrollIntoView({behavior: 'smooth'});
+    element.scrollIntoView({ behavior: "smooth" });
   }
-}
+};
 
 const useGroupedFeatures = computed(() => {
   const groupedFeatures = features.reduce((acc, model) => {
-    const {group: groupId, ...rest} = model;
-    if (!acc[groupId ?? 'unclassified-1']) {
-      acc[groupId ?? 'unclassified-1'] = [];
+    const { group: groupId, ...rest } = model;
+    if (!acc[groupId ?? "unclassified-1"]) {
+      acc[groupId ?? "unclassified-1"] = [];
     }
     //@ts-ignore
     acc[groupId].push(rest);
@@ -111,7 +110,7 @@ const useGroupedFeatures = computed(() => {
 
 const getGroup = (id: string) => {
   return groups.find((group) => group.id === id);
-}
+};
 
 //endregion
 
@@ -121,10 +120,10 @@ onMounted(() => {
   getProjectFeatureConfig(configPath).then((config) => {
     updateGroups(config.groups);
     updateFeatures(config.features);
-    currentFeatureId.value = config.features[0]?.id ?? '';
+    currentFeatureId.value = config.features[0]?.id ?? "";
   });
 
-  emitter.on('toChangeLocale', async (e) => {
+  emitter.on("toChangeLocale", async (e) => {
     const event = e as { locale: string };
     await nextTick(() => {
       const configPath = getFeatureConfigPath(event.locale);
@@ -136,7 +135,7 @@ onMounted(() => {
   });
 
   nextTick(() => {
-    emitter.emit('toChangeProjectPaper', {paper: 'features'});
+    emitter.emit("toChangeProjectPaper", { paper: "features" });
   });
 });
 
@@ -148,7 +147,9 @@ onUnmounted(() => {
 
 <template>
 
-  <body-block class="feature-paper xl:flex overflow-hidden">
+  <div class="absolute -mt-20 w-0.5 h-0.5 bg-transparent" ref="focusedRef"></div>
+
+  <body-block class="xl:flex overflow-hidden">
 
     <div class="feature-index xl:flex-none">
 
@@ -162,7 +163,7 @@ onUnmounted(() => {
 
           <ul>
 
-            <li v-for="feature in features" :key="feature.id" class="feature-index-text" >
+            <li v-for="feature in features" :key="feature.id" class="feature-index-text">
               <a :href="`#${feature.id}`"
                  :class="{
                   'text-pink-500': currentFeatureId === feature.id,
@@ -183,8 +184,6 @@ onUnmounted(() => {
     </div>
 
     <div class="xl:flex-1 overflow-hidden p-4">
-
-      <div class="absolute top-56 w-0.5 h-0.5 bg-transparent" ref="focusedRef"></div>
 
       <section v-for="feature in features" :key="feature.id"
                :id="feature.id"
@@ -208,15 +207,11 @@ onUnmounted(() => {
 
   </body-block>
 
-  <placeholder-block height="20px"/>
+  <div class="feature-end relative"></div>
 
 </template>
 
 <style scoped lang="css">
-
-.feature-paper {
-  @apply mb-6;
-}
 
 .feature-index-group {
   @apply py-2;
@@ -230,7 +225,7 @@ onUnmounted(() => {
   @apply cursor-default;
 }
 
-.feature-index-group-title-hide{
+.feature-index-group-title-hide {
   display: none;
 }
 
@@ -238,10 +233,10 @@ onUnmounted(() => {
   @apply xl:pt-10 pt-0 xl:pl-10 pl-0;
   @apply text-sm font-light;
   @apply xl:w-64 xl:h-auto w-0 h-0 overflow-hidden;
-}
 
-.feature-index ul {
-  @apply xl:w-52 xl:h-auto w-0 h-0 overflow-hidden;
+  & ul {
+    @apply xl:w-52 xl:h-auto w-0 h-0 overflow-hidden;
+  }
 }
 
 .feature-index-current {
@@ -263,6 +258,12 @@ onUnmounted(() => {
   @apply text-black dark:text-white text-lg;
   @apply border-b-4 border-pink-500;
   font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
+}
+
+.feature-end {
+  @apply h-16;
+  background: linear-gradient(rgba(248, 248, 248, 0), rgba(248, 248, 248, 0.8), rgba(248, 248, 248, 1));
+  z-index: 1;
 }
 
 </style>

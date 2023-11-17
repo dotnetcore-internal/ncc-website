@@ -16,7 +16,7 @@ setTitle("contact-us", "i18n");
 
   </body-block>
 
-  <body-block class=" markdown-toc-right">
+  <body-block class="content-paper markdown-toc-right">
 
     <div class="xl:flex xl：justify-between">
 

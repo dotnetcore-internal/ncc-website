@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {computed, nextTick, onMounted} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useProjectStore} from "@/stores/projectStore";
+import { computed, nextTick, onMounted } from "vue";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useProjectStore } from "@/stores/projectStore";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import LicenseBlock from "@/components/projects/LicenseBlock.vue";
@@ -27,12 +27,12 @@ const useLicenseName = computed(() => {
   if (Array.isArray(target)) {
     // array
     return target.map(x => x.name);
-  } else if (typeof target === 'object') {
+  } else if (typeof target === "object") {
     // object
     return target.name;
   } else {
     // undefined
-    return '';
+    return "";
   }
 });
 
@@ -41,18 +41,18 @@ const useLicenseUrl = computed(() => {
   if (Array.isArray(target)) {
     // array
     return target.map(x => x.file);
-  } else if (typeof target === 'object') {
+  } else if (typeof target === "object") {
     // object
     return target.file;
   } else {
     // undefined
-    return '';
+    return "";
   }
 });
 
 onMounted(() => {
   nextTick(() => {
-    emitter.emit('toChangeProjectPaper', {paper: 'license'});
+    emitter.emit("toChangeProjectPaper", { paper: "license" });
   });
 });
 
@@ -60,17 +60,17 @@ onMounted(() => {
 
 <template>
 
-  <div v-if="useLicenseNumber === 0" class="project-paper p-5">
+  <div v-if="useLicenseNumber === 0" class="content-paper p-5">
     <p class="text-center">No License</p>
   </div>
 
   <div v-else-if="useLicenseNumber === 1">
 
-    <license-block :license="useLicenseName"/>
+    <license-block :license="useLicenseName" />
 
-    <body-block class="project-paper p-5">
+    <body-block class="content-paper p-5">
 
-      <p>{{ $t('raw-license-content') }}</p>
+      <p>{{ $t("raw-license-content") }}</p>
 
       <anchor class="underline hover:underline underline-offset-2 text-blue-500" :href="useLicenseUrl" target="_blank" title="Raw License Content" mode="classic">
         {{ useLicenseUrl }}
@@ -78,9 +78,9 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block class="project-paper">
+    <body-block class="content-paper">
 
-      <license-raw :raw-url="useLicenseUrl"/>
+      <license-raw :raw-url="useLicenseUrl" />
 
     </body-block>
 
@@ -88,11 +88,11 @@ onMounted(() => {
 
   <div v-else>
 
-    <license-block v-for="(item, index) in useLicenseName" :key="index" :license="item"/>
+    <license-block v-for="(item, index) in useLicenseName" :key="index" :license="item" />
 
-    <body-block class="project-paper p-5">
+    <body-block class="content-paper p-5">
 
-      <p>{{ $t('raw-license-content') }}</p>
+      <p>{{ $t("raw-license-content") }}</p>
 
       <ul class="list-disc list-inside">
         <li v-for="(item, index) in useLicenseUrl" :key="index">
@@ -104,13 +104,13 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="project-paper overflow-hidden">
+    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="content-paper overflow-hidden">
 
-      <license-raw :raw-url="item"/>
+      <license-raw :raw-url="item" />
 
     </body-block>
 
-    <placeholder-block height="90px"/>
+    <placeholder-block height="90px" />
 
   </div>
 
@@ -118,9 +118,5 @@ onMounted(() => {
 
 <style scoped lang="css">
 
-.project-paper {
-  @apply my-6 rounded-lg shadow overflow-hidden;
-  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
-}
 
 </style>

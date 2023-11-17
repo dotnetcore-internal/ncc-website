@@ -56,7 +56,7 @@ onUnmounted(() => {
 
     <project-cards :models="projects" for="archived"/>
 
-    <div class="the-archived archived-paper">
+    <div class="the-archived content-paper">
 
       <markdown-renderer source="projects/projects-after-archived" :i18n="true"/>
 
@@ -74,7 +74,7 @@ onUnmounted(() => {
 
     <project-cards :models="projects" for="other"/>
 
-    <div class="the-past past-paper">
+    <div class="the-past content-paper">
 
       <markdown-renderer source="projects/projects-as-past" :i18n="true"/>
 
@@ -91,10 +91,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="css">
-.archived-paper,.past-paper {
-  @apply my-6 p-5 rounded-lg shadow;
-  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
-}
 
 .the-archived,
 .the-archived .markdown-body,

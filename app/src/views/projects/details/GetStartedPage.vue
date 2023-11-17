@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {nextTick, onMounted} from "vue";
-import {useRoute} from "vue-router";
-import {useEmitter} from "@/hooks/useEmitter";
+import { nextTick, onMounted } from "vue";
+import { useRoute } from "vue-router";
+import { useEmitter } from "@/hooks/useEmitter";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
@@ -12,7 +12,7 @@ const emitter = useEmitter();
 
 onMounted(() => {
   nextTick(() => {
-    emitter.emit('toChangeProjectPaper', {paper: 'get-started'});
+    emitter.emit("toChangeProjectPaper", { paper: "get-started" });
   });
 });
 
@@ -20,7 +20,7 @@ onMounted(() => {
 
 <template>
 
-  <body-block class="project-paper markdown-toc-right">
+  <body-block class="content-paper markdown-toc-right">
 
     <div class="xl:flex xl：justify-between">
 
@@ -33,22 +33,18 @@ onMounted(() => {
                            :include-file-extension="true"
                            file-extension=".md"
                            retry-timeout="1000"
-                           :redirect-to404="false"/>
+                           :redirect-to404="false" />
       </div>
 
     </div>
 
   </body-block>
 
-  <placeholder-block height="20px"/>
+  <placeholder-block height="20px" />
 
 </template>
 
 <style scoped lang="css">
 
-.project-paper {
-  @apply my-6 p-5 rounded-lg shadow;
-  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
-}
 
 </style>

@@ -192,6 +192,11 @@ body {
     @apply mx-auto;
 }
 
+.content-paper{
+    @apply my-6 p-5 rounded-lg shadow;
+    @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
+}
+
 .markdown-body {
     @apply !bg-transparent p-5 pb-10;
 

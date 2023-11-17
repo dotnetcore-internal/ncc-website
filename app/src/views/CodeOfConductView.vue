@@ -59,7 +59,7 @@ onUnmounted(() => {
 
   </div>
 
-  <body-block class="coc-paper markdown-toc-right">
+  <body-block class="content-paper markdown-toc-right">
 
     <div class="xl:flex xl：justify-between">
 
@@ -103,11 +103,6 @@ onUnmounted(() => {
 </template>
 
 <style scoped lang="css">
-
-.coc-paper {
-  @apply my-6 p-5 rounded-lg shadow;
-  @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
-}
 
 .coc-note {
 
