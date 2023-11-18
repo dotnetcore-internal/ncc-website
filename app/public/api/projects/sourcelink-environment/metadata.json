@@ -14,6 +14,9 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
+  "language": [
+    "Xml"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/SourceLink.Environment/master/LICENSE"

@@ -14,6 +14,9 @@
     "url": "https://github.com/xin-lai"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/Magicodes.IE/master/LICENSE"

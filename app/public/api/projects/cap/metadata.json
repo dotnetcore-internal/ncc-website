@@ -14,6 +14,9 @@
     "url": "https://github.com/yang-xiaodong"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/CAP/master/LICENSE.txt"

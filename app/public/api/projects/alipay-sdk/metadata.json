@@ -14,6 +14,9 @@
     "url": "https://github.com/stulzq"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/Alipay.AopSdk.Core/master/LICENSE"
