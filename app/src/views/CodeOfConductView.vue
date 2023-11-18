@@ -15,7 +15,8 @@ const emitter = useEmitter();
 onMounted(async () => {
 
   emitter.on("toChangeLocale", async (e) => {
-    nextTick(() => {
+    await nextTick(() => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const event = e as { locale: string };
       setTitle("code-of-conduct", "i18n");
     });

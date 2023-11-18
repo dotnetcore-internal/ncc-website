@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {setTitle} from "@/hooks/usePageToolkits";
+import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-setTitle('pmc', 'i18n');
+setTitle("pmc", "i18n");
 
 </script>
 
@@ -12,7 +12,7 @@ setTitle('pmc', 'i18n');
 
   <body-block>
 
-    <title-block>{{ $t('pmc') }}</title-block>
+    <title-block>{{ $t("pmc") }}</title-block>
 
   </body-block>
 

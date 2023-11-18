@@ -250,7 +250,7 @@ onUnmounted(() => {
 .feature-item {
   @apply p-3 my-6 rounded-lg shadow;
   @apply bg-white/50 dark:bg-black/50 backdrop-blur-3xl;
-  box-shadow: 0px 0px 24px rgba(11, 15, 33, 0.05), 0px 0px 5px rgba(11, 15, 33, 0.04);
+  box-shadow: 0 0 24px rgba(11, 15, 33, 0.05), 0 0 5px rgba(11, 15, 33, 0.04);
 }
 
 .feature-item-title {
@@ -267,7 +267,7 @@ onUnmounted(() => {
 }
 
 @media (prefers-color-scheme: dark) {
-  .feature-end{
+  .feature-end {
     background: linear-gradient(rgba(29, 31, 32, 0), rgba(29, 31, 32, 0.8), rgba(29, 31, 32, 1));
   }
 }

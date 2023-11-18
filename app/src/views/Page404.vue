@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {setTitle} from "@/hooks/usePageToolkits";
+import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 
-setTitle('Page Not Found');
+setTitle("Page Not Found");
 </script>
 
 <template>
@@ -27,12 +27,13 @@ setTitle('Page Not Found');
 </template>
 
 <style scoped lang="css">
-.err-404{
+.err-404 {
   @apply text-9xl font-black text-center leading-10;
   @apply pt-48;
   font-family: 'Lexend', 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
-.err-jump{
+
+.err-jump {
   @apply text-sm text-center leading-10 mt-6;
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }

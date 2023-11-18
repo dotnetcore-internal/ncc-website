@@ -5,7 +5,7 @@ body, ol, ul, h1, h2, h3, h4, h5, p, blockquote, th, td, dl, dt, dd, form, input
 
 body {
     -webkit-text-size-adjust: none;
-    font: 1em/1.5 'Microsoft YaHei',Helvetica,Arial,sans-serif;
+    font: 1em/1.5 'Microsoft YaHei', Helvetica, Arial, sans-serif;
     min-width: 320px;
     min-height: 100%;
 }
@@ -55,6 +55,7 @@ p {
 i {
     font-style: normal;
 }
+
 /*ios-input-submit-button*/
 input[type="text"], input[type="password"], input[type="email"], input[type="tel"], input[type="number"], textarea {
     -moz-appearance: none;
@@ -62,7 +63,7 @@ input[type="text"], input[type="password"], input[type="email"], input[type="tel
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
     border-radius: 0;
-    font-family: 'Microsoft YaHei',Helvetica,Arial,sans-serif;
+    font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
 
 input::-webkit-inner-spin-button {
@@ -166,8 +167,8 @@ input::-webkit-inner-spin-button {
     text-indent: 2em;
 }
 
-.h100percent{
-    height:100%;
+.h100percent {
+    height: 100%;
 }
 
 .f0 {
@@ -254,6 +255,7 @@ input::-webkit-inner-spin-button {
     font-size: 30px;
     font-size: 1.875rem;
 }
+
 .f40 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -319,7 +321,7 @@ input::-webkit-inner-spin-button {
     margin-top: 16px;
 }
 
-.mt40{
+.mt40 {
     margin-top: 40px;
 }
 
@@ -572,28 +574,28 @@ input::-webkit-inner-spin-button {
     width: 100%;
 }
 
-.iw90{
+.iw90 {
     width: 90%;
 }
 
-.iw60{
+.iw60 {
     width: 60%;
 }
 
-.iw80{
+.iw80 {
     width: 80%;
 }
 
-.iw95{
+.iw95 {
     width: 95%;
 }
 
-.ismall{
+.ismall {
     width: 25%;
     height: 25%;
 }
 
-.imedium{
+.imedium {
     width: 30%;
     height: 30%;
 }
@@ -644,7 +646,7 @@ input::-webkit-inner-spin-button {
     text-align: center;
     color: #fff;
     background: #0096dc;
-    font-family: 'Microsoft YaHei',Helvetica,Arial,sans-serif;
+    font-family: 'Microsoft YaHei', Helvetica, Arial, sans-serif;
 }
 
 .boxSizBr {
@@ -653,6 +655,6 @@ input::-webkit-inner-spin-button {
     box-sizing: border-box;
 }
 
-.fyh{
+.fyh {
     font-family: 'Microsoft YaHei';
 }

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {computed, onMounted, watch} from "vue";
-import {usePreferredDark, useWindowSize} from '@vueuse/core'
-import {unlockBody} from "@/hooks/usePageToolkits";
+import { computed, onMounted, watch } from "vue";
+import { usePreferredDark, useWindowSize } from "@vueuse/core";
+import { unlockBody } from "@/hooks/usePageToolkits";
 
-import {useUiStore} from "@/stores/uiStore";
-import {RightSmallUp} from "@icon-park/vue-next";
+import { useUiStore } from "@/stores/uiStore";
+import { RightSmallUp } from "@icon-park/vue-next";
 
 import TitleFrame from "@/components/common/header/TitleFrame.vue";
 import TitleContentBlock from "@/components/common/header/TitleContentBlock.vue";
@@ -12,7 +12,7 @@ import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();
 
-const {width} = useWindowSize();
+const { width } = useWindowSize();
 
 const updateMobileMode = (n: number) => {
   if (n < 1024) {
@@ -30,14 +30,14 @@ watch(width, (n) => {
 const currentPrefersDarkMode = usePreferredDark();
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
-      ? '#f8f8f8'
-      : '#000000';
+    ? "#f8f8f8"
+    : "#000000";
 });
 
 const useSecondaryTitleTopBorder = computed(() => {
   return uiStore.isMobileMode
-      ? '2px'
-      : '0';
+    ? "2px"
+    : "0";
 });
 
 onMounted(() => {
@@ -51,27 +51,27 @@ onMounted(() => {
   <title-frame>
 
     <title-content-block feature-key="about">
-      <span class="header-title">{{ $t('about') }}</span>
+      <span class="header-title">{{ $t("about") }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('about-block-discover-ncc') }}</li>
+          <li class="header-sub-title">{{ $t("about-block-discover-ncc") }}</li>
 
           <li class="header-content">
             <anchor href="/about/who-we-are" :title="$t('who-we-are')" mode="classic">
-              {{ $t('who-we-are') }}
+              {{ $t("who-we-are") }}
               <span>
-                {{ $t('who-we-are-desc') }}
+                {{ $t("who-we-are-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/people/project-management-committee" :title="$t('pmc')" mode="classic">
-              {{ $t('pmc') }}
+              {{ $t("pmc") }}
               <span>
-                {{ $t('pmc-desc') }}
+                {{ $t("pmc-desc") }}
               </span>
             </anchor>
           </li>
@@ -83,17 +83,17 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('about-block-additional-info') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("about-block-additional-info") }}</li>
 
           <li class="header-content">
             <anchor href="/conduct" :title="$t('code-of-conduct')" mode="classic">
-              {{ $t('code-of-conduct') }}
+              {{ $t("code-of-conduct") }}
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/about/faq" :title="$t('faq')" mode="classic">
-              {{ $t('faq') }}
+              {{ $t("faq") }}
             </anchor>
           </li>
 
@@ -104,13 +104,13 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('about-block-featured-reads') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("about-block-featured-reads") }}</li>
 
           <li class="header-content">
             <anchor href="/about/story" :title="$t('story')" mode="classic">
-              {{ $t('story') }}
+              {{ $t("story") }}
               <span>
-                {{ $t('story-desc') }}
+                {{ $t("story-desc") }}
               </span>
             </anchor>
           </li>
@@ -121,45 +121,45 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="projects">
-      <span class="header-title">{{ $t('projects') }}</span>
+      <span class="header-title">{{ $t("projects") }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('projects-block-ncc-projects') }}</li>
+          <li class="header-sub-title">{{ $t("projects-block-ncc-projects") }}</li>
 
           <li class="header-content">
             <anchor href="/projects" :title="$t('project-all-full')" mode="classic">
-              {{ $t('project-all') }}
+              {{ $t("project-all") }}
               <span>
-                {{ $t('project-all-desc') }}
+                {{ $t("project-all-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/top-level-projects" :title="$t('project-top-level-full')" mode="classic">
-              {{ $t('project-top-level') }}
+              {{ $t("project-top-level") }}
               <span>
-                {{ $t('project-top-level-desc') }}
+                {{ $t("project-top-level-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/archived-projects" :title="$t('project-archived-full')" mode="classic">
-              {{ $t('project-archived') }}
+              {{ $t("project-archived") }}
               <span>
-                {{ $t('project-archived-desc') }}
+                {{ $t("project-archived-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/project-maturity-model" :title="$t('project-maturity-model-full')" mode="classic">
-              {{ $t('project-maturity-model') }}
+              {{ $t("project-maturity-model") }}
               <span>
-                {{ $t('project-maturity-model-desc') }}
+                {{ $t("project-maturity-model-desc") }}
               </span>
             </anchor>
           </li>
@@ -171,32 +171,32 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('projects-block-get-involved') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("projects-block-get-involved") }}</li>
 
           <li class="header-content">
             <anchor href="https://contribute.ncc.work" :title="$t('project-contribute')" target="_blank" mode="classic">
-              {{ $t('project-contribute') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("project-contribute") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('project-contribute-desc') }}
+                {{ $t("project-contribute-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://landscape.ncc.work" :title="$t('project-landscape')" target="_blank" mode="classic">
-              {{ $t('project-landscape') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("project-landscape") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('project-landscape-desc') }}
+                {{ $t("project-landscape-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://contribute.ncc.work/project-join-ncc" :title="$t('project-how-to-join-us')" target="_blank" mode="classic">
-              {{ $t('project-how-to-join-us') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("project-how-to-join-us") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
             </anchor>
           </li>
 
@@ -207,26 +207,26 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('projects-block-tools-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("projects-block-tools-resources") }}</li>
 
           <li class="header-content">
             <anchor href="https://tools.ncc.work" :title="$t('project-tools')" target="_blank" mode="classic">
-              {{ $t('project-tools') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("project-tools") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://github.com/dotnetcore" title="NCC@GitHub" target="_blank" mode="classic">
               NCC@GitHub
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://gitee.com/dotnetcore" title="NCC@Gitee" target="_blank" mode="classic">
               NCC@Gitee
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
             </anchor>
           </li>
 
@@ -236,12 +236,12 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="learning">
-      <span class="header-title">{{ $t('learning') }}</span>
+      <span class="header-title">{{ $t("learning") }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('learning-block-applying') }}</li>
+          <li class="header-sub-title">{{ $t("learning-block-applying") }}</li>
 
         </ul>
 
@@ -250,7 +250,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('learning-block-additional-info') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("learning-block-additional-info") }}</li>
 
         </ul>
 
@@ -259,7 +259,7 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('learning-block-featured-reads') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("learning-block-featured-reads") }}</li>
 
         </ul>
 
@@ -267,39 +267,39 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="community">
-      <span class="header-title">{{ $t('community') }}</span>
+      <span class="header-title">{{ $t("community") }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('community-block-take-part') }}</li>
+          <li class="header-sub-title">{{ $t("community-block-take-part") }}</li>
 
           <li class="header-content">
             <anchor href="https://events.ncc.work" :title="$t('community-events')" target="_blank" mode="classic">
-              {{ $t('community-events') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("community-events") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('community-events-desc') }}
+                {{ $t("community-events-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://events.ncc.work/meetups" :title="$t('community-meetups')" target="_blank" mode="classic">
-              {{ $t('community-meetups') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("community-meetups") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('community-meetups-desc') }}
+                {{ $t("community-meetups-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://2f.ncc.work" :title="$t('community-2f')" target="_blank" mode="classic">
-              {{ $t('community-2f') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("community-2f") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('community-2f-desc') }}
+                {{ $t("community-2f-desc") }}
               </span>
             </anchor>
           </li>
@@ -311,31 +311,31 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('community-block-content') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("community-block-content") }}</li>
 
           <li class="header-content">
             <anchor href="/community-online" :title="$t('community-online')" mode="classic">
-              {{ $t('community-online') }}
+              {{ $t("community-online") }}
               <span>
-                {{ $t('community-online-desc') }}
+                {{ $t("community-online-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/participation-guidelines" :title="$t('community-participation')" mode="classic">
-              {{ $t('community-participation') }}
+              {{ $t("community-participation") }}
               <span>
-                {{ $t('community-participation-desc')}}
+                {{ $t("community-participation-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/rules" :title="$t('community-rules')" mode="classic">
-              {{ $t('community-rules') }}
+              {{ $t("community-rules") }}
               <span>
-                {{ $t('community-rules-desc')}}
+                {{ $t("community-rules-desc") }}
               </span>
             </anchor>
           </li>
@@ -347,14 +347,14 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('community-block-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("community-block-resources") }}</li>
 
           <li class="header-content">
             <anchor href="https://glossary.ncc.work" :title="$t('glossary')" target="_blank" mode="classic">
-              {{ $t('glossary') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("glossary") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
               <span>
-                {{ $t('glossary-desc') }}
+                {{ $t("glossary-desc") }}
               </span>
             </anchor>
           </li>
@@ -365,36 +365,36 @@ onMounted(() => {
     </title-content-block>
 
     <title-content-block feature-key="resource">
-      <span class="header-title">{{ $t('resources-and-media') }}</span>
+      <span class="header-title">{{ $t("resources-and-media") }}</span>
       <template #col1>
 
         <ul>
 
-          <li class="header-sub-title">{{ $t('media-block-news') }}</li>
+          <li class="header-sub-title">{{ $t("media-block-news") }}</li>
 
           <li class="header-content">
             <anchor href="/news" :title="$t('media-news')" mode="classic">
-              {{ $t('media-news') }}
+              {{ $t("media-news") }}
               <span>
-                {{ $t('media-news-desc')}}
+                {{ $t("media-news-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/weekly" :title="$t('media-weekly')" mode="classic">
-              {{ $t('media-weekly') }}
+              {{ $t("media-weekly") }}
               <span>
-                {{ $t('media-weekly-desc')}}
+                {{ $t("media-weekly-desc") }}
               </span>
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="/announcements" :title="$t('media-announcements')" mode="classic">
-              {{ $t('media-announcements') }}
+              {{ $t("media-announcements") }}
               <span>
-                {{ $t('media-announcements-desc')}}
+                {{ $t("media-announcements-desc") }}
               </span>
             </anchor>
           </li>
@@ -406,18 +406,18 @@ onMounted(() => {
 
         <ul>
 
-          <li class="header-sub-title header-sub-title-secondary">{{ $t('media-block-resources') }}</li>
+          <li class="header-sub-title header-sub-title-secondary">{{ $t("media-block-resources") }}</li>
 
           <li class="header-content">
             <anchor href="/brand-guidelines" :title="$t('media-brand')" mode="classic">
-              {{ $t('media-brand') }}
+              {{ $t("media-brand") }}
             </anchor>
           </li>
 
           <li class="header-content">
             <anchor href="https://github.com/dotnetcore/ncc-artwork" :title="$t('media-logos')" target="_blank" mode="classic">
-              {{ $t('media-logos') }}
-              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor"/>
+              {{ $t("media-logos") }}
+              <right-small-up class="header-content-arrow" theme="filled" size="24" :fill="useIconColor" />
             </anchor>
           </li>
 

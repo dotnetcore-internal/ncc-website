@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {computed, onMounted, onUnmounted, ref} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
+import { computed, onMounted, onUnmounted, ref } from "vue";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useUiStore } from "@/stores/uiStore";
 
 import MarkdownIt from "markdown-it";
 // @ts-ignore
@@ -17,9 +17,9 @@ import MarkdownItSup from "markdown-it-sup";
 import MarkdownItTaskLists from "markdown-it-task-lists";
 import MarkdownItTOC from "markdown-it-toc-done-right";
 // @ts-ignore
-import MarkdownHighlight from 'markdown-it-highlight-lines';
-import {align} from "@mdit/plugin-align";
-import {mark} from "@mdit/plugin-mark";
+import MarkdownHighlight from "markdown-it-highlight-lines";
+import { align } from "@mdit/plugin-align";
+import { mark } from "@mdit/plugin-mark";
 
 import WaveLoading from "@/components/basic/WaveLoading.vue";
 
@@ -34,45 +34,45 @@ const props = withDefaults(defineProps<{
   fileExtension?: string;
 }>(), {
   i18n: false,
-  fallbackLocale: 'en',
+  fallbackLocale: "en",
   includeFileExtension: true,
-  fileExtension: '.md'
+  fileExtension: ".md"
 });
 
-const markdown = new MarkdownIt({html: true, xhtmlOut: true, breaks: true, linkify: true, typographer: true})
-    .use(MarkdownItAbbr)
-    .use(MarkdownItAnchor)
-    .use(MarkdownItFootnote)
-    .use(MarkdownItHighlightJS)
-    .use(MarkdownItSub)
-    .use(MarkdownItSup)
-    .use(MarkdownItTaskLists)
-    .use(MarkdownItTOC)
-    .use(MarkdownHighlight)
-    .use(align)
-    .use(mark);
+const markdown = new MarkdownIt({ html: true, xhtmlOut: true, breaks: true, linkify: true, typographer: true })
+  .use(MarkdownItAbbr)
+  .use(MarkdownItAnchor)
+  .use(MarkdownItFootnote)
+  .use(MarkdownItHighlightJS)
+  .use(MarkdownItSub)
+  .use(MarkdownItSup)
+  .use(MarkdownItTaskLists)
+  .use(MarkdownItTOC)
+  .use(MarkdownHighlight)
+  .use(align)
+  .use(mark);
 
 const loading = ref(true);
 const success = ref(false);
-const content = ref('');
-const key = ref('');
+const content = ref("");
+const key = ref("");
 
 const useLocaleSuffix = computed(() => {
   if (props.i18n)
     return `.${uiStore.locale}`;
-  return '';
+  return "";
 });
 
 const useFallbackLocaleSuffix = computed(() => {
   if (props.i18n)
     return `.${props.fallbackLocale}`;
-  return '';
+  return "";
 });
 
 const useFileExtensions = computed(() => {
   if (props.includeFileExtension)
     return props.fileExtension;
-  return '';
+  return "";
 });
 
 const useMarkdownContent = computed(() => {
@@ -91,7 +91,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
   if (source.length === 0) {
 
-    content.value = '';
+    content.value = "";
     loading.value = false;
     success.value = false;
 
@@ -99,7 +99,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
     if (!locale || locale.length === 0) {
       locale = useLocaleSuffix.value;
-    } else if (!locale.startsWith('.')) {
+    } else if (!locale.startsWith(".")) {
       locale = `.${locale}`;
     }
 
@@ -116,7 +116,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
         if (!locale || locale.length === 0) {
           locale = useFallbackLocaleSuffix.value;
-        } else if (!locale.startsWith('.')) {
+        } else if (!locale.startsWith(".")) {
           locale = `.${locale}`;
         }
 
@@ -129,7 +129,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
         } else {
 
-          content.value = '';
+          content.value = "";
           success.value = false;
 
         }
@@ -140,7 +140,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
       if (!locale || locale.length === 0) {
         locale = useFallbackLocaleSuffix.value;
-      } else if (!locale.startsWith('.')) {
+      } else if (!locale.startsWith(".")) {
         locale = `.${locale}`;
       }
 
@@ -153,7 +153,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
       } else {
 
-        content.value = '';
+        content.value = "";
         success.value = false;
 
       }
@@ -169,14 +169,14 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
 onMounted(async () => {
 
-  emitter.on('toRerenderMarkdown', (e) => {
+  emitter.on("toRerenderMarkdown", (e) => {
     const event = e as { source: string, locale?: string };
     toLoadMarkdownContent(event.source, event.locale);
   });
 
   await toLoadMarkdownContent(props.source);
 
-})
+});
 
 onUnmounted(() => {
 
@@ -188,9 +188,9 @@ onUnmounted(() => {
 
 <template>
 
-  <wave-loading v-show="loading"/>
+  <wave-loading v-show="loading" />
 
-  <div v-show="!loading" v-html="useMarkdownHtml" class="markdown-body" :key="key"/>
+  <div v-show="!loading" v-html="useMarkdownHtml" class="markdown-body" :key="key" />
 
 </template>
 

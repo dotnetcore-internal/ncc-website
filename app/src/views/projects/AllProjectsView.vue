@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {onMounted, onUnmounted, reactive} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
+import { onMounted, onUnmounted, reactive } from "vue";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useUiStore } from "@/stores/uiStore";
 
-import {setTitle} from "@/hooks/usePageToolkits";
-import {loadProjectsAsync} from "@/hooks/useProjectToolkits";
-import type {CatalogueMap, ProjectCardModel} from "@/apis/QueryProjectListApi";
+import { setTitle } from "@/hooks/usePageToolkits";
+import { loadProjectsAsync } from "@/hooks/useProjectToolkits";
+import type { CatalogueMap, ProjectCardModel } from "@/apis/QueryProjectListApi";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MemberProjects from "@/components/projects/MemberProjects.vue";
@@ -26,19 +26,19 @@ const updateProjects = (models: ProjectCardModel[]) => {
   for (const model of models) {
     projects.push(model);
   }
-}
+};
 
 const updateCatalogues = (catalog: CatalogueMap) => {
   for (const key in catalog) {
     catalogues[key] = catalog[key];
   }
-}
+};
 
-setTitle('project-all-full', 'i18n');
+setTitle("project-all-full", "i18n");
 
 onMounted(async () => {
 
-  emitter.on('toChangeLocale', async (e) => {
+  emitter.on("toChangeLocale", async (e) => {
     const event = e as { locale: string };
     await loadProjectsAsync(event.locale, updateProjects, updateCatalogues);
   });
@@ -56,7 +56,7 @@ onUnmounted(() => {
 
   <body-block>
 
-    <project-header feature-key="all"/>
+    <project-header feature-key="all" />
 
     <project-cards :models="projects"
                    :catalogues="catalogues"
@@ -67,53 +67,53 @@ onUnmounted(() => {
                    :enable-grouped-by-catalogue="true"
     />
 
-    <placeholder-block height="90px"/>
+    <placeholder-block height="90px" />
 
     <title-block h1-mode="false"
                  color-mode="auto"
                  :with-horizontal-rule="true"
                  :is-font-black="false">
-      {{ $t('our-laboratory-projects-title') }}
+      {{ $t("our-laboratory-projects-title") }}
     </title-block>
 
     <span class="the-labs">
-      {{ $t('project-laboratory-desc') }}
+      {{ $t("project-laboratory-desc") }}
     </span>
 
-    <project-cards :models="projects" for="labs"/>
+    <project-cards :models="projects" for="labs" />
 
-    <placeholder-block height="90px"/>
+    <placeholder-block height="90px" />
 
     <title-block h1-mode="false"
                  color-mode="auto"
                  :with-horizontal-rule="true"
                  :is-font-black="false">
-      {{ $t('our-translation-projects-title') }}
+      {{ $t("our-translation-projects-title") }}
     </title-block>
 
     <span class="the-translation">
-      {{ $t('project-translation-desc') }}
+      {{ $t("project-translation-desc") }}
     </span>
 
-    <project-cards :models="projects" for="translation"/>
+    <project-cards :models="projects" for="translation" />
 
-    <placeholder-block height="90px"/>
+    <placeholder-block height="90px" />
 
     <title-block h1-mode="false"
                  color-mode="auto"
                  :with-horizontal-rule="true"
                  :is-font-black="false">
-      {{ $t('project-stat-title') }}
+      {{ $t("project-stat-title") }}
     </title-block>
 
     <project-stat-block />
 
-    <placeholder-block height="90px"/>
+    <placeholder-block height="90px" />
 
   </body-block>
 
   <member-projects :models="projects">
-    {{ $t('our-projects-title-by-name') }}
+    {{ $t("our-projects-title-by-name") }}
   </member-projects>
 
 </template>

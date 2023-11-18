@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
-import {usePreferredDark} from "@vueuse/core";
+import { computed, ref } from "vue";
+import { usePreferredDark } from "@vueuse/core";
 
-import {useUiStore} from "@/stores/uiStore";
-import {go, lockBody, unlockBody} from "@/hooks/usePageToolkits";
+import { useUiStore } from "@/stores/uiStore";
+import { go, lockBody, unlockBody } from "@/hooks/usePageToolkits";
 
-import {Close, HamburgerButton} from "@icon-park/vue-next";
+import { Close, HamburgerButton } from "@icon-park/vue-next";
 
 import JoinUsButton from "@/components/common/JoinUsButton.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
@@ -16,20 +16,20 @@ const currentPrefersDarkMode = usePreferredDark();
 
 const useLogoUrl = computed(() => {
   return currentPrefersDarkMode.value
-      ? '/images/logo-header-dark.png'
-      : '/images/logo-header-light.png';
+    ? "/images/logo-header-dark.png"
+    : "/images/logo-header-light.png";
 });
 
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
-      ? '#f8f8f8'
-      : '#000000';
+    ? "#f8f8f8"
+    : "#000000";
 });
 
 const useHeaderClass = computed(() => {
   return uiStore.isMobileMode
-      ? 'bg-white dark:bg-black'
-      : 'backdrop-blur-md bg-white/75 dark:bg-black/75';
+    ? "bg-white dark:bg-black"
+    : "backdrop-blur-md bg-white/75 dark:bg-black/75";
 });
 
 //region Mobile Mode
@@ -60,7 +60,7 @@ const switchMobileMenu = () => {
         <template #left>
           <div class="inline-block align-top">
             <a href="/app/public" @click.prevent="go('home')" title=".NET Core Community">
-              <img :src="useLogoUrl" width="180" alt="NCC"/>
+              <img :src="useLogoUrl" width="180" alt="NCC" />
             </a>
           </div>
           <div class="ml-5 inline-block">
@@ -74,7 +74,7 @@ const switchMobileMenu = () => {
         <template #right>
           <div class="mx-auto mt-6">
             <join-us-button>
-              {{ $t('join-at-header-desktop') }}
+              {{ $t("join-at-header-desktop") }}
             </join-us-button>
           </div>
         </template>
@@ -89,15 +89,15 @@ const switchMobileMenu = () => {
         <template #left>
           <div class="inline-block align-top mt-2 ml-4">
             <a href="/" @click.prevent="go('home')" title=".NET Core Community">
-              <img :src="useLogoUrl" width="140" alt="NCC"/>
+              <img :src="useLogoUrl" width="140" alt="NCC" />
             </a>
           </div>
         </template>
 
         <template #right>
           <div class="mr-8 mt-8 cursor-pointer" @click="switchMobileMenu">
-              <hamburger-button v-show="!displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
-              <close v-show="displayMobileMenu" theme="filled" size="28" :fill="useIconColor"/>
+            <hamburger-button v-show="!displayMobileMenu" theme="filled" size="28" :fill="useIconColor" />
+            <close v-show="displayMobileMenu" theme="filled" size="28" :fill="useIconColor" />
           </div>
         </template>
 
@@ -119,7 +119,7 @@ const switchMobileMenu = () => {
 
           <div class="px-10">
             <join-us-button mode="block" :need-refresh="true">
-              <span class="text-lg">{{ $t('join-at-header-mobile') }}</span>
+              <span class="text-lg">{{ $t("join-at-header-mobile") }}</span>
             </join-us-button>
           </div>
 

@@ -1,29 +1,29 @@
-import {ref} from "vue";
-import {defineStore} from "pinia";
+import { ref } from "vue";
+import { defineStore } from "pinia";
 
 export const useUiStore = defineStore("ui", () => {
 
-    //region isMobileMode
-    const isMobileMode = ref(false);
+  //region isMobileMode
+  const isMobileMode = ref(false);
 
-    const setMobileMode = (mobileMode: boolean) => isMobileMode.value = mobileMode;
+  const setMobileMode = (mobileMode: boolean) => isMobileMode.value = mobileMode;
 
-    //endregion
+  //endregion
 
-    //region Locale
+  //region Locale
 
-    const locale = ref("en");
+  const locale = ref("en");
 
-    const setLocale = (newLocale: string) => {
-        locale.value = newLocale;
-    };
+  const setLocale = (newLocale: string) => {
+    locale.value = newLocale;
+  };
 
-    //endregion
+  //endregion
 
-    return {
-        isMobileMode,
-        setMobileMode,
-        locale,
-        setLocale
-    };
+  return {
+    isMobileMode,
+    setMobileMode,
+    locale,
+    setLocale
+  };
 });

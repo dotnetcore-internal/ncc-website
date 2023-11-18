@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {computed} from "vue";
-import {usePreferredDark} from '@vueuse/core'
-import {RightSmallUp} from "@icon-park/vue-next";
+import { computed } from "vue";
+import { usePreferredDark } from "@vueuse/core";
+import { RightSmallUp } from "@icon-park/vue-next";
 
-import {useUiStore} from "@/stores/uiStore";
+import { useUiStore } from "@/stores/uiStore";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
@@ -13,7 +13,7 @@ const uiStore = useUiStore();
 const currentPrefersDarkMode = usePreferredDark();
 
 const props = withDefaults(defineProps<{
-  featureKey: 'all' | 'top-level' | 'archived' | 'maturity-model'
+  featureKey: "all" | "top-level" | "archived" | "maturity-model"
 }>(), {});
 
 const isMobileMode = computed(() => {
@@ -22,14 +22,14 @@ const isMobileMode = computed(() => {
 
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
-      ? '#f8f8f8'
-      : '#000000';
+    ? "#f8f8f8"
+    : "#000000";
 });
 </script>
 
 <template>
 
-  <placeholder-block height="20px" v-show="!isMobileMode"/>
+  <placeholder-block height="20px" v-show="!isMobileMode" />
 
   <div class="project-titles grid grid-cols-5 w-5/6 mx-auto" v-show="!isMobileMode">
 
@@ -40,7 +40,7 @@ const useIconColor = computed(() => {
             :title="$t('project-all-full')"
             mode="h5">
 
-      {{ $t('project-all') }}
+      {{ $t("project-all") }}
 
     </anchor>
 
@@ -51,7 +51,7 @@ const useIconColor = computed(() => {
             :title="$t('project-top-level-full')"
             mode="h5">
 
-      {{ $t('project-top-level') }}
+      {{ $t("project-top-level") }}
 
     </anchor>
 
@@ -62,7 +62,7 @@ const useIconColor = computed(() => {
             :title="$t('project-archived-full')"
             mode="h5">
 
-      {{ $t('project-archived') }}
+      {{ $t("project-archived") }}
 
     </anchor>
 
@@ -72,7 +72,7 @@ const useIconColor = computed(() => {
             route-name="project-maturity-model"
             :title="$t('project-maturity-model')"
             mode="h5">
-      {{ $t('project-maturity-model') }}
+      {{ $t("project-maturity-model") }}
 
     </anchor>
 
@@ -81,31 +81,31 @@ const useIconColor = computed(() => {
             target="_blank"
             :title="$t('project-how-to-join-us')"
             mode="classic">
-      {{ $t('project-contribute') }}
-      <right-small-up class="title-arrow" theme="filled" size="18" :fill="useIconColor"/>
+      {{ $t("project-contribute") }}
+      <right-small-up class="title-arrow" theme="filled" size="18" :fill="useIconColor" />
     </anchor>
 
   </div>
 
   <div v-show="isMobileMode">
     <title-block :with-placeholder="false" :is-font-black="true">
-      <span v-if="featureKey === 'all'">{{ $t('project-all-full') }}</span>
-      <span v-else-if="featureKey === 'top-level'">{{ $t('project-top-level-full') }}</span>
-      <span v-else-if="featureKey === 'archived'">{{ $t('project-archived-full') }}</span>
-      <span v-else-if="featureKey === 'maturity-model'">{{ $t('project-maturity-model-full') }}</span>
+      <span v-if="featureKey === 'all'">{{ $t("project-all-full") }}</span>
+      <span v-else-if="featureKey === 'top-level'">{{ $t("project-top-level-full") }}</span>
+      <span v-else-if="featureKey === 'archived'">{{ $t("project-archived-full") }}</span>
+      <span v-else-if="featureKey === 'maturity-model'">{{ $t("project-maturity-model-full") }}</span>
       <span v-else>FeatureKey is Error</span>
     </title-block>
   </div>
 
   <div class="p-5 mx-auto" :class="{'project-desc': !isMobileMode}">
-    <span v-if="featureKey === 'all'">{{ $t('project-all-desc') }}</span>
-    <span v-else-if="featureKey === 'top-level'">{{ $t('project-top-level-desc') }}</span>
-    <span v-else-if="featureKey === 'archived'">{{ $t('project-archived-desc') }}</span>
-    <span v-else-if="featureKey === 'maturity-model'">{{ $t('project-maturity-model-desc') }}</span>
+    <span v-if="featureKey === 'all'">{{ $t("project-all-desc") }}</span>
+    <span v-else-if="featureKey === 'top-level'">{{ $t("project-top-level-desc") }}</span>
+    <span v-else-if="featureKey === 'archived'">{{ $t("project-archived-desc") }}</span>
+    <span v-else-if="featureKey === 'maturity-model'">{{ $t("project-maturity-model-desc") }}</span>
     <span v-else>FeatureKey is Error</span>
   </div>
 
-  <placeholder-block height="20px"/>
+  <placeholder-block height="20px" />
 
 </template>
 

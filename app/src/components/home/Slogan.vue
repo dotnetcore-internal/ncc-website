@@ -8,7 +8,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="dark" :with-horizontal-rule="true" :is-font-black="false">
-        {{ $t('our-slogan-title') }}
+        {{ $t("our-slogan-title") }}
       </title-block>
 
       <div class="lg:text-3xl md:text-2xl sm:text-lg font-light italic px-5 pb-10">

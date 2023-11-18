@@ -2,17 +2,17 @@
 import Anchor from "@/components/basic/AnchorElement.vue";
 
 const props = withDefaults(defineProps<{
-  mode?: 'h5' | 'classic'
+  mode?: "h5" | "classic"
   title?: string;
   href?: string;
-  target?: '_blank' | '_self' | '_parent' | '_top';
+  target?: "_blank" | "_self" | "_parent" | "_top";
   routeName?: string;
   classValue?: string;
 }>(), {
-  mode: 'h5',
-  title: '',
-  href: '#',
-  target: '_self'
+  mode: "h5",
+  title: "",
+  href: "#",
+  target: "_self"
 });
 </script>
 

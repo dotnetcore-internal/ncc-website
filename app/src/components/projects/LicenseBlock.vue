@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import {computed, reactive} from "vue";
-import {usePreferredDark} from "@vueuse/core";
-import type {LicenseModel} from "@/apis/QueryProjectLicelseApi";
-import {loadLicensesAsync} from "@/hooks/useProjectToolkits";
+import { computed, reactive } from "vue";
+import { usePreferredDark } from "@vueuse/core";
+import type { LicenseModel } from "@/apis/QueryProjectLicelseApi";
+import { loadLicensesAsync } from "@/hooks/useProjectToolkits";
 
-import {BalanceTwo, Correct, Error, Info, Pound} from "@icon-park/vue-next";
+import { BalanceTwo, Correct, Error, Info, Pound } from "@icon-park/vue-next";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import AnchorElement from "@/components/basic/AnchorElement.vue";
 
 const props = withDefaults(defineProps<{
   license?: string
 }>(), {
-  license: ''
+  license: ""
 });
 
 const currentPrefersDarkMode = usePreferredDark();
@@ -22,7 +22,7 @@ const updateLicenses = (models: LicenseModel[]) => {
   for (const model of models) {
     licenses.push(model);
   }
-}
+};
 
 loadLicensesAsync(updateLicenses);
 
@@ -36,8 +36,8 @@ const useLicense = computed(() => {
 
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
-      ? '#f8f8f8'
-      : '#000000';
+    ? "#f8f8f8"
+    : "#000000";
 });
 
 </script>
@@ -49,13 +49,13 @@ const useIconColor = computed(() => {
       <div class="col-span-2">
         <div class="flex">
           <div class="flex-none">
-            <balance-two class="inline-block align-middle" theme="filled" size="28" :fill="useIconColor" :strokeWidth="2"/>
+            <balance-two class="inline-block align-middle" theme="filled" size="28" :fill="useIconColor" :strokeWidth="2" />
           </div>
           <div class="flex-1">
             <span class="text-2xl inline-block align-middle px-3">{{ useLicense?.name }}</span>
             <span v-if="useLicense?.['osi-approved']" class="align-middle inline-block">
               <anchor-element :href="useLicense?.['osi-link']" target="_blank" title="OSI Approved" mode="classic">
-                <img src="/images/orgs/osi.png" alt="OSI Approved" class="w-5"/>
+                <img src="/images/orgs/osi.png" alt="OSI Approved" class="w-5" />
               </anchor-element>
             </span>
           </div>
@@ -64,7 +64,7 @@ const useIconColor = computed(() => {
           {{ useLicense?.description }}
           <span class="align-middle inline-block">
               <anchor-element :href="useLicense?.['def-link']" target="_blank" title="License Definition" mode="classic">
-                <pound theme="filled" size="14" fill="#9013fe" :strokeWidth="2"/>
+                <pound theme="filled" size="14" fill="#9013fe" :strokeWidth="2" />
               </anchor-element>
             </span>
         </div>
@@ -73,7 +73,7 @@ const useIconColor = computed(() => {
         <span class="title">Permissions</span>
         <ul>
           <li v-for="permission in useLicense?.permissions" :key="permission" class="permission">
-            <correct class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2"/>
+            <correct class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2" />
             {{ permission }}
           </li>
         </ul>
@@ -82,7 +82,7 @@ const useIconColor = computed(() => {
         <span class="title">Limitations</span>
         <ul>
           <li v-for="limitation in useLicense?.limitations" :key="limitation" class="limitation">
-            <error class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2"/>
+            <error class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2" />
             {{ limitation }}
           </li>
         </ul>
@@ -91,7 +91,7 @@ const useIconColor = computed(() => {
         <span class="title">Conditions</span>
         <ul>
           <li v-for="condition in useLicense?.conditions" :key="condition" class="condition">
-            <info class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2"/>
+            <info class="inline-block align-middle" theme="filled" size="12" fill="#9013fe" :strokeWidth="2" />
             {{ condition }}
           </li>
         </ul>

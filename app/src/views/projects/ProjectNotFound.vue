@@ -5,7 +5,7 @@ import Page404 from "@/views/Page404.vue";
 
 <template>
 
-  <page404/>
+  <page404 />
 
 </template>
 

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {computed} from "vue";
+import { computed } from "vue";
 
-import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
+import type { ProjectCardModel } from "@/apis/QueryProjectListApi";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 
@@ -21,19 +21,19 @@ const useTitle = computed(() => {
 });
 
 const useTips = computed(() => {
-  let suffix = '';
+  let suffix = "";
   switch (props.project.status) {
-    case 'top-level':
-      suffix = ' (Top-Level)';
+    case "top-level":
+      suffix = " (Top-Level)";
       break;
-    case 'archived':
-      suffix = ' (Archived)';
+    case "archived":
+      suffix = " (Archived)";
       break;
-    case 'incubation':
-      suffix = ' (Incubation)';
+    case "incubation":
+      suffix = " (Incubation)";
       break;
-    case 'labs':
-      suffix = ' (Lab)';
+    case "labs":
+      suffix = " (Lab)";
       break;
   }
   return `${useTitle.value}${suffix}`;
@@ -45,19 +45,19 @@ const useTips = computed(() => {
   <div class="block card hover:scale-105 transition-all ease-in-out duration-500"
        :title="useTips">
     <anchor v-if="project.status !== 'other'" :href="`/projects/${project.id}`" :title="useTips" mode="classic">
-      <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name"/>
+      <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name" />
       <span class="block text-lg text-center leading-7 px-5 pt-2">{{ useTitle }}</span>
-      <span v-if="project.status==='archived'" class="tip archived">{{ $t('project-archived') }}</span>
-      <span v-else-if="project.status==='top-level'" class="tip toplevel">{{ $t('project-top-level') }}</span>
-      <span v-else-if="project.status==='incubation'" class="tip incubation">{{ $t('project-incubation') }}</span>
-      <span v-else-if="project.status==='labs'" class="tip labs">{{ $t('project-laboratory') }}</span>
-      <span v-else-if="project.status==='translation'" class="tip translation">{{ $t('project-translation') }}</span>
-      <span v-if="project.external" class="tip external">{{ $t('project-external') }}</span>
+      <span v-if="project.status==='archived'" class="tip archived">{{ $t("project-archived") }}</span>
+      <span v-else-if="project.status==='top-level'" class="tip toplevel">{{ $t("project-top-level") }}</span>
+      <span v-else-if="project.status==='incubation'" class="tip incubation">{{ $t("project-incubation") }}</span>
+      <span v-else-if="project.status==='labs'" class="tip labs">{{ $t("project-laboratory") }}</span>
+      <span v-else-if="project.status==='translation'" class="tip translation">{{ $t("project-translation") }}</span>
+      <span v-if="project.external" class="tip external">{{ $t("project-external") }}</span>
     </anchor>
     <span v-else>
-      <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name"/>
+      <img class="mx-auto p-4" :src="useLogo" :title="useTips" width="100" :alt="project.name" />
       <span class="block text-lg text-center leading-7 px-5 pt-2">{{ useTitle }}</span>
-      <span class="tip other">{{ $t('project-other') }}</span>
+      <span class="tip other">{{ $t("project-other") }}</span>
     </span>
   </div>
 </template>

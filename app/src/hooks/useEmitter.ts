@@ -4,4 +4,4 @@ const emitter = mitt();
 
 export const useEmitter = () => {
   return emitter;
-}
+};

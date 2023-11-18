@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {computed, nextTick, onMounted, onUnmounted, ref, watch} from "vue";
-import {useMouseInElement} from '@vueuse/core'
+import { computed, nextTick, onMounted, onUnmounted, ref, watch } from "vue";
+import { useMouseInElement } from "@vueuse/core";
 
-import {useEmitter} from "@/hooks/useEmitter";
+import { useEmitter } from "@/hooks/useEmitter";
 
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
@@ -14,8 +14,8 @@ const emitter = useEmitter();
 
 const itemTarget = ref(null);
 const panelTarget = ref(null);
-const {isOutside: itemIsOutside} = useMouseInElement(itemTarget);
-const {isOutside: panelIsOutside} = useMouseInElement(panelTarget);
+const { isOutside: itemIsOutside } = useMouseInElement(itemTarget);
+const { isOutside: panelIsOutside } = useMouseInElement(panelTarget);
 
 const hidePanelCommandRef = ref<boolean | null>(null);
 
@@ -67,7 +67,7 @@ const displayPanel = computed(() => {
 watch(displayPanel, (value) => {
   if (value) {
     // console.log("displayPanel", props.featureKey);
-    emitter.emit("toSelectHeaderPanelFor", {featureKey: props.featureKey});
+    emitter.emit("toSelectHeaderPanelFor", { featureKey: props.featureKey });
   } else {
     // console.log("hidePanel", props.featureKey);
   }

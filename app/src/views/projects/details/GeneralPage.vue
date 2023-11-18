@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {useRoute} from "vue-router";
+import { useRoute } from "vue-router";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
@@ -23,14 +23,14 @@ const route = useRoute();
                            :include-file-extension="true"
                            file-extension=".md"
                            retry-timeout="1000"
-                           :redirect-to404="false"/>
+                           :redirect-to404="false" />
       </div>
 
     </div>
 
   </body-block>
 
-  <placeholder-block height="20px"/>
+  <placeholder-block height="20px" />
 
 </template>
 

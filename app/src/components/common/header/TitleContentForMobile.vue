@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import {computed, ref} from "vue";
-import {usePreferredDark} from "@vueuse/core";
-import {Down, Up} from "@icon-park/vue-next";
+import { computed, ref } from "vue";
+import { usePreferredDark } from "@vueuse/core";
+import { Down, Up } from "@icon-park/vue-next";
 
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 
@@ -11,8 +11,8 @@ const displayPanel = ref(false);
 
 const useIconColor = computed(() => {
   return currentPrefersDarkMode.value
-      ? '#f8f8f8'
-      : '#000000';
+    ? "#f8f8f8"
+    : "#000000";
 });
 
 const switchPanel = () => {
@@ -29,8 +29,8 @@ const switchPanel = () => {
         </template>
         <template #right>
           <div class="m-3">
-              <up v-if="displayPanel" theme="filled" size="16" :fill="useIconColor" class="mobile-control-icon"/>
-              <down v-else theme="filled" size="16" :fill="useIconColor" class="mobile-control-icon"/>
+            <up v-if="displayPanel" theme="filled" size="16" :fill="useIconColor" class="mobile-control-icon" />
+            <down v-else theme="filled" size="16" :fill="useIconColor" class="mobile-control-icon" />
           </div>
         </template>
       </left-right-layout>
@@ -38,7 +38,7 @@ const switchPanel = () => {
 
     <div class="block-body-mobile" v-show="displayPanel">
 
-      <div class="responsive-width" >
+      <div class="responsive-width">
 
         <div class="col1">
           <slot name="col1"></slot>
@@ -67,7 +67,7 @@ const switchPanel = () => {
   line-height: 3rem;
 }
 
-.block-body-mobile{
+.block-body-mobile {
   @apply border-t-4 border-purple-800 dark:border-purple-500;
 }
 </style>

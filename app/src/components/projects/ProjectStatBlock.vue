@@ -2,7 +2,6 @@
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 import AnimateNumber from "@/components/basic/AnimateNumber.vue";
-
 </script>
 
 <template>

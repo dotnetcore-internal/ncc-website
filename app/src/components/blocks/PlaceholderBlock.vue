@@ -1,23 +1,23 @@
 <script setup lang="ts">
-import {computed} from "vue";
+import { computed } from "vue";
 
 const props = withDefaults(defineProps<{
-  height: '20px' | '90px' | '1.25rem',
-  bgColor?: '' | 'bg-black' | 'bg-white',
+  height: "20px" | "90px" | "1.25rem",
+  bgColor?: "" | "bg-black" | "bg-white",
   bgColorClass?: string,
 }>(), {
-  bgColor: '',
+  bgColor: ""
 });
 
 const getBgColor = computed(() => {
   let color = props.bgColor;
   switch (color) {
-    case 'bg-black':
-      return 'bg-black';
-    case 'bg-white':
-      return 'bg-white';
+    case "bg-black":
+      return "bg-black";
+    case "bg-white":
+      return "bg-white";
     default:
-      return props.bgColorClass ?? '';
+      return props.bgColorClass ?? "";
   }
 });
 </script>

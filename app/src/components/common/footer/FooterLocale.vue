@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import {inject, ref} from "vue";
-import {onClickOutside} from "@vueuse/core";
-import {useRoute} from "vue-router";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
+import { inject, ref } from "vue";
+import { onClickOutside } from "@vueuse/core";
+import { useRoute } from "vue-router";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useUiStore } from "@/stores/uiStore";
 
-import {Earth} from "@icon-park/vue-next";
-import {setLocaleToCookie} from "@/hooks/usePageToolkits";
-import {toSetOrLoadLanguage} from "@/hooks/useLocaleToolkits";
+import { Earth } from "@icon-park/vue-next";
+import { setLocaleToCookie } from "@/hooks/usePageToolkits";
+import { toSetOrLoadLanguage } from "@/hooks/useLocaleToolkits";
 
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 
-const i18n = inject('$i18n');
+const i18n = inject("$i18n");
 const route = useRoute();
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -37,10 +37,10 @@ const setLanguage = async (locale: string) => {
 
   uiStore.setLocale(locale);
 
-  emitter.emit("toChangeLocale", {locale: locale});
+  emitter.emit("toChangeLocale", { locale: locale });
 
   setLocaleToCookie(locale);
-}
+};
 </script>
 
 <template>
@@ -53,7 +53,7 @@ const setLanguage = async (locale: string) => {
       <div ref="target" class="languages-box" v-show="displayLanguagesBox">
 
         <title-block h1-mode="false" color-mode="light" :with-horizontal-rule="false" :with-placeholder="true" :is-font-black="false">
-          <div class="text-lg text-center">{{ $t('i18n-switch-title') }}</div>
+          <div class="text-lg text-center">{{ $t("i18n-switch-title") }}</div>
         </title-block>
 
         <div class="columns-1">
@@ -66,13 +66,12 @@ const setLanguage = async (locale: string) => {
 
     </transition>
 
-    <earth theme="outline" size="24" fill="#f8f8f8" :strokeWidth="2" @click="switchLanguagesBox" :title="$t('i18n-switch-tip')"/>
+    <earth theme="outline" size="24" fill="#f8f8f8" :strokeWidth="2" @click="switchLanguagesBox" :title="$t('i18n-switch-tip')" />
   </div>
 
   <div class="clear-both"></div>
 
   <div class="fixed left-0 top-0 right-0 bottom-0 z-40" v-show="displayLanguagesBox"></div>
-
 
 
 </template>

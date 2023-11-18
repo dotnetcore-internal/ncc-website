@@ -9,7 +9,7 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-        {{ $t('our-partners-title')}}
+        {{ $t("our-partners-title") }}
       </title-block>
 
       <a href="https://www.jetbrains.com/?from=.NETCoreCommunity(NCC)" target="_blank" title="JetBrains" class="partner-item">
@@ -28,7 +28,7 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
         <img src="/images/partners/material-theme.png" alt="Material Theme" class="w-full h-full">
       </a>
 
-      <placeholder-block height="1.25rem"/>
+      <placeholder-block height="1.25rem" />
 
     </div>
 

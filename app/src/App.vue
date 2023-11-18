@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import {RouterView} from "vue-router";
+import { RouterView } from "vue-router";
 
-import {useUiStore} from "@/stores/uiStore";
-import {getCookieValueWithDefaults, go} from "@/hooks/usePageToolkits";
+import { useUiStore } from "@/stores/uiStore";
+import { getCookieValueWithDefaults, go } from "@/hooks/usePageToolkits";
 
-import NavigationResources from '@/components/common/NavigationResources.vue';
+import NavigationResources from "@/components/common/NavigationResources.vue";
 import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import HeaderTitle from "@/components/common/header/HeaderTitle.vue";
@@ -17,33 +17,33 @@ import Anchor from "@/components/basic/AnchorElement.vue";
 
 const uiStore = useUiStore();
 
-const locale = getCookieValueWithDefaults<string | unknown>('locale', (t) => t === undefined || t === null || t === '', () => 'en') as string;
+const locale = getCookieValueWithDefaults<string | unknown>("locale", (t) => t === undefined || t === null || t === "", () => "en") as string;
 
-uiStore.setLocale(locale ?? 'en');
+uiStore.setLocale(locale ?? "en");
 
 </script>
 
 <template>
 
-  <header-title/>
+  <header-title />
 
   <div class="mt-24 min-h-75vh">
-    <RouterView/>
+    <RouterView />
   </div>
 
   <footer class="bg-black text-white relative">
     <div class="responsive-width">
 
-      <placeholder-block height="90px"/>
+      <placeholder-block height="90px" />
 
-      <navigation-resources/>
+      <navigation-resources />
 
-      <placeholder-block height="1.25rem"/>
+      <placeholder-block height="1.25rem" />
 
       <div class="p-5">
         <div class="inline-block align-middle">
           <a href="/" @click.prevent="go('home')" title=".NET Core Community">
-            <img src="/images/logo.black.png" width="220" alt="NCC"/>
+            <img src="/images/logo.black.png" width="220" alt="NCC" />
           </a>
         </div>
       </div>
@@ -51,8 +51,8 @@ uiStore.setLocale(locale ?? 'en');
       <div class="clear-both"></div>
 
       <div class="pb-2.5 px-5" v-show="!uiStore.isMobileMode">
-        {{ $t('footer-we-part1') }} <span class="text-xl font-bold">{{ $t('footer-we-part2') }}</span>{{ $t('footer-we-part3') }} <br/>
-        {{ $t('footer-we-part4') }}
+        {{ $t("footer-we-part1") }} <span class="text-xl font-bold">{{ $t("footer-we-part2") }}</span>{{ $t("footer-we-part3") }} <br />
+        {{ $t("footer-we-part4") }}
       </div>
 
       <div class="clear-both"></div>
@@ -64,20 +64,20 @@ uiStore.setLocale(locale ?? 'en');
             <a href="/all-ncc"
                @click.prevent="go('all-ncc')"
                class="text-white font-bold border p-2 px-5">
-              {{ $t('all-ncc') }}
+              {{ $t("all-ncc") }}
             </a>
           </div>
         </template>
 
         <template #right>
           <div class="p-5">
-            <footer-pendant/>
+            <footer-pendant />
           </div>
         </template>
 
       </left-right-layout>
 
-      <horizontal-rule-element colorMode="dark"/>
+      <horizontal-rule-element colorMode="dark" />
 
       <footer-copyright>
         <template #maintain-by>
@@ -85,13 +85,13 @@ uiStore.setLocale(locale ?? 'en');
         </template>
       </footer-copyright>
 
-      <footer-ncc-logo/>
+      <footer-ncc-logo />
 
-      <footer-locale/>
+      <footer-locale />
 
       <div class="clear-both"></div>
 
-      <placeholder-block height="90px" bg-color="bg-black"/>
+      <placeholder-block height="90px" bg-color="bg-black" />
 
     </div>
   </footer>

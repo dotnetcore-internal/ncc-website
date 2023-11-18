@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import {computed, onMounted, reactive} from "vue";
-import {useUiStore} from "@/stores/uiStore";
+import { computed, onMounted, reactive } from "vue";
+import { useUiStore } from "@/stores/uiStore";
 
-import {filterProjects, groupProjectsByLetter, loadProjectsAsync} from "@/hooks/useProjectToolkits";
-import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
+import { filterProjects, groupProjectsByLetter, loadProjectsAsync } from "@/hooks/useProjectToolkits";
+import type { ProjectCardModel } from "@/apis/QueryProjectListApi";
 
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
@@ -27,10 +27,10 @@ const updateProjects = (models: ProjectCardModel[]) => {
   for (const model of models) {
     projects.push(model);
   }
-}
+};
 
 const useGroupedProjectsByLetter = computed(() => {
-  return groupProjectsByLetter(filterProjects(projects, 'all'));
+  return groupProjectsByLetter(filterProjects(projects, "all"));
 });
 
 onMounted(async () => {
@@ -57,7 +57,7 @@ onMounted(async () => {
               <slot> </slot>
             </span>
             <span v-else>
-              {{ $t('our-projects-title') }}
+              {{ $t("our-projects-title") }}
             </span>
           </title-block>
 
@@ -66,14 +66,14 @@ onMounted(async () => {
         <template #right>
 
           <title-link class="mr-7 mt-9" v-if="displayMoreBtn" href="/projects" :title="$t('project-all')" mode="classic">
-            {{ $t('more-project') }}
+            {{ $t("more-project") }}
           </title-link>
 
         </template>
 
       </left-right-layout>
 
-      <HorizontalRuleElement v-if="true" colorMode="auto"/>
+      <HorizontalRuleElement v-if="true" colorMode="auto" />
 
 
       <div class="text-lg font-light px-5 pb-10 sm:columns-4 lg:columns-5 columns-3">

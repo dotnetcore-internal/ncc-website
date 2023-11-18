@@ -3,7 +3,7 @@ import Page404 from "@/views/Page404.vue";
 </script>
 
 <template>
-  <page404/>
+  <page404 />
 </template>
 
 <style scoped lang="css">

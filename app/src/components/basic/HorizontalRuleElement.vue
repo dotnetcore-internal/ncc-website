@@ -1,24 +1,24 @@
 <script setup lang="ts">
 
-import {computed} from "vue";
+import { computed } from "vue";
 
 const props = withDefaults(defineProps<{
-  colorMode?: 'auto' | 'dark' | 'light' | 'always-dark' | 'always-light'
+  colorMode?: "auto" | "dark" | "light" | "always-dark" | "always-light"
 }>(), {
-  colorMode: 'auto',
+  colorMode: "auto"
 });
 
 const colorClass = computed(() => {
   let mode = props.colorMode;
   switch (mode) {
-    case 'dark':
+    case "dark":
     case "always-light":
-      return 'border-white';
-    case 'light':
+      return "border-white";
+    case "light":
     case "always-dark":
-      return 'border-black';
+      return "border-black";
     default:
-      return 'border-black dark:border-white';
+      return "border-black dark:border-white";
   }
 });
 
@@ -26,7 +26,7 @@ const colorClass = computed(() => {
 
 <template>
 
-  <hr class="m-5" :class="colorClass"/>
+  <hr class="m-5" :class="colorClass" />
 
 </template>
 

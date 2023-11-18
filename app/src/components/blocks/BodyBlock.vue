@@ -11,7 +11,7 @@
 </template>
 
 <style scoped lang="css">
-.body-block{
+.body-block {
   font-family: 'Poppins', Helvetica, Arial, sans-serif;
 }
 </style>

@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import {onMounted, onUnmounted, reactive} from "vue";
-import {useEmitter} from "@/hooks/useEmitter";
-import {useUiStore} from "@/stores/uiStore";
+import { onMounted, onUnmounted, reactive } from "vue";
+import { useEmitter } from "@/hooks/useEmitter";
+import { useUiStore } from "@/stores/uiStore";
 
-import {setTitle} from "@/hooks/usePageToolkits";
-import {loadProjectsAsync} from "@/hooks/useProjectToolkits";
-import type {ProjectCardModel} from "@/apis/QueryProjectListApi";
+import { setTitle } from "@/hooks/usePageToolkits";
+import { loadProjectsAsync } from "@/hooks/useProjectToolkits";
+import type { ProjectCardModel } from "@/apis/QueryProjectListApi";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import MemberProjects from "@/components/projects/MemberProjects.vue";
@@ -23,13 +23,13 @@ const updateProjects = (models: ProjectCardModel[]) => {
   for (const model of models) {
     projects.push(model);
   }
-}
+};
 
-setTitle('project-top-level-full', 'i18n');
+setTitle("project-top-level-full", "i18n");
 
 onMounted(async () => {
 
-  emitter.on('toChangeLocale', async (e) => {
+  emitter.on("toChangeLocale", async (e) => {
     const event = e as { locale: string };
     await loadProjectsAsync(event.locale, updateProjects);
   });
@@ -46,16 +46,16 @@ onUnmounted(() => {
 
   <body-block>
 
-    <project-header feature-key="top-level"/>
+    <project-header feature-key="top-level" />
 
-    <project-cards :models="projects" for="top-level"/>
+    <project-cards :models="projects" for="top-level" />
 
   </body-block>
 
-  <placeholder-block height="90px"/>
+  <placeholder-block height="90px" />
 
   <member-projects :models="projects">
-    {{ $t('our-projects-title-by-name') }}
+    {{ $t("our-projects-title-by-name") }}
   </member-projects>
 
 </template>

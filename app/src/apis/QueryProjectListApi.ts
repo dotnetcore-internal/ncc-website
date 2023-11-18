@@ -1,32 +1,32 @@
 import axios from "axios";
-import type {ProjectDescriptionModel, BaseProjectModel} from "@/apis/QueryProjectProfileApi";
+import type { BaseProjectModel, ProjectDescriptionModel } from "@/apis/QueryProjectProfileApi";
 
 export class NumberVersionModel {
-    version: number = 0;
-    locale: string = 'en';
+  version: number = 0;
+  locale: string = "en";
 }
 
 export type ProjectCardModel = BaseProjectModel & ProjectDescriptionModel;
 
 export interface CatalogueMap {
-    [key: string]: string
+  [key: string]: string;
 }
 
 export class ProjectListQueryDto {
-    _metadata: NumberVersionModel = new NumberVersionModel();
-    _catalogues: CatalogueMap = {};
-    projects: ProjectCardModel[] = [];
+  _metadata: NumberVersionModel = new NumberVersionModel();
+  _catalogues: CatalogueMap = {};
+  projects: ProjectCardModel[] = [];
 }
 
-export const queryProjectList = async function (
-    locale: string = 'en',
-    callback: (data: ProjectListQueryDto) => void,
-    fallback: () => void = () => {
-    }
+export const queryProjectList = async function(
+  locale: string = "en",
+  callback: (data: ProjectListQueryDto) => void,
+  fallback: () => void = () => {
+  }
 ) {
-    await axios.get<ProjectListQueryDto>(`/api/projects-list.${locale}.json`)
-        .then(function (response) {
-            callback(response.data);
-        })
-        .catch(fallback)
+  await axios.get<ProjectListQueryDto>(`/api/projects-list.${locale}.json`)
+    .then(function(response) {
+      callback(response.data);
+    })
+    .catch(fallback);
 };

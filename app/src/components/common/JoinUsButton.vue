@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import {go} from "@/hooks/usePageToolkits";
+import { go } from "@/hooks/usePageToolkits";
 
 const props = withDefaults(defineProps<{
-  mode?: 'inline-block' | 'block';
+  mode?: "inline-block" | "block";
   needRefresh?: boolean;
 }>(), {
-  mode: 'inline-block',
-  needRefresh: true,
+  mode: "inline-block",
+  needRefresh: true
 });
 </script>
 
@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<{
     <span v-if="$slots.default">
       <slot></slot>
       </span>
-    <span v-else>{{ $t('join-at-header-default') }}</span>
+    <span v-else>{{ $t("join-at-header-default") }}</span>
   </a>
 
   <a v-else
@@ -29,7 +29,7 @@ const props = withDefaults(defineProps<{
     <span v-if="$slots.default">
       <slot></slot>
       </span>
-    <span v-else>{{ $t('join-at-header-default') }}</span>
+    <span v-else>{{ $t("join-at-header-default") }}</span>
   </a>
 </template>
 
