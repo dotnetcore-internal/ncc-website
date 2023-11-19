@@ -15,6 +15,9 @@
     "url": "https://github.com/kklldog"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/AgileConfig/master/License.txt"

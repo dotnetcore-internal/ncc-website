@@ -14,6 +14,9 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
+  "language": [
+    "Other"
+  ],
   "license": [
     {
       "name": "cc-by-4.0",

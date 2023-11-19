@@ -1,4 +1,12 @@
 {
+  "ArticleCard.css": {
+    "file": "assets/ArticleCard.css",
+    "src": "ArticleCard.css"
+  },
+  "ArticleNav.css": {
+    "file": "assets/ArticleNav.css",
+    "src": "ArticleNav.css"
+  },
   "BodyBlock.css": {
     "file": "assets/BodyBlock.css",
     "src": "BodyBlock.css"
@@ -15,6 +23,10 @@
     "file": "assets/ProjectHeader.css",
     "src": "ProjectHeader.css"
   },
+  "ProjectStatBlock.css": {
+    "file": "assets/ProjectStatBlock.css",
+    "src": "ProjectStatBlock.css"
+  },
   "TitleBlock.css": {
     "file": "assets/TitleBlock.css",
     "src": "TitleBlock.css"
@@ -28,6 +40,29 @@
     "imports": [
       "_vendor.js",
       "_usePageToolkits.js"
+    ]
+  },
+  "_ArticleCard.js": {
+    "css": [
+      "assets/ArticleCard.css"
+    ],
+    "file": "assets/ArticleCard.js",
+    "imports": [
+      "_uiStore.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "__plugin-vue_export-helper.js"
+    ]
+  },
+  "_ArticleNav.js": {
+    "css": [
+      "assets/ArticleNav.css"
+    ],
+    "file": "assets/ArticleNav.js",
+    "imports": [
+      "_vendor.js",
+      "_ArticleCard.js",
+      "__plugin-vue_export-helper.js"
     ]
   },
   "_BodyBlock.js": {
@@ -45,6 +80,15 @@
     "imports": [
       "__plugin-vue_export-helper.js",
       "_vendor.js"
+    ]
+  },
+  "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_WaveLoading.js"
     ]
   },
   "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js": {
@@ -103,6 +147,17 @@
       "__plugin-vue_export-helper.js"
     ]
   },
+  "_ProjectStatBlock.js": {
+    "css": [
+      "assets/ProjectStatBlock.css"
+    ],
+    "file": "assets/ProjectStatBlock.js",
+    "imports": [
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "__plugin-vue_export-helper.js"
+    ]
+  },
   "_TitleBlock.js": {
     "css": [
       "assets/TitleBlock.css"
@@ -126,6 +181,9 @@
   },
   "__plugin-vue_export-helper.js": {
     "file": "assets/_plugin-vue_export-helper.js"
+  },
+  "_axios.js": {
+    "file": "assets/axios.js"
   },
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
@@ -170,6 +228,12 @@
       "src/views/news/NewsIndexView.vue",
       "src/views/weekly/WeeklyIndexView.vue",
       "src/views/announcements/AnnouncementsIndexView.vue",
+      "src/views/news/NewsIndexView.vue",
+      "src/views/weekly/WeeklyIndexView.vue",
+      "src/views/announcements/AnnouncementsIndexView.vue",
+      "src/views/news/NewsDetailView.vue",
+      "src/views/weekly/WeeklyDetailView.vue",
+      "src/views/announcements/AnnouncementDetailView.vue",
       "src/views/rules/RulesIndexView.vue",
       "src/views/about/WhoWeAreView.vue",
       "src/views/about/JoinView.vue",
@@ -195,7 +259,8 @@
   "_useProjectToolkits.js": {
     "file": "assets/useProjectToolkits.js",
     "imports": [
-      "_useResource.js"
+      "_useResource.js",
+      "_axios.js"
     ]
   },
   "_useResource.js": {
@@ -279,17 +344,21 @@
     "file": "assets/HomeView.js",
     "imports": [
       "_usePageToolkits.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_axios.js",
       "_TitleBlock.js",
       "_LeftRightLayout.js",
       "_MemberProjects.js",
-      "_uiStore.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleCard.js",
       "_vendor.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
+      "_ProjectStatBlock.js",
       "_preload-helper.js",
       "_useProjectToolkits.js",
-      "_useResource.js"
+      "_useResource.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/HomeView.vue"
@@ -335,10 +404,13 @@
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_useEmitter.js",
+      "_uiStore.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/ContactView.vue"
@@ -414,16 +486,41 @@
     "isDynamicEntry": true,
     "src": "src/views/about/WhoWeAreView.vue"
   },
+  "src/views/announcements/AnnouncementDetailView.vue": {
+    "file": "assets/AnnouncementDetailView.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_usePageToolkits.js",
+      "_axios.js",
+      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_preload-helper.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/announcements/AnnouncementDetailView.vue"
+  },
   "src/views/announcements/AnnouncementsIndexView.vue": {
     "file": "assets/AnnouncementsIndexView.js",
     "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_useEmitter.js",
       "_usePageToolkits.js",
+      "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_vendor.js",
+      "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleCard.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/announcements/AnnouncementsIndexView.vue"
@@ -470,16 +567,41 @@
     "isDynamicEntry": true,
     "src": "src/views/guidelines/SourceCodeUsageGuidelinesView.vue"
   },
+  "src/views/news/NewsDetailView.vue": {
+    "file": "assets/NewsDetailView.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_usePageToolkits.js",
+      "_axios.js",
+      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_preload-helper.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/news/NewsDetailView.vue"
+  },
   "src/views/news/NewsIndexView.vue": {
     "file": "assets/NewsIndexView.js",
     "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_useEmitter.js",
       "_usePageToolkits.js",
+      "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_vendor.js",
+      "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleCard.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/news/NewsIndexView.vue"
@@ -518,10 +640,12 @@
       "_ProjectCards.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_TitleBlock.js",
+      "_ProjectStatBlock.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
       "_preload-helper.js",
       "_useResource.js",
+      "_axios.js",
       "_LeftRightLayout.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -553,6 +677,7 @@
       "__plugin-vue_export-helper.js",
       "_preload-helper.js",
       "_useResource.js",
+      "_axios.js",
       "_LeftRightLayout.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -582,6 +707,7 @@
       "__plugin-vue_export-helper.js",
       "_preload-helper.js",
       "_useResource.js",
+      "_axios.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
@@ -601,6 +727,7 @@
       "_uiStore.js",
       "_useProjectToolkits.js",
       "_useResource.js",
+      "_axios.js",
       "_LeftRightLayout.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
@@ -637,6 +764,7 @@
       "_vendor.js",
       "_preload-helper.js",
       "_useResource.js",
+      "_axios.js",
       "__plugin-vue_export-helper.js",
       "_LeftRightLayout.js",
       "_TitleBlock.js",
@@ -645,14 +773,7 @@
     "isDynamicEntry": true,
     "src": "src/views/projects/TopLevelView.vue"
   },
-  "src/views/projects/details/CustomPage.css": {
-    "file": "assets/CustomPage.css",
-    "src": "src/views/projects/details/CustomPage.css"
-  },
   "src/views/projects/details/CustomPage.vue": {
-    "css": [
-      "assets/CustomPage.css"
-    ],
     "file": "assets/CustomPage.js",
     "imports": [
       "_vendor.js",
@@ -660,9 +781,10 @@
       "_projectStore.js",
       "_BodyBlock.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
       "_uiStore.js",
-      "_WaveLoading.js",
-      "__plugin-vue_export-helper.js"
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/CustomPage.vue"
@@ -696,21 +818,13 @@
       "_useEmitter.js",
       "_uiStore.js",
       "_BodyBlock.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/FeaturesPage.vue"
   },
-  "src/views/projects/details/GeneralPage.css": {
-    "file": "assets/GeneralPage.css",
-    "src": "src/views/projects/details/GeneralPage.css"
-  },
   "src/views/projects/details/GeneralPage.vue": {
-    "css": [
-      "assets/GeneralPage.css"
-    ],
     "file": "assets/GeneralPage.js",
     "imports": [
       "_vendor.js",
@@ -725,14 +839,7 @@
     "isDynamicEntry": true,
     "src": "src/views/projects/details/GeneralPage.vue"
   },
-  "src/views/projects/details/GetStartedPage.css": {
-    "file": "assets/GetStartedPage.css",
-    "src": "src/views/projects/details/GetStartedPage.css"
-  },
   "src/views/projects/details/GetStartedPage.vue": {
-    "css": [
-      "assets/GetStartedPage.css"
-    ],
     "file": "assets/GetStartedPage.js",
     "imports": [
       "_vendor.js",
@@ -767,20 +874,14 @@
       "_WaveLoading.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_useResource.js",
+      "_axios.js",
       "_usePageToolkits.js",
       "_preload-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/LicensePage.vue"
   },
-  "src/views/projects/details/MetricsPage.css": {
-    "file": "assets/MetricsPage.css",
-    "src": "src/views/projects/details/MetricsPage.css"
-  },
   "src/views/projects/details/MetricsPage.vue": {
-    "css": [
-      "assets/MetricsPage.css"
-    ],
     "file": "assets/MetricsPage.js",
     "imports": [
       "_useEmitter.js",
@@ -805,16 +906,41 @@
     "isDynamicEntry": true,
     "src": "src/views/rules/RulesIndexView.vue"
   },
+  "src/views/weekly/WeeklyDetailView.vue": {
+    "file": "assets/WeeklyDetailView.js",
+    "imports": [
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_usePageToolkits.js",
+      "_axios.js",
+      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_preload-helper.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/weekly/WeeklyDetailView.vue"
+  },
   "src/views/weekly/WeeklyIndexView.vue": {
     "file": "assets/WeeklyIndexView.js",
     "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_useEmitter.js",
       "_usePageToolkits.js",
+      "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_vendor.js",
+      "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleCard.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/weekly/WeeklyIndexView.vue"

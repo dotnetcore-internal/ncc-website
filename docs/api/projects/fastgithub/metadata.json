@@ -13,6 +13,9 @@
     "url": "https://github.com/dotnetcore"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit"
   },

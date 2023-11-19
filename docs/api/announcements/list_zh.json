@@ -5,37 +5,40 @@
   },
   "list": [
     {
-      "id": "ncc-cloud-native-wind-rises",
+      "id": "ncc-itai-projects-incubation",
       "title": "NCC 社区启动两个信创项目的孵化",
       "date": "2023-10-16",
       "author": {
+        "id": "ncc",
         "name": "The NCC",
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": ""
+      "img": "ef.png"
     },
     {
-      "id": "ncc-cloud-native-wind-rises",
+      "id": "ncc-cloud-native-mocha",
       "title": "Mocha：云原生 APM 与大规模可观测性数据处理平台项目启动",
       "date": "2023-10-09",
       "author": {
+        "id": "ncc",
         "name": "The NCC",
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": ""
+      "img": "mocha.png"
     },
     {
       "id": "ncc-cloud-native-wind-rises",
       "title": "起风了，NCC 云原生项目孵化计划",
       "date": "2023-10-08",
       "author": {
+        "id": "ncc",
         "name": "The NCC",
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": ""
+      "img": "wind-rises.png"
     }
   ]
 }

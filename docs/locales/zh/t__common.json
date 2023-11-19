@@ -47,7 +47,6 @@
   "project-landscape-desc": "NCC 成员项目及其延伸、扩展项目，并基于此展开的技术生态圈和生态开源项目的全面分类概述",
   "project-how-to-join-us": "如何加入",
   "project-tools": "项目工具",
-  "project-growing-for-ecosystem": "NCC 项目为生态而生",
   "project-maturity-model": "成熟度模型",
   "project-maturity-model-full": "项目成熟度模型",
   "project-maturity-model-desc": "NCC 项目成熟度模型是一套评估项目成熟度的指导方针",
@@ -67,7 +66,6 @@
   "community-rules": "社区规则",
   "community-rules-desc": "由社区制定、PMC 评审并表决通过的社区规范，这些规范性文件将指导社区的运营和发展",
   "community-together-with-us": "和我们一起",
-  "community-embrace-join": "拥抱 .NET，与 NCC 的追梦者们在一起",
   "glossary": "术语库",
   "glossary-desc": "用清晰简单的语言来描述抽象、深奥的技术性概念",
   "resources-and-media": "资源和媒体",
@@ -126,5 +124,29 @@
   "grouped-by": "",
   "grouped-by-category": "根据目录分组",
   "grouped-by-status": "根据状态分组",
-  "grouped-by-none": "不分组"
+  "grouped-by-none": "不分组",
+  "home": {
+    "growing-for-ecosystem": "NCC 项目是 .NET 生态系统中盛开的花骨朵",
+    "independently-operated-by": "<span class=\"font-bold\">.NET Core Community</span> 社区是由<span class=\"highlight\">个体开发者</span>们独立运作的、<span class=\"highlight\">非盈利性</span>的、<span class=\"highlight\">非官方性质</span>的<span class=\"highlight\">技术中立</span>的开源技术社区。",
+    "embrace-net": "想拥抱 .NET 吗？",
+    "join-the-dreamers": "与 NCC 的追梦者们在一起",
+    "as-a-member": "成员",
+    "as-a-member-q": "正使用 .NET 技术构建项目？",
+    "as-a-member-a": "与 NCC 一道，与我们的成员项目一起，为技术生态系统的塑造加油喝彩。让 .NET 的社区力量变得更加强大。",
+    "as-a-member-b": "成为社区成员",
+    "as-a-contributor": "贡献者",
+    "as-a-contributor-q": "寻找参与的机会？",
+    "as-a-contributor-a": "无论你是程序员还是设计师，成为我们的一员，助开源项目走向更好的未来。",
+    "as-a-contributor-b": "开始贡献",
+    "as-an-end-user": "用户",
+    "as-an-end-user-q": "正使用 .NET 技术开发？",
+    "as-an-end-user-a": "与社区、同行和开源项目团队密切连接，使 NCC 项目成为你方案的最优解。",
+    "as-an-end-user-b": "加入社区"
+  },
+  "page": {
+    "first": "首页",
+    "last": "末页",
+    "next": "下页",
+    "previous": "上页"
+  }
 }

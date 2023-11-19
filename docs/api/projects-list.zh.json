@@ -26,7 +26,10 @@
         "name": "ZJ ZHOU",
         "url": "https://github.com/kklldog"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "alipay-sdk",
@@ -40,7 +43,10 @@
         "name": "Zhiqiang Li",
         "url": "https://github.com/stulzq"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "aspectcore",
@@ -54,7 +60,10 @@
         "name": "Liu Haoyang",
         "url": "https://github.com/liuhaoyang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "bootstrapblazor",
@@ -70,7 +79,12 @@
         "name": "Argo Zhang",
         "url": "https://github.com/ArgoZhang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#",
+        "Blazor",
+        "JavaScript"
+      ]
     },
     {
       "id": "canalsharp",
@@ -84,7 +98,10 @@
         "name": "WithLin",
         "url": "https://github.com/withlin"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "cap",
@@ -98,7 +115,10 @@
         "name": "杨晓东",
         "url": "https://github.com/yang-xiaodong"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "collections",
@@ -112,7 +132,10 @@
         "name": "Alex Lewis",
         "url": "https://github.com/alexinea"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "compile-environment",
@@ -126,7 +149,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "Xml"
+      ]
     },
     {
       "id": "dotnetspider",
@@ -140,7 +166,10 @@
         "name": "Lewis Zou",
         "url": "https://github.com/zlzforever"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "easycaching",
@@ -154,7 +183,10 @@
         "name": "汪文清",
         "url": "https://github.com/catcherwang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "flubucore",
@@ -168,7 +200,10 @@
         "name": "Marko Zorec",
         "url": "https://github.com/mzorec"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "efcore-gaussdb",
@@ -182,7 +217,10 @@
         "name": "Jeffcky",
         "url": "https://github.com/wangpengxpy"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "efcore-kingbasees",
@@ -196,7 +234,10 @@
         "name": "Jeffcky",
         "url": "https://github.com/wangpengxpy"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "fastgithub",
@@ -209,7 +250,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "freesql",
@@ -223,7 +267,10 @@
         "name": "2881099",
         "url": "https://github.com/2881099"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "httpreports",
@@ -237,7 +284,10 @@
         "name": "SpringLee",
         "url": "https://github.com/SpringLee"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "magicodes-ie",
@@ -251,7 +301,10 @@
         "name": "Xin-Lai",
         "url": "https://github.com/xin-lai"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "mocha",
@@ -265,7 +318,10 @@
         "name": "Liu Haoyang",
         "url": "https://github.com/liuhaoyang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "natasha",
@@ -279,7 +335,10 @@
         "name": "AzulX",
         "url": "https://github.com/NMSAzulX"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "npoi",
@@ -293,7 +352,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "osharp",
@@ -307,7 +369,10 @@
         "name": "郭明峰",
         "url": "https://github.com/gmf520"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "shardingcore",
@@ -321,7 +386,10 @@
         "name": "Xuejmnet",
         "url": "https://github.com/Xuejmnet"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "smartcode",
@@ -335,21 +403,28 @@
         "name": "Ahoo-Wang",
         "url": "https://github.com/Ahoo-Wang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "smartsql",
       "name": "SmartSql",
-      "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。 SmartSql 具有与 Dapper 相似的性能水平，并提供许多特性：动态代理存储、分布式缓存、类型处理器、自动生成 CUD 代码、分布式 Id 生成器、性能诊断、AOP 级别的事务/缓存（内存，分布式缓存）、读/写分离、代码生成器、高性能的批量插入等。",
+      "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。",
       "logo": "",
       "github": "https://github.com/dotnetcore/SmartSql",
+      "website": "https://smartsql.net/",
       "catalogue": "data",
       "status": "sandbox",
       "leader": {
         "name": "Ahoo-Wang",
         "url": "https://github.com/Ahoo-Wang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "sourcelink-environment",
@@ -363,7 +438,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "Xml"
+      ]
     },
     {
       "id": "util",
@@ -377,7 +455,10 @@
         "name": "何镇汐",
         "url": "https://github.com/xiadao521"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "webapiclient",
@@ -391,7 +472,10 @@
         "name": "老九",
         "url": "https://github.com/xljiuliang"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "wtm",
@@ -405,7 +489,10 @@
         "name": "Liu Liang",
         "url": "https://github.com/liuliang-wt"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "kooboo-json",
@@ -419,7 +506,10 @@
         "name": "Kooboo Team",
         "url": "https://github.com/Kooboo"
       },
-      "external": true
+      "external": true,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "aspnetcore-translation",
@@ -433,7 +523,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "Other"
+      ]
     },
     {
       "id": "btfindtree",
@@ -447,7 +540,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "papper",
@@ -461,7 +557,10 @@
         "name": "The NCC",
         "url": "https://github.com/dotnetcore"
       },
-      "external": false
+      "external": false,
+      "language": [
+        "C#"
+      ]
     },
     {
       "id": "surging",
@@ -474,7 +573,8 @@
         "name": "fanliang11",
         "url": ""
       },
-      "external": true
+      "external": true,
+      "language": []
     },
     {
       "id": "zkweb",
@@ -487,7 +587,8 @@
         "name": "The ZKWeb Team",
         "url": ""
       },
-      "external": true
+      "external": true,
+      "language": []
     },
     {
       "id": "botsharp",
@@ -500,7 +601,8 @@
         "name": "The SciSharp",
         "url": "https://github.com/scisharp"
       },
-      "external": true
+      "external": true,
+      "language": []
     }
   ]
 }

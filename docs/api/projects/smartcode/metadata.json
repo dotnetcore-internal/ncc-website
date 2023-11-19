@@ -14,6 +14,9 @@
     "url": "https://github.com/Ahoo-Wang"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "apache-2.0",
     "file": "https://raw.githubusercontent.com/dotnetcore/SmartCode/master/LICENSE"

@@ -47,7 +47,6 @@
   "project-landscape-desc": "A comprehensive categorical overview of member projects, their extended initiatives, and the ecosystem projects and products that have emerged based on them",
   "project-how-to-join-us": "How to Join Us",
   "project-tools": "Project Tools",
-  "project-growing-for-ecosystem": "NCC projects is growing for the.NET ecosystem",
   "project-maturity-model": "Maturity Model",
   "project-maturity-model-full": "Project Maturity Model",
   "project-maturity-model-desc": "The NCC Project Maturity Model is a set of guidelines for evaluating the maturity of a project",
@@ -67,7 +66,6 @@
   "community-rules": "Community Rules",
   "community-rules-desc": "Community Standards established, reviewed, and approved by PMC: these normative documents will guide the community's operations and development",
   "community-together-with-us": "Come together with us",
-  "community-embrace-join": "Embrace .NET and join the dreamers at NCC",
   "glossary": "Glossary",
   "glossary-desc": "Describing abstract and profound technical concepts in clear and simple language",
   "resources-and-media": "Resources & Media",
@@ -126,5 +124,29 @@
   "grouped-by": "Grouped by:",
   "grouped-by-category": "Category",
   "grouped-by-status": "Status",
-  "grouped-by-none": "None"
+  "grouped-by-none": "None",
+  "home": {
+    "growing-for-ecosystem": "TheNCC projects are the blooming flowers in the .NET ecosystem",
+    "independently-operated-by": "<span class=\"font-bold\">.NET Core Community</span> is an open-source technology community that is independently operated by <span class=\"highlight\">individual developers</span>, <span class=\"highlight\">non-profit</span>, <span class=\"highlight\">unofficial</span>, and <span class=\"highlight\">technology-neutral</span>.",
+    "embrace-net": "Embrace .NET?",
+    "join-the-dreamers": "Join the team of dreamers at NCC",
+    "as-a-member": "Members",
+    "as-a-member-q": "Building .NET technologies?",
+    "as-a-member-a": "Join NCC and our member projects to shape the technology ecosystem and make the .NET community even stronger.",
+    "as-a-member-b": "Become a member",
+    "as-a-contributor": "Contributors",
+    "as-a-contributor-q": "Looking to get involved?",
+    "as-a-contributor-a": "Whether you are a programmer or a designer, become a part of us and help open source projects move towards a better future.",
+    "as-a-contributor-b": "Start Contributing",
+    "as-an-end-user": "End Users",
+    "as-an-end-user-q": "Using .NET technologies?",
+    "as-an-end-user-a": "Connect closely with the community, peers, and open source project teams to make the NCC project your best solution.",
+    "as-an-end-user-b": "Join the community"
+  },
+  "page": {
+    "first": "First",
+    "last": "Last",
+    "next": "Next",
+    "previous": "Previous"
+  }
 }

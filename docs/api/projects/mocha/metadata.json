@@ -14,6 +14,9 @@
     "url": "https://github.com/liuhaoyang"
   },
   "external": false,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/dotnetcore/mocha/main/LICENSE"

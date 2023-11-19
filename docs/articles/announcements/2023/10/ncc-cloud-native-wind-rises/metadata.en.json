@@ -1,0 +1,12 @@
+{
+  "id": "ncc-cloud-native-wind-rises",
+  "title": "WIND RISES: The NCC cloud native project incubation program",
+  "date": "2023-10-08",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
+  "img": "wind-rises.png"
+}

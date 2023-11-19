@@ -16,6 +16,11 @@
     "url": "https://github.com/ArgoZhang"
   },
   "external": false,
+  "language": [
+    "C#",
+    "Blazor",
+    "JavaScript"
+  ],
   "license": {
     "name": "apache-2.0",
     "file": "https://github.com/dotnetcore/BootstrapBlazor/blob/main/LICENSE"

@@ -14,6 +14,9 @@
     "url": "https://github.com/Kooboo"
   },
   "external": true,
+  "language": [
+    "C#"
+  ],
   "license": {
     "name": "mit",
     "file": "https://raw.githubusercontent.com/Kooboo/Json/master/LICENSE"

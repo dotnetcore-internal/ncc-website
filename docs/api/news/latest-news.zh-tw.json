@@ -1,0 +1,23 @@
+{
+  "count": 3,
+  "data": [
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC 參加了 .NET Conf China 2023 | 北京",
+      "date": "2023-12-16",
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC 參加了 .NET Conf China 2023 | 北京",
+      "date": "2023-12-16",
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-chengdu",
+      "title": "NCC 參加了 .NET Conf 成都 2023",
+      "date": "2023-12-09",
+      "img": "conf23.png"
+    }
+  ]
+}
