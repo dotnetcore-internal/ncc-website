@@ -12,8 +12,12 @@ const props = withDefaults(defineProps<{
   go: (pageNumber: number) => {};
   baseUrl?: string;
   useTitle?: string;
+  hiddenIfBtnDisabled?: boolean;
+  alignCenter?: boolean;
 }>(), {
-  useTitle: ""
+  useTitle: "",
+  hiddenIfBtnDisabled: false,
+  alignCenter: true
 });
 
 const hasPreviousBtn = computed(() => {
@@ -99,11 +103,18 @@ const go = (pageNumber: number) => {
 
 <template>
 
-  <div class="my-pagination">
+  <div class="article-pagination" :class="{'justify-center': alignCenter}">
 
-    <a @click.prevent="first" :href="getHref(1)" :class="{disabled: descriptor.current === 1}">第一页</a>
+    <a @click.prevent="first" :href="getHref(1)"
+       :class="{disabled: descriptor.current === 1, conceal: descriptor.current === 1 && hiddenIfBtnDisabled}">
+      {{ $t("page.first") }}
+    </a>
 
-    <a @click.prevent='previous' :href="getHref(descriptor.current-1)" :class="{disabled: !hasPreviousBtn}">上一页</a>
+    <a @click.prevent='previous'
+       :href="getHref(descriptor.current-1)"
+       :class="{disabled: !hasPreviousBtn, conceal: !hasPreviousBtn && hiddenIfBtnDisabled}">
+      {{ $t("page.previous") }}
+    </a>
 
     <span v-if='descriptor.current > 3'>...</span>
 
@@ -117,9 +128,17 @@ const go = (pageNumber: number) => {
 
     <span v-if='descriptor.current < descriptor.total - 2'>...</span>
 
-    <a @click.prevent='next' :href="getHref(descriptor.current+1)" :class='{disabled: !hasNextBtn}'>下一页</a>
+    <a @click.prevent='next'
+       :href="getHref(descriptor.current+1)"
+       :class='{disabled: !hasNextBtn,conceal:!hasNextBtn && hiddenIfBtnDisabled}'>
+      {{ $t("page.next") }}
+    </a>
 
-    <a @click.prevent="last" :href="getHref(descriptor.total)" :class="{disabled: descriptor.current === descriptor.total}">最后一页</a>
+    <a @click.prevent="last"
+       :href="getHref(descriptor.total)"
+       :class="{disabled: descriptor.current === descriptor.total,conceal: descriptor.current === descriptor.total && hiddenIfBtnDisabled}">
+      {{ $t("page.last") }}
+    </a>
 
   </div>
 
@@ -127,8 +146,8 @@ const go = (pageNumber: number) => {
 
 <style scoped lang="css">
 
-.my-pagination {
-  @apply flex justify-center p-8;
+.article-pagination {
+  @apply flex p-8;
 
   > a {
     @apply inline-block px-2 py-1 mr-2.5;
@@ -142,6 +161,10 @@ const go = (pageNumber: number) => {
     &.disabled {
       @apply cursor-not-allowed opacity-40;
       @apply hover:text-gray-400;
+    }
+
+    &.conceal {
+      display: none;
     }
   }
 

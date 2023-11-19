@@ -60,6 +60,9 @@ const hasPreviousPage = computed(() => {
 const hasNextPage = computed(() => {
   return page.current < page.total;
 });
+const moreThanOnePage = computed(() => {
+  return page.total > 1;
+});
 
 const loadPagedAnnouncementsAsync = async (queryPageNumber: number, locale?: string) => {
   await queryPagedAnnouncements(
@@ -113,12 +116,14 @@ onUnmounted(() => {
 
     <article-block :articles="list" />
 
-    <article-nav :descriptor="page"
+    <article-nav v-if="moreThanOnePage"
+                 :descriptor="page"
                  :previous="async ()=>await loadPreviousPageAsync()"
                  :next="async ()=>await loadNextPageAsync()"
                  :first="async ()=>await loadPagedAnnouncementsAsync(1)"
                  :last="async ()=>await loadPagedAnnouncementsAsync(page.total)"
                  :go="async (pageNumber)=>await loadPagedAnnouncementsAsync(pageNumber)"
+                 :hidden-if-btn-disabled="true"
                  base-url="/announcements"
     />
 

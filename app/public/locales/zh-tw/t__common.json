@@ -142,5 +142,11 @@
     "as-an-end-user-q": "正使用 .NET 技術開發？",
     "as-an-end-user-a": "與社區、同行和開源項目團隊密切連接，使 NCC 項目成為你方案的最優解。",
     "as-an-end-user-b": "加入社區"
+  },
+  "page": {
+    "first": "首頁",
+    "last": "末頁",
+    "next": "後頁",
+    "previous": "前頁"
   }
 }

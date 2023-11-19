@@ -142,5 +142,11 @@
     "as-an-end-user-q": "Using .NET technologies?",
     "as-an-end-user-a": "Connect closely with the community, peers, and open source project teams to make the NCC project your best solution.",
     "as-an-end-user-b": "Join the community"
+  },
+  "page": {
+    "first": "First",
+    "last": "Last",
+    "next": "Next",
+    "previous": "Previous"
   }
 }
