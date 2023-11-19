@@ -1,12 +1,5 @@
 import axios from "axios";
-
-export interface NewsIndexModel {
-  id: string,
-  title: string,
-  date: string,
-  img: string,
-  url?: string
-}
+import type { NewsIndexModel } from "@/apis/ContentModels";
 
 export interface LatestNewsDto {
   count: number,
