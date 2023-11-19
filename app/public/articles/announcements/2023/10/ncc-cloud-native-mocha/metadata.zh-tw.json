@@ -1,0 +1,12 @@
+{
+  "id": "ncc-cloud-native-mocha",
+  "title": "Mocha：雲原生 APM 與大規模可觀測性數據處理平台項目啟動",
+  "date": "2023-10-09",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
+  "img": "mocha.png"
+}

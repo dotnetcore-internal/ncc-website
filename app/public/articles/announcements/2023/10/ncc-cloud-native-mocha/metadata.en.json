@@ -1,0 +1,12 @@
+{
+  "id": "ncc-cloud-native-mocha",
+  "title": "MOCHA: Cloud Native APM and Large-Scale Observability Data Processing Platform project has been launched",
+  "date": "2023-10-09",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
+  "img": "mocha.png"
+}

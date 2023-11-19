@@ -1,0 +1,12 @@
+{
+  "id": "weekly-2345",
+  "title": "NCC Weekly #2345",
+  "date": "2023-11-03",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/ncc-cmc.png"
+  },
+  "img": "weekly.png"
+}

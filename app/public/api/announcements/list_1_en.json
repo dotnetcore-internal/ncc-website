@@ -14,7 +14,7 @@
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": "ef.png"
+      "img": "ef.png"
     },
     {
       "id": "ncc-cloud-native-mocha",
@@ -26,7 +26,7 @@
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": "mocha.png"
+      "img": "mocha.png"
     },
     {
       "id": "ncc-cloud-native-wind-rises",
@@ -38,7 +38,7 @@
         "url": "https://github.com/dotnetcore",
         "avatar": "/images/logo-seq-svg.svg"
       },
-      "image": "wind-rises.png"
+      "img": "wind-rises.png"
     }
   ]
 }

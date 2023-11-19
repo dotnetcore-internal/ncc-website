@@ -1,0 +1,12 @@
+{
+  "id": "ncc-cloud-native-wind-rises",
+  "title": "起風了，NCC 雲原生項目孵化計劃",
+  "date": "2023-10-08",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
+  "img": "wind-rises.png"
+}
