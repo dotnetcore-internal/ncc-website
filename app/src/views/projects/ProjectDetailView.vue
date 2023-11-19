@@ -15,7 +15,7 @@ import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
-import { Github, Home } from "@icon-park/vue-next";
+import { Code, Github, Home } from "@icon-park/vue-next";
 import ProjectContributors from "@/components/projects/ProjectContributors.vue";
 
 setTitle("Member Project Detail");
@@ -75,6 +75,20 @@ const displayGiteeSource = computed(() => {
 const displayWebSite = computed(() => {
   const w = useProject?.value?.website;
   return !!w && w.length > 0;
+});
+
+const displayLanguage = computed(() => {
+  const l = useProject?.value?.language;
+  return !!l && l.length > 0;
+});
+
+const useLanguageArray = computed(() => {
+  const l = useProject?.value?.language;
+  if (!!l && l.length > 0) {
+    return l;
+  } else {
+    return [];
+  }
 });
 
 const currentProjectPaper = ref("");
@@ -206,8 +220,11 @@ onUnmounted(() => {
 <template>
   <body-block>
 
+    <!-- Project Title -->
     <title-block :is-font-black="false">
       <left-right-layout>
+
+        <!-- LEFT: Title -->
         <template #left>
           <span class="inline-block align-middle">
             <img :src="useProjectLogo" width="40" :alt="useProject?.name" :title="useProject?.name" />
@@ -216,13 +233,18 @@ onUnmounted(() => {
               {{ useProject?.name }}
           </span>
         </template>
+
+        <!-- RIGHT: Additional Parts -->
         <template #right>
 
           <left-right-layout>
 
+            <!-- LEFT: Contributors -->
             <template #left>
               <project-contributors :github="useProject?.github" />
             </template>
+
+            <!--RIGHT: Go Back -->
             <template #right>
 
               <div class="go-back">
@@ -239,40 +261,50 @@ onUnmounted(() => {
       </left-right-layout>
     </title-block>
 
+    <!-- Project Cards -->
     <div class="card">
 
-      <anchor :href="useProject?.leader?.url" :title="useProject?.leader?.name" target="_blank" mode="classic">
-        {{ useProject?.leader?.name }}
-      </anchor>
+      <left-right-layout>
 
-      <span v-if="useProject?.status==='archived'" class="tip archived">
+        <template #left>
+
+          <!-- Project Leader Card -->
+          <anchor :href="useProject?.leader?.url" :title="useProject?.leader?.name" target="_blank" mode="classic">
+            {{ useProject?.leader?.name }}
+          </anchor>
+
+          <!-- Project Status Card -->
+          <span v-if="useProject?.status==='archived'" class="tip archived">
         <anchor href="/archived-projects" :title="$t('project-archived')" mode="classic">
            {{ $t("project-archived") }}
         </anchor>
       </span>
-
-      <span v-else-if="useProject?.status==='top-level'" class="tip toplevel">
+          <span v-else-if="useProject?.status==='top-level'" class="tip toplevel">
         <anchor href="/top-level-projects" :title="$t('project-top-level')" mode="classic">
            {{ $t("project-top-level") }}
         </anchor>
       </span>
-      <span v-else-if="useProject?.status==='sandbox'" class="tip sandbox">{{ $t("project-sandbox") }}</span>
-      <span v-else-if="useProject?.status==='incubation'" class="tip incubation">{{ $t("project-incubation") }}</span>
-      <span v-else-if="useProject?.status==='labs'" class="tip labs">{{ $t("project-laboratory") }}</span>
-      <span v-else-if="useProject?.status==='translation'" class="tip translation">{{ $t("project-translation") }}</span>
+          <span v-else-if="useProject?.status==='sandbox'" class="tip sandbox">{{ $t("project-sandbox") }}</span>
+          <span v-else-if="useProject?.status==='incubation'" class="tip incubation">{{ $t("project-incubation") }}</span>
+          <span v-else-if="useProject?.status==='labs'" class="tip labs">{{ $t("project-laboratory") }}</span>
+          <span v-else-if="useProject?.status==='translation'" class="tip translation">{{ $t("project-translation") }}</span>
 
-      <span v-if="useProject?.external" class="tip external">{{ $t("project-external") }}</span>
+          <!-- Project External Flag Card -->
+          <span v-if="useProject?.external" class="tip external">{{ $t("project-external") }}</span>
 
-      <span class="tip catalogue">{{ catalogues[useProject?.catalogue] }}</span>
+          <!-- Project Catalogue Card -->
+          <span class="tip catalogue">{{ catalogues[useProject?.catalogue] }}</span>
 
-      <span v-if="displayGitHubSource" class="tip2 align-middle">
+          <!-- Project GitHub Card -->
+          <span v-if="displayGitHubSource" class="tip2 align-middle">
         <anchor :href="useProject?.github" title="GitHub" target="_blank" mode="classic">
              <github class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor" />
               <span class="inline-block align-middle ml-1 font-medium">GitHub</span>
         </anchor>
       </span>
 
-      <span v-if="displayGiteeSource" class="tip2 align-middle">
+          <!-- Project Gitee Card -->
+          <span v-if="displayGiteeSource" class="tip2 align-middle">
         <anchor :href="useProject?.gitee" title="Gitee" target="_blank" mode="classic">
               <svg class="inline-block align-middle icon"
                    t="1698644520030" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -286,19 +318,39 @@ onUnmounted(() => {
         </anchor>
       </span>
 
-      <span v-if="displayWebSite" class="tip2 align-middle">
+          <!-- Project WebSite Card -->
+          <span v-if="displayWebSite" class="tip2 align-middle">
         <anchor :href="useProject?.website" title="WebSite" target="_blank" mode="classic">
              <home class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor" />
               <span class="inline-block align-middle ml-1 font-medium">WebSite</span>
         </anchor>
       </span>
 
+        </template>
+
+        <template #right>
+
+          <!-- Project Language Card -->
+          <span v-if="displayLanguage" class="tip2 language-card">
+            <Code theme="outline" size="16" :fill="useIconColor" class="inline-block align-middle" />
+            <span v-for="language in useLanguageArray" :key="language" class="inline-block align-middle">
+    <!--          <img :src="`/images/languages/${language}.png`" width="14" :alt="language" :title="language" />-->
+              {{ language }}
+              </span>
+          </span>
+
+        </template>
+
+      </left-right-layout>
+
     </div>
 
+    <!-- Project Description -->
     <div class="px-5">
       {{ useProject?.description }}
     </div>
 
+    <!-- Project PageModules Tab -->
     <div class="sub-catalog z-20">
 
       <left-right-layout>
@@ -331,6 +383,7 @@ onUnmounted(() => {
 
     </div>
 
+    <!-- Project PageModules Body -->
     <div class="paper">
 
       <router-view :key="route.path" />
@@ -338,6 +391,7 @@ onUnmounted(() => {
     </div>
 
   </body-block>
+
 </template>
 
 <style scoped lang="css">
@@ -358,6 +412,14 @@ onUnmounted(() => {
   .catalogue {
     @apply bg-gray-200/50 dark:bg-black/50 backdrop-blur-3xl;
     @apply text-black dark:text-white;
+  }
+
+  .language-card {
+    @apply align-middle bg-gray-500/10 px-3 rounded-xl;
+
+    & span {
+      @apply text-xs px-1 underline underline-offset-2 decoration-dotted;
+    }
   }
 
 }
