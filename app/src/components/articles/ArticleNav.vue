@@ -151,15 +151,16 @@ const go = (pageNumber: number) => {
 
   > a {
     @apply inline-block px-2 py-1 mr-2.5;
-    @apply border border-gray-300 rounded;
-    @apply text-gray-400 hover:text-black text-sm no-underline;
+    @apply border border-gray-300 dark:border-gray-700 rounded;
+    @apply text-gray-400 dark:text-gray-500 hover:text-black dark:hover:text-white text-sm;
+    @apply no-underline;
 
     &.active {
-      @apply text-white bg-purple-800 border-purple-800;
+      @apply text-white dark:text-purple-300 bg-purple-800 border-purple-800;
     }
 
     &.disabled {
-      @apply cursor-not-allowed opacity-40;
+      @apply cursor-not-allowed opacity-40 dark:opacity-25;
       @apply hover:text-gray-400;
     }
 

@@ -9,7 +9,7 @@ import type { PageDescriptor, WeeklyIndexModel } from "@/apis/ContentModels";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import ArticleBlock from "@/components/articles/ArticleBlock.vue";
+import ArticleCards from "@/components/articles/ArticleCards.vue";
 import ArticleNav from "@/components/articles/ArticleNav.vue";
 
 setTitle("media-weekly", "i18n");
@@ -113,7 +113,10 @@ onUnmounted(() => {
 
     <title-block :is-font-black="false" :is-font-bold="true">{{ $t("media-weekly") }}</title-block>
 
-    <article-block :articles="list" />
+    <article-cards :articles="list"
+                   default-display-mode="list"
+                   base-url="/weekly"
+    />
 
     <article-nav v-if="moreThanOnePage"
                  :descriptor="page"

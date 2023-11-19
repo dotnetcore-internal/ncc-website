@@ -30,13 +30,16 @@ const props = withDefaults(defineProps<{
   source: string;
   i18n?: boolean;
   fallbackLocale?: string;
+  finalFallbackFn?: () => void;
   includeFileExtension?: boolean;
   fileExtension?: string;
 }>(), {
   i18n: false,
   fallbackLocale: "en",
   includeFileExtension: true,
-  fileExtension: ".md"
+  fileExtension: ".md",
+  finalFallbackFn: () => {
+  }
 });
 
 const markdown = new MarkdownIt({ html: true, xhtmlOut: true, breaks: true, linkify: true, typographer: true })
@@ -89,6 +92,8 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
   loading.value = true;
   success.value = false;
 
+  let finallyFallbackFnFlag = false;
+
   if (source.length === 0) {
 
     content.value = "";
@@ -131,6 +136,7 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
           content.value = "";
           success.value = false;
+          finallyFallbackFnFlag = true;
 
         }
 
@@ -155,12 +161,17 @@ const toLoadMarkdownContent = async (source: string, locale?: string) => {
 
         content.value = "";
         success.value = false;
+        finallyFallbackFnFlag = true;
 
       }
 
     } finally {
 
       loading.value = false;
+
+      if (finallyFallbackFnFlag) {
+        props.finalFallbackFn();
+      }
 
     }
 

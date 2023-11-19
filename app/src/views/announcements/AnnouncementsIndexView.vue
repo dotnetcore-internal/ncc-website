@@ -9,7 +9,7 @@ import type { AnnouncementIndexModel, PageDescriptor } from "@/apis/ContentModel
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import ArticleBlock from "@/components/articles/ArticleBlock.vue";
+import ArticleCards from "@/components/articles/ArticleCards.vue";
 import ArticleNav from "@/components/articles/ArticleNav.vue";
 
 setTitle("media-announcements", "i18n");
@@ -114,18 +114,25 @@ onUnmounted(() => {
 
     <title-block :is-font-black="false" :is-font-bold="true">{{ $t("media-announcements") }}</title-block>
 
-    <article-block :articles="list" />
+    <div class="p-5">
 
-    <article-nav v-if="moreThanOnePage"
-                 :descriptor="page"
-                 :previous="async ()=>await loadPreviousPageAsync()"
-                 :next="async ()=>await loadNextPageAsync()"
-                 :first="async ()=>await loadPagedAnnouncementsAsync(1)"
-                 :last="async ()=>await loadPagedAnnouncementsAsync(page.total)"
-                 :go="async (pageNumber)=>await loadPagedAnnouncementsAsync(pageNumber)"
-                 :hidden-if-btn-disabled="true"
-                 base-url="/announcements"
-    />
+      <article-cards :articles="list"
+                     default-display-mode="grid"
+                     base-url="/announcements"
+      />
+
+      <article-nav v-if="moreThanOnePage"
+                   :descriptor="page"
+                   :previous="async ()=>await loadPreviousPageAsync()"
+                   :next="async ()=>await loadNextPageAsync()"
+                   :first="async ()=>await loadPagedAnnouncementsAsync(1)"
+                   :last="async ()=>await loadPagedAnnouncementsAsync(page.total)"
+                   :go="async (pageNumber)=>await loadPagedAnnouncementsAsync(pageNumber)"
+                   :hidden-if-btn-disabled="true"
+                   base-url="/announcements"
+      />
+
+    </div>
 
   </body-block>
 </template>

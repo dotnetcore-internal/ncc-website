@@ -2,12 +2,13 @@
 import { onMounted, onUnmounted, reactive } from "vue";
 import { useEmitter } from "@/hooks/useEmitter";
 import { useUiStore } from "@/stores/uiStore";
-import { type NewsIndexModel, queryLatestNews } from "@/apis/QueryLatestNewsApi";
+import { queryLatestNews } from "@/apis/QueryLatestNewsApi";
+import type { NewsIndexModel } from "@/apis/ContentModels";
 
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
-import LatestNewsBlock from "@/components/home/LatestNewsBlock.vue";
+import ArticleCard from "@/components/articles/ArticleCard.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -61,14 +62,16 @@ onUnmounted(() => {
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
 
-        <latest-news-block v-for="news in latestNews"
-                           :id="news.id"
-                           :key="news.id"
-                           :image="news.img"
-                           :date="new Date(news.date)"
-                           :title-tip="news.title">
+        <article-card v-for="news in latestNews"
+                      :id="news.id"
+                      :key="news.id"
+                      :image="news.img"
+                      :date="new Date(news.date)"
+                      :title-tip="news.title"
+                      base-url="/news"
+        >
           {{ news.title }}
-        </latest-news-block>
+        </article-card>
 
       </div>
 

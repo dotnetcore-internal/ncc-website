@@ -9,7 +9,7 @@ import type { NewsIndexModel, PageDescriptor } from "@/apis/ContentModels";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import ArticleBlock from "@/components/articles/ArticleBlock.vue";
+import ArticleCards from "@/components/articles/ArticleCards.vue";
 import ArticleNav from "@/components/articles/ArticleNav.vue";
 
 setTitle("media-news", "i18n");
@@ -113,7 +113,10 @@ onUnmounted(() => {
 
     <title-block :is-font-black="false" :is-font-bold="true">{{ $t("media-news") }}</title-block>
 
-    <article-block :articles="list" />
+    <article-cards :articles="list"
+                   default-display-mode="grid"
+                   base-url="/news"
+    />
 
     <article-nav v-if="moreThanOnePage"
                  :descriptor="page"

@@ -30,6 +30,21 @@ const routes: RouteRecordRaw[] = [
     path: "/announcements/page/:pageNo",
     name: "announcements-page",
     component: () => import("../views/announcements/AnnouncementsIndexView.vue")
+  },
+  {
+    path: "/news/:pathMatch(.*)*",
+    name: "news-detail",
+    component: () => import("../views/news/NewsDetailView.vue")
+  },
+  {
+    path: "/weekly/:pathMatch(.*)*",
+    name: "weekly-detail",
+    component: () => import("../views/weekly/WeeklyDetailView.vue")
+  },
+  {
+    path: "/announcements/:pathMatch(.*)*",
+    name: "announcements-detail",
+    component: () => import("../views/announcements/AnnouncementDetailView.vue")
   }
 ];
 
