@@ -2,5 +2,11 @@
   "id": "ncc-participation-in-conf23-in-beijing",
   "title": "NCC participation in .NET Conf China 2023 in Beijing",
   "date": "2023-12-16",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
   "img": "conf23.png"
 }

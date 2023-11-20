@@ -2,11 +2,19 @@
   "id": "ncc-cloud-native-wind-rises",
   "title": "起风了，NCC 云原生项目孵化计划",
   "date": "2023-10-08",
-  "author": {
-    "id": "ncc",
-    "name": "The NCC",
-    "url": "https://github.com/dotnetcore",
-    "avatar": "/images/logo-seq-svg.svg"
-  },
+  "author": [
+    {
+      "id": "ncc",
+      "name": "The NCC",
+      "url": "https://github.com/dotnetcore",
+      "avatar": "/images/logo-seq-svg.svg"
+    },
+    {
+      "id": "dotnet-china",
+      "name": "The .NET China User Group",
+      "url": "https://github.com/dotnetcore",
+      "avatar": "/images/logo-seq-svg.svg"
+    }
+  ],
   "img": "wind-rises.png"
 }
