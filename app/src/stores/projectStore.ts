@@ -20,6 +20,7 @@ export const useProjectStore = defineStore("project", () => {
     currentProjectMetadata.license = projectMetadata.license;
     currentProjectMetadata.modules = projectMetadata.modules;
     currentProjectMetadata["i18n-support"] = projectMetadata["i18n-support"];
+    currentProjectMetadata.language = projectMetadata.language;
   };
 
   const currentProjectProfile = reactive<ProjectProfileModel>({} as ProjectProfileModel);

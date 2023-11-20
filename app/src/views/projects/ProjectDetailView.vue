@@ -15,8 +15,8 @@ import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
-import { Code, Github, Home } from "@icon-park/vue-next";
 import ProjectContributors from "@/components/projects/ProjectContributors.vue";
+import { Code, Github, Home } from "@icon-park/vue-next";
 
 setTitle("Member Project Detail");
 
@@ -26,6 +26,8 @@ const emitter = useEmitter();
 const attrs = useAttrs();
 const route = useRoute();
 const router = useRouter();
+
+//region Project Resource
 
 const akaId = attrs.akaId as string;
 const projects = reactive<ProjectCardModel[]>([]);
@@ -51,39 +53,78 @@ const useIconColor = computed(() => {
     : "#000000";
 });
 
-const useProject = computed(() => {
-  return projects.find(x => x.id === akaId)!;
-});
+//endregion
+
+//region Project Profile
 
 const useProjectLogo = computed(() => {
-  let logo = useProject?.value?.logo;
+  let logo = projectStore.currentProjectMetadata?.logo;
   if (!logo || logo.length === 0)
     logo = `/images/projects/${akaId}.png`;
   return logo;
 });
 
+const useProjectName = computed(() => {
+  return projectStore.currentProjectMetadata?.name;
+});
+
+const useProjectLeader = computed(() => {
+  return projectStore.currentProjectMetadata?.leader;
+});
+
+const useProjectStatus = computed(() => {
+  return projectStore.currentProjectMetadata?.status;
+});
+
+const useProjectExternalStatus = computed(() => {
+  return projectStore.currentProjectMetadata?.external;
+});
+
+const useCatalogues = computed(() => {
+  const c = projectStore.currentProjectMetadata?.catalogue;
+  if (c)
+    return catalogues[c];
+  return "";
+});
+
+//region Code source
+
 const displayGitHubSource = computed(() => {
-  const g = useProject?.value?.github;
+  const g = projectStore.currentProjectMetadata?.github;
   return !!g && g.length > 0;
+});
+
+const useGitHubSource = computed(() => {
+  return projectStore.currentProjectMetadata?.github;
 });
 
 const displayGiteeSource = computed(() => {
-  const g = useProject?.value?.gitee;
+  const g = projectStore.currentProjectMetadata?.gitee;
   return !!g && g.length > 0;
 });
 
+const useGiteeSource = computed(() => {
+  return projectStore.currentProjectMetadata?.gitee;
+});
+
+//endregion
+
 const displayWebSite = computed(() => {
-  const w = useProject?.value?.website;
+  const w = projectStore.currentProjectMetadata?.website;
   return !!w && w.length > 0;
 });
 
+const useWebSite = computed(() => {
+  return projectStore.currentProjectMetadata?.website;
+});
+
 const displayLanguage = computed(() => {
-  const l = useProject?.value?.language;
+  const l = projectStore.currentProjectMetadata?.language;
   return !!l && l.length > 0;
 });
 
 const useLanguageArray = computed(() => {
-  const l = useProject?.value?.language;
+  const l = projectStore.currentProjectMetadata?.language;
   if (!!l && l.length > 0) {
     return l;
   } else {
@@ -91,26 +132,35 @@ const useLanguageArray = computed(() => {
   }
 });
 
+const useDescription = computed(() => {
+  return projectStore.currentProjectProfile?.description;
+});
+
+//endregion
+
+//region Project Page Module
+
 const currentProjectPaper = ref("");
 const displayProjectPaper = (paper: string) => {
 
+  const project = projectStore.currentProjectMetadata;
   const previousPaper = currentProjectPaper.value;
   currentProjectPaper.value = paper;
 
   if (paper === "") {
-    router.push({ path: `/projects/${useProject.value.id}` });
+    router.push({ path: `/projects/${project.id}` });
     return;
   }
 
   const targetPaper = projectStore.currentProjectMetadata.modules.find(x => x.name === paper);
 
   if (!targetPaper) {
-    router.push({ path: `/projects/${useProject.value.id}/paper-not-found` });
+    router.push({ path: `/projects/${project.id}/paper-not-found` });
     return;
   }
 
   if (targetPaper["in-build"]) {
-    router.push({ path: `/projects/${useProject.value.id}/${paper}` });
+    router.push({ path: `/projects/${project.id}/${paper}` });
     return;
   }
 
@@ -118,7 +168,7 @@ const displayProjectPaper = (paper: string) => {
   const targetProfile = projectStore.currentProjectProfile.modules[paper];
 
   if (!targetProfile) {
-    router.push({ path: `/projects/${useProject.value.id}/${paper}` });
+    router.push({ path: `/projects/${project.id}/${paper}` });
     return;
   }
 
@@ -128,7 +178,7 @@ const displayProjectPaper = (paper: string) => {
     return;
   }
 
-  router.push({ path: `/projects/${useProject.value.id}/${paper}` });
+  router.push({ path: `/projects/${project.id}/${paper}` });
 };
 
 const toPaperNameAka = (paper: string) => {
@@ -167,17 +217,22 @@ const hasModule = (paperName: string): boolean => {
   return !!projectStore.currentProjectMetadata.modules.find(x => x.name === paperName);
 };
 
+//endregion
+
 onMounted(async () => {
 
   loadProjectsAsync(uiStore.locale, updateProjects, updateCatalogues).then(() => {
 
-    if (!(useProject.value) ||
+    const p = projects.find(x => x.id === akaId);
+
+    if (!p ||
       !projects.some(p => p.id === akaId) ||
       projects.some(p => p.id === akaId && p.status === "other")) {
       router.push({ name: "project-not-found" });
     }
 
-    setTitle(`NCC ${useProject.value!.name}`, "direct");
+    setTitle(`NCC ${p!.name}`, "direct");
+
   }).then(() => {
 
     loadProjectMetadataAsync(akaId, projectStore.setCurrentProjectMetadata);
@@ -227,10 +282,10 @@ onUnmounted(() => {
         <!-- LEFT: Title -->
         <template #left>
           <span class="inline-block align-middle">
-            <img :src="useProjectLogo" width="40" :alt="useProject?.name" :title="useProject?.name" />
+            <img :src="useProjectLogo" width="40" :alt="useProjectName" :title="useProjectName" />
             </span>
           <span class="inline-block align-middle cursor-default px-3">
-              {{ useProject?.name }}
+              {{ useProjectName }}
           </span>
         </template>
 
@@ -241,7 +296,7 @@ onUnmounted(() => {
 
             <!-- LEFT: Contributors -->
             <template #left>
-              <project-contributors :github="useProject?.github" />
+              <project-contributors :github="useGitHubSource" />
             </template>
 
             <!--RIGHT: Go Back -->
@@ -269,35 +324,35 @@ onUnmounted(() => {
         <template #left>
 
           <!-- Project Leader Card -->
-          <anchor :href="useProject?.leader?.url" :title="useProject?.leader?.name" target="_blank" mode="classic">
-            {{ useProject?.leader?.name }}
+          <anchor :href="useProjectLeader?.url" :title="useProjectLeader?.name" target="_blank" mode="classic">
+            {{ useProjectLeader?.name }}
           </anchor>
 
           <!-- Project Status Card -->
-          <span v-if="useProject?.status==='archived'" class="tip archived">
+          <span v-if="useProjectStatus ==='archived'" class="tip archived">
             <anchor href="/archived-projects" :title="$t('project-archived')" mode="classic">
                {{ $t("project-archived") }}
             </anchor>
           </span>
-          <span v-else-if="useProject?.status==='top-level'" class="tip toplevel">
+          <span v-else-if="useProjectStatus==='top-level'" class="tip toplevel">
             <anchor href="/top-level-projects" :title="$t('project-top-level')" mode="classic">
                {{ $t("project-top-level") }}
             </anchor>
           </span>
-          <span v-else-if="useProject?.status==='sandbox'" class="tip sandbox">{{ $t("project-sandbox") }}</span>
-          <span v-else-if="useProject?.status==='incubation'" class="tip incubation">{{ $t("project-incubation") }}</span>
-          <span v-else-if="useProject?.status==='labs'" class="tip labs">{{ $t("project-laboratory") }}</span>
-          <span v-else-if="useProject?.status==='translation'" class="tip translation">{{ $t("project-translation") }}</span>
+          <span v-else-if="useProjectStatus==='sandbox'" class="tip sandbox">{{ $t("project-sandbox") }}</span>
+          <span v-else-if="useProjectStatus==='incubation'" class="tip incubation">{{ $t("project-incubation") }}</span>
+          <span v-else-if="useProjectStatus==='labs'" class="tip labs">{{ $t("project-laboratory") }}</span>
+          <span v-else-if="useProjectStatus==='translation'" class="tip translation">{{ $t("project-translation") }}</span>
 
           <!-- Project External Flag Card -->
-          <span v-if="useProject?.external" class="tip external">{{ $t("project-external") }}</span>
+          <span v-if="useProjectExternalStatus" class="tip external">{{ $t("project-external") }}</span>
 
           <!-- Project Catalogue Card -->
-          <span class="tip catalogue">{{ catalogues[useProject?.catalogue] }}</span>
+          <span class="tip catalogue">{{ useCatalogues }}</span>
 
           <!-- Project GitHub Card -->
           <span v-if="displayGitHubSource" class="tip2 align-middle">
-            <anchor :href="useProject?.github" title="GitHub" target="_blank" mode="classic">
+            <anchor :href="useGitHubSource" title="GitHub" target="_blank" mode="classic">
                  <github class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor" />
                   <span class="inline-block align-middle ml-1 font-medium">GitHub</span>
             </anchor>
@@ -305,7 +360,7 @@ onUnmounted(() => {
 
           <!-- Project Gitee Card -->
           <span v-if="displayGiteeSource" class="tip2 align-middle">
-            <anchor :href="useProject?.gitee" title="Gitee" target="_blank" mode="classic">
+            <anchor :href="useGiteeSource" title="Gitee" target="_blank" mode="classic">
                   <svg class="inline-block align-middle icon"
                        t="1698644520030" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
                        p-id="4566" data-spm-anchor-id="a313x.search_index.0.i5.73f13a81QDVP27"
@@ -320,7 +375,7 @@ onUnmounted(() => {
 
           <!-- Project WebSite Card -->
           <span v-if="displayWebSite" class="tip2 align-middle">
-            <anchor :href="useProject?.website" title="WebSite" target="_blank" mode="classic">
+            <anchor :href="useWebSite" title="WebSite" target="_blank" mode="classic">
                  <home class="inline-block align-middle" theme="filled" size="14" :fill="useIconColor" />
                   <span class="inline-block align-middle ml-1 font-medium">WebSite</span>
             </anchor>
@@ -346,7 +401,7 @@ onUnmounted(() => {
 
     <!-- Project Description -->
     <div class="px-5">
-      {{ useProject?.description }}
+      {{ useDescription }}
     </div>
 
     <!-- Project PageModules Tab -->

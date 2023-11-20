@@ -1,29 +1,47 @@
 import axios from "axios";
 
-
-export class BaseProjectModel {
+export class ProjectBio {
   id: string = "";
   name: string = "";
   logo: string = "";
-  github?: string = "";
-  gitee?: string = "";
-  website?: string = "";
+}
+
+export class ProjectIndex {
   catalogue: string = "";
   status: string = "sandbox";
-  leader: ProjectLeaderModel = new ProjectLeaderModel();
   external: boolean = false;
   language: string[] = [];
 }
 
+export class ProjectSource {
+  github?: string = "";
+  gitee?: string = "";
+  website?: string = "";
+}
+
+export interface hasProjectLeader {
+  leader: ProjectLeaderModel;
+}
+
+export interface hasProjectLicense {
+  license: ProjectLicenseDescriptor | ProjectLicenseDescriptor[];
+}
+
+export interface hasProjectModule {
+  modules: ProjectModuleDescriptor[];
+}
+
+export interface hasI18nSupport {
+  "i18n-support": string[];
+}
+
+export type BaseProjectModel = ProjectBio & ProjectIndex & ProjectSource & hasProjectLeader;
+
+export type ProjectMetadataModel = BaseProjectModel & hasProjectLicense & hasProjectModule & hasI18nSupport;
+
 export class ProjectLeaderModel {
   name: string = "";
   url: string = "";
-}
-
-export class ProjectMetadataModel extends BaseProjectModel {
-  license: ProjectLicenseDescriptor | ProjectLicenseDescriptor[] = [];
-  modules: ProjectModuleDescriptor[] = [];
-  "i18n-support": string[] = [];
 }
 
 export class ProjectLicenseDescriptor {

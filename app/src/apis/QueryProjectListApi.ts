@@ -1,12 +1,12 @@
 import axios from "axios";
-import type { BaseProjectModel, ProjectDescriptionModel } from "@/apis/QueryProjectProfileApi";
+import type { ProjectBio, ProjectIndex } from "@/apis/QueryProjectProfileApi";
 
 export class NumberVersionModel {
   version: number = 0;
   locale: string = "en";
 }
 
-export type ProjectCardModel = BaseProjectModel & ProjectDescriptionModel;
+export type ProjectCardModel = ProjectBio & ProjectIndex;
 
 export interface CatalogueMap {
   [key: string]: string;
