@@ -116,6 +116,9 @@ onUnmounted(() => {
     <article-cards :articles="list"
                    default-display-mode="list"
                    base-url="/weekly"
+                   :enable-card-mode="false"
+                   :enable-block-mode="false"
+                   :enable-grid-mode="false"
     />
 
     <article-nav v-if="moreThanOnePage"

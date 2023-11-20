@@ -118,6 +118,9 @@ onUnmounted(() => {
                    display-author-mode="all-but-name"
                    :display-author-by="true"
                    base-url="/news"
+                   :enable-card-mode="false"
+                   :enable-block-mode="false"
+                   :enable-list-mode="false"
     />
 
     <article-nav v-if="moreThanOnePage"

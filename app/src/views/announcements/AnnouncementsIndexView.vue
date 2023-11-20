@@ -117,9 +117,12 @@ onUnmounted(() => {
     <div class="p-5">
 
       <article-cards :articles="list"
-                     default-display-mode="grid"
+                     default-display-mode="list"
                      base-url="/announcements"
                      display-author-mode="all-but-first-avatar"
+                     :enable-block-mode="false"
+                     :enable-grid-mode="false"
+                     :enable-card-mode="false"
       />
 
       <article-nav v-if="moreThanOnePage"
