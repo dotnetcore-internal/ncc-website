@@ -19,6 +19,9 @@ export interface AnnouncementIndexModel extends Article, hasAuthor {
 export interface WeeklyIndexModel extends Article, hasAuthor {
 }
 
+export interface StoryIndexModel extends Article, hasAuthor {
+}
+
 export interface AuthorModel {
   id: string,
   name: string,
