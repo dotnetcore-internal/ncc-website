@@ -1,0 +1,12 @@
+{
+  "id": "ncc-participation-in-conf23-in-chengdu",
+  "title": "NCC 參加了 .NET Conf 成都 2023",
+  "date": "2023-12-09",
+  "author": {
+    "id": "ncc",
+    "name": "The NCC",
+    "url": "https://github.com/dotnetcore",
+    "avatar": "/images/logo-seq-svg.svg"
+  },
+  "img": "conf23.png"
+}
