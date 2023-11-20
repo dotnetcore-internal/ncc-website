@@ -8,7 +8,7 @@ import type { NewsIndexModel } from "@/apis/ContentModels";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
-import ArticleCard from "@/components/articles/ArticleCard.vue";
+import ArticleCard from "@/components/articles/ArticleAsGrid.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();

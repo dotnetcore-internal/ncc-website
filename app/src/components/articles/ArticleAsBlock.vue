@@ -149,35 +149,53 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="article-card">
+  <div class="article-block">
     <anchor class="block w-full h-4/5" :href="useArticleUrl" :title="useTitleTip" target="_blank" mode="classic">
-      <img :src="useImageUrl" :alt="useTitleTip" />
-      <span class="block px-5 py-7 text-lg font-bold">
-        <slot></slot>
-        <br />
-        <!-- Author -->
-        <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
-          <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
-          <span v-for="(author, i) in getAuthors(author)" :key="author.id" v-show="displayThisAuthor(i)">
-            <span v-if="i > 0 && i < totalOfAuthors - 1" class="text-xs mx-1 text-gray-500/50">,</span>
-            <span v-else-if="i > 0 && i < totalOfAuthors" class="text-xs mx-1 text-gray-500/50">and</span>
-            <span v-if="displayThisAuthorAvatar(i)" class="mr-1.5"> <img :src="author.avatar" :alt="author.name" class="inline-block w-5 h-5 rounded-full" /></span>
-            <span v-if="displayThisAuthorName(i)" class=""> {{ author.name }}</span>
-          </span>
-        </span>
-        <!-- Author -->
-      </span>
+
+      <div class="w-full relative">
+        <img :src="useImageUrl" :alt="useTitleTip" class="w-full" />
+
+        <div class="absolute bottom-0 w-full bg-gradient-to-b from-transparent via-black/30 to-black/90 h-36 lg:h-48 xl:h-64">
+
+          <div class="text-white text-xl lg:text-3xl xl:text-5xl absolute bottom-0 p-5">
+            <slot></slot>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="w-full md:flex dark:bg-black/70 p-5">
+
+        <div class="md:flex-1">
+          <!-- Author -->
+          <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
+              <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
+              <span v-for="(author, i) in getAuthors(author)" :key="author.id" v-show="displayThisAuthor(i)">
+                <span v-if="i > 0 && i < totalOfAuthors - 1" class="text-xs mx-1 text-gray-500/50">,</span>
+                <span v-else-if="i > 0 && i < totalOfAuthors" class="text-xs mx-1 text-gray-500/50">and</span>
+                <span v-if="displayThisAuthorAvatar(i)" class="mr-1.5"> <img :src="author.avatar" :alt="author.name" class="inline-block w-5 h-5 rounded-full" /></span>
+                <span v-if="displayThisAuthorName(i)" class=""> {{ author.name }}</span>
+              </span>
+            </span>
+          <!-- Author -->
+        </div>
+
+        <div class="md:flex-none w-36">
+          <span class="text-sm text-gray-500">{{ displayDate(date, $t("_common.date-format")) }}</span>
+        </div>
+
+      </div>
+
     </anchor>
-    <span class="block px-5 py-7 text-sm text-gray-500 ">{{ displayDate(date, $t("_common.date-format")) }}</span>
 
   </div>
 </template>
 
 <style scoped lang="css">
-.article-card {
+.article-block {
   @apply m-4 rounded-lg overflow-hidden;
-  @apply dark:bg-white/10;
-  @apply transition-all ease-in-out duration-500 hover:scale-105;
+  @apply dark:bg-gray-500/5;
   @apply shadow-md;
 }
 </style>

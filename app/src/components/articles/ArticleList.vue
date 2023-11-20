@@ -1,8 +1,8 @@
 <script setup lang="ts">
 
 import {ref} from "vue";
-import ArticleCard from "@/components/articles/ArticleCard.vue";
-import ArticleLine from "@/components/articles/ArticleLine.vue";
+import ArticleCard from "@/components/articles/ArticleAsGrid.vue";
+import ArticleLine from "@/components/articles/ArticleAsList.vue";
 
 //导入外部文章列表，如果不导入，则显示【无】
 
