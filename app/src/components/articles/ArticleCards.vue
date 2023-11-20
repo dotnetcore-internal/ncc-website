@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { usePreferredDark } from "@vueuse/core";
-import type { Article } from "@/apis/ContentModels";
+import type { Article, hasAuthor } from "@/apis/ContentModels";
 import ArticleCard from "@/components/articles/ArticleCard.vue";
 import { GridNine, VerticalTidyUp } from "@icon-park/vue-next";
 
@@ -9,9 +9,13 @@ const props = withDefaults(defineProps<{
   articles: Article[];
   defaultDisplayMode?: "grid" | "list";
   baseUrl: string;
+  displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
+  displayAuthorBy?: boolean;
 }>(), {
-  defaultDisplayMode: "grid"
+  defaultDisplayMode: "grid",
+  displayAuthorBy: false
 });
+
 
 const currentDisplayMode = ref(props.defaultDisplayMode);
 
@@ -25,7 +29,6 @@ const useIconColor = computed(() => {
     ? "#f8f8f8"
     : "#000000";
 });
-//filled
 
 const useIconTheme = (mode: "grid" | "list") => {
   return currentDisplayMode.value === mode
@@ -57,8 +60,12 @@ const useIconTheme = (mode: "grid" | "list") => {
                   :id="article.id"
                   :image="article.img"
                   :date="new Date(article.date)"
+                  :author="(article as hasAuthor)?.author"
                   :title-tip="article.title"
-                  :base-url="baseUrl">
+                  :base-url="baseUrl"
+                  :display-author-mode="displayAuthorMode"
+                  :display-author-by="displayAuthorBy"
+    >
       {{ article.title }}
     </article-card>
 

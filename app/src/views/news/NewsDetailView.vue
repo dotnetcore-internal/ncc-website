@@ -11,6 +11,7 @@ import type { NewsIndexModel } from "@/apis/ContentModels";
 import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import ArticleAuthors from "@/components/articles/ArticleAuthors.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -37,6 +38,7 @@ const loadNewsMetadataAsync = async (locale?: string) => {
     articleMetadata.id = data.id;
     articleMetadata.title = data.title;
     articleMetadata.date = data.date;
+    articleMetadata.author = data.author;
     articleMetadata.img = data.img;
     articleMetadata.url = data.url;
     setTitle(articleMetadata.title, "direct");
@@ -49,6 +51,10 @@ const useArticleTitle = computed(() => {
 
 const useArticleDate = computed(() => {
   return articleMetadata.date;
+});
+
+const useAuthor = computed(()=>{
+  return articleMetadata.author;
 });
 
 const displayDate = (date: Date, format: string) => {
@@ -88,13 +94,7 @@ onUnmounted(() => {
         {{ useArticleTitle }}
       </title-block>
 
-      <div class="w-12 rounded-full overflow-hidden mx-auto mt-8">
-        <img src="/images/logo-seq-svg.svg" alt="The NCC" />
-      </div>
-
-      <div class="text-center p-3 border-b-2 border-gray-300 w-72 mx-auto">
-        The NCC
-      </div>
+      <article-authors :author="useAuthor" />
 
       <div class="px-5 pt-1 text-sm text-gray-500">
         {{ displayDate(new Date(useArticleDate), $t("_common.date-format")) }}

@@ -7,10 +7,10 @@ export interface Article {
 }
 
 export interface hasAuthor {
-  author: AuthorModel;
+  author?: AuthorModel | AuthorModel[];
 }
 
-export interface NewsIndexModel extends Article {
+export interface NewsIndexModel extends Article, hasAuthor {
 }
 
 export interface AnnouncementIndexModel extends Article, hasAuthor {
@@ -30,3 +30,25 @@ export interface PageDescriptor {
   current: number,
   total: number
 }
+
+const hasAuthors = (model: AuthorModel | AuthorModel[] | null) => {
+  if (!model) return false;
+  if (Array.isArray(model)) return model.length > 0;
+  return true;
+};
+
+const getAuthors = (model: AuthorModel | AuthorModel[] | null): AuthorModel[] => {
+  if (!model) return [];
+  if (Array.isArray(model)) return model;
+  return [model];
+};
+
+const countAuthors = (model: AuthorModel | AuthorModel[] | null): number => {
+  return getAuthors(model).length;
+};
+
+export {
+  hasAuthors,
+  getAuthors,
+  countAuthors
+};

@@ -115,6 +115,8 @@ onUnmounted(() => {
 
     <article-cards :articles="list"
                    default-display-mode="grid"
+                   display-author-mode="all-but-name"
+                   :display-author-by="true"
                    base-url="/news"
     />
 

@@ -11,6 +11,7 @@ import type { AnnouncementIndexModel } from "@/apis/ContentModels";
 import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
+import ArticleAuthors from "@/components/articles/ArticleAuthors.vue";
 
 const route = useRoute();
 const router = useRouter();
@@ -53,6 +54,8 @@ const useArticleDate = computed(() => {
 });
 
 const useAuthor = computed(()=>{
+  console.log(articleMetadata);
+  console.log(articleMetadata.author);
   return articleMetadata.author;
 });
 
@@ -93,13 +96,7 @@ onUnmounted(() => {
         {{ useArticleTitle }}
       </title-block>
 
-      <div class="w-12 rounded-full overflow-hidden mx-auto mt-8">
-        <img :src="useAuthor?.avatar" :alt="useAuthor?.name" />
-      </div>
-
-      <div class="text-center p-3 border-b-2 border-gray-300 w-72 mx-auto">
-        {{ useAuthor?.name }}
-      </div>
+      <article-authors :author="useAuthor" />
 
       <div class="px-5 pt-1 text-sm text-gray-500">
         {{ displayDate(new Date(useArticleDate), $t("_common.date-format")) }}
