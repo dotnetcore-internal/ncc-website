@@ -7,8 +7,6 @@
   "modules": {
     "general": "General",
     "metrics": "Metrics",
-    "get-started": "Get Started",
-    "features": "Features",
     "license": "License"
   }
 }
