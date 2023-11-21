@@ -1,0 +1,1 @@
+目前`sharding-core`已經支持code first支持代碼現行，具體實現可以參考 [Migrations](https://github.com/dotnetcore/sharding-core/blob/main/samples/Sample.Migrations/readme.md)

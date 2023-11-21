@@ -7,6 +7,8 @@
   "name": "ShardingCore",
   "logo": "",
   "github": "https://github.com/dotnetcore/sharding-core",
+  "gitee": "https://gitee.com/xuejm/sharding-core",
+  "website": "https://xuejmnet.github.io/sharding-core-doc/",
   "catalogue": "data",
   "status": "sandbox",
   "leader": {

@@ -1,0 +1,1 @@
+Supports automatic table creation, see [this example](https://github.com/dotnetcore/sharding-core/tree/main/samples/Samples.AutoByDate.SqlServer).
