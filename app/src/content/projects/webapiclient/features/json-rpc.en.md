@@ -1,0 +1,2 @@
+
+In a few scenarios, developers may encounter JsonRpc-called interfaces. Since this protocol is not very popular, WebApiClientCore provides support for this function as the WebApiClientCore.Extensions.JsonRpc extension package. By using [JsonRpcMethod] to decorate Rpc methods and [JsonRpcParam] to decorate Rpc parameters, you can achieve this.

@@ -1,0 +1,2 @@
+
+For the frequently asked question of dynamic Host, the following simple example is provided for reference; the implementation method is not limited to the one mentioned in the example. In principle, at any link before the request is sent out, the RequestUri of the request message can be modified to achieve the purpose of dynamic target.

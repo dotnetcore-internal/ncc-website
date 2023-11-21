@@ -1,0 +1,3 @@
+It is undeniable that System.Text.Json will be used more and more widely due to its performance advantages, but NewtonsoftJson will not exit the stage because of this.
+
+System.Text.Json is very strict by default, avoiding any guesswork or interpretation on behalf of the caller, emphasizing deterministic behavior, and this library is designed specifically to achieve performance and security. Newtonsoft.Json is very flexible by default. Under the default configuration, you hardly encounter various problems of deserialization, although these problems are often caused by imprecise json structures or type declarations.
