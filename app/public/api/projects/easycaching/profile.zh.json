@@ -10,6 +10,10 @@
     "get-started": "快速上手",
     "features": "功能特性",
     "license": "许可证",
+    "todo": {
+      "title": "计划",
+      "url": "https://github.com/dotnetcore/EasyCaching/blob/dev/docs/ToDoList.md"
+    },
     "release": {
       "title": "发布日志",
       "url": "https://github.com/dotnetcore/EasyCaching/releases/latest"

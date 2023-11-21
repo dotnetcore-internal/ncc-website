@@ -7,6 +7,7 @@
   "name": "EasyCaching",
   "logo": "",
   "github": "https://github.com/dotnetcore/EasyCaching",
+  "website": "https://easycaching.readthedocs.io",
   "catalogue": "data",
   "status": "sandbox",
   "leader": {
@@ -43,8 +44,13 @@
       "in-built": true
     },
     {
-      "name": "license",
+      "name": "todo",
       "sort": 5,
+      "in-built": false
+    },
+    {
+      "name": "license",
+      "sort": 6,
       "in-built": true
     },
     {
