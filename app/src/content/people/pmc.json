@@ -1,0 +1,152 @@
+{
+  "people": [
+    {
+      "id": "alexinea",
+      "name": "Alex LEWIS",
+      "avatar": "alexinea.png",
+      "founder": true,
+      "during-in-term": true
+    },
+    {
+      "id": "2881099",
+      "name": "XiangQ. YE",
+      "avatar": "2881099.png",
+      "during-in-term": true
+    },
+    {
+      "id": "ahoo",
+      "name": "Ahoo WANG",
+      "avatar": "ahoo.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "argo",
+      "name": "Argo ZHANG",
+      "avatar": "argo.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "azulx",
+      "name": "Azulx HU",
+      "avatar": "azulx.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "catcher-wong",
+      "name": "Catcher WONG",
+      "avatar": "catcherwong.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "gmf",
+      "name": "MingF. GUO",
+      "avatar": "gmf.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "hueifeng",
+      "name": "Huei FENG",
+      "avatar": "hueifeng.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "hzx",
+      "name": "Zhenxi HE",
+      "avatar": "hzx.jpg",
+      "founder": true,
+      "during-in-term": true
+    },
+    {
+      "id": "Jeffcky",
+      "name": "Jeffcky WANG",
+      "avatar": "jeffcky.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "jiu",
+      "name": "Jiu CHEN",
+      "avatar": "jiu.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "lhy",
+      "name": "Haoyang LIU",
+      "avatar": "lhy.jpg",
+      "founder": true,
+      "during-in-term": true
+    },
+    {
+      "id": "ll",
+      "name": "Liang LIU",
+      "avatar": "ll.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "ls",
+      "name": "Spring LEE",
+      "avatar": "ls.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "lwq",
+      "name": "WenQ. LEE",
+      "avatar": "lwq.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "lyrics",
+      "name": "Yu LOU",
+      "avatar": "lyrics.jpg",
+      "founder": true,
+      "during-in-term": true
+    },
+    {
+      "id": "lzq",
+      "name": "晓晨",
+      "avatar": "lzq.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "mjzhou",
+      "name": "MJ ZHOU",
+      "avatar": "mjzhou.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "mzorec",
+      "name": "Marko Zorec",
+      "avatar": "mzorec.png",
+      "during-in-term": true
+    },
+    {
+      "id": "savorboard",
+      "name": "Xiaodong YANG",
+      "avatar": "savorboard.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "whitlin",
+      "name": "Jinlin FU",
+      "avatar": "withlin.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "xjm",
+      "name": "Jiaming XUE",
+      "avatar": "xjm.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "zeng",
+      "name": "Future ZENG",
+      "avatar": "zeng.jpg",
+      "during-in-term": true
+    },
+    {
+      "id": "zs",
+      "name": "Song ZOU",
+      "avatar": "zs.jpg",
+      "during-in-term": true
+    }
+  ]
+}
