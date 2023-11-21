@@ -1,0 +1,16 @@
+1. [基础教程之导入学生数据](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/1.基础教程之导入学生数据.md) （[点此访问国内文档](https://docs.xin-lai.com/2019/11/26/组件/Magicodes.IE/1.基础教程之导入学生数据/)）
+2. [基础教程之导出Excel](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/2.基础教程之导出Excel.md) [（点此访问国内文档）](https://docs.xin-lai.com/2020/02/19/组件/Magicodes.IE/2.Magicodes.IE基础教程之导出Excel/)
+3. [基础教程之导出Pdf收据](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/3.基础教程之导出Pdf收据.md) [(点此访问国内文档)](https://docs.xin-lai.com/2020/02/25/组件/Magicodes.IE/3.Magicodes.IE基础教程之导出Pdf/)
+4. [在Docker中使用](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/4.在Docker中使用.md)
+5. [动态导出](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/5.动态导出.md)
+6. [多Sheet导入](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/6.多Sheet导入.md)
+7. [Csv导入导出](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/7.Csv导入导出.md)
+8. [Excel图片导入导出](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/8.Excel图片导入导出.md) [(点此访问国内文档)](https://docs.xin-lai.com/2020/03/16/组件/Magicodes.IE/使用Magicodes.IE.Excel完成Excel图片的导入和导出/)
+9. [Excel模板导出之导出教材订购表](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/9.Excel模板导出之导出教材订购表.md)（[点此访问国内文档](https://docs.xin-lai.com/2020/01/08/组件/Magicodes.IE/7.Excel模板导出之导出教材订购表/)）
+10. [进阶篇之导入导出筛选器](https://docs.xin-lai.com/2020/09/21/组件/Magicodes.IE/Magicodes.IE之导入导出筛选器/)
+11. [Magicodes.IE之花式导出](https://docs.xin-lai.com/2020/09/28/组件/Magicodes.IE/Magicodes.IE之花式导出/)
+12. [Magicodes.IE.AspNetCore之一行代码多格式导出](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/12.Magicodes.IE.AspNetCore之一行代码多格式导出.md)
+13. [性能测试](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/13.性能测试.md)
+14. [Excel合并行导入](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/Excel合并行导入.md)
+15. [Excel模板导出之动态导出](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/Excel模板导出之动态导出.md)
+16. [Magicodes.IE.Excel.AspNetCore之快速导出Excel（new）](https://github.com/dotnetcore/Magicodes.IE/blob/master/docs/AspNetCore之快速导出Excel.md)
