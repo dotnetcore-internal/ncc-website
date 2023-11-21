@@ -68,7 +68,7 @@ onMounted(() => {
 
     <license-block :license="useLicenseName" />
 
-    <body-block class="content-paper p-5">
+    <body-block class="content-paper">
 
       <p>{{ $t("raw-license-content") }}</p>
 
@@ -78,7 +78,7 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block class="content-paper">
+    <body-block class="content-paper p-0 overflow-hidden">
 
       <license-raw :raw-url="useLicenseUrl" />
 
@@ -104,7 +104,7 @@ onMounted(() => {
 
     </body-block>
 
-    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="content-paper">
+    <body-block v-for="(item, index) in useLicenseUrl" :key="index" class="content-paper p-0 overflow-hidden">
 
       <license-raw :raw-url="item" />
 

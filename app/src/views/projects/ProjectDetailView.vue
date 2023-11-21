@@ -388,7 +388,7 @@ onUnmounted(() => {
           <!-- Project Language Card -->
           <span v-if="displayLanguage" class="tip2 language-card">
             <Code theme="outline" size="16" :fill="useIconColor" class="inline-block align-middle" />
-            <span v-for="language in useLanguageArray" :key="language" class="inline-block align-middle">
+            <span v-for="language in useLanguageArray" :key="language" class="inline-block align-middle" :title="language">
               {{ language }}
               </span>
           </span>
