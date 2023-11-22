@@ -7,6 +7,7 @@
   "name": "Kooboo Json",
   "logo": "",
   "github": "https://github.com/kooboo/Json",
+  "website": "https://www.kooboo.com/",
   "catalogue": "tools-env",
   "status": "sandbox",
   "leader": {
@@ -30,16 +31,6 @@
     {
       "name": "metrics",
       "sort": 2,
-      "in-built": true
-    },
-    {
-      "name": "get-started",
-      "sort": 3,
-      "in-built": true
-    },
-    {
-      "name": "features",
-      "sort": 4,
       "in-built": true
     },
     {

@@ -7,6 +7,8 @@
   "name": "Magicodes Import & Export",
   "logo": "",
   "github": "https://github.com/dotnetcore/Magicodes.IE",
+  "gitee": "https://gitee.com/magicodes/Magicodes.IE",
+  "website": "https://docs.xin-lai.com/",
   "catalogue": "data",
   "status": "sandbox",
   "leader": {
@@ -38,13 +40,8 @@
       "in-built": true
     },
     {
-      "name": "features",
-      "sort": 4,
-      "in-built": true
-    },
-    {
       "name": "license",
-      "sort": 5,
+      "sort": 4,
       "in-built": true
     },
     {

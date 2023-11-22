@@ -21,6 +21,8 @@
   "code-of-conduct": "行為准則 (CoC)",
   "story": "故事",
   "story-desc": "NCC 從夢想開始之處啟航，一起讓 .NET 變得更強大",
+  "story-full": "我們的@:story",
+  "story-more": "更多@:story",
   "faq": "常見問題",
   "contact-us": "聯繫我們",
   "projects": "專案",

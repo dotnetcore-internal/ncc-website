@@ -1,7 +1,11 @@
 {
-  "ArticleCard.css": {
-    "file": "assets/ArticleCard.css",
-    "src": "ArticleCard.css"
+  "ArticleAsGrid.css": {
+    "file": "assets/ArticleAsGrid.css",
+    "src": "ArticleAsGrid.css"
+  },
+  "ArticleCards.css": {
+    "file": "assets/ArticleCards.css",
+    "src": "ArticleCards.css"
   },
   "ArticleNav.css": {
     "file": "assets/ArticleNav.css",
@@ -42,16 +46,38 @@
       "_usePageToolkits.js"
     ]
   },
-  "_ArticleCard.js": {
+  "_ArticleAsGrid.js": {
     "css": [
-      "assets/ArticleCard.css"
+      "assets/ArticleAsGrid.css"
     ],
-    "file": "assets/ArticleCard.js",
+    "file": "assets/ArticleAsGrid.js",
     "imports": [
-      "_uiStore.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
+      "_uiStore.js",
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
+    ]
+  },
+  "_ArticleAuthors.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/ArticleAuthors.vue_vue_type_script_setup_true_lang.js",
+    "imports": [
+      "_vendor.js",
+      "_ContentModels.js"
+    ]
+  },
+  "_ArticleCards.js": {
+    "css": [
+      "assets/ArticleCards.css"
+    ],
+    "file": "assets/ArticleCards.js",
+    "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
+      "_ArticleAsGrid.js"
     ]
   },
   "_ArticleNav.js": {
@@ -61,7 +87,6 @@
     "file": "assets/ArticleNav.js",
     "imports": [
       "_vendor.js",
-      "_ArticleCard.js",
       "__plugin-vue_export-helper.js"
     ]
   },
@@ -74,6 +99,9 @@
       "__plugin-vue_export-helper.js",
       "_vendor.js"
     ]
+  },
+  "_ContentModels.js": {
+    "file": "assets/ContentModels.js"
   },
   "_LeftRightLayout.js": {
     "file": "assets/LeftRightLayout.js",
@@ -153,9 +181,17 @@
     ],
     "file": "assets/ProjectStatBlock.js",
     "imports": [
+      "_uiStore.js",
+      "_useProjectToolkits.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js"
+    ]
+  },
+  "_QueryPagedStoryApi.js": {
+    "file": "assets/QueryPagedStoryApi.js",
+    "imports": [
+      "_axios.js"
     ]
   },
   "_TitleBlock.js": {
@@ -238,6 +274,8 @@
       "src/views/about/WhoWeAreView.vue",
       "src/views/about/JoinView.vue",
       "src/views/about/StoryView.vue",
+      "src/views/about/StoryView.vue",
+      "src/views/about/StoryDetail.vue",
       "src/views/about/FaqView.vue",
       "src/views/about/ContactView.vue",
       "src/views/HomeView.vue",
@@ -295,6 +333,11 @@
     "isEntry": true,
     "src": "index.html"
   },
+  "src/content/people/pmc.json": {
+    "file": "assets/pmc.js",
+    "isDynamicEntry": true,
+    "src": "src/content/people/pmc.json"
+  },
   "src/views/CodeOfConductView.css": {
     "file": "assets/CodeOfConductView.css",
     "src": "src/views/CodeOfConductView.css"
@@ -350,7 +393,7 @@
       "_TitleBlock.js",
       "_LeftRightLayout.js",
       "_MemberProjects.js",
-      "_ArticleCard.js",
+      "_ArticleAsGrid.js",
       "_vendor.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
@@ -358,7 +401,8 @@
       "_preload-helper.js",
       "_useProjectToolkits.js",
       "_useResource.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/HomeView.vue"
@@ -458,37 +502,10 @@
     "isDynamicEntry": true,
     "src": "src/views/about/OpenNccView.vue"
   },
-  "src/views/about/StoryView.vue": {
-    "file": "assets/StoryView.js",
+  "src/views/about/StoryDetail.vue": {
+    "file": "assets/StoryDetail.js",
     "imports": [
-      "_usePageToolkits.js",
-      "_BodyBlock.js",
-      "_TitleBlock.js",
-      "_vendor.js",
-      "_preload-helper.js",
-      "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/about/StoryView.vue"
-  },
-  "src/views/about/WhoWeAreView.vue": {
-    "file": "assets/WhoWeAreView.js",
-    "imports": [
-      "_usePageToolkits.js",
-      "_BodyBlock.js",
-      "_TitleBlock.js",
-      "_vendor.js",
-      "_preload-helper.js",
-      "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
-    ],
-    "isDynamicEntry": true,
-    "src": "src/views/about/WhoWeAreView.vue"
-  },
-  "src/views/announcements/AnnouncementDetailView.vue": {
-    "file": "assets/AnnouncementDetailView.js",
-    "imports": [
+      "_ArticleAuthors.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "_useEmitter.js",
       "_uiStore.js",
@@ -497,6 +514,85 @@
       "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
+      "_preload-helper.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/StoryDetail.vue"
+  },
+  "src/views/about/StoryView.vue": {
+    "file": "assets/StoryView.js",
+    "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_useEmitter.js",
+      "_usePageToolkits.js",
+      "_QueryPagedStoryApi.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_ArticleCards.js",
+      "_ArticleNav.js",
+      "_preload-helper.js",
+      "_axios.js",
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleAsGrid.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/StoryView.vue"
+  },
+  "src/views/about/WhoWeAreView.css": {
+    "file": "assets/WhoWeAreView.css",
+    "src": "src/views/about/WhoWeAreView.css"
+  },
+  "src/views/about/WhoWeAreView.vue": {
+    "css": [
+      "assets/WhoWeAreView.css"
+    ],
+    "file": "assets/WhoWeAreView.js",
+    "imports": [
+      "_vendor.js",
+      "_uiStore.js",
+      "_usePageToolkits.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_ProjectStatBlock.js",
+      "_useEmitter.js",
+      "_QueryPagedStoryApi.js",
+      "_ArticleCards.js",
+      "__plugin-vue_export-helper.js",
+      "_preload-helper.js",
+      "_useProjectToolkits.js",
+      "_useResource.js",
+      "_axios.js",
+      "_ContentModels.js",
+      "_ArticleAsGrid.js"
+    ],
+    "isDynamicEntry": true,
+    "src": "src/views/about/WhoWeAreView.vue"
+  },
+  "src/views/announcements/AnnouncementDetailView.vue": {
+    "file": "assets/AnnouncementDetailView.js",
+    "imports": [
+      "_ArticleAuthors.vue_vue_type_script_setup_true_lang.js",
+      "_vendor.js",
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_usePageToolkits.js",
+      "_axios.js",
+      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_BodyBlock.js",
+      "_TitleBlock.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
       "_preload-helper.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -515,12 +611,14 @@
       "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_ArticleCards.js",
       "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleCard.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleAsGrid.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/announcements/AnnouncementsIndexView.vue"
@@ -570,6 +668,7 @@
   "src/views/news/NewsDetailView.vue": {
     "file": "assets/NewsDetailView.js",
     "imports": [
+      "_ArticleAuthors.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "_useEmitter.js",
       "_uiStore.js",
@@ -578,6 +677,8 @@
       "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
       "_preload-helper.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -596,26 +697,41 @@
       "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_ArticleCards.js",
       "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleCard.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleAsGrid.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/news/NewsIndexView.vue"
   },
+  "src/views/people/ProjectManagementCommitteeView.css": {
+    "file": "assets/ProjectManagementCommitteeView.css",
+    "src": "src/views/people/ProjectManagementCommitteeView.css"
+  },
   "src/views/people/ProjectManagementCommitteeView.vue": {
+    "css": [
+      "assets/ProjectManagementCommitteeView.css"
+    ],
+    "dynamicImports": [
+      "src/content/people/pmc.json"
+    ],
     "file": "assets/ProjectManagementCommitteeView.js",
     "imports": [
+      "_preload-helper.js",
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_useEmitter.js",
+      "_uiStore.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/people/ProjectManagementCommitteeView.vue"
@@ -909,6 +1025,7 @@
   "src/views/weekly/WeeklyDetailView.vue": {
     "file": "assets/WeeklyDetailView.js",
     "imports": [
+      "_ArticleAuthors.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "_useEmitter.js",
       "_uiStore.js",
@@ -917,6 +1034,8 @@
       "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
       "_preload-helper.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -935,12 +1054,14 @@
       "_axios.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_ArticleCards.js",
       "_ArticleNav.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleCard.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+      "_ContentModels.js",
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ArticleAsGrid.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/weekly/WeeklyIndexView.vue"

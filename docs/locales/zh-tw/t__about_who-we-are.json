@@ -1,5 +1,7 @@
 {
   "_about_who-we-are": {
     "version": "20231104002"
-  }
+  },
+  "who-we-are-intro": "NCC 社區（.NET Core Community）是由一群有共同理念的 .NET 技術愛好者們組成的自由王國，用愛與夢想點燃 .NET 的明日之花。",
+  "id-of-ncc-and-member-projects": "社區與成員專案標識"
 }

@@ -17,15 +17,9 @@
     {
       "id": "agileconfig",
       "name": "AgileConfig",
-      "description": "一个基于 .NET Core 的轻量级配置中心。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/AgileConfig",
       "catalogue": "infra-middleware",
       "status": "sandbox",
-      "leader": {
-        "name": "ZJ ZHOU",
-        "url": "https://github.com/kklldog"
-      },
       "external": false,
       "language": [
         "C#"
@@ -34,15 +28,9 @@
     {
       "id": "alipay-sdk",
       "name": "Alipay SDK",
-      "description": "基于 .NET Standard 2.0 开发的第三方支付宝服务端 SDK，提供比官方更可靠的设计，但仍与官方 APIs 保持一致。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Alipay.AopSdk.Core",
       "catalogue": "tools-env",
       "status": "archived",
-      "leader": {
-        "name": "Zhiqiang Li",
-        "url": "https://github.com/stulzq"
-      },
       "external": false,
       "language": [
         "C#"
@@ -51,15 +39,9 @@
     {
       "id": "aspectcore",
       "name": "AspectCore",
-      "description": ".NET Standard 跨平台 AOP 框架。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/AspectCore-Framework",
       "catalogue": "application-library",
       "status": "top-level",
-      "leader": {
-        "name": "Liu Haoyang",
-        "url": "https://github.com/liuhaoyang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -68,17 +50,9 @@
     {
       "id": "bootstrapblazor",
       "name": "BootstrapBlazor",
-      "description": "基于 Bootstrap 的 Blazor 企业级 UI 组件库。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/BootstrapBlazor",
-      "gitee": "https://gitee.com/LongbowEnterprise/BootstrapBlazor",
-      "website": "https://www.blazor.zone/",
       "catalogue": "ui",
       "status": "sandbox",
-      "leader": {
-        "name": "Argo Zhang",
-        "url": "https://github.com/ArgoZhang"
-      },
       "external": false,
       "language": [
         "C#",
@@ -89,15 +63,9 @@
     {
       "id": "canalsharp",
       "name": "CanalSharp",
-      "description": "Alibaba Canal 的开源 .NET 客户端，Alibaba Canal 是一个基于 MySQL binlog 的增量发布与订阅组件。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/CanalSharp",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "WithLin",
-        "url": "https://github.com/withlin"
-      },
       "external": false,
       "language": [
         "C#"
@@ -106,15 +74,9 @@
     {
       "id": "cap",
       "name": "CAP",
-      "description": "基于最终一致性的微服务分布式事务解决方案，具有 Outbox 模式的事件总线。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/CAP",
       "catalogue": "infra-middleware",
       "status": "top-level",
-      "leader": {
-        "name": "杨晓东",
-        "url": "https://github.com/yang-xiaodong"
-      },
       "external": false,
       "language": [
         "C#"
@@ -123,15 +85,9 @@
     {
       "id": "collections",
       "name": "Collections",
-      "description": "包括分页组件在内的集合扩展。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Collections",
       "catalogue": "application-library",
       "status": "sandbox",
-      "leader": {
-        "name": "Alex Lewis",
-        "url": "https://github.com/alexinea"
-      },
       "external": false,
       "language": [
         "C#"
@@ -140,15 +96,9 @@
     {
       "id": "compile-environment",
       "name": "Compile Environment",
-      "description": "使用 Roslyn 库进行动态编译时，可以引入该库提供动态编译的环境。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Compile.Environment",
       "catalogue": "tools-env",
       "status": "sandbox",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "Xml"
@@ -157,15 +107,9 @@
     {
       "id": "dotnetspider",
       "name": "DotnetSpider",
-      "description": "类似 WebMagic 与 Scrapy 的 .NET Standard 轻量级、高效且高速的高级爬虫库。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/DotnetSpider",
       "catalogue": "data",
       "status": "top-level",
-      "leader": {
-        "name": "Lewis Zou",
-        "url": "https://github.com/zlzforever"
-      },
       "external": false,
       "language": [
         "C#"
@@ -174,15 +118,9 @@
     {
       "id": "easycaching",
       "name": "EasyCaching",
-      "description": "开源缓存库，包含基本用法和缓存的高级用法，可助我们更轻松地处理缓存。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/EasyCaching",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "汪文清",
-        "url": "https://github.com/catcherwang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -191,15 +129,9 @@
     {
       "id": "flubucore",
       "name": "FlubuCore",
-      "description": "跨平台构建与部署自动化系统，基于 C# 代码构建项目和执行部署脚本。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/FlubuCore",
       "catalogue": "tools-env",
       "status": "top-level",
-      "leader": {
-        "name": "Marko Zorec",
-        "url": "https://github.com/mzorec"
-      },
       "external": false,
       "language": [
         "C#"
@@ -208,15 +140,9 @@
     {
       "id": "efcore-gaussdb",
       "name": "GaussDB for EFCore",
-      "description": "华为 GaussDB 的 Entity Framework Core 驱动。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/EntityFrameworkCore.GaussDB",
       "catalogue": "data",
       "status": "incubation",
-      "leader": {
-        "name": "Jeffcky",
-        "url": "https://github.com/wangpengxpy"
-      },
       "external": false,
       "language": [
         "C#"
@@ -225,15 +151,9 @@
     {
       "id": "efcore-kingbasees",
       "name": "KingbaseES for EFCore",
-      "description": "人大金仓 KingbaseES 的 Entity Framework Core 驱动。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/EntityFrameworkCore.KingbaseES",
       "catalogue": "data",
       "status": "incubation",
-      "leader": {
-        "name": "Jeffcky",
-        "url": "https://github.com/wangpengxpy"
-      },
       "external": false,
       "language": [
         "C#"
@@ -242,14 +162,9 @@
     {
       "id": "fastgithub",
       "name": "FastGithub",
-      "description": "GitHub 加速神器，解决 GitHub 打不开、用户头像无法加载、releases 无法上传下载、git-clone git-pull git-push 失败等问题。",
       "logo": "",
       "catalogue": "tools-env",
       "status": "archived",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "C#"
@@ -258,15 +173,9 @@
     {
       "id": "freesql",
       "name": "FreeSql",
-      "description": "一款功能强大的 ORM 组件，支持 .NET Core、.NET Framework 和 Xamarin。目前 FreeSql 支持以下数据库：MySQL、PostgreSQL、SqlServer、Oracle、Sqlite、Firebird、ODBC、微软 Access 以及国产数据库达梦、人大金仓、神通、瀚高、华为 GaussDB。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/FreeSql",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "2881099",
-        "url": "https://github.com/2881099"
-      },
       "external": false,
       "language": [
         "C#"
@@ -275,15 +184,9 @@
     {
       "id": "httpreports",
       "name": "HttpReports",
-      "description": "是一款基于 .NET Core 的轻量级 APM 系统，可在 .NET Core 环境下快速搭建统计、分析、图标、监控和分布式跟踪一体化的站点，适用于 ASP.NET Core MVC/WebAPI。HttpReports 上手简单，适合在微服务中使用。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/HttpReports",
       "catalogue": "infra-middleware",
       "status": "sandbox",
-      "leader": {
-        "name": "SpringLee",
-        "url": "https://github.com/SpringLee"
-      },
       "external": false,
       "language": [
         "C#"
@@ -292,15 +195,9 @@
     {
       "id": "magicodes-ie",
       "name": "Magicodes Import & Export",
-      "description": "导入导出通用库，支持 Excel、Word、PDF 与 HTML。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Magicodes.IE",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "Xin-Lai",
-        "url": "https://github.com/xin-lai"
-      },
       "external": false,
       "language": [
         "C#"
@@ -309,15 +206,9 @@
     {
       "id": "mocha",
       "name": "Mocha",
-      "description": "一款基于OpenTelemetry 的应用程序性能监控工具，为可观测性数据分析和存储提供了可扩展的平台。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/mocha",
       "catalogue": "infra-middleware",
       "status": "incubation",
-      "leader": {
-        "name": "Liu Haoyang",
-        "url": "https://github.com/liuhaoyang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -326,15 +217,9 @@
     {
       "id": "natasha",
       "name": "Natasha",
-      "description": "简化 IL 操作，优化 IL 编程流程，并编写具有高性能的动态缓存。 ",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Natasha",
       "catalogue": "application-library",
       "status": "sandbox",
-      "leader": {
-        "name": "AzulX",
-        "url": "https://github.com/NMSAzulX"
-      },
       "external": false,
       "language": [
         "C#"
@@ -343,15 +228,9 @@
     {
       "id": "npoi",
       "name": "NPOI",
-      "description": "用于读写 Microsoft Office 二进制文件和 OOXML 文件格式的 .NET 类库。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/NPOI",
       "catalogue": "data",
       "status": "archived",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "C#"
@@ -360,15 +239,9 @@
     {
       "id": "osharp",
       "name": "OSharp",
-      "description": "全称 OSharp Framework with .NetStandard2.x，是一个基于 .NetStandard2.x 开发的一个 .NetCore 快速开发框架。这个框架使用最新稳定版的 .NetCore SDK（当前是.NET Core 3.1），对 AspNetCore 的配置、依赖注入、日志、缓存、实体框架、Mvc(WebApi)、身份认证、权限授权等模块进行更高一级的自动化封装，并规范了一套业务实现的代码结构与操作流程，使 .Net Core 框架更易于应用到实际项目开发中。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/OSharp",
       "catalogue": "dev-fx",
       "status": "sandbox",
-      "leader": {
-        "name": "郭明峰",
-        "url": "https://github.com/gmf520"
-      },
       "external": false,
       "language": [
         "C#"
@@ -377,15 +250,9 @@
     {
       "id": "shardingcore",
       "name": "ShardingCore",
-      "description": "一款 EFCore 下高性能、轻量级针对分表分库读写分离的解决方案，具有零依赖、零学习成本、零业务代码入侵。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/sharding-core",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "Xuejmnet",
-        "url": "https://github.com/Xuejmnet"
-      },
       "external": false,
       "language": [
         "C#"
@@ -394,15 +261,9 @@
     {
       "id": "smartcode",
       "name": "SmartCode",
-      "description": "优秀的开源代码生成器（不仅仅是生成代码），它基于执行流程，支持 ETL 模式，高度灵活和可扩展，还支持自定义模板和多种模板样式，以及多种数据库。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/SmartCode",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "Ahoo-Wang",
-        "url": "https://github.com/Ahoo-Wang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -411,16 +272,9 @@
     {
       "id": "smartsql",
       "name": "SmartSql",
-      "description": "通过简单的连接字符串来运行，解析 SQL 的 XML 配置和各种性能观察方法，使性能问题一目了然。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/SmartSql",
-      "website": "https://smartsql.net/",
       "catalogue": "data",
       "status": "sandbox",
-      "leader": {
-        "name": "Ahoo-Wang",
-        "url": "https://github.com/Ahoo-Wang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -429,15 +283,9 @@
     {
       "id": "sourcelink-environment",
       "name": "SourceLink Environment",
-      "description": "为 SourceLink 功能提供可继承性值的 Nuget 包。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/SourceLink.Environment",
       "catalogue": "tools-env",
       "status": "sandbox",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "Xml"
@@ -446,15 +294,9 @@
     {
       "id": "util",
       "name": "Util",
-      "description": ".NET Core 平台下的开源应用程序，旨在提高小型团队的开发效率。 它由通用帮助程序，分层体系结构设计，UI 组件，第三方组件和服务接口包组成。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/Util",
       "catalogue": "dev-fx",
       "status": "sandbox",
-      "leader": {
-        "name": "何镇汐",
-        "url": "https://github.com/xiadao521"
-      },
       "external": false,
       "language": [
         "C#"
@@ -463,15 +305,9 @@
     {
       "id": "webapiclient",
       "name": "WebApiClient",
-      "description": "基于 HttpClient 的开源项目，只需通过定义 C# 接口并修改一些细节便可异步调用远程 HTTP 接口。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/WebApiClient",
       "catalogue": "application-library",
       "status": "sandbox",
-      "leader": {
-        "name": "老九",
-        "url": "https://github.com/xljiuliang"
-      },
       "external": false,
       "language": [
         "C#"
@@ -480,15 +316,9 @@
     {
       "id": "wtm",
       "name": "WTM",
-      "description": "针对中小规模后台管理系统的开发利器，基于 .NET Core，实现零编码创建项目、零编码生成业务模块。框架严格遵循 MVVM 的开发模式，经过数十个真实项目检测，可以极大提高开发效率，降低开发成本。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/WTM",
       "catalogue": "dev-fx",
       "status": "sandbox",
-      "leader": {
-        "name": "Liu Liang",
-        "url": "https://github.com/liuliang-wt"
-      },
       "external": false,
       "language": [
         "C#"
@@ -497,15 +327,9 @@
     {
       "id": "kooboo-json",
       "name": "Kooboo Json",
-      "description": "更小更快的 C# JSON 序列化工具（基于表达式树构建）。",
       "logo": "",
-      "github": "https://github.com/kooboo/Json",
       "catalogue": "tools-env",
       "status": "sandbox",
-      "leader": {
-        "name": "Kooboo Team",
-        "url": "https://github.com/Kooboo"
-      },
       "external": true,
       "language": [
         "C#"
@@ -514,15 +338,9 @@
     {
       "id": "aspnetcore-translation",
       "name": "ASP.NET Core Documentation",
-      "description": "由 .NET China Foundation（已更名为 NCC）发起的微软 ASP.NET Core 文档翻译计划。",
       "logo": "",
-      "github": "https://github.com/dotnetcore/aspnetcore-doc-cn",
       "catalogue": "translation",
       "status": "translation",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "Other"
@@ -531,15 +349,9 @@
     {
       "id": "btfindtree",
       "name": "BTFindTree",
-      "description": "此项目为 Leo 项目中的高效查找数据结构，使用二分+桶的方式优化查找性能。",
       "logo": "",
-      "github": "https://github.com/dotnet-lab/BTFindTree",
       "catalogue": "application-library",
       "status": "labs",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "C#"
@@ -548,15 +360,9 @@
     {
       "id": "papper",
       "name": "Papper",
-      "description": "基于 Roslyn 对语法树的一个封装, 使开发者更容易操作语法树。",
       "logo": "",
-      "github": "https://github.com/dotnet-lab/Papper",
       "catalogue": "application-library",
       "status": "labs",
-      "leader": {
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore"
-      },
       "external": false,
       "language": [
         "C#"
@@ -565,42 +371,27 @@
     {
       "id": "surging",
       "name": "Surging",
-      "description": "一个微服务框架",
       "logo": "",
       "catalogue": "other",
       "status": "other",
-      "leader": {
-        "name": "fanliang11",
-        "url": ""
-      },
       "external": true,
       "language": []
     },
     {
       "id": "zkweb",
       "name": "ZKWeb",
-      "description": "一个灵活的 Web 框架",
       "logo": "",
       "catalogue": "other",
       "status": "other",
-      "leader": {
-        "name": "The ZKWeb Team",
-        "url": ""
-      },
       "external": true,
       "language": []
     },
     {
       "id": "botsharp",
       "name": "BotSharp",
-      "description": "一个创建智能聊天机器人的机器学习框架。",
       "logo": "",
       "catalogue": "other",
       "status": "other",
-      "leader": {
-        "name": "The SciSharp",
-        "url": "https://github.com/scisharp"
-      },
       "external": true,
       "language": []
     }

@@ -10,6 +10,10 @@
     "get-started": "快速入門",
     "features": "功能特性",
     "license": "許可證",
+    "todo": {
+      "title": "待辦",
+      "url": "https://github.com/dotnetcore/EasyCaching/blob/dev/docs/ToDoList.md"
+    },
     "release": {
       "title": "發佈日誌",
       "url": "https://github.com/dotnetcore/EasyCaching/releases/latest"

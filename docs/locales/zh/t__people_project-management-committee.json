@@ -1,5 +1,7 @@
 {
-  "_people-management-committee": {
+  "_people_project-management-committee": {
     "version": "20231104002"
-  }
+  },
+  "pmc-intro": "项目管理委员会 (PMC) 为 TheNCC 社区提供技术领导和监督。",
+  "pmc-director": "主理人"
 }

@@ -8,36 +8,60 @@
       "id": "ncc-itai-projects-incubation",
       "title": "ITAI: The NCC has initiated the incubation of two ITAI projects33",
       "date": "2023-10-16",
-      "author": {
-        "id": "ncc",
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore",
-        "avatar": "/images/logo-seq-svg.svg"
-      },
+      "author": [
+        {
+          "id": "ncc",
+          "name": "The NCC",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        },
+        {
+          "id": "dotnet-china",
+          "name": "The .NET China User Group",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        }
+      ],
       "img": "ef.png"
     },
     {
       "id": "ncc-cloud-native-mocha",
       "title": "MOCHA: Cloud Native APM and Large-Scale Observability Data Processing Platform project has been launched33",
       "date": "2023-10-09",
-      "author": {
-        "id": "ncc",
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore",
-        "avatar": "/images/logo-seq-svg.svg"
-      },
+      "author": [
+        {
+          "id": "ncc",
+          "name": "The NCC",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        },
+        {
+          "id": "dotnet-china",
+          "name": "The .NET China User Group",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        }
+      ],
       "img": "mocha.png"
     },
     {
       "id": "ncc-cloud-native-wind-rises",
       "title": "WIND RISES: The NCC cloud native project incubation program33",
       "date": "2023-10-08",
-      "author": {
-        "id": "ncc",
-        "name": "The NCC",
-        "url": "https://github.com/dotnetcore",
-        "avatar": "/images/logo-seq-svg.svg"
-      },
+      "author": [
+        {
+          "id": "ncc",
+          "name": "The NCC",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        },
+        {
+          "id": "dotnet-china",
+          "name": "The .NET China User Group",
+          "url": "https://github.com/dotnetcore",
+          "avatar": "/images/logo-seq-svg.svg"
+        }
+      ],
       "img": "wind-rises.png"
     }
   ]

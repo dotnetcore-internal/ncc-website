@@ -1,0 +1,80 @@
+{
+  "_page": {
+    "current": 1,
+    "total": 1
+  },
+  "list": [
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC participation in .NET Conf China 2023 in Beijing",
+      "date": "2023-12-16",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC participation in .NET Conf China 2023 in Beijing",
+      "date": "2023-12-16",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-chengdu",
+      "title": "NCC participation in .NET Conf Chengdu 2023",
+      "date": "2023-12-09",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC participation in .NET Conf China 2023 in Beijing",
+      "date": "2023-12-16",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-beijing",
+      "title": "NCC participation in .NET Conf China 2023 in Beijing",
+      "date": "2023-12-16",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    },
+    {
+      "id": "ncc-participation-in-conf23-in-chengdu",
+      "title": "NCC participation in .NET Conf Chengdu 2023",
+      "date": "2023-12-09",
+      "author": {
+        "id": "ncc",
+        "name": "The NCC",
+        "url": "https://github.com/dotnetcore",
+        "avatar": "/images/logo-seq-svg.svg"
+      },
+      "img": "conf23.png"
+    }
+  ]
+}

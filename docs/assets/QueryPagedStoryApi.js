@@ -1,0 +1,1 @@
+import{a as s}from"./axios.js";const c=async function(t,o,a=()=>{}){await s.get(t).then(function(i){o(i.data)}).catch(a)},f=async function(t,o,a,i=()=>{}){t<1&&(t=1),await y(t-1,o,a,i)},y=async function(t,o,a,i=()=>{}){t<0&&(t=0);const n=t===0?`/api/story/list_${o}.json`:`/api/story/list_${t}_${o}.json`;await c(n,a,i)};export{f as q};
