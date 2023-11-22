@@ -16,9 +16,11 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDate?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
+  displayDate: true,
   author: null
 });
 
@@ -166,7 +168,7 @@ onMounted(() => {
           </span>
         </div>
 
-        <div class="md:flex-none w-full md:w-36 text-right">
+        <div v-if="props.displayDate" class="md:flex-none w-full md:w-36 text-right">
           <span class="text-sm text-gray-500">
             {{ displayDate(date, $t("_common.date-format")) }}
           </span>

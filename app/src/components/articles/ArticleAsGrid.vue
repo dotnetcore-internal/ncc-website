@@ -16,10 +16,18 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDate?: boolean;
+  withShadow?: boolean;
+  withScale?: boolean;
+  infiniteHorizontal?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
-  author: null
+  displayDate: true,
+  author: null,
+  withShadow: true,
+  withScale: true,
+  infiniteHorizontal: false
 });
 
 const uiStore = useUiStore();
@@ -149,7 +157,9 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="article-grid">
+
+  <div class="article-grid" :class="{'shadow-md': withShadow, 'hover:scale-105': withScale }">
+
     <anchor class="block w-full h-4/5" :href="useArticleUrl" :title="useTitleTip" target="_blank" mode="classic">
       <img :src="useImageUrl" :alt="useTitleTip" />
       <span class="block px-5 py-7 text-lg font-bold">
@@ -168,16 +178,16 @@ onMounted(() => {
         <!-- Author -->
       </span>
     </anchor>
-    <span class="block px-5 py-7 text-sm text-gray-500 ">{{ displayDate(date, $t("_common.date-format")) }}</span>
+    <span v-if="props.displayDate" class="block px-5 py-7 text-sm text-gray-500 ">{{ displayDate(date, $t("_common.date-format")) }}</span>
 
   </div>
+
 </template>
 
 <style scoped lang="css">
 .article-grid {
   @apply m-4 rounded-lg overflow-hidden;
   @apply dark:bg-gray-500/5;
-  @apply transition-all ease-in-out duration-500 hover:scale-105;
-  @apply shadow-md;
+  @apply transition-all ease-in-out duration-500;
 }
 </style>

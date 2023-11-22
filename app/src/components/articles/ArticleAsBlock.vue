@@ -16,10 +16,14 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDate?: boolean;
+  withShadow?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
-  author: null
+  displayDate: true,
+  author: null,
+  withShadow: true
 });
 
 const uiStore = useUiStore();
@@ -149,7 +153,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="article-block">
+  <div class="article-block" :class="{'shadow-md': props.withShadow}">
     <anchor class="block w-full h-4/5" :href="useArticleUrl" :title="useTitleTip" target="_blank" mode="classic">
 
       <div class="w-full relative">
@@ -181,7 +185,7 @@ onMounted(() => {
           <!-- Author -->
         </div>
 
-        <div class="md:flex-none w-36">
+        <div v-if="props.displayDate" class="md:flex-none w-36">
           <span class="text-sm text-gray-500">{{ displayDate(date, $t("_common.date-format")) }}</span>
         </div>
 
@@ -196,6 +200,5 @@ onMounted(() => {
 .article-block {
   @apply m-4 rounded-lg overflow-hidden;
   @apply dark:bg-gray-500/5;
-  @apply shadow-md;
 }
 </style>

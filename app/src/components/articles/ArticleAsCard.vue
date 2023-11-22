@@ -16,10 +16,14 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDate?: boolean;
+  withShadow?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
-  author: null
+  displayDate: true,
+  author: null,
+  withShadow: true
 });
 
 const uiStore = useUiStore();
@@ -149,7 +153,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="article-card">
+  <div class="article-card" :class="{'shadow-md':withShadow,'hover:shadow-lg':withShadow}">
     <anchor class="block w-full h-4/5" :href="useArticleUrl" :title="useTitleTip" target="_blank" mode="classic">
 
       <div class="md:flex p-5">
@@ -160,7 +164,8 @@ onMounted(() => {
 
         <div class="flex-1 p-5 text-lg font-bold">
           <slot></slot>
-          <span class="block text-sm text-gray-500 font-medium">{{ displayDate(date, $t("_common.date-format")) }}</span>
+          <span v-if="props.displayDate" class="block text-sm text-gray-500 font-medium">{{ displayDate(date, $t("_common.date-format")) }}</span>
+          <br v-else />
           <!-- Author -->
           <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
             <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
@@ -185,6 +190,5 @@ onMounted(() => {
 .article-card {
   @apply m-4 rounded-lg overflow-hidden;
   @apply dark:bg-gray-500/5 hover:bg-purple-500/5;
-  @apply shadow-md;
 }
 </style>

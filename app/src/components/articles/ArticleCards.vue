@@ -14,20 +14,28 @@ const props = withDefaults(defineProps<{
   baseUrl: string;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDate?: boolean;
   enableCardMode?: boolean;
   enableListMode?: boolean;
   enableGridMode?: boolean;
   enableBlockMode?: boolean;
   limitedItems?: number;
+  withShadow?: boolean;
+  withScale?: boolean;
+  infiniteHorizontalForGrid?: boolean;
 }>(), {
   defaultDisplayMode: "grid",
   displayAuthorBy: false,
+  displayDate: true,
   displayAuthorMode: "hide",
   enableCardMode: true,
   enableListMode: true,
   enableGridMode: true,
   enableBlockMode: true,
-  limitedItems: 0
+  limitedItems: 0,
+  withShadow: true,
+  withScale: true,
+  infiniteHorizontalForGrid: false
 });
 
 
@@ -118,6 +126,8 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                       :base-url="baseUrl"
                       :display-author-mode="displayAuthorMode"
                       :display-author-by="displayAuthorBy"
+                      :display-date="displayDate"
+                      :with-shadow="withShadow"
     >
       {{ article.title }}
     </article-as-block>
@@ -126,7 +136,10 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
 
   <div v-if="enableGridMode"
        v-show="currentDisplayMode === 'grid'"
-       class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+       :class="{
+         'grid-normal': !props.infiniteHorizontalForGrid,
+         'grid-scroll': props.infiniteHorizontalForGrid
+       }">
 
     <article-as-grid v-for="article in useArticles"
                      :key="article.id"
@@ -138,6 +151,10 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :base-url="baseUrl"
                      :display-author-mode="displayAuthorMode"
                      :display-author-by="displayAuthorBy"
+                     :display-date="displayDate"
+                     :with-shadow="withShadow"
+                     :with-scale="withScale"
+                     :infinite-horizontal="infiniteHorizontalForGrid"
     >
       {{ article.title }}
     </article-as-grid>
@@ -157,6 +174,8 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :base-url="baseUrl"
                      :display-author-mode="displayAuthorMode"
                      :display-author-by="displayAuthorBy"
+                     :display-date="displayDate"
+                     :with-shadow="withShadow"
     >
       {{ article.title }}
     </article-as-card>
@@ -176,6 +195,7 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :base-url="baseUrl"
                      :display-author-mode="displayAuthorMode"
                      :display-author-by="displayAuthorBy"
+                     :display-date="displayDate"
     >
       {{ article.title }}
     </article-as-list>
@@ -201,4 +221,20 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
   @apply bg-purple-500/10 dark:bg-purple-200/30;
 
 }
+
+.grid-normal {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+
+.grid-scroll {
+  @apply w-full flex snap-x overflow-x-auto;
+  @apply scroll-pl-12;
+
+
+  .article-grid {
+    @apply snap-center scroll-ml-6 shrink-0;
+    @apply block xl:w-1/4 md:w-1/3 w-1/2;
+  }
+}
+
 </style>
