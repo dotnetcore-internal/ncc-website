@@ -5,7 +5,7 @@ export class PeopleKey {
 }
 
 export class PmcPeople extends PeopleKey {
-  founder: boolean = false;
+  director: boolean = false;
   "during-in-term": boolean = false;
 }
 

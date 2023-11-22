@@ -4,7 +4,7 @@
       "id": "alexinea",
       "name": "Alex LEWIS",
       "avatar": "alexinea.png",
-      "founder": true,
+      "director": true,
       "during-in-term": true
     },
     {
@@ -53,7 +53,6 @@
       "id": "hzx",
       "name": "Zhenxi HE",
       "avatar": "hzx.jpg",
-      "founder": true,
       "during-in-term": true
     },
     {
@@ -72,7 +71,7 @@
       "id": "lhy",
       "name": "Haoyang LIU",
       "avatar": "lhy.jpg",
-      "founder": true,
+      "director": true,
       "during-in-term": true
     },
     {
@@ -91,13 +90,6 @@
       "id": "lwq",
       "name": "WenQ. LEE",
       "avatar": "lwq.jpg",
-      "during-in-term": true
-    },
-    {
-      "id": "lyrics",
-      "name": "Yu LOU",
-      "avatar": "lyrics.jpg",
-      "founder": true,
       "during-in-term": true
     },
     {
