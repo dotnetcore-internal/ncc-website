@@ -8,9 +8,9 @@ import Anchor from "@/components/basic/AnchorElement.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
-import BloomingFlowers from "@/components/home/BloomingFlowers.vue";
 import { RightSmallUp } from "@icon-park/vue-next";
 import ProjectStatBlock from "@/components/projects/ProjectStatBlock.vue";
+import StoryCollections from "@/views/about/StoryCollections.vue";
 
 const uiStore = useUiStore();
 
@@ -43,15 +43,29 @@ const useIconColor = computed(() => {
 
   </body-block>
 
+  <body-block>
+
+    <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+      {{ $t("story-full") }}
+    </title-block>
+
+    <story-collections :query-number="6" />
+
+    <placeholder-block height="35px" />
+
+  </body-block>
+
   <div class="bg-white dark:bg-black">
 
-    <placeholder-block height="20px"/>
+    <placeholder-block height="35px" />
 
     <body-block>
 
       <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
-        Identity of TheNCC and member projects
+        {{ $t("id-of-ncc-and-member-projects") }}
       </title-block>
+
+      <placeholder-block height="20px" />
 
       <div class="grid grid-cols-2 gap-4">
 
@@ -86,6 +100,8 @@ const useIconColor = computed(() => {
 
       </div>
 
+      <placeholder-block height="90px" />
+
     </body-block>
 
   </div>
@@ -97,7 +113,6 @@ const useIconColor = computed(() => {
     <div class="who-we-are-intro">
       {{ $t("home.growing-for-ecosystem") }}
     </div>
-
 
 
     <project-stat-block />
@@ -114,7 +129,7 @@ const useIconColor = computed(() => {
   line-height: 3.5rem;
 }
 
-.brand-logo{
+.brand-logo {
   @apply py-2 w-72 mx-auto my-4 block;
   @apply bg-slate-500/10 hover:bg-slate-500/20 rounded-lg cursor-pointer;
   @apply text-lg text-center;
