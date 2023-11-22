@@ -1,7 +1,42 @@
 <script setup lang="ts">
+import { computed, onMounted, reactive } from "vue";
+import { useUiStore } from "@/stores/uiStore";
+import { filterProjects, loadProjectsAsync } from "@/hooks/useProjectToolkits";
+import type { ProjectCardModel } from "@/apis/QueryProjectListApi";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 import AnimateNumber from "@/components/basic/AnimateNumber.vue";
+
+const uiStore = useUiStore();
+const projects = reactive<ProjectCardModel[]>([]);
+
+const props = withDefaults(defineProps<{
+  models?: ProjectCardModel[];
+}>(), {});
+
+const updateProjects = (models: ProjectCardModel[]) => {
+  projects.length = 0;
+  for (const model of models) {
+    projects.push(model);
+  }
+};
+
+const useTopLevelProjectCount = computed(() => {
+  return filterProjects(projects, "top-level").length;
+});
+
+const useTotalProjectCount = computed(() => {
+  return filterProjects(projects, "full").length;
+});
+
+onMounted(async () => {
+  if (!!props.models && props.models.length > 0) {
+    updateProjects(props.models);
+  } else {
+    await loadProjectsAsync(uiStore.locale, updateProjects);
+  }
+});
+
 </script>
 
 <template>
@@ -10,7 +45,7 @@ import AnimateNumber from "@/components/basic/AnimateNumber.vue";
 
     <anchor href="/top-level-projects" :title="$t('project-top-level-full')" mode="classic" class="number-card block">
         <span class="number">
-          <animate-number :from="0" :to="4" duration="500" />
+          <animate-number :from="0" :to="useTopLevelProjectCount" duration="500" :key="useTopLevelProjectCount" />
         </span>
       <span class="desc">
           <span class="">Top-Level</span>
@@ -20,7 +55,7 @@ import AnimateNumber from "@/components/basic/AnimateNumber.vue";
 
     <anchor href="/projects" :title="$t('project-all-full')" mode="classic" class="number-card block">
         <span class="number">
-          <animate-number :from="0" :to="32" duration="500" />
+          <animate-number :from="0" :to="useTotalProjectCount" duration="500" :key="useTotalProjectCount" />
         </span>
       <span class="desc">
           <span class="">Member</span>
