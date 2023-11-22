@@ -1,1 +1,0 @@
-import{e as t,T as o}from"./TitleBlock.js";import{B as a}from"./BodyBlock.js";import{d as r,y as s,e,o as l,b as c,f as n}from"./vendor.js";const u=r({__name:"404View",setup(_){return t("Page Not Found"),(d,f)=>(l(),s(a,null,{default:e(()=>[c(o,null,{default:e(()=>[n("404")]),_:1})]),_:1}))}});export{u as default};
