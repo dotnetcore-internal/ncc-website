@@ -27,7 +27,7 @@ import { mark } from "@mdit/plugin-mark";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "./",
+  base: "/",
   plugins: [
     vue({
       include: [/\.vue$/, /\.md$/] // <-- allows Vue to compile Markdown files

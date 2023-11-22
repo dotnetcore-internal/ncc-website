@@ -1,1 +1,1 @@
-const e=""+new URL("../images/official-wechat-account-qrcode.jpg",import.meta.url).href;export{e as _};
+const c="/images/official-wechat-account-qrcode.jpg";export{c as _};
