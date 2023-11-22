@@ -2,7 +2,7 @@
 import { computed } from "vue";
 
 const props = withDefaults(defineProps<{
-  height: "20px" | "90px" | "1.25rem",
+  height: "20px" | "90px" | "1.25rem" | "2.5rem" | string,
   bgColor?: "" | "bg-black" | "bg-white",
   bgColorClass?: string,
 }>(), {
