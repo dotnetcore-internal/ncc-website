@@ -87,8 +87,6 @@ https://ncc.work/projects/httpreports/features
 https://ncc.work/projects/httpreports/license
 https://ncc.work/projects/kooboo-json
 https://ncc.work/projects/kooboo-json/metrics
-https://ncc.work/projects/kooboo-json/get-started
-https://ncc.work/projects/kooboo-json/features
 https://ncc.work/projects/kooboo-json/license
 https://ncc.work/projects/efcore-kingbasees
 https://ncc.work/projects/efcore-kingbasees/metrics
@@ -97,7 +95,6 @@ https://ncc.work/projects/efcore-kingbasees/license
 https://ncc.work/projects/magicodes-ie
 https://ncc.work/projects/magicodes-ie/metrics
 https://ncc.work/projects/magicodes-ie/get-started
-https://ncc.work/projects/magicodes-ie/features
 https://ncc.work/projects/magicodes-ie/license
 https://ncc.work/projects/mocha
 https://ncc.work/projects/mocha/metrics
@@ -107,7 +104,6 @@ https://ncc.work/projects/mocha/license
 https://ncc.work/projects/natasha
 https://ncc.work/projects/natasha/metrics
 https://ncc.work/projects/natasha/get-started
-https://ncc.work/projects/natasha/features
 https://ncc.work/projects/natasha/license
 https://ncc.work/projects/npoi
 https://ncc.work/projects/npoi/announcement
