@@ -4,6 +4,7 @@ import { defineConfig, splitVendorChunkPlugin } from "vite";
 import vue from "@vitejs/plugin-vue";
 import VueTypeImports from "@rah-emil/vite-plugin-vue-type-imports";
 import vitePluginImp from "vite-plugin-imp";
+import rollupCopy from "rollup-plugin-copy";
 
 //region Markdown-IT
 import Markdown from "unplugin-vue-markdown/vite";
@@ -78,7 +79,15 @@ export default defineConfig({
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
         assetFileNames: `assets/[name].[ext]`
-      }
+      },
+      plugins: [
+        rollupCopy({
+          targets: [
+            { src: "src/content/*", dest: "../docs/content" }
+          ],
+          copyOnce: true
+        })
+      ]
     }
   },
   resolve: {

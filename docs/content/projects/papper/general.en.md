@@ -1,0 +1,1 @@
+Based on the encapsulation of the syntax tree by Roslyn, it makes it easier for developers to operate the syntax tree.

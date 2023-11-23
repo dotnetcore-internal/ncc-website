@@ -1,0 +1,2 @@
+It is used for deduplication of collection requests and control of collection order. By default, it implements two schedulers: breadth-first and depth-first. The scheduler can use different Hash duplicators, usually the default HashSetDuplicateRemover is sufficient. If the collection volume is large, BloomFilterDuplicateRemover can be used. If you want to schedule massive requests or have requirements such as resuming after a restart, you need to implement a scheduler based on a database (relational database, Redis, etc.) yourself.
+

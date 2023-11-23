@@ -1,0 +1,1 @@
+支持自动建表，可参考[本例](https://github.com/dotnetcore/sharding-core/tree/main/samples/Samples.AutoByDate.SqlServer)

@@ -1,0 +1,2 @@
+The concurrent controller retrieves requests from the Scheduler at a certain speed and pushes them into the message queue. These requests are cached in the RequestedQueue, which is implemented using the low-overhead HashedWheelTimer. If no message is received from the download agent within a certain period of time, it is considered a Timeout, and a retry is triggered until the retry limit is exceeded.
+

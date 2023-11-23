@@ -1,0 +1,5 @@
+Dynamic Agent Repository (SmartSql.DyRepository) components are SmartSql very unique features that simplify the use of SmartSql. There is little intrusion into the business code other than configuration. It can be said that using ISqlMapper is the original method, and DyRepository automatically helps you implement these methods.
+
+DyRepository only need to define the Repository interface, through a simple configuration can automatically implement these interfaces and register in the IoC container, when used injection instant acquisition implementation. The principle is to obtain the Scope and SqlId in the XML file of SmartSql through the naming rules of the interface and interface method, use the parameters of the interface method as the Request, and automatically judge the query or perform the operation through the SQL in the XML, and finally realize the ISqlMapper Call.
+
+For more detail, please view [documentation](https://smartsql.net/en/dyrepository/)

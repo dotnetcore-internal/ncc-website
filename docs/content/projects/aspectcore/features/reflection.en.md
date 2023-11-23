@@ -1,0 +1,3 @@
+In the process of implementing AOP from scratch, it is inevitable that a large number of reflection-related operations will be required. Although the performance of reflection has been greatly optimized in .net 4.5+/.net core, in order to pursue ultimate performance, I have implemented some alternative solutions to reflection, including constructor invocation, method invocation, field read and write, property read and write, and attribute reading. When refactoring, the reflection extension operations are encapsulated in a separate project to facilitate the use of myself and others.
+
+For more detail, please view [documentation](https://github.com/dotnetcore/AspectCore-Framework/blob/master/docs/reflection-extensions.md).

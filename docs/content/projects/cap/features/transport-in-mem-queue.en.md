@@ -1,0 +1,1 @@
+In Memory Queue is a memory-based message queue provided by [Community](https://github.com/yang-xiaodong/Savorboard.CAP.InMemoryMessageQueue).

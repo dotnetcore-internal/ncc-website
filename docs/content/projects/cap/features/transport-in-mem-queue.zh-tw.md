@@ -1,0 +1,1 @@
+In Memory Queue 為基於內存的消息隊列，該擴展由 [社區](https://github.com/yang-xiaodong/Savorboard.CAP.InMemoryMessageQueue) 進行提供。

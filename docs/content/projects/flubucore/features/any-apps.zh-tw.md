@@ -1,0 +1,1 @@
+[可在其他 .NET 應用程序中使用 FlubuCore 任務](https://github.com/flubu-core/examples/blob/master/NetCore_csproj/BuildScript/BuildScriptTests.cs)。

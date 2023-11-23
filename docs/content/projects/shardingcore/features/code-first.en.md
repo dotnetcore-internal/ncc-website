@@ -1,0 +1,1 @@
+Currently, `sharding-core` already supports code first, for specific implementation, please refer to [Migrations](https://github.com/dotnetcore/sharding-core/blob/main/samples/Sample.Migrations/readme.md).
