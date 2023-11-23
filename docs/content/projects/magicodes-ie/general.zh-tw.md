@@ -1,6 +1,6 @@
 導入導出通用庫，支持 DTO 導入導出、模板導出、花式導出以及動態導出，支持 Excel、Csv、Word、Pdf 和 Html。
 
-![Overview](/articles/projects/magicodes-ie/assets/ov.png)
+![Overview](/content/projects/magicodes-ie/assets/ov.png)
 
 ## 自動構建
 

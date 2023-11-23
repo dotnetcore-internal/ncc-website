@@ -163,7 +163,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 此時在 Dashboard 項目中，可以看到業務項目的數據了。
 
-![Dashboard with data](/articles/projects/httpreports/assets/dashboard.png)
+![Dashboard with data](/content/projects/httpreports/assets/dashboard.png)
 
 ## 配置 IP 和端口
 

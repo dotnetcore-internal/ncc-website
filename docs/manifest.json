@@ -110,22 +110,14 @@
       "_vendor.js"
     ]
   },
-  "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js": {
-    "file": "assets/MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+  "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js": {
+    "file": "assets/MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
     "imports": [
       "_vendor.js",
       "_useEmitter.js",
       "_uiStore.js",
+      "_index2.js",
       "_WaveLoading.js"
-    ]
-  },
-  "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js": {
-    "file": "assets/MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
-    "imports": [
-      "_preload-helper.js",
-      "_vendor.js",
-      "_useEmitter.js",
-      "_uiStore.js"
     ]
   },
   "_MemberProjects.js": {
@@ -220,6 +212,12 @@
   },
   "_axios.js": {
     "file": "assets/axios.js"
+  },
+  "_index2.js": {
+    "file": "assets/index2.js",
+    "imports": [
+      "_vendor.js"
+    ]
   },
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
@@ -333,10 +331,10 @@
     "isEntry": true,
     "src": "index.html"
   },
-  "src/content/people/pmc.json": {
+  "src/config/people/pmc.json": {
     "file": "assets/pmc.js",
     "isDynamicEntry": true,
-    "src": "src/content/people/pmc.json"
+    "src": "src/config/people/pmc.json"
   },
   "src/views/CodeOfConductView.css": {
     "file": "assets/CodeOfConductView.css",
@@ -352,12 +350,14 @@
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
       "_preload-helper.js",
-      "_uiStore.js"
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/CodeOfConductView.vue"
@@ -448,13 +448,15 @@
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_useEmitter.js",
-      "_uiStore.js"
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/ContactView.vue"
@@ -511,12 +513,13 @@
       "_uiStore.js",
       "_usePageToolkits.js",
       "_axios.js",
-      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
       "_preload-helper.js",
+      "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
@@ -558,13 +561,13 @@
     "file": "assets/WhoWeAreView.js",
     "imports": [
       "_vendor.js",
-      "_uiStore.js",
       "_usePageToolkits.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_ProjectStatBlock.js",
+      "_uiStore.js",
       "_useEmitter.js",
       "_QueryPagedStoryApi.js",
       "_ArticleCards.js",
@@ -588,12 +591,13 @@
       "_uiStore.js",
       "_usePageToolkits.js",
       "_axios.js",
-      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
       "_preload-helper.js",
+      "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
@@ -674,12 +678,13 @@
       "_uiStore.js",
       "_usePageToolkits.js",
       "_axios.js",
-      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
       "_preload-helper.js",
+      "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
@@ -718,7 +723,7 @@
       "assets/ProjectManagementCommitteeView.css"
     ],
     "dynamicImports": [
-      "src/content/people/pmc.json"
+      "src/config/people/pmc.json"
     ],
     "file": "assets/ProjectManagementCommitteeView.js",
     "imports": [
@@ -726,12 +731,13 @@
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js",
       "_useEmitter.js",
-      "_uiStore.js"
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/people/ProjectManagementCommitteeView.vue"
@@ -788,14 +794,16 @@
       "_ProjectCards.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_TitleBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
       "_preload-helper.js",
       "_useResource.js",
       "_axios.js",
       "_LeftRightLayout.js",
-      "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
+      "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/ArchivedView.vue"
@@ -897,10 +905,10 @@
       "_projectStore.js",
       "_BodyBlock.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
-      "__plugin-vue_export-helper.js",
       "_uiStore.js",
-      "_WaveLoading.js"
+      "_index2.js",
+      "_WaveLoading.js",
+      "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/CustomPage.vue"
@@ -934,8 +942,10 @@
       "_useEmitter.js",
       "_uiStore.js",
       "_BodyBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
-      "__plugin-vue_export-helper.js"
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
+      "__plugin-vue_export-helper.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/FeaturesPage.vue"
@@ -945,12 +955,13 @@
     "imports": [
       "_vendor.js",
       "_BodyBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_useEmitter.js",
-      "_uiStore.js"
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/GeneralPage.vue"
@@ -961,11 +972,12 @@
       "_vendor.js",
       "_useEmitter.js",
       "_BodyBlock.js",
-      "_MarkdownRenderer.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
-      "_uiStore.js"
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/GetStartedPage.vue"
@@ -1031,12 +1043,13 @@
       "_uiStore.js",
       "_usePageToolkits.js",
       "_axios.js",
-      "_MarkdownBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
       "_preload-helper.js",
+      "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"

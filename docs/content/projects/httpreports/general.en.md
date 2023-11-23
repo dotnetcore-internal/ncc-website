@@ -12,7 +12,7 @@ HttpReports is an APM monitoring system based on .NET Core and using the MIT ope
 - Easy integration with multiple databases
 - Monitoring of application performance
 
-![HttpReports Diagram](/articles/projects/httpreports/assets/diagram.jpg)
+![HttpReports Diagram](/content/projects/httpreports/assets/diagram.jpg)
 
 ## Database Support
 

@@ -10,7 +10,7 @@ You can also use CAP as an EventBus. CAP provides a simpler way to implement eve
 
 ## Architecture overview
 
-![CAP](/articles/projects/cap/assets/architecture-new.png)
+![CAP](/content/projects/cap/assets/architecture-new.png)
 
 > CAP implements the Outbox Pattern described in the [eShop ebook](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/subscribe-events#designing-atomicity-and-resiliency-when-publishing-to-the-event-bus).
 

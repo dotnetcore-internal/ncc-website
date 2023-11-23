@@ -6,5 +6,5 @@ HybridCachingProvider 将本地缓存和分布式缓存结合在一起。
 
 下图显示了它的运行方式。
 
-![Hybrid Details](/articles/projects/easycaching/assets/hybrid_details.png)
+![Hybrid Details](/content/projects/easycaching/assets/hybrid_details.png)
 

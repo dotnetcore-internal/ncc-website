@@ -8,7 +8,7 @@
 
 
 
-![SmartCode](/articles/projects/smartcode/assets/SmartCode-EN.png)
+![SmartCode](/content/projects/smartcode/assets/SmartCode-EN.png)
 
 ### SmartCode.ETL
 

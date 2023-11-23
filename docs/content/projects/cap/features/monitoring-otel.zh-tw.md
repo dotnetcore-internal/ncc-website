@@ -26,4 +26,4 @@ services.AddOpenTelemetryTracing((builder) => builder
 
 以下是 CAP 的跟蹤數據在 Zipkin 中的一個示意圖：
 
-![CAP with Zipkin](/articles/projects/cap/assets/opentelemetry.png)
+![CAP with Zipkin](/content/projects/cap/assets/opentelemetry.png)

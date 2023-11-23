@@ -4,7 +4,7 @@
 
 DotnetSpider 是一个 .NET 标准的网络爬虫库。它是一个轻量级、高效、快速的高级网络爬虫和刮取框架。
 
-![Design](/articles/projects/dotnetspider/assets/ds-design.png)
+![Design](/content/projects/dotnetspider/assets/ds-design.png)
 
 如上设计图，整个爬虫设计是纯异步的，利用消息队列进行各个组件的解耦，若是只需要单机爬虫则不需要做任何额外的配置，默认使用了一个内存型的消息队列；若是想要实一个纯分布式爬虫，则需要引入一个消息队列即可，后面会详细介绍如何实现一个分布式爬虫。
 

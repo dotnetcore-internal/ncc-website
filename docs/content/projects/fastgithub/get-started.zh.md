@@ -46,4 +46,4 @@ sudo ./fastgithub stop // 以systemd服务卸载并删除
 
 根据自己的需要更新 `docker-compose.yaml` 中的 `sample` 和 `build` 镜像即可完成拉 `github.com` 源码加速，并基于源码做后续的操作。
 
-![FastGithub](/articles/projects/fastgithub/assets/ui.png)
+![FastGithub](/content/projects/fastgithub/assets/ui.png)

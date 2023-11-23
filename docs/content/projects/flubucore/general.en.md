@@ -4,7 +4,7 @@
 
 "FlubuCore - Fluent Builder Core" is a cross platform build and deployment automation system. You can define your build and deployment scripts in C# using an intuitive fluent interface. This gives you code completion, IntelliSense, debugging, FlubuCore custom analyzers, and native access to the whole .NET ecosystem inside of your scripts.
 
-![Demo](/articles/projects/flubucore/assets/flubu-core-demo.gif)
+![Demo](/content/projects/flubucore/assets/flubu-core-demo.gif)
 
 FlubuCore offers a .net (core) console application that uses power of roslyn to compile and execute scripts. Above example can be run from console with:
 

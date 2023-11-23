@@ -4,4 +4,4 @@ To simplify the deployment, AgileConfig does not have a separate console program
 
 In order for the console to manage nodes, it is necessary to configure node information in the console.
 
-![Node](/articles/projects/agileconfig/assets/node.png)
+![Node](/content/projects/agileconfig/assets/node.png)

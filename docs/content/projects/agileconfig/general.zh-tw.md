@@ -38,7 +38,7 @@ AgileConfig 秉承輕量化的特點，部署簡單、配置簡單、使用簡�
 
 ## 架構
 
-![AgileConfig Architecture](/articles/projects/agileconfig/assets/architecture.png)
+![AgileConfig Architecture](/content/projects/agileconfig/assets/architecture.png)
 
 AgileConfig 的架構比較簡單，主要分為三部分：
 

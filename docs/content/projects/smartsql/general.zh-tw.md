@@ -37,7 +37,7 @@ Dapper 確實很好，並且又很好的性能，但是會讓給你的代碼裏�
 
 ## SmartCode 生成的目錄結構
 
-![Directory Structure](/articles/projects/smartsql/assets/directory-structure.png)
+![Directory Structure](/content/projects/smartsql/assets/directory-structure.png)
 
 
 

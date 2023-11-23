@@ -12,7 +12,7 @@ HttpReports 基于 .NET Core 开发的 APM 监控系统，使用 MIT 开源协�
 - 多数据库支持，集成方便
 - 程序性能监控
 
-![HttpReports Diagram](/articles/projects/httpreports/assets/diagram.jpg)
+![HttpReports Diagram](/content/projects/httpreports/assets/diagram.jpg)
 
 
 ## 数据存储支持

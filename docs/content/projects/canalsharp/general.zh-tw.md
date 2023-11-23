@@ -2,7 +2,7 @@
 
 ## 什麼是 Canal
 
-![Canal](/articles/projects/canalsharp/assets/canal.png)
+![Canal](/content/projects/canalsharp/assets/canal.png)
 
 早期阿裏巴巴因為杭州和美國雙機房部署，存在跨機房同步的業務需求，實現方式主要是基於業務 trigger 獲取增量變更。從 2010 年開始，業務逐步嘗試數據庫日志解析獲取增量變更進行同步，由此衍生出了大量的數據庫增量訂閱和消費業務。
 
@@ -28,7 +28,7 @@
 
 canal 設計了 client-server 模式，交互協議使用 protobuf 3.0 , client 端可采用不同語言實現不同的消費邏輯。而 CanalSharp 正是 .NET/C# Client 實現，可以采用 C# 編寫業務代碼來消費 MySql binlog 數據。
 
-![CanalSharp](/articles/projects/canalsharp/assets/canalsharp.png)
+![CanalSharp](/content/projects/canalsharp/assets/canalsharp.png)
 
 ## 問題反饋
 

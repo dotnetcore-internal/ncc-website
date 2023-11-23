@@ -6,5 +6,5 @@ When we modify a cached value, the provider will send a message to `EasyCaching 
 
 The following image shows how it runs.
 
-![Hybrid Details](/articles/projects/easycaching/assets/hybrid_details.png)
+![Hybrid Details](/content/projects/easycaching/assets/hybrid_details.png)
 

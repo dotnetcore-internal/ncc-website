@@ -1,6 +1,6 @@
 针对目前云平台方案，因为网络、主机状态等诸多因素，单台主机上的服务出现问题的几率大大增加。这就要求我们能够监控每台主机、每个微服务实例的健康状态。
 
-![Health Checking](/articles/projects/httpreports/assets/hc-1.png)
+![Health Checking](/content/projects/httpreports/assets/hc-1.png)
 
 HttpReports 目前支持两种方式的健康检查，这些数据会展示到 Dashboard 页面
 - Self: 服务使用 HttpReports 组件后，会收集性能数据，每10s 一次 发送到 Dashboard，  所以从 Dashboard 就可以检查有哪些服务发送了性能数据上来， 来判断程序是否健康

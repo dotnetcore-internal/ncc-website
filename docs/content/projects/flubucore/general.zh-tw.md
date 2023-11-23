@@ -4,7 +4,7 @@
 
 「FlubuCore - Fluent Builder Core」，跨平台的構建與部署自動化系統，通過直觀的 Fluent 接口，使用 C# 定義構建和部署腳本。這使你的代碼獲得自動完成、IntelliSense、調試、FlubuCore 自定義分析器，以及在腳本中對整個 .NET 生態的原生性訪問。
 
-![Demo](/articles/projects/flubucore/assets/flubu-core-demo.gif)
+![Demo](/content/projects/flubucore/assets/flubu-core-demo.gif)
 
 通過 roslyn 的強大賦能，FlubuCore 提供有 .NET/.NET Core 控制台應用程序用於編譯和執行腳本。以上示例均可從控制台運行：
 

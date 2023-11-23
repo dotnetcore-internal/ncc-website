@@ -7,7 +7,7 @@
 | [SmartCode.CLI](https://www.nuget.org/packages/SmartCode.CLI/) | [![SmartCode.CLI](https://camo.githubusercontent.com/4690d08079645eebc381ed753155f46876295f95f29b9339ea38275faf303192/68747470733a2f2f696d672e736869656c64732e696f2f6e756765742f762f536d617274436f64652e434c492e737667)](https://www.nuget.org/packages/SmartCode.CLI/) | [![SmartCode.CLI](https://camo.githubusercontent.com/3994d6c1b0d813a797ee50ff1be2c83727ec281dae0a493911c125d65d9951f1/68747470733a2f2f696d672e736869656c64732e696f2f6e756765742f64742f536d617274436f64652e434c492e737667)](https://www.nuget.org/packages/SmartCode.CLI/) |
 
 
-![SmartCode](/articles/projects/smartcode/assets/SmartCode.png)
+![SmartCode](/content/projects/smartcode/assets/SmartCode.png)
 
 ### SmartCode.ETL
 

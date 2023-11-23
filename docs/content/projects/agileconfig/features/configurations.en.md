@@ -5,4 +5,4 @@ After configuring the application information, you can configure configuration i
 - If the configurations that have gone live are modified, deleted, or rolled back, they will be pushed to the client in real time;
 - Version history records the historical information of the configuration, and you can roll back to any version.
 
-![Applications](/articles/projects/agileconfig/assets/configuration.png)
+![Applications](/content/projects/agileconfig/assets/configuration.png)

@@ -1,6 +1,6 @@
 For the current cloud platform solution, due to many factors such as network and host status, the probability of problems with services on a single host has greatly increased. This requires us to be able to monitor the health status of each host and each microservice instance.
 
-![Health Checking](/articles/projects/httpreports/assets/hc-1.png)
+![Health Checking](/content/projects/httpreports/assets/hc-1.png)
 
 HttpReports currently supports two methods of health checks, and this data is displayed on the Dashboard page:
 - Self: After the service uses the HttpReports component, it collects performance data and sends it to the Dashboard every 10 seconds. Therefore, from the Dashboard, you can check which services have sent performance data to determine if the program is healthy.

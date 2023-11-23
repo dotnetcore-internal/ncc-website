@@ -10,7 +10,7 @@ CAP 是一個基於 .NET Standard 的 C# 庫，它是一種處理分布式事務
 
 ## 架構概述
 
-![CAP](/articles/projects/cap/assets/architecture-new.png)
+![CAP](/content/projects/cap/assets/architecture-new.png)
 
 > CAP 實現了 [eShop 電子書](https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/multi-container-microservice-net-applications/subscribe-events#designing-atomicity-and-resiliency-when-publishing-to-the-event-bus) 中描述的發件箱模式
 

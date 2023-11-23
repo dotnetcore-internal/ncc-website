@@ -2,7 +2,7 @@
 
 ## 什么是 Canal
 
-![Canal](/articles/projects/canalsharp/assets/canal.png)
+![Canal](/content/projects/canalsharp/assets/canal.png)
 
 早期阿里巴巴因为杭州和美国双机房部署，存在跨机房同步的业务需求，实现方式主要是基于业务 trigger 获取增量变更。从 2010 年开始，业务逐步尝试数据库日志解析获取增量变更进行同步，由此衍生出了大量的数据库增量订阅和消费业务。
 
@@ -28,7 +28,7 @@
 
 canal 设计了 client-server 模式，交互协议使用 protobuf 3.0 , client 端可采用不同语言实现不同的消费逻辑。而 CanalSharp 正是 .NET/C# Client 实现，可以采用 C# 编写业务代码来消费 MySql binlog 数据。
 
-![CanalSharp](/articles/projects/canalsharp/assets/canalsharp.png)
+![CanalSharp](/content/projects/canalsharp/assets/canalsharp.png)
 
 ## 问题反馈
 

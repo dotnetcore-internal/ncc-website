@@ -1,6 +1,6 @@
 Import and export general library, support Dto import and export, template export, fancy export and dynamic export, support Excel, Csv, Word, Pdf and Html.
 
-![Overview](/articles/projects/magicodes-ie/assets/ov.en.png)
+![Overview](/content/projects/magicodes-ie/assets/ov.en.png)
 
 ### Azure DevOps
 

@@ -2,7 +2,7 @@ In a database, Change Data Capture (CDC) is a set of software design patterns us
 
 ## What is Canal
 
-![Canal](/articles/projects/canalsharp/assets/canal.png)
+![Canal](/content/projects/canalsharp/assets/canal.png)
 
 In the early days, Alibaba had business requirements for cross-datacenter synchronization due to the deployment of dual datacenters in Hangzhou and the United States. The main implementation method was to obtain incremental changes based on business triggers. Since 2010, the business has gradually attempted to obtain incremental changes by parsing database logs for synchronization, which has given rise to a large number of database incremental subscription and consumption businesses.
 
@@ -28,7 +28,7 @@ For more detailed information, please refer to the Canal official documentation:
 
 Canal is designed in a client-server mode, with the interaction protocol using protobuf 3.0. The client side can implement different consumption logics in different languages. CanalSharp is a .NET/C# Client implementation, which allows you to write business code in C# to consume MySql binlog data.
 
-![CanalSharp](/articles/projects/canalsharp/assets/canalsharp.png)
+![CanalSharp](/content/projects/canalsharp/assets/canalsharp.png)
 
 ## Problem Feedback
 

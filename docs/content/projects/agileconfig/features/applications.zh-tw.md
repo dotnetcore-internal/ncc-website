@@ -7,4 +7,4 @@ AgileConfig 支持多應用程序接入。需要為每個應用程序配置名�
 - 子應用可以繼承多個應用；
 - 如果多個應用之間發生重複鍵，按照繼承的順序，後繼承的應用的配置覆蓋前面的應用。
 
-![Applications](/articles/projects/agileconfig/assets/applications.png)
+![Applications](/content/projects/agileconfig/assets/applications.png)

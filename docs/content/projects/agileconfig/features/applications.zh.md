@@ -7,4 +7,4 @@ AgileConfig 支持多应用程序接入。需要为每个应用程序配置名�
 - 子应用可以继承多个应用；
 - 如果多个应用之间发生重复键，按照继承的顺序，后继承的应用的配置覆盖前面的应用。
 
-![Applications](/articles/projects/agileconfig/assets/applications.png)
+![Applications](/content/projects/agileconfig/assets/applications.png)

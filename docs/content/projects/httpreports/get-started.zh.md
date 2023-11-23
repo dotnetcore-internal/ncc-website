@@ -163,7 +163,7 @@ public static IHostBuilder CreateHostBuilder(string[] args) =>
 
 此时在 Dashboard 项目中，可以看到业务项目的数据了。
 
-![Dashboard with data](/articles/projects/httpreports/assets/dashboard.png)
+![Dashboard with data](/content/projects/httpreports/assets/dashboard.png)
 
 ## 配置 IP 和端口
 

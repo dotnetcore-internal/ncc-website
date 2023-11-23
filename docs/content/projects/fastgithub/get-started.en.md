@@ -45,4 +45,4 @@ There is a `docker-compose.yaml` file in the source code directory, which is spe
 
 Update the `sample` and `build` images in `docker-compose.yaml` according to your needs to complete the pull of the `github.com` source code acceleration and subsequent operations based on the source code.
 
-![FastGithub](/articles/projects/fastgithub/assets/ui.png)
+![FastGithub](/content/projects/fastgithub/assets/ui.png)

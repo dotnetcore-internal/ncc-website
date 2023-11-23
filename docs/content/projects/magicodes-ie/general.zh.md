@@ -1,6 +1,6 @@
 导入导出通用库，支持 DTO 导入导出、模板导出、花式导出以及动态导出，支持 Excel、Csv、Word、Pdf 和 Html。
 
-![Overview](/articles/projects/magicodes-ie/assets/ov.png)
+![Overview](/content/projects/magicodes-ie/assets/ov.png)
 
 ## 自动构建
 

@@ -24,4 +24,4 @@ services.AddOpenTelemetryTracing((builder) => builder
 
 Here is a diagram of CAP's tracking data in Zipkin:
 
-![CAP with Zipkin](/articles/projects/cap/assets/opentelemetry.png)
+![CAP with Zipkin](/content/projects/cap/assets/opentelemetry.png)

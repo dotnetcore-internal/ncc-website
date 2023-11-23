@@ -1,8 +1,8 @@
 HttpReports.Dashboard 支持預警監控功能，設定請求規則，預警觸發後，推送預警信息到郵箱或者 WebHook，使用的話需要先配置 Smtp 郵箱，否則接收不到預警郵件哦
 
-![Alarm 1](/articles/projects/httpreports/assets/alarm-1.png)
+![Alarm 1](/content/projects/httpreports/assets/alarm-1.png)
 
-![Alarm 2](/articles/projects/httpreports/assets/alarm-2.png)
+![Alarm 2](/content/projects/httpreports/assets/alarm-2.png)
 
 ### 監控類型
 

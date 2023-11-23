@@ -1,8 +1,8 @@
 HttpReports.Dashboard supports the warning monitoring function. After setting the request rules, when the warning is triggered, the warning information will be pushed to the mailbox or WebHook. To use this function, you need to configure the Smtp mailbox first, otherwise you will not receive the warning email.
 
-![Alarm 1](/articles/projects/httpreports/assets/alarm-1.png)
+![Alarm 1](/content/projects/httpreports/assets/alarm-1.png)
 
-![Alarm 2](/articles/projects/httpreports/assets/alarm-2.png)
+![Alarm 2](/content/projects/httpreports/assets/alarm-2.png)
 
 # Monitoring Types
 

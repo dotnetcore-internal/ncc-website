@@ -38,7 +38,7 @@ If you don't want to use the microservices suite, or don't want to read N tutori
 
 ## Architecture
 
-![AgileConfig Architecture](/articles/projects/agileconfig/assets/architecture.png)
+![AgileConfig Architecture](/content/projects/agileconfig/assets/architecture.png)
 
 ### Client
 

@@ -171,7 +171,7 @@ Then, in Visual Studio, set up multiple projects to start, and run both the busi
 
 At this point, in the Dashboard project, you can see the data from the business project.
 
-![Dashboard with data](/articles/projects/httpreports/assets/dashboard.png)
+![Dashboard with data](/content/projects/httpreports/assets/dashboard.png)
 
 ## Configure IP and port
 

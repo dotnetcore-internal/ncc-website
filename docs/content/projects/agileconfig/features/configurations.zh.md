@@ -5,4 +5,4 @@
 - 已上线的配置如果发生修改、删除、回滚操作，会实时推送给客户端；
 - 版本历史记录了配置的历史信息，可以回滚至任意版本。
 
-![Applications](/articles/projects/agileconfig/assets/configuration.png)
+![Applications](/content/projects/agileconfig/assets/configuration.png)

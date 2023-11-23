@@ -7,4 +7,4 @@ Each application can be set to whether it can be inherited, and an application t
 - A child application can inherit multiple applications;
 - If there are duplicate keys between multiple applications, the configuration of the application inherited later will override the previous applications according to the inheritance order.
 
-![Applications](/articles/projects/agileconfig/assets/applications.png)
+![Applications](/content/projects/agileconfig/assets/applications.png)

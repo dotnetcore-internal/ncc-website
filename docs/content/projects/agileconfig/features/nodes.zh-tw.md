@@ -4,4 +4,4 @@ AgileConfig 支持多節點部署，所有的節點都是平行的。
 
 為了控制台能夠管理節點，所以需要在控制台配置節點的信息。
 
-![Node](/articles/projects/agileconfig/assets/node.png)
+![Node](/content/projects/agileconfig/assets/node.png)

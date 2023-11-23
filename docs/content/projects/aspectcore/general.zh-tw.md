@@ -61,7 +61,7 @@ public class Interceptor : IInterceptor
 
 下圖就是調用的例子：
 
-![Example](/articles/projects/aspectcore/assets/proxy-pipeline.png)
+![Example](/content/projects/aspectcore/assets/proxy-pipeline.png)
 
 - 藍色區域就是代理類的區域， 對於外界來說，它就像 proxied object 一樣
 - 但是實際在調用時就像 黃色箭頭一樣， 會通過一層又一層攔截器類，最終才調用proxied object

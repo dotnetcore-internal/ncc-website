@@ -59,7 +59,7 @@ This is an interceptor class. The purpose of dynamic weaving is to call the "Int
 
 The following is an example of calling:
 
-![Example](/articles/projects/aspectcore/assets/proxy-pipeline.png)
+![Example](/content/projects/aspectcore/assets/proxy-pipeline.png)
 
 - The blue area is the area of the proxy class, which is the same as the proxied object to the outside world.
 - However, when calling, it is like the yellow arrow, and it will call the proxied object through layer upon layer of interceptor classes, and finally.
