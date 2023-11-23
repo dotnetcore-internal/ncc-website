@@ -1,0 +1,102 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "data-validation",
+      "title": "Data Validation",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "attr",
+      "title": "Built-in Attribute",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "logs",
+      "title": "Logs",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "retry",
+      "title": "Retry on Requests",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "core-analyzers",
+      "title": "Compile-time syntax analysis",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "sg",
+      "title": "SourceGenerator",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "exception-process",
+      "title": "Exception Process",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "deformed-interface",
+      "title": "Deformed Interface",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "customize-resolve",
+      "title": "Customize Resolve",
+      "group": "unclassified-1",
+      "sort": 9
+    },
+    {
+      "id": "hmh-options",
+      "title": "HttpMessageHandler Options",
+      "group": "unclassified-1",
+      "sort": 10
+    },
+    {
+      "id": "oauth",
+      "title": "OAuth & Token",
+      "group": "unclassified-1",
+      "sort": 11
+    },
+    {
+      "id": "json",
+      "title": "Work with Json.NET",
+      "group": "unclassified-1",
+      "sort": 12
+    },
+    {
+      "id": "json-rpc",
+      "title": "JsonRpc Client",
+      "group": "unclassified-1",
+      "sort": 13
+    },
+    {
+      "id": "dynamic-host",
+      "title": "Dynamic Host",
+      "group": "unclassified-1",
+      "sort": 14
+    },
+    {
+      "id": "openapi-sg",
+      "title": "Client code generator for OpenAPI/Swagger",
+      "group": "unclassified-1",
+      "sort": 15
+    }
+  ]
+}

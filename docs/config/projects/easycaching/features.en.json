@@ -1,0 +1,106 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    },
+    {
+      "id": "cp-group",
+      "title": "Caching Provider",
+      "sort": 2
+    },
+    {
+      "id": "ci-group",
+      "title": "Caching Interceptor",
+      "sort": 3
+    }
+  ],
+  "features": [
+    {
+      "id": "apis",
+      "title": "Rich API Design",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "factory",
+      "title": "Provider Factory",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "serializer",
+      "title": "Caching Serializer",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "cp-in-mem",
+      "title": "In-Memory",
+      "group": "cp-group",
+      "sort": 1
+    },
+    {
+      "id": "cp-redis",
+      "title": "Redis & CSRedis",
+      "group": "cp-group",
+      "sort": 2
+    },
+    {
+      "id": "cp-mem",
+      "title": "Memcached",
+      "group": "cp-group",
+      "sort": 3
+    },
+    {
+      "id": "cp-local",
+      "title": "Disk, SQLite & LiteDB",
+      "group": "cp-group",
+      "sort": 4
+    },
+    {
+      "id": "cp-hy",
+      "title": "Hybrid",
+      "group": "cp-group",
+      "sort": 5
+    },
+    {
+      "id": "cp-fkv",
+      "title": "FasterKv",
+      "group": "cp-group",
+      "sort": 6
+    },
+    {
+      "id": "ci-ov",
+      "title": "Interceptor Overview",
+      "group": "ci-group",
+      "sort": 1
+    },
+    {
+      "id": "ci-key",
+      "title": "Cache Key generation rules",
+      "group": "ci-group",
+      "sort": 2
+    },
+    {
+      "id": "ci-rules",
+      "title": "Intercepting rules",
+      "group": "ci-group",
+      "sort": 3
+    },
+    {
+      "id": "ci-aspectcore",
+      "title": "AspectCore",
+      "group": "ci-group",
+      "sort": 4
+    },
+    {
+      "id": "ci-castle",
+      "title": "Castle",
+      "group": "ci-group",
+      "sort": 5
+    }
+  ]
+}

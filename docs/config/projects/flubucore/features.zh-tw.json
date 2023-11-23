@@ -1,0 +1,108 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "easy-to-learn",
+      "title": "直觀、易學",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "build-in-tasks",
+      "title": "內置大量常用任務",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "execute-code",
+      "title": "執行自定義代碼",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "load-auto",
+      "title": "自動加載程序集與 NuGet 包",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "run-in-script",
+      "title": "在腳本中運行外部程序或控制台命令",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "pass-to-script",
+      "title": "將配置傳入腳本",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "extending-fluent-apis",
+      "title": "擴展 FlubuCore 流暢接口",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "growing-built-in-tasks",
+      "title": "成長中的內置任務",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "async-exe",
+      "title": "異步執行",
+      "group": "unclassified-1",
+      "sort": 9
+    },
+    {
+      "id": "override-options",
+      "title": "重寫配置",
+      "group": "unclassified-1",
+      "sort": 10
+    },
+    {
+      "id": "full-net-support",
+      "title": "完整的 .NET Core 支持",
+      "group": "unclassified-1",
+      "sort": 11
+    },
+    {
+      "id": "test-debug-scripts",
+      "title": "測試與調試",
+      "group": "unclassified-1",
+      "sort": 12
+    },
+    {
+      "id": "auto-deploy",
+      "title": "遠程部署自動化",
+      "group": "unclassified-1",
+      "sort": 13
+    },
+    {
+      "id": "any-apps",
+      "title": "在任何應用中集成",
+      "group": "unclassified-1",
+      "sort": 14
+    },
+    {
+      "id": "interactive-mode",
+      "title": "交互模式",
+      "group": "unclassified-1",
+      "sort": 15
+    },
+    {
+      "id": "custom-analyzers",
+      "title": "自定義分析器",
+      "group": "unclassified-1",
+      "sort": 16
+    }
+  ]
+}
