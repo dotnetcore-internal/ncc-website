@@ -5,8 +5,8 @@ import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 
 setTitle("code-of-conduct", "i18n");
 
@@ -68,7 +68,7 @@ onUnmounted(() => {
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer source="about/code-of-conduct" :i18n="true" />
+        <markdown source="about/code-of-conduct" :i18n="true" fallback-locale="en" />
 
       </div>
 

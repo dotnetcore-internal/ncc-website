@@ -4,7 +4,7 @@ import { useRoute } from "vue-router";
 import { useEmitter } from "@/hooks/useEmitter";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 const route = useRoute();
@@ -28,12 +28,12 @@ onMounted(() => {
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer :source="`projects/${route.params.id}/get-started`"
-                           :i18n="true" fallback-locale="en"
-                           :include-file-extension="true"
-                           file-extension=".md"
-                           retry-timeout="1000"
-                           :redirect-to404="false" />
+        <markdown :source="`projects/${route.params.id}/get-started`"
+                  :i18n="true"
+                  fallback-locale="en"
+                  :include-file-extension="true"
+                  file-extension=".md"
+                  :redirect-to404="false" />
       </div>
 
     </div>

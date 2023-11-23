@@ -13,7 +13,7 @@ import ProjectHeader from "@/components/projects/ProjectHeader.vue";
 import ProjectCards from "@/components/projects/ProjectCards.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 
 const uiStore = useUiStore();
 const emitter = useEmitter();
@@ -58,7 +58,7 @@ onUnmounted(() => {
 
     <div class="the-archived content-paper">
 
-      <markdown-renderer source="projects/projects-after-archived" :i18n="true" />
+      <markdown source="projects/projects-after-archived" :i18n="true" />
 
     </div>
 
@@ -76,7 +76,7 @@ onUnmounted(() => {
 
     <div class="the-past content-paper">
 
-      <markdown-renderer source="projects/projects-as-past" :i18n="true" />
+      <markdown source="projects/projects-as-past" :i18n="true" />
 
     </div>
 

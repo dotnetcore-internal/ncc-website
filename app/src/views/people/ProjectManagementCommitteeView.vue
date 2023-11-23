@@ -5,7 +5,7 @@ import type { PmcPeople, PmcPeopleList } from "@/apis/PeopleModels";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
+import Markdown from "@/components/markdown/Markdownworker.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 setTitle("pmc", "i18n");
@@ -13,7 +13,7 @@ setTitle("pmc", "i18n");
 const pmcList = reactive<PmcPeople[]>([]);
 
 const loadPmcListAsync = async () => {
-  const list = await import(/* @vite-ignore */"../../content/people/pmc.json");
+  const list = await import (/* @vite-ignore */"@/config/people/pmc.json");
   const people = list as unknown as PmcPeopleList;
   return people.people;
 };
@@ -46,7 +46,7 @@ onMounted(() => {
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer source="people/pmc" :i18n="true" />
+        <markdown source="people/pmc" :i18n="true" />
 
       </div>
 

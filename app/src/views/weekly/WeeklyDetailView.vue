@@ -8,7 +8,7 @@ import { setTitle } from "@/hooks/usePageToolkits";
 import { queryWeeklyMetadata } from "@/apis/QueryWeeklyMetadataApi";
 import type { WeeklyIndexModel } from "@/apis/ContentModels";
 
-import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import ArticleAuthors from "@/components/articles/ArticleAuthors.vue";
@@ -30,12 +30,12 @@ const articleId = computed(() => {
 const articleMetadata = reactive<WeeklyIndexModel>({} as WeeklyIndexModel);
 
 const articleSource = computed(() => {
-  return `/articles/weekly/${articleId.value}/content`;
+  return `weekly/${articleId.value}/content`;
 });
 
 const loadWeeklyMetadataAsync = async (locale?: string) => {
   const targetLocale = locale ?? currentLocale.value;
-  const api = `/articles/weekly/${articleId.value}/metadata.${targetLocale}.json`;
+  const api = `/content/weekly/${articleId.value}/metadata.${targetLocale}.json`;
   await queryWeeklyMetadata(api, (data) => {
     articleMetadata.id = data.id;
     articleMetadata.title = data.title;
@@ -119,7 +119,7 @@ onUnmounted(() => {
 
       </div>
 
-      <markdown-block :source="articleSource"
+      <markdown :source="articleSource"
                       :i18n="true"
                       fallback-locale="en"
                       :final-fallback-fn="()=>router.push({ path: `/404` })"

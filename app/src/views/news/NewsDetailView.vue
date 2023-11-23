@@ -8,7 +8,7 @@ import { setTitle } from "@/hooks/usePageToolkits";
 import { queryNewsMetadata } from "@/apis/QueryNewsMetadataApi";
 import type { NewsIndexModel } from "@/apis/ContentModels";
 
-import MarkdownBlock from "@/components/markdown/MarkdownBlock.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import ArticleAuthors from "@/components/articles/ArticleAuthors.vue";
@@ -30,12 +30,12 @@ const articleId = computed(() => {
 const articleMetadata = reactive<NewsIndexModel>({} as NewsIndexModel);
 
 const articleSource = computed(() => {
-  return `/articles/news/${articleId.value}/content`;
+  return `news/${articleId.value}/content`;
 });
 
 const loadNewsMetadataAsync = async (locale?: string) => {
   const targetLocale = locale ?? currentLocale.value;
-  const api = `/articles/news/${articleId.value}/metadata.${targetLocale}.json`;
+  const api = `/content/news/${articleId.value}/metadata.${targetLocale}.json`;
   await queryNewsMetadata(api, (data) => {
     articleMetadata.id = data.id;
     articleMetadata.title = data.title;
@@ -119,7 +119,7 @@ onUnmounted(() => {
 
       </div>
 
-      <markdown-block :source="articleSource"
+      <markdown :source="articleSource"
                       :i18n="true"
                       fallback-locale="en"
                       :final-fallback-fn="()=>router.push({ path: `/404` })"

@@ -43,7 +43,7 @@ const useTitleTip = computed(() => {
 const useImageUrl = computed(() => {
   const year = displayDate(props.date, "YYYY");
   const month = displayDate(props.date, "MM");
-  return `/articles${props.baseUrl}/${year}/${month}/${props.id}/assets/${props.image}`;
+  return `/content${props.baseUrl}/${year}/${month}/${props.id}/assets/${props.image}`;
 });
 
 const useArticleUrl = computed(() => {

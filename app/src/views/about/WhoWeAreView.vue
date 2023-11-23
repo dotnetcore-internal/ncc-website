@@ -1,18 +1,16 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { usePreferredDark } from "@vueuse/core";
-import { useUiStore } from "@/stores/uiStore";
 import { setTitle } from "@/hooks/usePageToolkits";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
-import { RightSmallUp } from "@icon-park/vue-next";
 import ProjectStatBlock from "@/components/projects/ProjectStatBlock.vue";
 import StoryCollections from "@/views/about/StoryCollections.vue";
+import { RightSmallUp } from "@icon-park/vue-next";
 
-const uiStore = useUiStore();
 
 setTitle("who-we-are", "i18n");
 

@@ -8,7 +8,7 @@ import { promiseDebounce } from "@/utils/debounceUtils";
 import type { FeatureConfig, FeatureGroupModel, FeatureModel } from "@/apis/ProjectFeatureModels";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 
 const route = useRoute();
 const emitter = useEmitter();
@@ -55,7 +55,7 @@ const updateFeatures = (models: FeatureModel[]) => {
 };
 
 const getFeatureConfigPath = (locale?: string) => {
-  return `../../../content/projects/${route.params.id}/features${locale ? `.${locale}` : `.${uiStore.locale}`}.json`;
+  return `../../../config/projects/${route.params.id}/features${locale ? `.${locale}` : `.${uiStore.locale}`}.json`;
 };
 
 const getProjectFeatureConfig = async (path: string): Promise<FeatureConfig> => {
@@ -193,12 +193,12 @@ onUnmounted(() => {
 
         <div class="feature-item-title">{{ feature.title }}</div>
 
-        <markdown-renderer :source="`projects/${route.params.id}/features/${feature.id}`"
-                           :i18n="true" fallback-locale="en"
-                           :include-file-extension="true"
-                           file-extension=".md"
-                           retry-timeout="1000"
-                           :redirect-to404="false"
+        <markdown :source="`projects/${route.params.id}/features/${feature.id}`"
+                  :i18n="true"
+                  fallback-locale="en"
+                  :include-file-extension="true"
+                  file-extension=".md"
+                  :redirect-to404="false"
         />
 
       </section>

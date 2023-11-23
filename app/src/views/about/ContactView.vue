@@ -3,7 +3,7 @@ import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import MarkdownRenderer from "@/components/markdown/MarkdownRenderer.vue";
+import Markdown from "@/components/markdown/MarkdownWorker.vue";
 
 setTitle("contact-us", "i18n");
 </script>
@@ -24,7 +24,7 @@ setTitle("contact-us", "i18n");
 
       <div class="xl:flex-1 overflow-hidden">
 
-        <markdown-renderer source="about/contact" :i18n="true" />
+        <markdown source="about/contact" :i18n="true" fallback-locale="en" />
 
       </div>
 

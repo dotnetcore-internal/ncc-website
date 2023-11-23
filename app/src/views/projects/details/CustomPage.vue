@@ -57,7 +57,7 @@ onMounted(() => {
 
   emitter.on("toChangeLocale", async (e) => {
     const event = e as { locale: string };
-    emitter.emit("toRerenderMarkdown", { source: `/articles/${usePageFileScope.value}/${usePageFileUrl.value}`, locale: event.locale });
+    emitter.emit("toRerenderMarkdown", { source: `/content/${usePageFileScope.value}/${usePageFileUrl.value}`, locale: event.locale });
   });
 
   emitter.on(`toBind404Page${randomPageCode}`, (e) => {
@@ -87,7 +87,7 @@ onUnmounted(() => {
 
       <div v-if="needDisplayFile" class="xl:flex-1">
 
-        <markdown-block :source="`/articles/${usePageFileScope}/${usePageFileUrl}`" :i18n="true" fallback-locale="en" />
+        <markdown-block :source="`/content/${usePageFileScope}/${usePageFileUrl}`" :i18n="true" fallback-locale="en" />
 
       </div>
 
