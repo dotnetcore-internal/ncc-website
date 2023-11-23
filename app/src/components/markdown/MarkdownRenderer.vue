@@ -62,25 +62,25 @@ const toImportMarkdown = async (source: string, locale?: string, skipRetry: bool
       })
       .catch(() => {
 
-        if (!locale || locale.length === 0) {
-          locale = useFallbackLocaleSuffix.value;
-        } else if (!locale.startsWith(".")) {
-          locale = `.${locale}`;
-        }
-
-        import(/* @vite-ignore */"../../content/" + props.source + locale + useFileExtensions.value)
-          .then(e => {
-            content.value = e.default;
-          })
-          .catch(() => {
-
-            if (!skipRetry && !!props.retryTimeout) {
-              retryToImportMarkdown(props.retryTimeout, source, locale);
-            } else if (props.redirectTo404) {
-              router.replace("/404");
-            }
-
-          });
+        // if (!locale || locale.length === 0) {
+        //   locale = useFallbackLocaleSuffix.value;
+        // } else if (!locale.startsWith(".")) {
+        //   locale = `.${locale}`;
+        // }
+        //
+        // import(/* @vite-ignore */"../../content/" + props.source + locale + useFileExtensions.value)
+        //   .then(e => {
+        //     content.value = e.default;
+        //   })
+        //   .catch(() => {
+        //
+        //     if (!skipRetry && !!props.retryTimeout) {
+        //       retryToImportMarkdown(props.retryTimeout, source, locale);
+        //     } else if (props.redirectTo404) {
+        //       router.replace("/404");
+        //     }
+        //
+        //   });
 
       });
   }
