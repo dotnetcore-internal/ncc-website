@@ -56,7 +56,7 @@ const toImportMarkdown = async (source: string, locale?: string, skipRetry: bool
       locale = `.${locale}`;
     }
 
-    import("@/content/" + props.source + locale + useFileExtensions.value)
+    import(/* @vite-ignore */"../../content/" + props.source + locale + useFileExtensions.value)
       .then(e => {
         content.value = e.default;
       })
