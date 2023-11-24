@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "scheduler",
+      "title": "Scheduler",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "download-proxy",
+      "title": "Download Proxy",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "download-proxy-registration-service",
+      "title": "Download Proxy Registration Service",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "statistics",
+      "title": "Statistics",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "request-provider",
+      "title": "Request Providers",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "request-config",
+      "title": "Request Config",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "dataflow",
+      "title": "DataFlow",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "proxy-pool",
+      "title": "Proxy Pool",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "concurrent-controllers",
+      "title": "Concurrent Controllers",
+      "group": "unclassified-1",
+      "sort": 9
+    }
+  ]
+}

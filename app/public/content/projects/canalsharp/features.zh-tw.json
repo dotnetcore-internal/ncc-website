@@ -1,0 +1,53 @@
+{
+  "groups": [
+    {
+      "id": "config-group",
+      "title": "Configuration",
+      "sort": 1,
+      "hidden": true
+    },
+    {
+      "id": "adv-group",
+      "title": "Advanced",
+      "sort": 2
+    }
+  ],
+  "features": [
+    {
+      "id": "db",
+      "title": "MySql Config",
+      "group": "config-group",
+      "sort": 1
+    },
+    {
+      "id": "canal",
+      "title": "Canal Config",
+      "group": "config-group",
+      "sort": 2
+    },
+    {
+      "id": "parse",
+      "title": "Data parse",
+      "group": "adv-group",
+      "sort": 1
+    },
+    {
+      "id": "ack",
+      "title": "ACK",
+      "group": "adv-group",
+      "sort": 2
+    },
+    {
+      "id": "ha",
+      "title": "High Availability",
+      "group": "adv-group",
+      "sort": 3
+    },
+    {
+      "id": "subscribe",
+      "title": "Subscribe",
+      "group": "adv-group",
+      "sort": 4
+    }
+  ]
+}

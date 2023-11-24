@@ -1,0 +1,72 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "smartsql-map",
+      "title": "SmartSql Map",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "read-write",
+      "title": "Read and write separation",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "cache",
+      "title": "Caching",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "type-handler",
+      "title": "Type Handler",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "cur",
+      "title": "CUD Code generation",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "id-gen",
+      "title": "Id Generator",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "aop",
+      "title": "AOP Transaction",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "bulk",
+      "title": "Bulk Insert",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "sw",
+      "title": "SkyWalking Monitoring",
+      "group": "unclassified-1",
+      "sort": 9
+    },
+    {
+      "id": "dy-repo",
+      "title": "Dynamic Agent Repository",
+      "group": "unclassified-1",
+      "sort": 10
+    }
+  ]
+}

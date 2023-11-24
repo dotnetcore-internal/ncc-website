@@ -1,0 +1,65 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    },
+    {
+      "id": "orm-group",
+      "title": "Work with ORMs",
+      "sort": 2
+    }
+  ],
+  "features": [
+    {
+      "id": "queryable",
+      "title": "Work with IQueryable<T>",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "for-chloe",
+      "title": "Chloe",
+      "group": "orm-group",
+      "sort": 1
+    },
+    {
+      "id": "for-dos-orm",
+      "title": "Dos.ORM",
+      "group": "orm-group",
+      "sort": 2
+    },
+    {
+      "id": "for-freesql",
+      "title": "FreeSql",
+      "group": "orm-group",
+      "sort": 3
+    },
+    {
+      "id": "for-sqlsugar",
+      "title": "SqlSugar",
+      "group": "orm-group",
+      "sort": 4
+    },
+    {
+      "id": "for-nh",
+      "title": "NHibernate",
+      "group": "orm-group",
+      "sort": 5
+    },
+    {
+      "id": "for-ef",
+      "title": "EntityFramework Core",
+      "group": "orm-group",
+      "sort": 6
+    },
+    {
+      "id": "for-sqlkata-dapper",
+      "title": "SqlKata with Dapper",
+      "group": "orm-group",
+      "sort": 7
+    }
+  ]
+}
