@@ -1,0 +1,42 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "alarm",
+      "title": "監控告警",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "hc",
+      "title": "健康檢查",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "grpc",
+      "title": "GrpcTransport",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "trace-query",
+      "title": "TraceId 查詢",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "ocelot",
+      "title": "與 Ocelot 集成",
+      "group": "unclassified-1",
+      "sort": 5
+    }
+  ]
+}

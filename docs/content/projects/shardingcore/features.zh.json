@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "code-first",
+      "title": "Code First",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "track",
+      "title": "自动实体跟踪",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "route",
+      "title": "手动路由",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "create-table",
+      "title": "自动建表",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "transaction",
+      "title": "事务",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "bulk",
+      "title": "批量操作",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "r-w-separation",
+      "title": "读写分离",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "high",
+      "title": "高性能分页",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "expression-cache",
+      "title": "表达式缓存",
+      "group": "unclassified-1",
+      "sort": 9
+    }
+  ]
+}

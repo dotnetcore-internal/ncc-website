@@ -222,9 +222,6 @@
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
   },
-  "_preload-helper.js": {
-    "file": "assets/preload-helper.js"
-  },
   "_projectStore.js": {
     "file": "assets/projectStore.js",
     "imports": [
@@ -288,8 +285,7 @@
     ],
     "file": "assets/usePageToolkits.js",
     "imports": [
-      "_vendor.js",
-      "_preload-helper.js"
+      "_vendor.js"
     ]
   },
   "_useProjectToolkits.js": {
@@ -325,16 +321,15 @@
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_LeftRightLayout.js",
       "_useEmitter.js",
-      "_official-wechat-account-qrcode.js",
-      "_preload-helper.js"
+      "_official-wechat-account-qrcode.js"
     ],
     "isEntry": true,
     "src": "index.html"
   },
-  "src/config/people/pmc.json": {
+  "src/apis/pmc.json": {
     "file": "assets/pmc.js",
     "isDynamicEntry": true,
-    "src": "src/config/people/pmc.json"
+    "src": "src/apis/pmc.json"
   },
   "src/views/CodeOfConductView.css": {
     "file": "assets/CodeOfConductView.css",
@@ -354,7 +349,6 @@
       "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_uiStore.js",
       "_index2.js",
       "_WaveLoading.js"
@@ -369,7 +363,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -398,7 +391,6 @@
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
       "_ProjectStatBlock.js",
-      "_preload-helper.js",
       "_useProjectToolkits.js",
       "_useResource.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
@@ -421,8 +413,7 @@
       "_BodyBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js",
-      "_preload-helper.js"
+      "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/Page404.vue"
@@ -435,7 +426,6 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -450,7 +440,6 @@
       "_TitleBlock.js",
       "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_useEmitter.js",
@@ -468,7 +457,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -482,7 +470,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -497,7 +484,6 @@
       "_TitleBlock.js",
       "_BodyBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js"
     ],
@@ -518,7 +504,6 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
-      "_preload-helper.js",
       "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -539,7 +524,6 @@
       "_TitleBlock.js",
       "_ArticleCards.js",
       "_ArticleNav.js",
-      "_preload-helper.js",
       "_axios.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
@@ -572,7 +556,6 @@
       "_QueryPagedStoryApi.js",
       "_ArticleCards.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_useProjectToolkits.js",
       "_useResource.js",
       "_axios.js",
@@ -596,7 +579,6 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
-      "_preload-helper.js",
       "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -617,7 +599,6 @@
       "_TitleBlock.js",
       "_ArticleCards.js",
       "_ArticleNav.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
@@ -634,7 +615,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -648,7 +628,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -662,7 +641,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -683,7 +661,6 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
-      "_preload-helper.js",
       "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -704,7 +681,6 @@
       "_TitleBlock.js",
       "_ArticleCards.js",
       "_ArticleNav.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
@@ -723,11 +699,10 @@
       "assets/ProjectManagementCommitteeView.css"
     ],
     "dynamicImports": [
-      "src/config/people/pmc.json"
+      "src/apis/pmc.json"
     ],
     "file": "assets/ProjectManagementCommitteeView.js",
     "imports": [
-      "_preload-helper.js",
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
@@ -765,7 +740,6 @@
       "_ProjectStatBlock.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_useResource.js",
       "_axios.js",
       "_LeftRightLayout.js",
@@ -797,7 +771,6 @@
       "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_useResource.js",
       "_axios.js",
       "_LeftRightLayout.js",
@@ -829,7 +802,6 @@
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_LeftRightLayout.js",
       "__plugin-vue_export-helper.js",
-      "_preload-helper.js",
       "_useResource.js",
       "_axios.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
@@ -846,7 +818,6 @@
       "_ProjectHeader.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_uiStore.js",
       "_useProjectToolkits.js",
@@ -865,7 +836,6 @@
       "src/views/Page404.vue",
       "_vendor.js",
       "_usePageToolkits.js",
-      "_preload-helper.js",
       "_BodyBlock.js",
       "__plugin-vue_export-helper.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
@@ -886,7 +856,6 @@
       "_ProjectCards.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "_preload-helper.js",
       "_useResource.js",
       "_axios.js",
       "__plugin-vue_export-helper.js",
@@ -919,7 +888,6 @@
       "src/views/Page404.vue",
       "_vendor.js",
       "_usePageToolkits.js",
-      "_preload-helper.js",
       "_BodyBlock.js",
       "__plugin-vue_export-helper.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js"
@@ -937,7 +905,6 @@
     ],
     "file": "assets/FeaturesPage.js",
     "imports": [
-      "_preload-helper.js",
       "_vendor.js",
       "_useEmitter.js",
       "_uiStore.js",
@@ -1003,8 +970,7 @@
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_useResource.js",
       "_axios.js",
-      "_usePageToolkits.js",
-      "_preload-helper.js"
+      "_usePageToolkits.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/projects/details/LicensePage.vue"
@@ -1027,7 +993,6 @@
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_vendor.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ],
@@ -1048,7 +1013,6 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",
-      "_preload-helper.js",
       "_index2.js",
       "_WaveLoading.js",
       "__plugin-vue_export-helper.js",
@@ -1069,7 +1033,6 @@
       "_TitleBlock.js",
       "_ArticleCards.js",
       "_ArticleNav.js",
-      "_preload-helper.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_ContentModels.js",

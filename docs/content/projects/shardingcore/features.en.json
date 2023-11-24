@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "id": "unclassified-1",
+      "title": "Unclassified 1",
+      "sort": 1,
+      "hidden": true
+    }
+  ],
+  "features": [
+    {
+      "id": "code-first",
+      "title": "Code First",
+      "group": "unclassified-1",
+      "sort": 1
+    },
+    {
+      "id": "track",
+      "title": "Automatic entity tracking",
+      "group": "unclassified-1",
+      "sort": 2
+    },
+    {
+      "id": "route",
+      "title": "Manual routing",
+      "group": "unclassified-1",
+      "sort": 3
+    },
+    {
+      "id": "create-table",
+      "title": "Automatically create tables",
+      "group": "unclassified-1",
+      "sort": 4
+    },
+    {
+      "id": "transaction",
+      "title": "transaction",
+      "group": "unclassified-1",
+      "sort": 5
+    },
+    {
+      "id": "bulk",
+      "title": "Bulk operations",
+      "group": "unclassified-1",
+      "sort": 6
+    },
+    {
+      "id": "r-w-separation",
+      "title": "Read-write separation",
+      "group": "unclassified-1",
+      "sort": 7
+    },
+    {
+      "id": "high",
+      "title": "High performance paging",
+      "group": "unclassified-1",
+      "sort": 8
+    },
+    {
+      "id": "expression-cache",
+      "title": "Expression Caching",
+      "group": "unclassified-1",
+      "sort": 9
+    }
+  ]
+}

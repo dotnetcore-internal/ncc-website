@@ -1,0 +1,182 @@
+{
+  "groups": [
+    {
+      "id": "cap-group",
+      "title": "CAP",
+      "sort": 1
+    },
+    {
+      "id": "transport-group",
+      "title": "傳輸",
+      "sort": 2
+    },
+    {
+      "id": "storage-group",
+      "title": "存儲",
+      "sort": 3
+    },
+    {
+      "id": "monitoring-group",
+      "title": "監控",
+      "sort": 4
+    }
+  ],
+  "features": [
+    {
+      "id": "cap-config",
+      "title": "配置",
+      "group": "cap-group",
+      "sort": 1
+    },
+    {
+      "id": "cap-messaging",
+      "title": "消息",
+      "group": "cap-group",
+      "sort": 2
+    },
+    {
+      "id": "cap-filter",
+      "title": "過濾器",
+      "group": "cap-group",
+      "sort": 3
+    },
+    {
+      "id": "cap-serialization",
+      "title": "序列化",
+      "group": "cap-group",
+      "sort": 4
+    },
+    {
+      "id": "cap-transactions",
+      "title": "事務",
+      "group": "cap-group",
+      "sort": 5
+    },
+    {
+      "id": "cap-idempotence",
+      "title": "冪等性",
+      "group": "cap-group",
+      "sort": 6
+    },
+    {
+      "id": "transport-general",
+      "title": "簡介",
+      "group": "transport-group",
+      "sort": 1
+    },
+    {
+      "id": "transport-ams-sqs",
+      "title": "Amazon SQS",
+      "group": "transport-group",
+      "sort": 2
+    },
+    {
+      "id": "transport-kafka",
+      "title": "Apache Kafka®",
+      "group": "transport-group",
+      "sort": 3
+    },
+    {
+      "id": "transport-pulsar",
+      "title": "Apache Pulsar",
+      "group": "transport-group",
+      "sort": 4
+    },
+    {
+      "id": "transport-azure-service-bus",
+      "title": "Azure Service Bus",
+      "group": "transport-group",
+      "sort": 5
+    },
+    {
+      "id": "transport-nats",
+      "title": "NATS",
+      "group": "transport-group",
+      "sort": 6
+    },
+    {
+      "id": "transport-rabbitmq",
+      "title": "RabbitMQ",
+      "group": "transport-group",
+      "sort": 7
+    },
+    {
+      "id": "transport-redis-streams",
+      "title": "Redis Streams",
+      "group": "transport-group",
+      "sort": 8
+    },
+    {
+      "id": "transport-in-mem-queue",
+      "title": "In-Memory Queue",
+      "group": "transport-group",
+      "sort": 9
+    },
+    {
+      "id": "storage-general",
+      "title": "簡介",
+      "group": "storage-group",
+      "sort": 1
+    },
+    {
+      "id": "storage-mssql",
+      "title": "SQL Server",
+      "group": "storage-group",
+      "sort": 2
+    },
+    {
+      "id": "storage-mysql",
+      "title": "MySQL",
+      "group": "storage-group",
+      "sort": 3
+    },
+    {
+      "id": "storage-postgresql",
+      "title": "PostgreSql",
+      "group": "storage-group",
+      "sort": 4
+    },
+    {
+      "id": "storage-mongodb",
+      "title": "MongoDB",
+      "group": "storage-group",
+      "sort": 5
+    },
+    {
+      "id": "storage-in-mem",
+      "title": "In-Memory",
+      "group": "storage-group",
+      "sort": 6
+    },
+    {
+      "id": "monitoring-consul",
+      "title": "Consul",
+      "group": "monitoring-group",
+      "sort": 1
+    },
+    {
+      "id": "monitoring-dashboard",
+      "title": "Dashboard",
+      "group": "monitoring-group",
+      "sort": 2
+    },
+    {
+      "id": "monitoring-k8s",
+      "title": "Kubernetes",
+      "group": "monitoring-group",
+      "sort": 3
+    },
+    {
+      "id": "monitoring-diagnostics",
+      "title": "Diagnostics",
+      "group": "monitoring-group",
+      "sort": 4
+    },
+    {
+      "id": "monitoring-otel",
+      "title": "OpenTelemetry",
+      "group": "monitoring-group",
+      "sort": 5
+    }
+  ]
+}

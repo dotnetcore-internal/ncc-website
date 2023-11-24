@@ -1,0 +1,57 @@
+{
+  "groups": [
+    {
+      "id": "aspnetcore",
+      "title": "在 ASP.NET Core 中使用",
+      "sort": 1
+    },
+    {
+      "id": "f2f-group",
+      "title": "當面支付",
+      "sort": 2
+    },
+    {
+      "id": "config-group",
+      "title": "配置的方法",
+      "sort": 3
+    }
+  ],
+  "features": [
+    {
+      "id": "install",
+      "title": "安裝程序包",
+      "group": "aspnetcore",
+      "sort": 1
+    },
+    {
+      "id": "add-config",
+      "title": "添加配置",
+      "group": "aspnetcore",
+      "sort": 2
+    },
+    {
+      "id": "controller",
+      "title": "在控制器中使用",
+      "group": "aspnetcore",
+      "sort": 3
+    },
+    {
+      "id": "f2f",
+      "title": "條碼支付與掃碼支付",
+      "group": "f2f-group",
+      "sort": 1
+    },
+    {
+      "id": "quick-config",
+      "title": "快速添加配置",
+      "group": "config-group",
+      "sort": 1
+    },
+    {
+      "id": "keygen",
+      "title": "密鑰生成",
+      "group": "config-group",
+      "sort": 2
+    }
+  ]
+}
