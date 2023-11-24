@@ -55,12 +55,11 @@ const updateFeatures = (models: FeatureModel[]) => {
 };
 
 const getFeatureConfigPath = (locale?: string) => {
-  return `/content/projects/${route.params.id}/features${locale ? `.${locale}` : `.${uiStore.locale}`}.json`;
+  return `/api/projects/${route.params.id}/features${locale ? `.${locale}` : `.${uiStore.locale}`}.json`;
 };
 
 const getProjectFeatureConfig = async (path: string): Promise<FeatureConfig> => {
   const awaitConfig = await fetch(path).then((res) => res.json());
-  //const awaitConfig = await import(/* @vite-ignore */path);
   return awaitConfig as unknown as FeatureConfig;
 };
 
