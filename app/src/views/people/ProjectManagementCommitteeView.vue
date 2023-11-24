@@ -13,7 +13,7 @@ setTitle("pmc", "i18n");
 const pmcList = reactive<PmcPeople[]>([]);
 
 const loadPmcListAsync = async () => {
-  const list = await import (/* @vite-ignore */"@/config/people/pmc.json");
+  const list = await import (/* @vite-ignore */"@/apis/pmc.json");
   const people = list as unknown as PmcPeopleList;
   return people.people;
 };
