@@ -1,24 +1,27 @@
 <script setup lang="ts">
 import { computed, ref } from "vue";
 import { usePreferredDark } from "@vueuse/core";
-import type { Article, hasAuthor } from "@/apis/ContentModels";
+import type { Article, hasAuthor, hasDescription } from "@/apis/ContentModels";
 import ArticleAsBlock from "@/components/articles/ArticleAsBlock.vue";
+import ArticleAsPureBlock from "@/components/articles/ArticleAsPureBlock.vue";
 import ArticleAsGrid from "@/components/articles/ArticleAsGrid.vue";
 import ArticleAsCard from "@/components/articles/ArticleAsCard.vue";
 import ArticleAsList from "@/components/articles/ArticleAsList.vue";
-import { AlignTextBoth, GridNine, ParagraphRectangle, VerticalTidyUp } from "@icon-park/vue-next";
+import { AlignmentLeftBottom, AlignTextBoth, GridNine, ParagraphRectangle, VerticalTidyUp } from "@icon-park/vue-next";
 
 const props = withDefaults(defineProps<{
   articles: Article[];
-  defaultDisplayMode?: "grid" | "list" | "card" | "block";
+  defaultDisplayMode?: "grid" | "list" | "card" | "block" | "pure-block";
   baseUrl: string;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDescription?: boolean;
   displayDate?: boolean;
   enableCardMode?: boolean;
   enableListMode?: boolean;
   enableGridMode?: boolean;
   enableBlockMode?: boolean;
+  enablePureBlockMode?: boolean;
   limitedItems?: number;
   withShadow?: boolean;
   withScale?: boolean;
@@ -26,27 +29,29 @@ const props = withDefaults(defineProps<{
 }>(), {
   defaultDisplayMode: "grid",
   displayAuthorBy: false,
+  displayDescription: false,
   displayDate: true,
   displayAuthorMode: "hide",
   enableCardMode: true,
   enableListMode: true,
   enableGridMode: true,
   enableBlockMode: true,
+  enablePureBlockMode: true,
   limitedItems: 0,
-  withShadow: true,
+  withShadow: false,
   withScale: true,
   infiniteHorizontalForGrid: false
 });
 
 
 const currentDisplayMode = ref(props.defaultDisplayMode);
-const enableVal = [props.enableBlockMode, props.enableListMode, props.enableGridMode, props.enableCardMode];
+const enableVal = [props.enableBlockMode, props.enableListMode, props.enableGridMode, props.enableCardMode, props.enablePureBlockMode];
 // 在 enableVal 中，返回有多少个 true
 const enableValLength = enableVal.filter(x => x).length;
 const displayBtnGroup = computed(() => enableValLength > 1);
 const noneBtnEnabled = computed(() => enableValLength === 0);
 
-const switchDisplayMode = (mode: "grid" | "list" | "card" | "block") => {
+const switchDisplayMode = (mode: "grid" | "list" | "card" | "block" | "pure-block") => {
   currentDisplayMode.value = mode;
 };
 
@@ -65,7 +70,7 @@ const useIconColor = computed(() => {
     : "#000000";
 });
 
-const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
+const useIconTheme = (mode: "grid" | "list" | "card" | "block" | "pure-block") => {
   return currentDisplayMode.value === mode
     ? "filled"
     : "outline";
@@ -86,6 +91,13 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
               class="group-btn-text"
               :class="{'group-btn-current': currentDisplayMode === 'block'}">
         <vertical-tidy-up class="sort-btn-icon" :theme="useIconTheme('block')" size="16" :fill="useIconColor" />
+      </button>
+
+      <button v-if="enablePureBlockMode"
+              @click="switchDisplayMode('pure-block')"
+              class="group-btn-text"
+              :class="{'group-btn-current': currentDisplayMode === 'pure-block'}">
+        <alignment-left-bottom class="sort-btn-icon" :theme="useIconTheme('pure-block')" size="16" :fill="useIconColor" />
       </button>
 
       <button v-if="enableGridMode"
@@ -129,8 +141,45 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                       :display-date="displayDate"
                       :with-shadow="withShadow"
     >
-      {{ article.title }}
+
+      <template #default>
+        {{ article.title }}
+      </template>
+
+      <template #description>
+        {{ (article as hasDescription)?.description }}
+      </template>
+
     </article-as-block>
+
+  </div>
+
+  <div v-if="enablePureBlockMode"
+       v-show="currentDisplayMode === 'pure-block'">
+
+    <article-as-pure-block v-for="article in useArticles"
+                      :key="article.id"
+                      :id="article.id"
+                      :image="article.img"
+                      :date="new Date(article.date)"
+                      :author="(article as hasAuthor)?.author"
+                      :title-tip="article.title"
+                      :base-url="baseUrl"
+                      :display-author-mode="displayAuthorMode"
+                      :display-author-by="displayAuthorBy"
+                      :display-date="displayDate"
+                      :with-shadow="withShadow"
+    >
+
+      <template #default>
+        {{ article.title }}
+      </template>
+
+      <template #description>
+        {{ (article as hasDescription)?.description }}
+      </template>
+
+    </article-as-pure-block>
 
   </div>
 
@@ -156,7 +205,15 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :with-scale="withScale"
                      :infinite-horizontal="infiniteHorizontalForGrid"
     >
-      {{ article.title }}
+
+      <template #default>
+        {{ article.title }}
+      </template>
+
+      <template #description>
+        {{ (article as hasDescription)?.description }}
+      </template>
+
     </article-as-grid>
 
   </div>
@@ -177,7 +234,15 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :display-date="displayDate"
                      :with-shadow="withShadow"
     >
-      {{ article.title }}
+
+      <template #default>
+        {{ article.title }}
+      </template>
+
+      <template #description>
+        {{ (article as hasDescription)?.description }}
+      </template>
+
     </article-as-card>
 
   </div>
@@ -197,7 +262,15 @@ const useIconTheme = (mode: "grid" | "list" | "card" | "block") => {
                      :display-author-by="displayAuthorBy"
                      :display-date="displayDate"
     >
-      {{ article.title }}
+
+      <template #default>
+        {{ article.title }}
+      </template>
+
+      <template #description>
+        {{ (article as hasDescription)?.description }}
+      </template>
+
     </article-as-list>
 
   </div>
