@@ -117,6 +117,7 @@ onUnmounted(() => {
                    default-display-mode="card"
                    base-url="/about/story"
                    :enable-block-mode="false"
+                   :enable-pure-block-mode="false"
                    :enable-grid-mode="false"
                    :enable-list-mode="false"
     />

@@ -10,16 +10,20 @@ export interface hasAuthor {
   author?: AuthorModel | AuthorModel[];
 }
 
-export interface NewsIndexModel extends Article, hasAuthor {
+export interface hasDescription {
+  description?: string;
 }
 
-export interface AnnouncementIndexModel extends Article, hasAuthor {
+export interface NewsIndexModel extends Article, hasAuthor, hasDescription {
 }
 
-export interface WeeklyIndexModel extends Article, hasAuthor {
+export interface AnnouncementIndexModel extends Article, hasAuthor, hasDescription {
 }
 
-export interface StoryIndexModel extends Article, hasAuthor {
+export interface WeeklyIndexModel extends Article, hasAuthor, hasDescription {
+}
+
+export interface StoryIndexModel extends Article, hasAuthor, hasDescription {
 }
 
 export interface AuthorModel {

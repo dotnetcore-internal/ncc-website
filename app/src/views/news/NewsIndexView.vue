@@ -120,6 +120,7 @@ onUnmounted(() => {
                    base-url="/news"
                    :enable-card-mode="false"
                    :enable-block-mode="false"
+                   :enable-pure-block-mode="false"
                    :enable-list-mode="false"
     />
 

@@ -118,6 +118,7 @@ onUnmounted(() => {
                    base-url="/weekly"
                    :enable-card-mode="false"
                    :enable-block-mode="false"
+                   :enable-pure-block-mode="false"
                    :enable-grid-mode="false"
     />
 

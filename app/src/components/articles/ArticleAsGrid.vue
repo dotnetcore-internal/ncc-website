@@ -16,6 +16,7 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDescription?: boolean;
   displayDate?: boolean;
   withShadow?: boolean;
   withScale?: boolean;
@@ -23,6 +24,7 @@ const props = withDefaults(defineProps<{
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
+  displayDescription: false,
   displayDate: true,
   author: null,
   withShadow: true,
@@ -164,9 +166,12 @@ onMounted(() => {
       <img :src="useImageUrl" :alt="useTitleTip" />
       <span class="block px-5 py-7 text-lg font-bold">
         <slot></slot>
-        <br />
+        <span v-if="displayDescription" class="article-description">
+          <slot name="description"></slot>
+        </span>
+        <br v-else />
         <!-- Author -->
-        <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
+        <span v-if="hasAuthors(author)" class="text-sm font-medium text-gray-500">
           <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
           <span v-for="(author, i) in getAuthors(author)" :key="author.id" v-show="displayThisAuthor(i)">
             <span v-if="i > 0 && i < totalOfAuthors - 1" class="text-xs mx-1 text-gray-500/50">,</span>
@@ -176,10 +181,14 @@ onMounted(() => {
           </span>
         </span>
         <!-- Author -->
+
+        <!-- Date -->
+        <span v-if="props.displayDate" class="text-xs mt-1.5 text-gray-500 font-medium block">
+          {{ displayDate(date, $t("_common.date-format")) }}
+        </span>
+        <!-- Date -->
       </span>
     </anchor>
-    <span v-if="props.displayDate" class="block px-5 py-7 text-sm text-gray-500 ">{{ displayDate(date, $t("_common.date-format")) }}</span>
-
   </div>
 
 </template>
@@ -188,6 +197,13 @@ onMounted(() => {
 .article-grid {
   @apply m-4 rounded-lg overflow-hidden;
   @apply dark:bg-gray-500/5;
+  @apply border border-gray-300 hover:border-gray-500;
   @apply transition-all ease-in-out duration-500;
+
+  .article-description {
+    @apply block py-1;
+    @apply text-sm text-gray-500;
+    @apply max-h-32 break-words text-ellipsis overflow-hidden;
+  }
 }
 </style>

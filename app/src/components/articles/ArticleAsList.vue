@@ -16,10 +16,12 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDescription?: boolean;
   displayDate?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
+  displayDescription: false,
   displayDate: true,
   author: null
 });
@@ -153,7 +155,10 @@ onMounted(() => {
         <div class="md:flex-1">
           <span class="text-lg font-bold">
             <slot></slot>
-            <br />
+            <span v-if="displayDescription" class="article-description">
+              <slot name="description"></slot>
+            </span>
+            <br v-else />
             <!-- Author -->
             <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
               <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
@@ -185,5 +190,11 @@ onMounted(() => {
 .article-list {
   @apply mx-4 my-1 rounded-lg overflow-hidden;
   @apply dark:bg-gray-500/5 hover:bg-purple-500/5;
+
+  .article-description {
+    @apply block py-1;
+    @apply text-sm text-gray-500;
+    @apply max-h-32 break-words text-ellipsis overflow-hidden;
+  }
 }
 </style>

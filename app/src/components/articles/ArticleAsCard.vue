@@ -16,14 +16,16 @@ const props = withDefaults(defineProps<{
   author?: AuthorModel | AuthorModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayDescription?: boolean;
   displayDate?: boolean;
   withShadow?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
+  displayDescription: false,
   displayDate: true,
   author: null,
-  withShadow: true
+  withShadow: false
 });
 
 const uiStore = useUiStore();
@@ -164,7 +166,12 @@ onMounted(() => {
 
         <div class="flex-1 p-5 text-lg font-bold">
           <slot></slot>
-          <span v-if="props.displayDate" class="block text-sm text-gray-500 font-medium">{{ displayDate(date, $t("_common.date-format")) }}</span>
+          <span v-if="displayDescription" class="article-description">
+              <slot name="description"></slot>
+          </span>
+          <span v-if="props.displayDate" class="block text-sm text-gray-500 font-medium">
+            {{ displayDate(date, $t("_common.date-format")) }}
+          </span>
           <br v-else />
           <!-- Author -->
           <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
@@ -189,6 +196,13 @@ onMounted(() => {
 <style scoped lang="css">
 .article-card {
   @apply m-4 rounded-lg overflow-hidden;
-  @apply dark:bg-gray-500/5 hover:bg-purple-500/5;
+  @apply dark:bg-gray-500/5 hover:bg-purple-200/5;
+  @apply border border-gray-300 hover:border-gray-500;
+
+  .article-description {
+    @apply block py-1;
+    @apply text-sm text-gray-500;
+    @apply max-h-32 break-words text-ellipsis overflow-hidden;
+  }
 }
 </style>

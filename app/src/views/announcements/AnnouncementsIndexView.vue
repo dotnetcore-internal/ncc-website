@@ -121,6 +121,7 @@ onUnmounted(() => {
                      base-url="/announcements"
                      display-author-mode="all-but-first-avatar"
                      :enable-block-mode="false"
+                     :enable-pure-block-mode="false"
                      :enable-grid-mode="false"
                      :enable-card-mode="false"
       />
