@@ -44,7 +44,7 @@ export default defineConfig({
           camel2DashComponentName: false
         }
       ]
-    }),
+    })
     // Markdown({
     //   markdownItOptions: {
     //     html: true,
@@ -80,7 +80,7 @@ export default defineConfig({
         entryFileNames: `assets/[name].js`,
         chunkFileNames: `assets/[name].js`,
         assetFileNames: `assets/[name].[ext]`
-      },
+      }
       // plugins: [
       //   rollupCopy({
       //     targets: [
