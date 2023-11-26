@@ -1,7 +1,5 @@
 # TheNCC WebSite
 
-
-
 This repository includes:
 
 - 【WIP】TheNCC static website, 
@@ -29,3 +27,10 @@ In addition, based on TheNCC website source, the following sites were designed (
 - 【TBD】[The .NET China Portal](https://github.com/dotnet-china/org) 
 - 【TBD】[The .NET China Oversight](https://github.com/dotnet-china/websites) 
 
+## Contribute
+
+One of the easiest ways to contribute is to participate in discussions and discuss issues. You can also contribute by submitting pull requests with code changes.
+
+### License
+
+[MIT](LICENSE) © .NET Core Community
