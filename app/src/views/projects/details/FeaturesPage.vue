@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed, nextTick, onMounted, onUnmounted, reactive, ref, watch } from "vue";
-import { useIntersectionObserver, useWindowScroll } from "@vueuse/core";
+import { useIntersectionObserver, usePreferredDark, useWindowScroll } from "@vueuse/core";
 import { useRoute } from "vue-router";
 import { useEmitter } from "@/hooks/useEmitter";
 import { useUiStore } from "@/stores/uiStore";
@@ -9,6 +9,7 @@ import type { FeatureConfig, FeatureGroupModel, FeatureModel } from "@/apis/Proj
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import Markdown from "@/components/markdown/MarkdownWorker.vue";
+import { DownC, UpC } from "@icon-park/vue-next";
 
 const route = useRoute();
 const emitter = useEmitter();
@@ -33,6 +34,7 @@ watch(y, async (value) => {
     for (let i = sections.length - 1; i >= 0; i--) {
       if ((sections[i]).offsetTop < value + 112) {
         currentFeatureId.value = sections[i].id;
+        syncGroupExpandStatus(sections[i].id)
         break;
       }
     }
@@ -44,10 +46,21 @@ watch(y, async (value) => {
 //region Features and Groups
 
 const groups = reactive<FeatureGroupModel[]>([]);
+const groupStatus = reactive<{
+  id: string;
+  status: boolean;
+}[]>([]);
 const features = reactive<FeatureModel[]>([]);
 
 const updateGroups = (models: FeatureGroupModel[]) => {
   groups.splice(0, groups.length, ...models);
+  groupStatus.length = 0;
+  for (let i = 0; i < groups.length; i++) {
+    groupStatus.push({
+      id: groups[i].id,
+      status: true
+    });
+  }
 };
 
 const updateFeatures = (models: FeatureModel[]) => {
@@ -71,6 +84,7 @@ const goFeatureSection = (id: string) => {
   if (element) {
     element.scrollIntoView({ behavior: "smooth" });
   }
+  syncGroupExpandStatus(id);
 };
 
 const useGroupedFeatures = computed(() => {
@@ -111,6 +125,35 @@ const useGroupedFeatures = computed(() => {
 const getGroup = (id: string) => {
   return groups.find((group) => group.id === id);
 };
+
+const getGroupExpandStatus = (id: string) => {
+  return groupStatus.find((group) => group.id === id)?.status ?? false;
+};
+
+const switchGroupExpandStatus = (id: string) => {
+  const group = groupStatus.find((group) => group.id === id);
+  if (group) {
+    group.status = !group.status;
+  }
+};
+
+const syncGroupExpandStatus = (featureId: string) => {
+  const groupId = features.find((feature) => feature.id === featureId)?.group;
+  if (groupId && !getGroupExpandStatus(groupId)) {
+    switchGroupExpandStatus(groupId);
+  }
+};
+
+//endregion
+
+//region SVG Color
+
+const currentPrefersDarkMode = usePreferredDark();
+const useIconColor = computed(() => {
+  return currentPrefersDarkMode.value
+    ? "#f8f8f8"
+    : "#000000";
+});
 
 //endregion
 
@@ -157,18 +200,25 @@ onUnmounted(() => {
 
         <div v-for="(features, groupId) in useGroupedFeatures" :key="groupId" class="feature-index-group">
 
-          <div class="feature-index-group-title overflow-hidden" :class="{ 'feature-index-group-title-hide': getGroup(groupId).hidden }">
-            {{ getGroup(groupId).title }}
+          <div class="feature-index-group-title overflow-hidden"
+               @click="switchGroupExpandStatus(groupId)"
+               :class="{ 'feature-index-group-title-hide': getGroup(groupId).hidden }">
+            <span class="inline-block align-middle">{{ getGroup(groupId).title }}</span>
+            <up-c v-show="getGroupExpandStatus(groupId)" theme="outline" size="16" :fill="useIconColor" class="inline-block align-middle pl-3" :strokeWidth="1" />
+            <down-c v-show="!getGroupExpandStatus(groupId)" theme="outline" size="16" :fill="useIconColor" class="inline-block align-middle pl-3" :strokeWidth="1" />
           </div>
 
-          <ul>
+          <ul v-show="getGroupExpandStatus(groupId)">
 
-            <li v-for="feature in features" :key="feature.id" class="feature-index-text">
+            <li v-for="feature in features" :key="feature.id"
+                class="feature-index-text"
+                :class="{
+                  '!border-pink-500': currentFeatureId === feature.id
+                }">
               <a :href="`#${feature.id}`"
                  :class="{
                   'text-pink-500': currentFeatureId === feature.id,
-                  'text-black dark:text-white': currentFeatureId !== feature.id,
-                  'feature-index-current': currentFeatureId === feature.id
+                  'text-black dark:text-white': currentFeatureId !== feature.id
                  }"
                  @click.prevent="goFeatureSection(feature.id)">
                 {{ feature.title }}
@@ -191,7 +241,11 @@ onUnmounted(() => {
 
         <div class="absolute -mt-28 bg-transparent" :id="`${feature.id}-anchor`"></div>
 
-        <div class="feature-item-title">{{ feature.title }}</div>
+        <div class="feature-item-title">
+          <a :href="`#${feature.id}`" @click.prevent="goFeatureSection(feature.id)">
+            {{ feature.title }}
+          </a>
+        </div>
 
         <markdown :source="`projects/${route.params.id}/features/${feature.id}`"
                   :i18n="true"
@@ -222,7 +276,7 @@ onUnmounted(() => {
 .feature-index-group-title {
   @apply inline-block;
   @apply text-xs text-black/50 dark:text-white/70 ;
-  @apply cursor-default;
+  @apply cursor-pointer;
 }
 
 .feature-index-group-title-hide {
@@ -239,12 +293,15 @@ onUnmounted(() => {
   }
 }
 
+/*
 .feature-index-current {
-  @apply after:content-['_✨']
+  @apply after:content-['_✨'];
 }
+*/
 
 .feature-index-text {
-  @apply py-2;
+  @apply py-2 pl-2;
+  @apply border-l-2 border-transparent;
 }
 
 .feature-item {
