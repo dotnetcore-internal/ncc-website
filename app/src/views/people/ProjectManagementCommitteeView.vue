@@ -36,6 +36,10 @@ onMounted(() => {
       {{ $t("pmc-intro") }}
     </div>
 
+    <div class="pmc-intro-image">
+      <img src="/images/material/committee.webp" alt="TheNCC PMC" />
+    </div>
+
   </body-block>
 
   <body-block class="markdown-toc-right">
@@ -83,8 +87,22 @@ onMounted(() => {
 
 <style scoped lang="css">
 .pmc-intro {
-  @apply p-5 text-3xl md:w-5/6 w-full;
+  @apply inline-block align-middle;
+  @apply p-5 text-xl lg:text-3xl md:w-4/6 w-full;
   line-height: 3.5rem;
+}
+
+.pmc-intro-image{
+  @apply inline-block align-middle;
+  @apply md:w-2/6 w-0;
+  @apply overflow-hidden;
+
+  & img {
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzE1IiBoZWlnaHQ9IjU4OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNTQ4LjMyOCA5Ni42OTRjNzUuNTM2IDUwLjEyNiAxMjkuNjM2IDExMS4wMDkgMTQ5LjE2NiAxNzQuOTg0IDE5LjUxNyA2My45MzIgNC41NCAxMzEuMDM2LTU4LjI2MSAxOTMuNzMzLTEyNS42NTcgMTI1LjQ1LTM0OS44NjggMTQ1Ljk0NS01MDAuNzQ0IDQ1Ljc3Mi03NS40MjQtNTAuMDc2LTExOC4yMzUtMTIwLjgyLTEyNi40OTYtMTk0LjY5N0MzLjczIDI0Mi42MSAzMC4wMSAxNjUuNTUxIDkyLjg2NiAxMDIuODI2IDIxOC41MzktMjIuNTg2IDM5Ny40Ny0zLjU2MSA1NDguMzI4IDk2LjY5NFoiIGZpbGw9IiM4Njg2ODYiLz48L3N2Zz4=");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+  }
 }
 
 .director {
