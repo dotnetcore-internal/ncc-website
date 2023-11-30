@@ -35,8 +35,12 @@ const useIconColor = computed(() => {
 
     <title-block :is-font-black="false" :is-font-bold="true">{{ $t("who-we-are") }}</title-block>
 
-    <div class="who-we-are-intro">
+    <div class="intro-text">
       {{ $t("who-we-are-intro") }}
+    </div>
+
+    <div class="intro-image">
+      <img src="/images/material/community-2.webp" alt="TheNCC Community" />
     </div>
 
   </body-block>
@@ -49,7 +53,31 @@ const useIconColor = computed(() => {
 
     <story-collections :query-number="6" />
 
-    <placeholder-block height="35px" />
+  </body-block>
+
+  <body-block>
+
+    <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
+      {{ $t("live-broadcast") }}
+    </title-block>
+
+    <div class="intro-image">
+      <img src="/images/material/on-air.webp" alt="TheNCC 2F" />
+    </div>
+
+    <div class="intro-text">
+      {{ $t("live-broadcast-intro") }}
+    </div>
+
+    <div class="md:grid grid-cols-2 gap-4">
+
+      <anchor href="https://2f.ncc.work/about" :title="`${$t('about')} ${$t('community-2f')}`" target="_blank" mode="classic" class="brand-logo col-start-2">
+        {{ $t("about") }} {{ $t("community-2f") }}
+      </anchor>
+
+    </div>
+
+    <placeholder-block height="55px" />
 
   </body-block>
 
@@ -108,7 +136,7 @@ const useIconColor = computed(() => {
 
     <placeholder-block height="90px" />
 
-    <div class="who-we-are-intro">
+    <div class="text-3xl w-full md:w-7/12 px-5 pb-16">
       {{ $t("home.growing-for-ecosystem") }}
     </div>
 
@@ -122,9 +150,23 @@ const useIconColor = computed(() => {
 </template>
 
 <style scoped lang="css">
-.who-we-are-intro {
-  @apply p-5 text-3xl md:w-4/6 w-full;
+.intro-text {
+  @apply inline-block align-middle;
+  @apply p-5 text-xl lg:text-3xl md:w-4/6 lg:w-3/6 w-full;
   line-height: 3.5rem;
+}
+
+.intro-image {
+
+  @apply inline-block align-middle;
+  @apply md:w-2/6 lg:w-3/6 w-0;
+
+  & img {
+    mask-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNzE1IiBoZWlnaHQ9IjU4OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNNTQ4LjMyOCA5Ni42OTRjNzUuNTM2IDUwLjEyNiAxMjkuNjM2IDExMS4wMDkgMTQ5LjE2NiAxNzQuOTg0IDE5LjUxNyA2My45MzIgNC41NCAxMzEuMDM2LTU4LjI2MSAxOTMuNzMzLTEyNS42NTcgMTI1LjQ1LTM0OS44NjggMTQ1Ljk0NS01MDAuNzQ0IDQ1Ljc3Mi03NS40MjQtNTAuMDc2LTExOC4yMzUtMTIwLjgyLTEyNi40OTYtMTk0LjY5N0MzLjczIDI0Mi42MSAzMC4wMSAxNjUuNTUxIDkyLjg2NiAxMDIuODI2IDIxOC41MzktMjIuNTg2IDM5Ny40Ny0zLjU2MSA1NDguMzI4IDk2LjY5NFoiIGZpbGw9IiM4Njg2ODYiLz48L3N2Zz4=");
+    mask-repeat: no-repeat;
+    mask-position: center center;
+    mask-size: contain;
+  }
 }
 
 .brand-logo {

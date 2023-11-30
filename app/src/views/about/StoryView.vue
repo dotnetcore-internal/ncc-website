@@ -19,7 +19,7 @@ const router = useRouter();
 const uiStore = useUiStore();
 const emitter = useEmitter();
 const list = reactive<StoryIndexModel[]>([]);
-const page = reactive<PageDescriptor>({ current: 1, total: 1 });
+const page = reactive<PageDescriptor>({ current: 1, total: 1, name: "", nameSeries: []  });
 
 const updatePage = (models: StoryIndexModel[], pageModel: PageDescriptor) => {
   list.length = 0;
@@ -28,6 +28,12 @@ const updatePage = (models: StoryIndexModel[], pageModel: PageDescriptor) => {
   }
   page.current = pageModel.current;
   page.total = pageModel.total;
+  page.name = pageModel.name;
+  page.nameSeries = [];
+  if (pageModel.nameSeries)
+    for (const name of pageModel.nameSeries) {
+      page.nameSeries.push(name);
+    }
 };
 
 const getCurrentPageNumber = () => {

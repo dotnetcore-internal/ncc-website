@@ -3,6 +3,7 @@
     "version": "20231104002"
   },
   "join": {
-    "join-ncc": "Join NCC"
+    "join-ncc": "Join NCC",
+    "join-ncc-intro": "Diverse community is the key to NCC's progress. We hope you can join our community and work together with us to build the future of NCC and .NET."
   }
 }
