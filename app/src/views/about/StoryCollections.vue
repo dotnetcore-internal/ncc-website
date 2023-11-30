@@ -68,6 +68,7 @@ onUnmounted(() => {
                  :enable-block-mode="false"
                  :enable-list-mode="false"
                  :enable-card-mode="false"
+                 :enable-pure-block-mode="false"
                  display-author-mode="hide"
                  :display-date="false"
                  :limited-items="queryNumber"
