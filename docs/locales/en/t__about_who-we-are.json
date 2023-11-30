@@ -3,5 +3,7 @@
     "version": "20231104002"
   },
   "who-we-are-intro": "The .NET Core Community (NCC) is a free kingdom composed of .NET technology enthusiasts who embrace diversity. They will ignite the future of .NET with love and dreams.",
-  "id-of-ncc-and-member-projects": "Identity of TheNCC and Member Projects"
+  "id-of-ncc-and-member-projects": "Identity of TheNCC and Member Projects",
+  "live-broadcast": "Technical Sharing Live Broadcast",
+  "live-broadcast-intro":"The NCC 2F is a technical topic sharing column launched, adopts the way of live streaming + recording. It periodically conducts online technical sharing sessions through live broadcasts."
 }

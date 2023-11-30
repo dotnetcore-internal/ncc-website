@@ -3,6 +3,7 @@
     "version": "20231104002"
   },
   "join": {
-    "join-ncc": "參與 NCC"
+    "join-ncc": "參與 NCC",
+    "join-ncc-intro": "多元化的社區是 NCC 前進的關鍵。我們希望您能夠加入我們的社區，與我們一起共同建設 NCC 與 .NET 的未來。"
   }
 }

@@ -463,15 +463,27 @@
     "isDynamicEntry": true,
     "src": "src/views/about/FaqView.vue"
   },
+  "src/views/about/JoinView.css": {
+    "file": "assets/JoinView.css",
+    "src": "src/views/about/JoinView.css"
+  },
   "src/views/about/JoinView.vue": {
+    "css": [
+      "assets/JoinView.css"
+    ],
     "file": "assets/JoinView.js",
     "imports": [
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/JoinView.vue"
