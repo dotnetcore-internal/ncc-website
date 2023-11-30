@@ -35,7 +35,9 @@ export interface AuthorModel {
 
 export interface PageDescriptor {
   current: number,
-  total: number
+  total: number,
+  name?: string,
+  nameSeries?: string[]
 }
 
 const hasAuthors = (model: AuthorModel | AuthorModel[] | null) => {
