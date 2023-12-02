@@ -10,6 +10,7 @@ import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
 import Anchor from "@/components/basic/AnchorElement.vue";
 import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 
 const uiStore = useUiStore();
 
@@ -46,6 +47,9 @@ onMounted(async () => {
 <template>
 
   <div class="">
+
+    <placeholder-block height="2rem" />
+
     <div class="responsive-width">
 
       <left-right-layout>
@@ -92,6 +96,9 @@ onMounted(async () => {
       </div>
 
     </div>
+
+    <placeholder-block height="2.5rem" />
+
   </div>
 
 </template>

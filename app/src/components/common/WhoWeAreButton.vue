@@ -12,22 +12,24 @@ const props = withDefaults(defineProps<{
 
 <template>
   <a v-if="needRefresh"
-     href="/about/join"
-     class="text-white text-sm font-bold text-center px-9 py-2 rounded-full bg-gradient-to-br from-pink-700 to-purple-700"
+     href="/about/who-we-are"
+     class="text-white font-bold text-center px-9 py-3 rounded-full bg-gradient-to-br from-pink-700 to-purple-700"
      :class="{block: props.mode === 'block', 'inline-block': props.mode === 'inline-block'}">
-    <slot>
-      {{ $t("join-at-header-default") }}
-    </slot>
+    <span v-if="$slots.default">
+      <slot></slot>
+      </span>
+    <span v-else>About NCC</span>
   </a>
 
   <a v-else
-     href="/about/join"
-     @click.prevent="go('about/join')"
-     class="text-white text-sm font-bold text-center px-9 py-2 rounded-full bg-gradient-to-br from-pink-700 to-purple-700"
+     href="/about/who-we-are"
+     @click.prevent="go('about/who-we-are')"
+     class="text-white font-bold text-center px-9 py-3 rounded-full bg-gradient-to-br from-pink-700 to-purple-700"
      :class="{block: props.mode === 'block', 'inline-block': props.mode === 'inline-block'}">
-    <slot>
-      {{ $t("join-at-header-default") }}
-    </slot>
+    <span v-if="$slots.default">
+      <slot></slot>
+      </span>
+    <span v-else>About NCC</span>
   </a>
 </template>
 

@@ -8,9 +8,11 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
 <template>
 
-  <div class="section-join-us pt-10">
+  <div class="section-join-us pt-10 relative">
 
-    <div class="responsive-width grid grid-cols-1 lg:grid-cols-2 pb-10">
+    <div class="absolute left-0 right-0 top-0 bottom-0 bg-black/20 dark:bg-black/60" />
+
+    <div class="responsive-width grid grid-cols-1 lg:grid-cols-2 pb-10 relative">
 
       <section-head>
         {{ $t("home.embrace-net") }}
@@ -21,7 +23,7 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
     </div>
 
-    <div class="responsive-width grid grid-cols-1 lg:grid-cols-3 gap-4">
+    <div class="responsive-width grid grid-cols-1 lg:grid-cols-3 gap-4 relative">
 
       <div class="join-card become-a-member">
         <div class="join-card-title">
@@ -82,7 +84,7 @@ import { ArrowRight, ArrowRightDown } from "@icon-park/vue-next";
 
     </div>
 
-    <div class="responsive-width grid grid-cols-1 lg:grid-cols-8 py-5">
+    <div class="responsive-width grid grid-cols-1 lg:grid-cols-8 py-5 relative">
 
       <div class="text-4xl lg:col-start-4 lg:col-span-4 text-center lg:text-left">
         New to NCC ?

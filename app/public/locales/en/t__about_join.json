@@ -4,6 +4,12 @@
   },
   "join": {
     "join-ncc": "Join NCC",
-    "join-ncc-intro": "Diverse community is the key to NCC's progress. We hope you can join our community and work together with us to build the future of NCC and .NET."
+    "join-ncc-intro": "Diverse community is the key to NCC's progress. We hope you can join our community and work together with us to build the future of NCC and .NET.",
+    "oss-author": "I am an OSS author, and I would like to join",
+    "dev-player": "I am an enthusiastic developer who wants to grow together with everyone",
+    "speaker": "I'm passionate about sharing and exchanging working and developing experience with everyone",
+    "student": "I am a student who loves technology",
+    "community-leader": "I come from other technical communities and collaborate with NCC",
+    "other": "Although I am not a professional, I am very interested in the community"
   }
 }

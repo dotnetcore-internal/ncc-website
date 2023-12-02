@@ -7,6 +7,7 @@ import type { NewsIndexModel } from "@/apis/ContentModels";
 
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
 import LeftRightLayout from "@/components/basic/LeftRightLayout.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import TitleLink from "@/components/blocks/TitleLink.vue";
 import ArticleCard from "@/components/articles/ArticleAsGrid.vue";
 
@@ -44,7 +45,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="bg-white dark:bg-black">
+  <div class="bg-white-black">
+
+    <placeholder-block height="3rem" />
+
     <div class="responsive-width py-5 pb-16">
 
       <left-right-layout>
@@ -76,6 +80,9 @@ onUnmounted(() => {
       </div>
 
     </div>
+
+    <placeholder-block height="2.5rem" />
+
   </div>
 </template>
 

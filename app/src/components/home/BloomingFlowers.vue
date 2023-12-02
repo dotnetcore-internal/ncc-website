@@ -2,11 +2,14 @@
 
 import SectionHead from "@/components/home/SectionHeadBlock.vue";
 import ProjectStatBlock from "@/components/projects/ProjectStatBlock.vue";
+import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 </script>
 
 <template>
 
-  <div class="bg-white dark:bg-black pb-16">
+  <div class="bg-white-black pb-16">
+
+    <placeholder-block height="2rem" />
 
     <div class="responsive-width grid grid-cols-1 lg:grid-cols-2 pb-10">
 
@@ -21,6 +24,8 @@ import ProjectStatBlock from "@/components/projects/ProjectStatBlock.vue";
     </div>
 
     <project-stat-block />
+
+    <placeholder-block height="2.5rem" />
 
   </div>
 

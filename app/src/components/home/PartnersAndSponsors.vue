@@ -6,6 +6,9 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 <template>
 
   <div class="bg-gray-200/50 dark:bg-purple-900/10 dark:text-white">
+
+    <placeholder-block height="2rem" />
+
     <div class="responsive-width">
 
       <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
@@ -28,9 +31,9 @@ import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
         <img src="/images/partners/material-theme.png" alt="Material Theme" class="w-full h-full">
       </a>
 
-      <placeholder-block height="1.25rem" />
-
     </div>
+
+    <placeholder-block height="3.5rem" />
 
   </div>
 

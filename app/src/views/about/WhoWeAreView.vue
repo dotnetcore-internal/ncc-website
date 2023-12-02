@@ -31,6 +31,7 @@ const useIconColor = computed(() => {
 
 <template>
 
+  <!-- Start Intro -->
   <body-block>
 
     <title-block :is-font-black="false" :is-font-bold="true">{{ $t("who-we-are") }}</title-block>
@@ -44,7 +45,11 @@ const useIconColor = computed(() => {
     </div>
 
   </body-block>
+  <!-- End Intro -->
 
+  <placeholder-block height="60px" />
+
+  <!-- Start Story -->
   <body-block>
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
@@ -54,7 +59,11 @@ const useIconColor = computed(() => {
     <story-collections :query-number="6" />
 
   </body-block>
+  <!-- End Story -->
 
+  <placeholder-block height="60px" />
+
+  <!-- Start NCC 2F -->
   <body-block>
 
     <title-block h1-mode="false" color-mode="auto" :with-horizontal-rule="true" :is-font-black="false">
@@ -77,11 +86,13 @@ const useIconColor = computed(() => {
 
     </div>
 
-    <placeholder-block height="55px" />
-
   </body-block>
+  <!-- End NCC 2F -->
 
-  <div class="bg-white dark:bg-black">
+  <placeholder-block height="60px" />
+
+  <!-- Start Brand & Logo -->
+  <div class="bg-white-black">
 
     <placeholder-block height="35px" />
 
@@ -131,7 +142,9 @@ const useIconColor = computed(() => {
     </body-block>
 
   </div>
+  <!-- End Brand & Logo -->
 
+  <!-- Start Project Stat -->
   <body-block>
 
     <placeholder-block height="90px" />
@@ -146,6 +159,7 @@ const useIconColor = computed(() => {
     <placeholder-block height="90px" />
 
   </body-block>
+  <!-- End Project Stat -->
 
 </template>
 

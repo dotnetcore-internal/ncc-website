@@ -181,6 +181,10 @@ body {
     margin-top: -5px;
 }
 
+.bg-white-black{
+    @apply bg-white dark:bg-black;
+}
+
 @media (prefers-color-scheme: dark) {
     body {
         background: #1d1f20;
@@ -248,4 +252,34 @@ body {
     }
 }
 
+.home-first{
+    height: 56rem;
+
+    .home-first-image{
+        @apply absolute;
+        @apply top-0 left-0 right-0;
+        @apply overflow-hidden;
+        height: 56rem;
+        z-index: 1;
+    }
+
+    .home-first-mask{
+        @apply absolute;
+        @apply top-0 left-0 right-0;
+        @apply bg-gradient-to-b from-black/30 to-black/50;
+        @apply overflow-hidden;
+        height: 56rem;
+        z-index: 2;
+    }
+
+    .home-first-text{
+        @apply text-5xl md:text-7xl mt-52 md:mt-64 text-white;
+        @apply drop-shadow-lg;
+    }
+
+    & img{
+        min-height: 56rem;
+        object-fit: cover;
+    }
+}
 

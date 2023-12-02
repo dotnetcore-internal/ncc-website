@@ -99,10 +99,12 @@ onMounted(async () => {
 
   .desc {
     @apply text-left font-medium;
-    @apply ml-3 inline-block align-middle;
+    @apply block lg:inline-block align-middle;
+    @apply lg:ml-3 mb-4 lg:mb-0;
 
     & span {
-      @apply block;
+      @apply lg:block;
+      @apply pr-2 lg:pr-0;
     }
   }
 }

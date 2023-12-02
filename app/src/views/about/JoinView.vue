@@ -3,7 +3,6 @@ import { setTitle } from "@/hooks/usePageToolkits";
 
 import BodyBlock from "@/components/blocks/BodyBlock.vue";
 import TitleBlock from "@/components/blocks/TitleBlock.vue";
-import HorizontalRuleElement from "@/components/basic/HorizontalRuleElement.vue";
 import PlaceholderBlock from "@/components/blocks/PlaceholderBlock.vue";
 import Markdown from "@/components/markdown/MarkdownWorker.vue";
 
@@ -27,86 +26,64 @@ setTitle("join.join-ncc", "i18n");
 
   <placeholder-block height="45px" />
 
-  <horizontal-rule-element colorMode="auto" />
+  <div class="bg-white-black p-5">
 
-  <div class="responsive-width">
+    <div class="responsive-width">
 
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-oss">
 
         <div class="join-title">
-          我是开源项目作者，我想加入
+          {{ $t("join.oss-author") }}
         </div>
 
         <markdown source="about/join/oss" :i18n="true" />
 
       </div>
 
-    </div>
-
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-dev">
 
         <div class="join-title">
-          我是热心的开发者，我想与大家一同成长
+          {{ $t("join.dev-player") }}
         </div>
 
         <markdown source="about/join/dev" :i18n="true" />
 
       </div>
 
-    </div>
-
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-speaker">
 
         <div class="join-title">
-          我有一些经验想分享给大家，独乐乐不如众乐乐
+          {{ $t("join.speaker") }}
         </div>
 
         <markdown source="about/join/speaker" :i18n="true" />
 
       </div>
 
-    </div>
-
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-student">
 
         <div class="join-title">
-          我是热爱技术的学生，我想加入
+          {{ $t("join.student") }}
         </div>
 
         <markdown source="about/join/student" :i18n="true" />
 
       </div>
 
-    </div>
-
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-techcom">
 
         <div class="join-title">
-          我来自其他技术社区，与 NCC 合作
+          {{ $t("join.community-leader") }}
         </div>
 
         <markdown source="about/join/techcom" :i18n="true" />
 
       </div>
 
-    </div>
-
-    <div class="content-paper">
-
-      <div class="p-5">
+      <div class="join-section js-non-pro">
 
         <div class="join-title">
-          虽然不是技术人员，但对社区很感兴趣
+          {{ $t("join.other") }}
         </div>
 
         <markdown source="about/join/non-pro" :i18n="true" />
@@ -115,9 +92,9 @@ setTitle("join.join-ncc", "i18n");
 
     </div>
 
-  </div>
+    <placeholder-block height="45px" />
 
-  <placeholder-block height="45px" />
+  </div>
 
 </template>
 
@@ -141,9 +118,19 @@ setTitle("join.join-ncc", "i18n");
   }
 }
 
-.join-title {
-  @apply px-3 py-2;
-  @apply border-l-8 border-pink-500;
-  @apply text-2xl;
+.join-section {
+  @apply p-5;
+
+
+  .join-title {
+    @apply px-3 py-2;
+    @apply border-l-8 border-pink-500;
+    @apply text-2xl;
+  }
+
+  :global(p) {
+    @apply text-lg break-normal;
+  }
 }
+
 </style>
