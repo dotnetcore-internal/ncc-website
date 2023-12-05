@@ -132,7 +132,8 @@
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js"
+      "__plugin-vue_export-helper.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
     ]
   },
   "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js": {
@@ -385,10 +386,10 @@
       "_axios.js",
       "_TitleBlock.js",
       "_LeftRightLayout.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_MemberProjects.js",
       "_ArticleAsGrid.js",
       "_vendor.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
       "_ProjectStatBlock.js",
       "_useProjectToolkits.js",
