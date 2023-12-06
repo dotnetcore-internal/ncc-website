@@ -1,4 +1,4 @@
-## Welcome to the use of our community's brand assets
+# Welcome to the use of our community's brand assets
 
 Please use the NCC community's brand assets responsibly under the guidance of this guide. Consistent use of our design patterns, logo, and other brand assets helps people easily recognize us.
 

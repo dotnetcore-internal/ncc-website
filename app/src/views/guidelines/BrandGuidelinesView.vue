@@ -28,37 +28,45 @@ const useLogoUrl = computed(() => {
 
   </body-block>
 
-  <body-block class="content-paper">
+  <body-block class="flex gap-4">
 
-    <markdown source="guidelines/BrandGuidelines" :i18n="true" />
-
-    <placeholder-block height="20px" />
-
-    <div class="grid grid-cols-2 gap-4">
-
-      <div class="text-center w-1/4 mx-auto self-center">
-        <img src="/images/logo-seq-svg.svg" alt="TheNCC Logo （Classic mode）" />
-      </div>
-
-      <div class="text-center w-3/4 mx-auto self-center">
-        <img :src="useLogoUrl" alt="TheNCC Logo （Design mode）" />
-      </div>
-
-      <div class="text-center text-sm text-gray-500">
-        TheNCC Logo （Classic mode）
-        <p class="text-xs text-gray-500/80">since 2016</p>
-      </div>
-
-      <div class="text-center text-sm text-gray-500">
-        TheNCC Logo （Design mode）
-        <p class="text-xs text-gray-500/80">since 2020</p>
-      </div>
-
+    <div class="flex-none w-1/4">
+TOC
     </div>
 
-    <placeholder-block height="90px" />
+    <div class="content-paper">
 
-    <markdown source="guidelines/logo" :i18n="true" />
+      <markdown source="guidelines/BrandGuidelines" :i18n="true" />
+
+      <placeholder-block height="20px" />
+
+      <div class="grid grid-cols-2 gap-4">
+
+        <div class="text-center w-1/4 mx-auto self-center">
+          <img src="/images/logo-seq-svg.svg" alt="TheNCC Logo （Classic mode）" />
+        </div>
+
+        <div class="text-center w-3/4 mx-auto self-center">
+          <img :src="useLogoUrl" alt="TheNCC Logo （Design mode）" />
+        </div>
+
+        <div class="text-center text-sm text-gray-500">
+          TheNCC Logo （Classic mode）
+          <p class="text-xs text-gray-500/80">since 2016</p>
+        </div>
+
+        <div class="text-center text-sm text-gray-500">
+          TheNCC Logo （Design mode）
+          <p class="text-xs text-gray-500/80">since 2020</p>
+        </div>
+
+      </div>
+
+      <placeholder-block height="90px" />
+
+      <markdown source="guidelines/logo" :i18n="true" />
+
+    </div>
 
   </body-block>
 
@@ -66,7 +74,7 @@ const useLogoUrl = computed(() => {
 
 <style scoped lang="css">
 
-:deep(.markdown-body){
+:deep(.markdown-body) {
   & p, & li {
     @apply text-lg;
   }

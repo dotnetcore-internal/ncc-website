@@ -1,4 +1,4 @@
-## Logo
+# Logo
 
 Our logo represents our community organization, as well as the member projects, community members, open-source community organizations we collaborate with, and developers who support us. It is important to use our community logo correctly so that people can recognize us.
 
@@ -12,7 +12,7 @@ In some special occasions, we have also designed variant logos with different pr
 
 Please try to avoid using these variant logos and prioritize the primary logo.
 
-### Dos and Don’ts
+## Dos and Don’ts
 
 We love our NCC logo, so please refrain from making any modifications to the logo, including but not limited to: changing colors, altering proportions, changing fonts, repositioning elements, adding other elements, or altering the shape of the logo.
 
