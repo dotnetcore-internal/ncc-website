@@ -10,6 +10,19 @@
     "discover-chinese-part2": ".NET China Community",
     "discover-chinese-part3": ".",
     "discover-chinese-tip": "Visit the .NET in China website",
-    "flagship-site": "FLAGSHIP SITE"
+    "flagship-site": "Flagship Site",
+    "events-and-meetups": "Events and Meetups",
+    "tools-and-resources": "Tools and Resources",
+    "others": "Others",
+    "flagship-desc": "Visit the NCC main site to learn <a href='/about/who-we-are' target='_blank'>about the NCC</a>, it's <a href='/news' target='_blank'>latest news</a>, <a href='/projects' target='_blank'>member projects</a>, as well as <a href='/about/story' target='_blank'>the past, present, and future</a> of the community. The <a href='github.com/dotnetcore/ncc-website' target='_blank'>source code</a> of the website is completely open-source and can be used with the guidance provided in the <a href='/website-source-code-usage-guidelines' target='_blank'>website source code usage guide</a>.",
+    "events-desc": "Communicate with each other and make progress together in events and meetups. The <a href='https://events.ncc.work' target='_blank'>NCC Events site</a> contains information on technical conferences, events, and meetups, and provides an index of key information for <a href='https://2f.ncc.work' target='_blank'>NCC Second Floor</a>.",
+    "ncc-2f-desc": "Let's talk about technology, programmers, and .NET... Besides technology, we should also have social interactions and a life outside of it. <a href='https://github.com/dotnetcore/ncc-2f' target='_blank'>Maintained by the community on GitHub</a>.",
+    "contribute-desc": "Whether you are an open-source project author, a passionate developer seeking challenges, a student, or anyone else, start contributing to the NCC community and explore the future of .NET together. <a href='https://github.com/dotnetcore/ncc-contribute' target='_blank'>Maintained by the community on GitHub</a>.",
+    "landscape-desc": "The NCC Landscape organizes all NCC member projects, the extension projects derived from member projects, and the entire ecosystem of open-source projects built upon them， into categories, providing an overview of the ecosystem. The landscape is managed on <a href='https://github.com/dotnetcore/ncc-landscape' target='_blank'>GitHub</a> with continuous contributions from the community.",
+    "glossary-desc": "Make the glossary easy to understand and reduce communication barriers. <a href='https://github.com/dotnetcore/ncc-glossary' target='_blank'>Maintained by the community on GitHub</a>.",
+    "tools-desc": "Provides some practical tools that can be used for open source projects, making it convenient for open source project authors to create or maintain their projects.",
+    "github-home-desc": "The community's Home project on GitHub is one of the portal projects of the NCC organization. Before the official website went live, it also served as the \"official website\" and many of our public affairs were carried out based on this project.",
+    "github-desc": "Our organization page is on <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a>. The majority of member projects can be found here.",
+    "gitee-desc": "Our organization page is on <a href='https://gitee.com/dotnetcore' target='_blank'>GitHub</a>. Some member projects can be found here (as our projects primarily operate on <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a>)."
   }
 }
