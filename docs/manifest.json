@@ -220,6 +220,9 @@
       "_vendor.js"
     ]
   },
+  "_logo-seq-svg.js": {
+    "file": "assets/logo-seq-svg.js"
+  },
   "_official-wechat-account-qrcode.js": {
     "file": "assets/official-wechat-account-qrcode.js"
   },
@@ -419,16 +422,24 @@
     "isDynamicEntry": true,
     "src": "src/views/Page404.vue"
   },
+  "src/views/about/AllNccView.css": {
+    "file": "assets/AllNccView.css",
+    "src": "src/views/about/AllNccView.css"
+  },
   "src/views/about/AllNccView.vue": {
+    "css": [
+      "assets/AllNccView.css"
+    ],
     "file": "assets/AllNccView.js",
     "imports": [
+      "_logo-seq-svg.js",
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
       "_vendor.js",
-      "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "__plugin-vue_export-helper.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/AllNccView.vue"
@@ -558,6 +569,7 @@
     "file": "assets/WhoWeAreView.js",
     "imports": [
       "_vendor.js",
+      "_logo-seq-svg.js",
       "_usePageToolkits.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
       "_BodyBlock.js",
@@ -621,15 +633,28 @@
     "isDynamicEntry": true,
     "src": "src/views/announcements/AnnouncementsIndexView.vue"
   },
+  "src/views/guidelines/BrandGuidelinesView.css": {
+    "file": "assets/BrandGuidelinesView.css",
+    "src": "src/views/guidelines/BrandGuidelinesView.css"
+  },
   "src/views/guidelines/BrandGuidelinesView.vue": {
+    "css": [
+      "assets/BrandGuidelinesView.css"
+    ],
     "file": "assets/BrandGuidelinesView.js",
     "imports": [
+      "_logo-seq-svg.js",
+      "_vendor.js",
       "_usePageToolkits.js",
       "_BodyBlock.js",
       "_TitleBlock.js",
-      "_vendor.js",
+      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
+      "_MarkdownWorker.vue_vue_type_script_setup_true_lang.js",
       "__plugin-vue_export-helper.js",
-      "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js"
+      "_useEmitter.js",
+      "_uiStore.js",
+      "_index2.js",
+      "_WaveLoading.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/guidelines/BrandGuidelinesView.vue"

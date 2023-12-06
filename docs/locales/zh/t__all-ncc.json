@@ -10,6 +10,19 @@
     "discover-chinese-part2": ".NET China 社区",
     "discover-chinese-part3": "中进一步探索。",
     "discover-chinese-tip": "访问 .NET in China 网站",
-    "flagship-site": "主站"
+    "flagship-site": "主站",
+    "events-and-meetups": "活动与聚会",
+    "tools-and-resources": "工具与资源",
+    "others": "更多",
+    "flagship-desc": "访问 NCC 主站，<a href='/about/who-we-are' target='_blank'>了解 NCC</a>，<a href='/projects' target='_blank'>成员项目</a>和社区的<a href='/news' target='_blank'>最新消息</a>，以及<a href='/about/story' target='_blank'>社区的过去、现在和未来</a>。该站点的<a href='github.com/dotnetcore/ncc-website' target='_blank'>源码</a>是完全开源的，可在<a href='/website-source-code-usage-guidelines' target='_blank'>网站源码使用指南</a>的指导下使用源码。",
+    "events-desc": "在活动和聚会中相互沟通，共同进步。<a href='https://events.ncc.work' target='_blank'>NCC Events 站点</a>包含技术大会、活动、聚会的信息，并提供了 <a href='https://2f.ncc.work' target='_blank'>NCC 二层楼</a>的关键信息索引。",
+    "ncc-2f-desc": "聊聊技术、程序员和 .NET……除了技术，我们还应有社交与生活。<a href='https://github.com/dotnetcore/ncc-2f' target='_blank'>由 GitHub 上的社区负责维护</a>。",
+    "contribute-desc": "无论你是开源项目作者、热爱挑战的开发者、学生还是其他人，开始为 NCC 社区做出贡献，一起探索 .NET 的未来。<a href='https://github.com/dotnetcore/ncc-contribute' target='_blank'>由 GitHub 上的社区负责维护</a>。",
+    "landscape-desc": " Landscape 项目将对 NCC 成员项目、由成员项目发展而来的扩展项目，以及所有由此构建而成的开源项目生态，对它们进行了分类，并提供生态系统的概述。Landscape 项目托管于 <a href='https://github.com/dotnetcore/ncc-langscape' target='_blank'>GitHub</a>，并持续的到社区的贡献。",
+    "glossary-desc": "让术语变得易于理解，减少沟通障碍。<a href='https://github.com/dotnetcore/ncc-glossary' target='_blank'>由 GitHub 上的社区负责维护</a>。",
+    "tools-desc": "提供了一些可用于开源项目的实用工具，方便开源项目作者创建或维护他们的项目。",
+    "github-home-desc": "社区在 GitHub 上的 Home 项目，是 NCC 组织的门户项目之一。在官方网站上线之前，它同时也承担着“官网”的职责。我们许多公开活动会依托该项目进行。",
+    "github-desc": "我们在 <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a> 上的组织页面。绝大多数成员项目都能在这里被找到。",
+    "gitee-desc": "我们在 <a href='https://gitee.com/dotnetcore' target='_blank'>GitHub</a> 上的组织页面。一部分成员项目能在这里被找到（因为我们项目的主要在 <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a> 活动）。"
   }
 }

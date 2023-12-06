@@ -10,6 +10,19 @@
     "discover-chinese-part2": ".NET China 社群",
     "discover-chinese-part3": "中進一步探索。",
     "discover-chinese-tip": "訪問 .NET in China 網站",
-    "flagship-site": "旗艦站"
+    "flagship-site": "旗艦站",
+    "events-and-meetups": "活動與聚會",
+    "tools-and-resources": "工具與資源",
+    "others": "更多",
+    "flagship-desc": "訪問 NCC 主站，<a href='/about/who-we-are' target='_blank'>了解 NCC</a>，<a href='/projects' target='_blank'>成員項目</a>和社區的<a href='/news' target='_blank'>最新消息</a>，以及<a href='/about/story' target='_blank'>社區的過去、現在和未來</a>。該站點的<a href='github.com/dotnetcore/ncc-website' target='_blank'>源碼</a>是完全開源的，可在<a href='/website-source-code-usage-guidelines' target='_blank'>網站源碼使用指南</a>的指導下使用源碼。",
+    "events-desc": "在活動和聚會中相互溝通，共同進步。<a href='https://events.ncc.work' target='_blank'>NCC Events 站點</a>包含技術大會、活動、聚會的信息，並提供了 <a href='https://2f.ncc.work' target='_blank'>NCC 二層樓</a>的關鍵信息索引。",
+    "ncc-2f-desc": "聊聊技術、程序員和 .NET……除了技術，我們還應有社交與生活。<a href='https://github.com/dotnetcore/ncc-2f' target=,'_blank'>由 GitHub 上的社區負責維護</a>。",
+    "contribute-desc": "無論你是開源項目作者、熱愛挑戰的開發者、學生還是其他人，開始為 NCC 社區做出貢獻，一起探索 .NET 的未來。<a href='https://github.com/dotnetcore/ncc-contribute' target='_blank'>由 GitHub 上的社區負責維護</a>。",
+    "landscape-desc": " Landscape 項目將對 NCC 成員項目、由成員項目發展而來的擴展項目，以及所有由此構建而成的開源項目生態，對它們進行了分類，並提供生態系統的概述。Landscape 項目托管於 <a href='https://github.com/dotnetcore/ncc-langscape' target='_blank'>GitHub</a>，並持續的到社區的貢獻。",
+    "glossary-desc": "讓術語變得易於理解，減少溝通障礙。<a href='https://github.com/dotnetcore/ncc-glossary' target=,'_blank'>由 GitHub 上的社區負責維護</a>。",
+    "tools-desc": "提供了一些可用於開源項目的實用工具，方便開源項目作者創建或維護他們的項目。",
+    "github-home-desc": "社區在 GitHub 上的 Home 項目，是 NCC 組織的門戶項目之一。在官方網站上線之前，它同時也承擔著「官網」的職責。我們許多公開活動會依托該項目進行。",
+    "github-desc": "我們在 <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a> 上的組織頁面。絕大多數成員項目都能在這裏被找到。",
+    "gitee-desc": "我們在 <a href='https://gitee.com/dotnetcore' target='_blank'>GitHub</a> 上的組織頁面。一部分成員項目能在這裏被找到（因為我們項目的主要在 <a href='https://github.com/dotnetcore' target='_blank'>GitHub</a> 活動）。"
   }
 }
