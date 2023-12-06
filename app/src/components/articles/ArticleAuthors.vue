@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import type { AuthorModel } from "@/apis/ContentModels";
+import type { AuthorExtendModel, AuthorModel } from "@/apis/ContentModels";
 import { getAuthors, hasAuthors } from "@/apis/ContentModels";
 
 import ArticleAuthorBlock from "@/components/articles/ArticleAuthorBlock.vue";
 
 const props = withDefaults(defineProps<{
-  author: AuthorModel | AuthorModel[] | null
+  author: AuthorModel | AuthorModel[] | AuthorExtendModel | AuthorExtendModel[] | null
 }>(), {});
 
 </script>

@@ -1,10 +1,11 @@
 <script setup lang="ts">
-import { computed, onMounted, ref } from "vue";
+import { computed } from "vue";
 import { useDateFormat } from "@vueuse/core";
 import { useUiStore } from "@/stores/uiStore";
-import { type AuthorModel, countAuthors, getAuthors, hasAuthors } from "@/apis/ContentModels";
+import type {AuthorExtendModel, AuthorModel} from "@/apis/ContentModels";
 
 import Anchor from "@/components/basic/AnchorElement.vue";
+import ArticleCardsAuthors from "@/components/articles/ArticleCardsAuthors.vue";
 
 const props = withDefaults(defineProps<{
   id: string;
@@ -13,15 +14,18 @@ const props = withDefaults(defineProps<{
   titleTip?: string;
   url?: string;
   baseUrl: string;
-  author?: AuthorModel | AuthorModel[] | null;
+  author?: AuthorModel | AuthorModel[] | AuthorExtendModel | AuthorExtendModel[] | null;
   displayAuthorMode?: "hide" | "all" | "all-but-avatar" | "all-but-name" | "all-but-first-avatar" | "all-but-first-name" | "first" | "first-but-avatar" | "first-but-name"
   displayAuthorBy?: boolean;
+  displayConjunctions?: boolean;
+  useAuthorExtendStrategy?: { key: string; mode?: "direct" | "i18n"; displayText?: string }[];
   displayDescription?: boolean;
   displayDate?: boolean;
   openInNewTab?: boolean;
 }>(), {
   displayAuthorMode: "hide",
   displayAuthorBy: false,
+  displayConjunctions: true,
   displayDescription: false,
   displayDate: true,
   author: null,
@@ -47,107 +51,7 @@ const useArticleUrl = computed(() => {
 });
 
 const useTarget = computed(() => {
-  return props.openInNewTab ? '_blank' : '_self';
-});
-
-//region Author Display Options
-
-/*
-  "hide"                  // Hide all authors
-  "all"                   // Show all authors
-  "all-but-avatar"        // Show all authors but avatar
-  "all-but-name"          // Show all authors but name
-  "all-but-first-avatar"  // Show all authors & show first avatar only
-  "all-but-first-name"    // Show all authors & show first name only
-  "first"                 // Show first author only
-  "first-but-avatar"      // Show first author & show first avatar only
-  "first-but-name"        // Show first author & show first name only
-*/
-
-const displayAuthors = ref(false);
-
-const displayThisAuthor = (i: number): boolean => {
-  if (displayAuthors.value) {
-
-    switch (props.displayAuthorMode) {
-      case "hide":
-        return false;
-      case "all":
-      case "all-but-avatar":
-      case "all-but-name":
-      case "all-but-first-avatar":
-      case "all-but-first-name":
-        return true;
-      case "first":
-      case "first-but-avatar":
-      case "first-but-name":
-        return i === 0;
-    }
-
-  }
-
-  return false;
-};
-
-const displayThisAuthorName = (i: number): boolean => {
-
-  if (displayAuthors.value) {
-
-    switch (props.displayAuthorMode) {
-      case "all":
-      case "all-but-name":
-      case "all-but-first-avatar":
-        return true;
-
-      case "all-but-avatar":
-      case "first-but-avatar":
-        return false;
-
-      case "first":
-      case "first-but-name":
-      case "all-but-first-name":
-        return i === 0;
-    }
-
-  }
-
-  return false;
-};
-
-const displayThisAuthorAvatar = (i: number): boolean => {
-  if (displayAuthors.value) {
-
-    switch (props.displayAuthorMode) {
-      case "all":
-      case "all-but-avatar":
-        return true;
-
-      case "all-but-name":
-      case "first-but-name":
-        return false;
-
-      case "first":
-      case "first-but-avatar":
-      case "all-but-first-avatar":
-        return i === 0;
-
-      case "all-but-first-name":
-        return i !== 0;
-    }
-
-  }
-
-  return false;
-};
-
-const totalOfAuthors = computed(() => {
-  return countAuthors(props.author);
-});
-
-//endregion
-
-onMounted(() => {
-  displayAuthors.value = props.displayAuthorMode !== "hide";
+  return props.openInNewTab ? "_blank" : "_self";
 });
 
 </script>
@@ -166,15 +70,13 @@ onMounted(() => {
             </span>
             <br v-else />
             <!-- Author -->
-            <span v-if="hasAuthors(author)" class="text-sm font-light text-gray-500">
-              <span v-if="displayAuthorBy" class="text-xs mr-1 text-gray-500/50">by</span>
-              <span v-for="(author, i) in getAuthors(author)" :key="author.id" v-show="displayThisAuthor(i)">
-                <span v-if="i > 0 && i < totalOfAuthors - 1" class="text-xs mx-1 text-gray-500/50">,</span>
-                <span v-else-if="i > 0 && i < totalOfAuthors" class="text-xs mx-1 text-gray-500/50">and</span>
-                <span v-if="displayThisAuthorAvatar(i)" class="mr-1.5"> <img :src="author.avatar" :alt="author.name" class="inline-block w-5 h-5 rounded-full" /></span>
-                <span v-if="displayThisAuthorName(i)" class=""> {{ author.name }}</span>
-              </span>
-            </span>
+            <article-cards-authors
+              :author="author"
+              :display-author-mode="props.displayAuthorMode"
+              :display-author-by="props.displayAuthorBy"
+              :display-conjunctions="props.displayConjunctions"
+              :use-extend-strategy="props.useAuthorExtendStrategy"
+            />
             <!-- Author -->
           </span>
         </div>

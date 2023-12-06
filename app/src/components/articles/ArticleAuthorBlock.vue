@@ -1,9 +1,9 @@
 <script setup lang="ts">
 
-import type { AuthorModel } from "@/apis/ContentModels";
+import type {AuthorExtendModel, AuthorModel} from "@/apis/ContentModels";
 
 const props = withDefaults(defineProps<{
-  author: AuthorModel
+  author: AuthorModel | AuthorExtendModel
 }>(), {});
 
 </script>
