@@ -3,10 +3,10 @@
     "version": "1",
     "locale": "en"
   },
-  "id": "efcore-gaussdb",
-  "name": "GaussDB for EFCore",
+  "id": "gaussdb-driver",
+  "name": "GaussDB Driver for .NET",
   "logo": "",
-  "github": "https://github.com/dotnetcore/EntityFrameworkCore.GaussDB",
+  "github": "https://github.com/dotnetcore/DotNetCore.GaussDB",
   "catalogue": "data",
   "status": "incubation",
   "leader": {
@@ -19,7 +19,7 @@
   ],
   "license": {
     "name": "postgresql",
-    "file": "https://raw.githubusercontent.com/dotnetcore/EntityFrameworkCore.GaussDB/master/LICENSE"
+    "file": "https://raw.githubusercontent.com/dotnetcore/DotNetCore.GaussDB/master/LICENSE"
   },
   "modules": [
     {

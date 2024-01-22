@@ -1,1 +1,1 @@
-const n=r=>r?Array.isArray(r)?r.length>0:!0:!1,t=r=>r?Array.isArray(r)?r:[r]:[],s=r=>t(r).length;export{s as c,t as g,n as h};
+const o=r=>r?Array.isArray(r)?r.length>0:!0:!1,i=r=>r?Array.isArray(r)?r:[r]:[],a=r=>i(r).length,u=r=>(r==null?void 0:r.groups)!==void 0,e=r=>{if(!r)return[];if(Array.isArray(r)){const s=[];for(const t of r)u(t)&&s.push(t);return s}else return u(r)?[r]:[]},c=(r,s)=>{const t=[],f=e(r);for(const n of f)n.groups.includes(s)&&t.push(n);return t};export{a as c,c as f,i as g,o as h};

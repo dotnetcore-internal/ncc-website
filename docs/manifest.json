@@ -52,10 +52,10 @@
     ],
     "file": "assets/ArticleAsGrid.js",
     "imports": [
-      "_vendor.js",
       "_uiStore.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
+      "_ContentModels.js",
+      "_vendor.js",
       "__plugin-vue_export-helper.js"
     ]
   },
@@ -74,10 +74,9 @@
     "imports": [
       "_vendor.js",
       "_uiStore.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "__plugin-vue_export-helper.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "__plugin-vue_export-helper.js"
     ]
   },
   "_ArticleNav.js": {
@@ -551,9 +550,9 @@
       "_axios.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/StoryView.vue"
@@ -584,8 +583,8 @@
       "_useProjectToolkits.js",
       "_useResource.js",
       "_axios.js",
-      "_ContentModels.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/about/WhoWeAreView.vue"
@@ -626,9 +625,9 @@
       "_ArticleNav.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/announcements/AnnouncementsIndexView.vue"
@@ -721,9 +720,9 @@
       "_ArticleNav.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/news/NewsIndexView.vue"
@@ -1073,9 +1072,9 @@
       "_ArticleNav.js",
       "__plugin-vue_export-helper.js",
       "_PlaceholderBlock.vue_vue_type_script_setup_true_lang.js",
-      "_ContentModels.js",
       "_AnchorElement.vue_vue_type_script_setup_true_lang.js",
-      "_ArticleAsGrid.js"
+      "_ArticleAsGrid.js",
+      "_ContentModels.js"
     ],
     "isDynamicEntry": true,
     "src": "src/views/weekly/WeeklyIndexView.vue"
