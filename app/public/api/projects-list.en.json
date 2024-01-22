@@ -149,6 +149,17 @@
       ]
     },
     {
+      "id": "gaussdb-driver",
+      "name": "GaussDB Driver for .NET",
+      "logo": "",
+      "catalogue": "data",
+      "status": "incubation",
+      "external": false,
+      "language": [
+        "C#"
+      ]
+    },
+    {
       "id": "efcore-kingbasees",
       "name": "KingbaseES for EFCore",
       "logo": "",

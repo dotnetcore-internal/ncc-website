@@ -1,0 +1,51 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "id": "gaussdb-driver",
+  "name": "GaussDB Driver for .NET",
+  "logo": "",
+  "github": "https://github.com/dotnetcore/DotNetCore.GaussDB",
+  "catalogue": "data",
+  "status": "incubation",
+  "leader": {
+    "name": "Jeffcky",
+    "url": "https://github.com/wangpengxpy"
+  },
+  "external": false,
+  "language": [
+    "C#"
+  ],
+  "license": {
+    "name": "postgresql",
+    "file": "https://raw.githubusercontent.com/dotnetcore/DotNetCore.GaussDB/master/LICENSE"
+  },
+  "modules": [
+    {
+      "name": "general",
+      "sort": 1,
+      "in-built": true
+    },
+    {
+      "name": "metrics",
+      "sort": 2,
+      "in-built": true
+    },
+    {
+      "name": "get-started",
+      "sort": 3,
+      "in-built": true
+    },
+    {
+      "name": "license",
+      "sort": 4,
+      "in-built": true
+    }
+  ],
+  "i18n-support": [
+    "en",
+    "zh",
+    "zh-tw"
+  ]
+}

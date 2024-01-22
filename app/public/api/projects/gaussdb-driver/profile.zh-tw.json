@@ -1,0 +1,13 @@
+{
+  "_metadata": {
+    "version": "1",
+    "locale": "en"
+  },
+  "description": "GaussDB 的 .NET 驅動。",
+  "modules": {
+    "general": "概述",
+    "metrics": "指標",
+    "get-started": "快速入門",
+    "license": "許可證"
+  }
+}
