@@ -18,6 +18,8 @@
     "C#"
   ],
   "license": {
+    "name": "postgresql",
+    "file": "https://raw.githubusercontent.com/dotnetcore/EntityFrameworkCore.GaussDB/master/LICENSE"
   },
   "modules": [
     {
